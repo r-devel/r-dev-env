@@ -4,6 +4,14 @@
 	"name": "C++",
 	"build": {
 		"dockerfile": "Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"REditorSupport.r",
+				"ms-vscode.cpptools-extension-pack"
+			]
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
