@@ -12,29 +12,44 @@ You can run this environment on GitHub using [codespaces](https://github.com/fea
 
 Click on the 'Open in GitHub Codespaces' button and then click the green 'Create Codespace' button.
 
-![Create Codespace screen](screenshots/create_codespace.png)
+<p align="center">
+    <img src="screenshots/create_codespace.png" width="80%">
+</p>
+
 
 The codespace setup screen will then be shown. Starting the container may take a minute or so.
 
-![setting up codespace screen](screenshots/setting_up_codespace.png)
+<p align="center">
+    <img src="screenshots/setting_up_codespace.png" width="80%">
+</p>
+
 
 You will be taken to a VSCode editor within your browser.
 
-![VSCode in codespaces](screenshots/vscode_in_codespace.png)
+<p align="center">
+    <img src="screenshots/vscode_in_codespace.png" width="80%">
+</p>
 
 ## Running R
 
 Create a file in VS Code ending with a .R extension. You can create new files by clicking on the new file icon in VS Code.
 
-![plus file icon](screenshots/plus_file_icon.png)
+<p align="center">
+    <img src="screenshots/plus_file_icon.png" width="80%">
+</p>
 
 Open the file by clicking on the filename. You should see R:(note attached) in the bottom bar.
 
-![Unattached R](screenshots/unattached_r.png)
+<p align="center">
+    <img src="screenshots/unattached_r.png" width="80%">
+</p>
 
 Click on the R:(note attached) button to launch R in the terminal. You can then send code from the .R file to the termianl r by pressing cmd + enter.
 
-![Running R code](screenshots/running_r_code.png)
+<p align="center">
+    <img src="screenshots/running_r_code.png" width="80%">
+</p>
+
 
 ## Useful Links
 
