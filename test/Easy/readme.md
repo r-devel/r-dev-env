@@ -1,4 +1,4 @@
-# Easy Task
+# Easy Test
 Go to the proof-of-concept repository and start the GitHub Codespace by clicking on the "Code" drop-down menu, clicking the "Codespaces"" tab and selecting "Create codespace on main". It will take several minutes to set up the codespace. Open a new file with a .R extension and click "R (not attached)" in the VS Code footer to attach to an active R terminal. Write a simple line of R code in your R script and run it. Take a screenshot of your R session.
 
 
