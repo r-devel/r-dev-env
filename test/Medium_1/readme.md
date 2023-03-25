@@ -16,3 +16,24 @@ Start the codespace in the proof-of-concept repository as detailed in the Easy t
 ![usingattached R-devel](https://user-images.githubusercontent.com/72031540/226259728-99186eee-5424-4c91-a930-3d21073e73e9.png)
 5. Output for library() command
 ![output](https://user-images.githubusercontent.com/72031540/226259672-088b6d9a-f6b4-4bb8-9a95-5281f50a1081.png)
+
+## Bash Script :
+
+```bash
+#!/bin/bash
+
+curl -O https://cran.r-project.org/src/base-prerelease/R-devel.tar.gz
+
+tar -xzvf R-devel.tar.gz
+
+cd R-devel
+
+./configure LIBnn=lib
+
+make
+
+sudo make install
+
+R --version
+
+```
