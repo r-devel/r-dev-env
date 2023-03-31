@@ -13,3 +13,7 @@ Write a brief description (< 200 words) of how the proof-of-concept works. Descr
 2. Finding Vulnerabilites
 
 ### Illutrations :
+
+![working of proof or work](https://user-images.githubusercontent.com/72031540/229110420-351702af-4252-4b56-a552-e1c8cff5269d.png)
+
+![local setup](https://user-images.githubusercontent.com/72031540/229110383-b6bc1600-1bed-4d8b-99fd-5c90910b30a1.png)
