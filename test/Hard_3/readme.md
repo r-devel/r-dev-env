@@ -45,3 +45,6 @@ RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
     && apt -y install r-base \
     && Rscript -e "install.packages('languageserver', repos='https://cran.rstudio.com')"
 ```
+
+Link to the Github Repo :
+https://github.com/StarTrooper08/r-dev-image
