@@ -48,3 +48,14 @@ sudo make install
 R --version
 
 ```
+
+## Bash Script Explaination
+
+- The bash script for installing and compiling R source code.
+- The "curl -O" command downloads the tarball of R-devel
+- The "tar -xzvf" unzips the tar file
+- Then we change the directory to R-devel.
+- The "./configure LIBnn=lib" is used to prepare the software to be built on the system. Specifying LIBnn=lib tells the R-devel build system to use the standard lib prefix for shared libraries, so that the
+resulting shared libraries will be named in the standard way for the user's system. The LIBnn=lib
+argument is required on Debian based system and also codespace is based on Ubuntu which will help
+us build source code on it.
