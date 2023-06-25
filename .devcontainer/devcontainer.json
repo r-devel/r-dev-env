@@ -5,6 +5,9 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
+	"waitFor": "onCreateCommand",
+	"postStartCommand": "bash scripts/var_initiate.sh",
+	"postCreateCommand": "bash scripts/var_initiate.sh",
 	"customizations": {
 		"vscode": {
 			"extensions": [
