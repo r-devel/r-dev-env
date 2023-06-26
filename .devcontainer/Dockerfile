@@ -1,1 +1,1 @@
-FROM ghcr.io/jamestripp/r-dev-image:main
+FROM ghcr.io/startrooper08/r-dev-artifact:main
