@@ -1,10 +1,11 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
-	"name": "C++",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"name": "R-Dev-Env",
+	"image": "ghcr.io/startrooper08/r-dev-artifact:main",
+	//"build": {
+	//	"dockerfile": "Dockerfile"
+        // },
 	"customizations": {
 		"vscode": {
 			"extensions": [
