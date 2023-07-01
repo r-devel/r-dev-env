@@ -9,7 +9,7 @@ editor: visual
 Here we will download and compile the R source code. The below variables specify the version of R you would like to install and where you would like the source code and compiled version of R.
 
 ```{r}
-r_version <- "R-4-2-3"
+r_version <- "R-4-1-0"
 source_dir <- "/home/vscode/r_source_code/"
 build_dir <- "/home/vscode/r_build/"
 ```
@@ -142,7 +142,7 @@ system(r_version_command)
 
 You should see the new R version.
 
-# Setting R
+# Using our new R version
 
 There is an R version already installed in this container.
 
@@ -156,13 +156,39 @@ The operating system will search for a command in a series of folders specified 
 system("$PATH")
 ```
 
-The /usr/local/bin is before the /usr/bin folder. That means if we put our built version of R then if we type R at the terminal then it will use our new version.
+The /usr/local/bin is before the /usr/bin folder. If we create links to our newly created binaries (R, RScript, etc.) in /usr/local/bin then the system will run these instead of the version of R which came with the container.
 
 ```{r}
-symbolic_link_command <- paste0(
-    "sudo ln -s ", r_version_build_dir, "/bin/R", " /usr/local/bin/R"
-)
-system(symbolic_link_command)
+bin_dir_path <- paste0(r_version_build_dir, "/bin")
+our_binaries <- list.files(bin_dir_path)
+
+for(binary in our_binaries){
+
+    source <- paste0(r_version_build_dir, "/bin/", binary)
+    target <- paste0("/usr/local/bin/", binary)
+
+    # remove any previous symbolic link
+    if(file.exists(target)){
+        remove_command <- paste(
+            "sudo rm", target
+            )
+        system(remove_command)
+    }
+
+    # create symbolic link
+    symbolic_link_command <- paste(
+        "sudo ln -s", source, target
+    )
+
+    system(symbolic_link_command)
+}
 ```
 
-Upon restarting the new version of R will be used.
+If you close R and then reopen it the newly compiled version of R should now be loaded. If that is not the case, then open a new terminal and start R from there.
+
+The VSCode extension for R requires the loaded version of R to have the languageserver package installed. Run the below script to do this for the new version of R. Note: this will take around 5 minutes because it will need to be compiled for the current system.
+
+```{r}
+install_languageserver_command <- 'Rscript -e "install.packages(\'languageserver\', repos=\'https://cran.rstudio.com\')"'
+system(install_languageserver_command)
+```
