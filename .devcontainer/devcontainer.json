@@ -9,7 +9,9 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"REditorSupport.r"
+				"REditorSupport.r",
+				"mads-hartmann.bash-ide-vscode",
+				"quarto.quarto"
 			]
 		}
 	}
