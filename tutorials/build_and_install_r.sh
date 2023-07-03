@@ -1,7 +1,7 @@
 #!/bin/bash
 R_VERSION="R-4-2-3"
-SOURCE_DIR="/home/vscode/r_source_code"
-BUILD_DIR="/home/vscode/r_build"
+SOURCE_DIR="/workspace/r-dev/r_source_code"
+BUILD_DIR="/workspace/r-dev/r_build"
 
 R_VERSION_SOURCE_DIR=$SOURCE_DIR/$R_VERSION
 R_VERSION_BUILD_DIR=$BUILD_DIR/$R_VERSION
