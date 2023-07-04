@@ -50,6 +50,42 @@ Click on the R:(note attached) button to launch R in the terminal. You can then 
     <img src="screenshots/running_r_code.png" width="80%">
 </p>
 
+## R Contribution Workflow
+
+### Build Setup
+1. Environment Variables
+    - We have environment variables for setting path to install and build R and source code. And also for R source code version.
+    - The path ENV variable for R Build and R Source code are BUILDDIR and TOP_SRCDIR respectively. And for R source code verison its R_VERSION.
+    - The path ENV var are set inside Docker File and it will get created when we start codespace automatically. And R_VERSION is mentioned inside setup.sh script file which let us install and compile source code of different R versions by just changing its value.
+      ![image](https://github.com/r-devel/r-dev-env/assets/72031540/6b6cb661-cde3-4c69-845a-a6a281c18ec2)
+2. svn checkout
+   - The svn checkout cmd let us create working of a repository with specific tag/branch.
+   - Example:
+    ```bash
+     svn checkout https://svn.r-project.org/R/tags/$R_VERSION/ "$R_VERSION_SOURCE_DIR"
+     ```
+   - Here we are checking out R source with specific version and the checkout files and folders will be stored inside R_VERSION_SOURCE_DIR directory.
+   - Output : We get file structure something like this after checking out R source code from R svn repository.
+     ![image](https://github.com/r-devel/r-dev-env/assets/72031540/5c560a5e-a40d-4c68-9013-d6eec7327020)
+
+3. cd to BUILDDIR
+   - We need to change our directory to R build directory(BUILDDIR)
+   - ```bash
+     cd $R_VERSION_BUILD_DIR
+     ```
+   - The R_VERSION_BUILD_DIR has BUILDDIR path as base path and R_VERSION is added as suffix.
+5. configure source code
+   - After we change directory to BUILDDIR we can build R and source code.
+   - ```bash
+     "$R_VERSION_SOURCE_DIR/configure" --enable-R-shlib --without-recommended-packages
+     make
+     sudo make install
+     ```
+   - The configure cmd help us build R and files and folders are stored inside BUILDDIR directory.
+   - Output : We get file structure something like this after using configure command.
+     ![image](https://github.com/r-devel/r-dev-env/assets/72031540/b6279710-1176-4c56-9a09-7c41c582e5f8)
+
+
 
 ## Useful Links
 
