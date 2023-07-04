@@ -1,20 +1,22 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
-	"name": "C++",
+	"name": "R-Dev-Env",
+	//"image": "ghcr.io/startrooper08/r-dev-artifact:main",
 	"build": {
 		"dockerfile": "Dockerfile"
-	},
-	"waitFor": "onCreateCommand",
-	"postStartCommand": "bash scripts/var_initiate.sh",
-	"postCreateCommand": "bash scripts/var_initiate.sh",
+         },
+	
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"REditorSupport.r"
+				"REditorSupport.r",
+				"mads-hartmann.bash-ide-vscode",
+				"quarto.quarto"
 			]
 		}
-	}
+	},
+	"postStartCommand": "bash ./scripts/setup.sh"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
