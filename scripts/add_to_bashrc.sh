@@ -11,8 +11,8 @@ the r development guide:
 
 To help you, we have already set the following environment variables:
 
-BUILDIR = "$BUILDDIR"
-TOP_SRCDIR = "$TOP_SRCDIR"
+BUILDDIR = \"$BUILDDIR\"
+TOP_SRCDIR = \"$TOP_SRCDIR\"
 
 Have fun :)
 "
