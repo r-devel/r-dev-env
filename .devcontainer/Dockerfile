@@ -8,6 +8,7 @@ RUN echo 'export PATH="/usr/lib/ccache:$PATH"' | tee -a /home/vscode/.bashrc
 ENV BUILDDIR='/workspaces/r-dev-env/bin/R'
 ENV TOP_SRCDIR='/workspaces/r-dev-env/Downloads/R'
 
+RUN touch /etc/motd
 RUN 'echo "$BUILDDIR" > /etc/motd'
 
 # install quarto
