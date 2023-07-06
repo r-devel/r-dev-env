@@ -55,11 +55,11 @@ Click on the R:(note attached) button to launch R in the terminal. You can then 
 ### Build Setup
 1. Environment Variables
     - We have environment variables for setting path to install and build R and source code. And also for R source code version.
-    - The path ENV variable for R Build and R Source code are BUILDDIR and TOP_SRCDIR respectively. And for R source code verison its R_VERSION.
+    - The path ENV variable for R Build and R Source code are BUILDDIR and TOP_SRCDIR respectively. And for R source code version it is R_VERSION.
     - The path ENV var are set inside Docker File and it will get created when we start codespace automatically. And R_VERSION is mentioned inside setup.sh script file which let us install and compile source code of different R versions by just changing its value.
       ![image](https://github.com/r-devel/r-dev-env/assets/72031540/6b6cb661-cde3-4c69-845a-a6a281c18ec2)
 2. svn checkout
-   - The svn checkout cmd let us create working of a repository with specific tag/branch.
+   - The svn checkout cmd lets us create working of a repository with specific tag/branch.
    - Example:
     ```bash
      svn checkout https://svn.r-project.org/R/tags/$R_VERSION/ "$R_VERSION_SOURCE_DIR"
