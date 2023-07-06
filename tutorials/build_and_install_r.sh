@@ -1,5 +1,4 @@
 #!/bin/bash
-R_VERSION="R-4-2-3"
 SOURCE_DIR="/workspace/r-dev/r_source_code"
 BUILD_DIR="/workspace/r-dev/r_build"
 
