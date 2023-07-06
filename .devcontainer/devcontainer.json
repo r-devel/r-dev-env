@@ -2,30 +2,27 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
 	"name": "R-Dev-Env",
-	"image": "ghcr.io/startrooper08/r-dev-artifact:main",
-	//"build": {
-	//	"dockerfile": "Dockerfile"
-        // },
+	"image": "ghcr.io/r-devel/r-dev-env:dev-container",
+	// "build": {
+	// 	"dockerfile": "Dockerfile"
+	// },
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"REditorSupport.r"
+				"REditorSupport.r",
+				"mads-hartmann.bash-ide-vscode",
+				"quarto.quarto"
 			]
 		}
-	}
-
+	},
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "gcc -v",
-
+	"postCreateCommand": "cat ./scripts/add_to_bashrc.sh >> ~/.bashrc"
 	// Configure tool-specific properties.
 	// "customizations": {},
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
