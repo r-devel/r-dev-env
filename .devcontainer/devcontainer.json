@@ -2,10 +2,10 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
 	"name": "R-Dev-Env",
-	//"image": "ghcr.io/startrooper08/r-dev-artifact:main",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"image": "ghcr.io/r-devel/r-dev-env:dev-container",
+	// "build": {
+	// 	"dockerfile": "Dockerfile"
+	// },
 	"customizations": {
 		"vscode": {
 			"extensions": [
