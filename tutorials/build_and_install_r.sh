@@ -7,12 +7,8 @@ BUILD_DIR="/workspace/r-dev/r_build"
 TOP_SRCDIR="/workspaces/r-dev-env/svn/R-devel"
 BUILDDIR="/workspaces/r-dev-env/bin/R"
 
-mkdir -p $R_VERSION_SOURCE_DIR
-mkdir -p $R_VERSION_BUILD_DIR
-
-cd $R_VERSION_SOURCE_DIR
-
-svn checkout https://svn.r-project.org/R/tags/$R_VERSION .
+# svn checkout will create TOP_SRCDIR if necessary,
+svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
 
 ./configure --prefix=$R_VERSION_BUILD_DIR --enable-R-shlib- -without-recommended-packages
 
