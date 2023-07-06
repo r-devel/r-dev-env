@@ -3,8 +3,9 @@ R_VERSION="R-4-2-3"
 SOURCE_DIR="/workspace/r-dev/r_source_code"
 BUILD_DIR="/workspace/r-dev/r_build"
 
-R_VERSION_SOURCE_DIR=$SOURCE_DIR/$R_VERSION
-R_VERSION_BUILD_DIR=$BUILD_DIR/$R_VERSION
+# put svn repo and build directory where we can see them in the workspace
+TOP_SRCDIR="/workspaces/r-dev-env/svn/R-devel"
+BUILDDIR="/workspaces/r-dev-env/bin/R"
 
 mkdir -p $R_VERSION_SOURCE_DIR
 mkdir -p $R_VERSION_BUILD_DIR
