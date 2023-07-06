@@ -1,7 +1,4 @@
 #!/bin/bash
-SOURCE_DIR="/workspace/r-dev/r_source_code"
-BUILD_DIR="/workspace/r-dev/r_build"
-
 # put svn repo and build directory where we can see them in the workspace
 TOP_SRCDIR="/workspaces/r-dev-env/svn/R-devel"
 BUILDDIR="/workspaces/r-dev-env/bin/R"
