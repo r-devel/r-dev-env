@@ -25,20 +25,3 @@ sudo make install
 # run the R check before doing any development/testing
 make check
 
-# create sys links for new binaries
-BINARIES=$R_VERSION_BUILD_DIR/bin/*
-
-for f in $BINARIES
-do
-if [[ "$f" != *\.* ]]
-then
-binary_name="$(basename -- $f)"
-source=$R_VERSION_BUILD_DIR/bin/$binary_name 
-target=/usr/local/bin/$binary_name
-sudo rm -f $target
-sudo ln -s $source $target
-fi
-done
-
-# install language server in new R version
-Rscript -e "install.packages('languageserver', repos='https://cran.rstudio.com')"
