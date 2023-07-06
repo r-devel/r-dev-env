@@ -10,11 +10,20 @@ BUILDDIR="/workspaces/r-dev-env/bin/R"
 # svn checkout will create TOP_SRCDIR if necessary,
 svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
 
-./configure --prefix=$R_VERSION_BUILD_DIR --enable-R-shlib- -without-recommended-packages
+# go to build dir
+cd "$BUILDDIR"
 
-make check
+# run the configure script from the R sources to create the makefile in the build directory
+"$TOP_SRCDIR/configure" --enable-R-shlib --without-recommended-packages
+
+# make R binary
 make
-make install
+
+# install, overriding the system version of R
+sudo make install
+
+# run the R check before doing any development/testing
+make check
 
 # create sys links for new binaries
 BINARIES=$R_VERSION_BUILD_DIR/bin/*
