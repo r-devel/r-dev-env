@@ -88,8 +88,45 @@ Click on the R:(note attached) button to launch R in the terminal. You can then 
      
      ![image](https://github.com/r-devel/r-dev-env/assets/72031540/b6279710-1176-4c56-9a09-7c41c582e5f8)
 
+6. After having configured setup, we can now make changes in source code and make our contributions.
 
+### Contribution Workflow
+1. R-org uses bugzilla for bug tracking and svn as a version control system.
+2. We can find listed and known bugs on bugzilla. Link : https://bugs.r-project.org/buglist.cgi?bug_status=__open__
+3. Example Contribution Workflow using DevContainer:
+   -  We will use bug [17616](https://bugs.r-project.org/show_bug.cgi?id=17616)
+   -  To confirm the bug we will click on R:attach option which is in the bottom right of our R-dev codespace. It will open R terminal for us.
+   -  We can now run R cmds. The expected output with bug (the second parameter label has the number of the factor level, "2", rather than the label of the factor level, "chilled") :
+      ```R
+      > lm(uptake~C(Treatment, contr.treatment), CO2)
+        Call:
+        lm(formula = uptake ~ C(Treatment, contr.treatment), data = CO2)
 
+        Coefficients:
+                   (Intercept)  C(Treatment, contr.treatment)2  
+                         30.64                           -6.86
+      ```
+ 4. Edit the source code of stats::`contrasts<-()`  to implement the proposed fix. The source code can be found in $BUILDDIR/src/library/stats/R/contrasts.R. Before fix:
+    ```R
+    if(is.function(value)) value <- value(nlevels(x))
+    ```
+       With fix:
+     ```R
+      if(is.function(value)) value <- value(levels(x))
+     ```
+ 5. Re-build the stats package (we only need to re-build the part we have modified). We can rebuild the package by following simple steps
+    - First we need to be inside $BUILDDIR, for that we can change directory to `cd $BUILDDIR`.
+    - After that we can run cmd `make` and `sudo make install` in a series to build our package again and we can now see our changes getting  reflected.
+ 6. Check fix has worked as expected by re-running the reprex. Expected output without bug
+    ```R
+    > lm(uptake~C(Treatment, contr.treatment), CO2)
+      Call:
+      lm(formula = uptake ~ C(Treatment, contr.treatment), data = CO2)
+
+      Coefficients:
+                         (Intercept)  C(Treatment, contr.treatment)chilled  
+                               30.64                                 -6.86 
+                               ```
 ## Useful Links
 
 * [R in Visual Studio code](https://code.visualstudio.com/docs/languages/r)
