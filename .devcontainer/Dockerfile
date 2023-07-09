@@ -1,4 +1,4 @@
-FROM ghcr.io/r-devel/r-dev-artifact:main
+FROM ghcr.io/r-devel/r-dev-env:dev-container
 RUN apt install shellcheck
 RUN apt install -y ccache
 RUN /usr/sbin/update-ccache-symlinks
