@@ -96,7 +96,10 @@ Click on the R:(note attached) button to launch R in the terminal. You can then 
 3. Example Contribution Workflow using DevContainer:
    -  We will use bug [17616](https://bugs.r-project.org/show_bug.cgi?id=17616)
    -  To confirm the bug we will click on `R:(not attach)` option which is in the bottom right of our R-dev codespace. It will open R terminal for us.
+     
        ![image](https://github.com/r-devel/r-dev-env/assets/72031540/4ad3ed18-108a-4f29-ab6c-7f32d81721a7)
+       ![image](https://github.com/r-devel/r-dev-env/assets/72031540/b3bdd3da-903d-4330-81c3-e41147d5dcd4)
+
    -  We can now run R cmds. The expected output with bug (the second parameter label has the number of the factor level, "2", rather than the label of the factor level, "chilled") :
       ```R
       > lm(uptake~C(Treatment, contr.treatment), CO2)
