@@ -14,7 +14,8 @@
 			"extensions": [
 				"REditorSupport.r",
 				"mads-hartmann.bash-ide-vscode",
-				"quarto.quarto"
+				"quarto.quarto",
+				"johnstoncode.svn-scm"
 			]
 		}
 	},
