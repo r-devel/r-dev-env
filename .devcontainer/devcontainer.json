@@ -6,7 +6,9 @@
 	"build": {
 		"dockerfile": "Dockerfile"
          },
-	
+	 "hostRequirements": {
+	  "cpus": 4
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
