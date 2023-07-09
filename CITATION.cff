@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Shirdhankar
+    given-names: Atharva
+  - family-names: Turner
+    given-names: Heather
+  - family-names: Tripp
+    given-names: James
+title: "R Dev Container"
+version: 0.0.1
+doi: 
+date-released: 
