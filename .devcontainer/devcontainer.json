@@ -2,9 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
 	"name": "R-Dev-Env",
-	"build": {
-		"dockerfile": "Dockerfile"
-         },
+	"image": "ghcr.io/r-devel/r-dev-env:dev-container",
 	 "hostRequirements": {
 	  "cpus": 4
 	},
