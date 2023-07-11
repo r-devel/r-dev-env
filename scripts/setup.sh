@@ -4,6 +4,7 @@
 
 svn checkout https://svn.r-project.org/R/tags/ "$TOP_SRCDIR"
 
+mkdir -p "$BUILDDIR"
 cd "$BUILDDIR"
 
 "$TOP_SRCDIR/configure" --enable-R-shlib --without-recommended-packages
