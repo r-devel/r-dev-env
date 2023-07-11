@@ -2,7 +2,7 @@
 
 #ENV VAR ($BUILDDIR & $TOP_SRCDIR) are created inside docker container itself.
 
-svn checkout https://svn.r-project.org/R/tags/ "$TOP_SRCDIR"
+svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
 
 mkdir -p "$BUILDDIR"
 cd "$BUILDDIR"
