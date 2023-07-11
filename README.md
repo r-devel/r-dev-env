@@ -125,7 +125,13 @@ Click on the R:(note attached) button to launch R in the terminal. You can then 
      ```
  4. Re-build the utils package (we only need to re-build the part we have modified). We can rebuild the package by following simple steps
     - First we need to be inside $BUILDDIR, for that we can change directory to `cd $BUILDDIR`.
-    - After that we can run cmd `make` and `sudo make install` in a series.  This will re-build any parts of R that have changed, in this case only re-building the utils package, then re-install R. If we open a new R terminal we will see our changes getting reflected.
+    - After that we can run cmd `make` and `sudo make install` in a series.
+      ![image](https://github.com/r-devel/r-dev-env/assets/72031540/e32f8b8f-c573-41e6-b4cc-31fb3494891a)
+
+      ![image](https://github.com/r-devel/r-dev-env/assets/72031540/709dd607-5d22-4b17-90ad-8f642ecad6b6)
+
+
+    - This will re-build any parts of R that have changed, in this case only re-building the utils package, then re-install R. If we open a new R terminal we will see our changes getting reflected.
  5. Check the edit has worked as expected by re-running the example code:
     ![image](https://github.com/r-devel/r-dev-env/assets/72031540/97fcfee8-dae5-402c-8bf4-0df62a63c3b0)
 
