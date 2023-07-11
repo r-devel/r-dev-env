@@ -70,9 +70,14 @@ Click on the R:(note attached) button to launch R in the terminal. You can then 
 
 3. cd to BUILDDIR
    - We need to change our directory to R build directory(BUILDDIR) to build and configure our R source code.
-   - ```bash
-     cd $BUILDDIR
+   - First we will create a directory using env var BUILDDIR.
+     ```bash
+     mkdir -p $BUILDDIR
      ```
+   - Then we can change directory from root to $BUILDDIR one.
+    ```bash
+      cd $BUILDDIR
+    ```
 4. configure source code
    - After we change directory to BUILDDIR we can configure and build R.
    - ```bash
