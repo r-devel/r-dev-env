@@ -55,7 +55,7 @@ Click on the R:(note attached) button to launch R in the terminal. You can then 
 ### Build Setup
 1. Environment Variables
     - We have environment variables for setting path to install and build R and source code. And also for R source code version.
-    - The path ENV variable for R Build and R Source code are BUILDDIR and TOP_SRCDIR respectively. And for R source code version it is R_VERSION.
+    - The path ENV variable for R Build and R Source code are BUILDDIR and TOP_SRCDIR respectively.
     - The environment variables are set in the codespace image and are available when the codespace starts.
     - The R_VERSION_BUILD_DIR has BUILDDIR path as base path and R_VERSION is added as suffix.
       
