@@ -41,7 +41,7 @@ Create a file in VS Code ending with a .R extension. You can create new files by
     <img src="screenshots/plus_file_icon.png" width="80%">
 </p>
 
-Open the file by clicking on the filename. You should see R:(note attached) in the bottom bar.
+Open the file by clicking on the filename. You should see R:(not attached) in the bottom bar.
 
 <p align="center">
     <img src="screenshots/unattached_r.png" width="80%">
