@@ -47,7 +47,7 @@ Open the file by clicking on the filename. You should see R:(not attached) in th
     <img src="screenshots/unattached_r.png" width="80%">
 </p>
 
-Click on the R:(not attached) button to launch R in the terminal. You can then send code from the .R file to the termianl r by pressing cmd + enter.
+Click on the R:(not attached) button to launch R in the terminal. You can then send code from the .R file to the R terminal by pressing cmd/ctrl + enter.
 
 <p align="center">
     <img src="screenshots/running_r_code.png" width="80%">
