@@ -59,7 +59,8 @@ Click on the R:(not attached) button to launch R in the terminal. You can then s
        svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
       ```
    - Output : We get file structure something like this after checking out R source code from R svn repository.
-     ![image](https://github.com/r-devel/r-dev-env/assets/72031540/2bce81e5-5ac7-45ec-b925-9222b0919cd8)
+     ![image](https://github.com/r-devel/r-dev-env/assets/72031540/4d5ec49c-4abe-4d2b-bdae-31f96404d6d4)
+
 
 3. cd to BUILDDIR
    - We need to change our directory to R build directory(BUILDDIR) to build and configure our R source code.
