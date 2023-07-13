@@ -102,7 +102,7 @@ Click on the R:(not attached) button to launch R in the terminal. You can then s
       Is this a good example? (Yes/no/cancel) Yes
       [1] TRUE
       ```
- 2. Edit the source code of `utils::askYesNo()` to change the default options. The source code can be found in `$BUILDDIR/src/library/utils/R/askYesNo.R`.
+ 2. Edit the source code of `utils::askYesNo()` to change the default options. The source code can be found in `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.
 
     Before edit:
     ![image](https://github.com/r-devel/r-dev-env/assets/72031540/6e7f368a-7a71-457c-a08e-de0d1b3c476f)
