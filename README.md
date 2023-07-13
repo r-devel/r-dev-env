@@ -50,8 +50,8 @@ Click on the R:(not attached) button to launch R in the terminal. You can then s
     - We have environment variables for setting the paths for building R and storing the source code.
     - The path ENV variable for R Build and R Source code are BUILDDIR and TOP_SRCDIR respectively.
     - The environment variables are set in the codespace image and are available when the codespace starts.
-      
-      ![image](https://github.com/r-devel/r-dev-env/assets/72031540/6b6cb661-cde3-4c69-845a-a6a281c18ec2)
+  
+      ![image](https://github.com/r-devel/r-dev-env/assets/72031540/7e208955-5cc1-4761-95f5-20ba85575dd3)
 2. svn checkout
    - The svn checkout cmd lets us create working of a repository with specific tag/branch.
    - Example:
