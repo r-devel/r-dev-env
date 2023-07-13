@@ -13,6 +13,14 @@ You can run this environment on GitHub using [codespaces](https://github.com/fea
 ### Codespaces
 
 Click on the 'Open in GitHub Codespaces' button and then click the green 'Create Codespace' button.
+
+> You will see the message "Codespace usage for this repository is paid for by ", with your username. Don't panic!
+> **Note : The Github Codespaces is offered 120 core hours of free usage per month for every Github User. That means one can use codespace for 120hrs of free and its get reset every month.
+The free hours also differ according to the number of cores you are using to run your codespaces.**
+>
+> **Here for the R-dev-env codespaces we have set the codespace usage to 4 cores which leads to 30hrs of free usage per month. And it can also be changed according to your preference.**
+> For more details about codespaces billing, you can read this [Codespaces Billing Docs](https://github.com/features/codespaces). And also calculate your Github services usage using this [Github Services Pricing Calculator](https://github.com/pricing/calculator). Moreover you can check your usage allowance under "Codespaces" on https://github.com/settings/billing. 
+
 ![image](https://github.com/r-devel/r-dev-env/assets/72031540/d42c5d89-7f1d-46fc-8fdd-44e03311c9b2)
 
 
