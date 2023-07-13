@@ -13,6 +13,14 @@ You can run this environment on GitHub using [codespaces](https://github.com/fea
 ### Codespaces
 
 Click on the 'Open in GitHub Codespaces' button and then click the green 'Create Codespace' button.
+
+> You will see the message "Codespace usage for this repository is paid for by ", with your username. Don't panic!
+> **Note : The Github Codespaces is offered 120 core hours of free usage per month for every Github User. That means one can use codespace for 120hrs of free and its get reset every month.
+The free hours also differ according to the number of cores you are using to run your codespaces.**
+>
+> **Here for the R-dev-env codespaces we have set the codespace usage to 4 cores which leads to 30hrs of free usage per month. And it can also be changed according to your preference.**
+> For more details about codespaces billing, you can read this [Codespaces Billing Docs](https://github.com/features/codespaces). And also calculate your Github services usage using this [Github Services Pricing Calculator](https://github.com/pricing/calculator). Moreover you can check your usage allowance under "Codespaces" on https://github.com/settings/billing.
+
 ![image](https://github.com/r-devel/r-dev-env/assets/72031540/d42c5d89-7f1d-46fc-8fdd-44e03311c9b2)
 
 
@@ -51,7 +59,7 @@ Click on the R:(not attached) button to launch R in the terminal. You can then s
     - The path ENV variable for R Build and R Source code are BUILDDIR and TOP_SRCDIR respectively.
     - The environment variables are set in the codespace image and are available when the codespace starts.
       
-      ![image](https://github.com/r-devel/r-dev-env/assets/72031540/6b6cb661-cde3-4c69-845a-a6a281c18ec2)
+      ![image](https://github.com/r-devel/r-dev-env/assets/72031540/7e208955-5cc1-4761-95f5-20ba85575dd3)
 2. svn checkout
    - The svn checkout cmd lets us create working of a repository with specific tag/branch.
    - Example:
@@ -59,7 +67,7 @@ Click on the R:(not attached) button to launch R in the terminal. You can then s
        svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
       ```
    - Output : We get file structure something like this after checking out R source code from R svn repository.
-     ![image](https://github.com/r-devel/r-dev-env/assets/72031540/2bce81e5-5ac7-45ec-b925-9222b0919cd8)
+     ![image](https://github.com/r-devel/r-dev-env/assets/72031540/4d5ec49c-4abe-4d2b-bdae-31f96404d6d4)
 
 3. cd to BUILDDIR
    - We need to change our directory to R build directory(BUILDDIR) to build and configure our R source code.
