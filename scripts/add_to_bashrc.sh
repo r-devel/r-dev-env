@@ -1,7 +1,4 @@
-export BUILDDIR='/workspaces/r-dev-env/bin/R'
-export TOP_SRCDIR='/workspaces/r-dev-env/Downloads/R'
-
-echo "
+echo -e "
 Welcome to the Containerised R Development Environment
 
 Here you can modify, compile and use R as described in
@@ -14,5 +11,5 @@ To help you, we have already set the following environment variables:
 BUILDDIR = \"$BUILDDIR\"
 TOP_SRCDIR = \"$TOP_SRCDIR\"
 
-Have fun :)
+Have fun \U0001F601
 "
