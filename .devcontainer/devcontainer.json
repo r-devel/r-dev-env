@@ -14,7 +14,8 @@
 				"quarto.quarto",
 				"johnstoncode.svn-scm",
 				"ms-vscode.cpptools",
-				"ms-vscode.makefile-tools"
+				"ms-vscode.makefile-tools",
+				"MS-vsliveshare.vsliveshare"
 			]
 		}
 	}
