@@ -20,8 +20,7 @@ Click on the 'Open in GitHub Codespaces' button and then click the green 'Create
 >
 > **Here for the R-dev-env codespace we have set the codespace usage to 4 cores which leads to 30hrs of free usage per month. And it can also be changed according to your preference.**
 > 
-> For more details about codespaces billing, see the [Codespaces Billing Docs](https://github.com/features/codespaces). And also calculate your Github services usage with the [Github Services Pricing Calculator](https://github.com/pricing/calculator) and check your usage allowance under "Codespaces" on https://github.com/settings/billing.
-
+> For more details about codespaces billing, see the [Codespaces Billing Docs](https://github.com/features/codespaces). You can calculate your GitHub services usage with the [GitHub Services Pricing Calculator](https://github.com/pricing/calculator) and check your usage allowance under "Codespaces" on https://github.com/settings/billing.
 ![image](https://github.com/r-devel/r-dev-env/assets/72031540/d42c5d89-7f1d-46fc-8fdd-44e03311c9b2)
 
 
