@@ -111,7 +111,12 @@ Click on the R:(not attached) button to launch R in the terminal. You can then s
       [1] TRUE
       ```
  2. Edit the source code of `utils::askYesNo()` to change the default options. The source code can be found in `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.
-
+    
+     **File Opening tip** : If you are known to file path. Here we have file `askYesNo.R` in which we have to make changes and path to that file is known to us which is `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.
+     We can just use cmd `code path_to_file` and codespaces will open us that file without having to open and search for different directories.
+    
+     Example : `code $TOP_SRCDIR/src/library/utils/R/askYesNo.R`
+    
     Before edit:
     ![image](https://github.com/r-devel/r-dev-env/assets/72031540/6e7f368a-7a71-457c-a08e-de0d1b3c476f)
 
