@@ -183,13 +183,15 @@ Click on the R:(not attached) button to launch R in the terminal. You can then s
    5. Now we can open this branch inside VSCode editor using cmd `code .`. This will redirect us to VSCode editor.
       ![image](https://github.com/r-devel/r-dev-env/assets/72031540/497f5e19-ef0d-417f-9f1f-f72b374e903a)
       ![image](https://github.com/r-devel/r-dev-env/assets/72031540/5fbca33d-093c-459b-825d-aafe2c4a3fc3)
-   6. We can see pop-up at the bottom right of the VSCode editor which says reopen in Dev Container. Click on 'Reopen in DevContainer' button.
+   6. After this step please be sure that your docker engine is started. If you have installed Docker Desktop just open the Docker Desktop app the engine starts automatically and if you are using just docker engine make sure to start it with `systemctl start docker` cmd)
+   7. We can see pop-up at the bottom right of the VSCode editor which says reopen in Dev Container. Click on 'Reopen in DevContainer' button.
+      
       ![image](https://github.com/r-devel/r-dev-env/assets/72031540/5c29b955-972f-4a7c-bad8-2d8050b13b9d)
-   7. After clicking on that button we will see our container is getting ready. It will take some time. So you can have coffee till that time :)
+   8. After clicking on that button we will see our container is getting ready. It will take some time. So till that time you can have coffee :)
       ![image](https://github.com/r-devel/r-dev-env/assets/72031540/044d1e27-22a6-45df-82ec-8fb65abd75e8)
-
+      
       And there we go!!! We have setup our R-dev-env Locally.
-   8. We can also test the dev container is working or not by just printing the env variables we have mentioned inside container.
+   9. We can also test the dev container is working or not by just printing the env variables we have mentioned inside container.
 
 
       
