@@ -1,5 +1,5 @@
 FROM mcr.microsoft.com/devcontainers/cpp:dev-ubuntu-22.04
-
+ 
 ARG REINSTALL_CMAKE_VERSION_FROM_SOURCE="none"
 
 # Optionally install the cmake for vcpkg
