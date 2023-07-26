@@ -14,7 +14,7 @@ RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
     && apt update \
     && apt -y install subversion \
     && apt -y build-dep r-base-dev \
-    && RUN echo "deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" >> /etc/apt/sources.list \
+    && echo "deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" >> /etc/apt/sources.list \
     && apt update \
     && apt -y install r-base-dev \
     && Rscript -e "install.packages('languageserver', repos='https://cran.rstudio.com')"
