@@ -145,10 +145,11 @@ The above build setup doesn't installs the recommeded packages for R. To install
       ```
  2. Edit the source code of `utils::askYesNo()` to change the default options. The source code can be found in `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.
     
-     **File Opening tip** : If you are known to file path. Here we have file `askYesNo.R` in which we have to make changes and path to that file is known to us which is `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.
-     We can just use cmd `code path_to_file` and codespaces will open us that file without having to open and search for different directories.
-    
-     Example : `code $TOP_SRCDIR/src/library/utils/R/askYesNo.R`
+     **File Opening tip in VSCode** : We are editing the `askYesNo.R` file which is located at `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.  To open this file on the command line, without searching through directories, you can run the below.
+   
+     ```bash
+    code $TOP_SRCDIR/src/library/utils/R/askYesNo.R
+     ```
     
     Before edit:
     ![image](https://github.com/r-devel/r-dev-env/assets/72031540/6e7f368a-7a71-457c-a08e-de0d1b3c476f)
@@ -182,16 +183,16 @@ The above build setup doesn't installs the recommeded packages for R. To install
 
 ## Stopping and Restarting Codespaces
 #### How to Stop Codespaces?
-- To stop codespaces we just need to navigate to Codespaces option which is present in the bottom left of the Codespaces panel.
+- To stop codespaces we just need to navigate to the Codespaces option in the bottom left of the Codespace panel.
    ![image](https://github.com/r-devel/r-dev-env/assets/72031540/6154aff9-2b46-44ab-aba7-4c454ef9d52d)
 - After clicking on codespaces option we will get a drop down above something like this👇
   ![image](https://github.com/r-devel/r-dev-env/assets/72031540/9bac270a-63c9-44ed-aa43-ce9f37a754ca)
 - Click on "Stop Current Codespace". It will stop the codespaces you are currently using or running.
-- You will be redirected to Restart Codespaces link that you just stopped.
+- You will be redirected to a Restart Codespaces page. The page shows a link to restart the codespace you just stopped.
   ![image](https://github.com/r-devel/r-dev-env/assets/72031540/e87082b3-fcd4-4943-9301-1a219eb58bf8)
 
 #### How to Restart Codespaces again?
-  > Since we have stopped the codespaces, the code changes and operations we have performed inside the codespaces will still be present. The codespaces also have session time limt example if you dont use codespaces for 20-30 mins its get stopped automatically. And you can restart the codespaces showed below 
+  > The code changes and operations we have performed inside the codespace will still be inside the stopped codespace. Also, the codespace may have an inactivity time limit and close after 30 minutes. If your codespace is stopped then you can restart it as shown below.
 - Lets see how we can restart the codespaces again.
 - To restart codespaces again we can go to this link https://github.com/codespaces
 - Here we can see list our codespaces we have created
@@ -203,10 +204,12 @@ The above build setup doesn't installs the recommeded packages for R. To install
 
 #### Using Locally
  - We can also use this codespace locally. For that we need to have some prerequisites installed.
- - Prerequisites : Docker Engine or Docker Desktop, VSCode Editor.
- - Steps to run R Dev Env locally
-   1. Head towards the Github project link for R Dev Env (https://github.com/r-devel/r-dev-env)
-   2. Clone the repository locally
+ - - Prerequisites : 
+   1. Docker Engine or Docker Desktop. You can find the docker desktop install instructions [here](https://www.docker.com/products/docker-desktop/).
+   2. VSCode Editor. You can install VSCode from [here](https://code.visualstudio.com/download).
+ - Steps to run R Development Container locally
+   1. Head to the GitHub page for the R de Github project link for R Development Container (https://github.com/r-devel/r-dev-env)
+   2. Clone the repository locally or download the zip file
       ![image](https://github.com/r-devel/r-dev-env/assets/72031540/a978e4e6-f6a6-428e-8dd2-e18b3570906f)
       ![image](https://github.com/r-devel/r-dev-env/assets/72031540/d89a6e0a-4ef4-444b-9ef8-94f3a97bf194)
    3. Change Directory to r-dev-env and list all the branches using `git branch --all`
