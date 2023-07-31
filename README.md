@@ -181,6 +181,23 @@ The above build setup doesn't installs the recommeded packages for R. To install
     [1] TRUE
     ```
 
+## Commiting Changes
+For commiting changes using svn we need to first change directory to $TOP_SRCDIR from $BUILDDIR
+**Steps**
+1. `cd $TOP_SRCDIR` - Change Directory to $TOP_SRCDIR
+2. `svn status` - We could see the changes made in file askYesNo.R
+3. `svn update` - this command commits the changes made inside the file.
+4. `svn diff > path.diff` - This create a path file which will have changes made inside the files.
+
+### SVN help
+While working with the R Contributors Workflow on Codespace, we might found some svn cmds handy.
+1. `svn status` - The svn status command is used to show the status of files and directories in your working copy. It displays information about the differences between your local copy and the repository, indicating which files are modified, added, deleted, or conflicted. 
+2. `svn cleanup --remove-unversioned` - The svn cleanup --remove-unversioned command is a specific variation of the svn cleanup command with an additional option. This command is used to perform a cleanup operation on the working copy while also removing any unversioned files and directories.
+3. svn update - The svn update command is used to bring your working copy up to date with the latest changes from the repository.
+
+Example :  To build the R from source code we checkout we need to be inside the $BUILLDIR directory. But sometimes mistakely we might build the R inside the $TOP_SRCDIR
+To roll back the changes made inside the $TOP_SRCDIR, we can use `svn cleanup --remove-unversioned`.
+
 ## Stopping and Restarting Codespaces
 #### How to Stop Codespaces?
 - To stop codespaces we just need to navigate to the Codespaces option in the bottom left of the Codespace panel.
