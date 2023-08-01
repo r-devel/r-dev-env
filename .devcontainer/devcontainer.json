@@ -9,7 +9,8 @@
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"r.rterm.linux": "usr/bin/bash"
+				"r.rpath.linux": "usr/bin/R",
+				"r.rterm.linux": "/workspaces/r-dev-env/bin/R/bin/R"
 			},
 			"extensions": [
 				"REditorSupport.r",
