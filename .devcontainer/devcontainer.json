@@ -8,6 +8,9 @@
 	},
 	"customizations": {
 		"vscode": {
+			"settings": {
+				"r.rterm.linux": "usr/bin/bash"
+			},
 			"extensions": [
 				"REditorSupport.r",
 				"mads-hartmann.bash-ide-vscode",
@@ -16,10 +19,7 @@
 				"ms-vscode.cpptools",
 				"ms-vscode.makefile-tools",
 				"MS-vsliveshare.vsliveshare"
-			],
-			"settings": {
-				"terminal.integrated.defaultProfile.linux": "zsh"
-			}
+			]
 		}
 	}
 	// Features to add to the dev container. More info: https://containers.dev/features.
