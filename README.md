@@ -96,7 +96,7 @@ Click on the R:(not attached) button to launch R in the terminal. You can then s
 
 ### Build Setup (With Recommended Packages)
 This build setup differs from the above because the recommended packages for R are included.
-1. svn checkout using cmd
+1. Checkout the R source using svn.
    ```bash
        svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
    ```
