@@ -238,7 +238,6 @@ To roll back the changes made inside the $TOP_SRCDIR, we can use `svn cleanup --
       ![image](https://github.com/r-devel/r-dev-env/assets/72031540/5fbca33d-093c-459b-825d-aafe2c4a3fc3)
    6. After this step please be sure that your docker engine is started. If you have installed Docker Desktop just open the Docker Desktop app the engine starts automatically and if you are using just docker engine make sure to start it with `systemctl start docker` cmd)
    7. We can see pop-up at the bottom right of the VSCode editor which says reopen in Dev Container. Click on 'Reopen in DevContainer' button.
-      
       ![image](https://github.com/r-devel/r-dev-env/assets/72031540/5c29b955-972f-4a7c-bad8-2d8050b13b9d)
    8. After clicking on that button we will see our container is getting ready. It will take some time. So till that time you can have coffee :)
       ![image](https://github.com/r-devel/r-dev-env/assets/72031540/044d1e27-22a6-45df-82ec-8fb65abd75e8)
