@@ -121,7 +121,7 @@ This build setup differs from the above because the recommended packages for R a
      make
      sudo make install
      ```
-   - The configure cmd prepares for building R, creating files and folders inside the BUILDDIR directory.
+   - The configure script sets options and settings for building R, creating files and folders inside the BUILDDIR directory.
    - After running the configure script the file structure of the build directory is something like the below.
      
      ![image](https://github.com/r-devel/r-dev-env/assets/72031540/0d4878fa-c1a8-462b-8365-76cc5dadf734)
