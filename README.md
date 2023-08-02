@@ -209,11 +209,10 @@ To roll back the changes made inside the $TOP_SRCDIR, we can use `svn cleanup --
 
 #### How to Restart Codespaces again?
   > The code changes and operations we have performed inside the codespace will still be inside the stopped codespace. Also, the codespace may have an inactivity time limit and close after 30 minutes. If your codespace is stopped then you can restart it as shown below.
-- Lets see how we can restart the codespaces again.
-- To restart codespaces again we can go to this link https://github.com/codespaces
-- Here we can see list our codespaces we have created
+- Go to [github.com/codespaces](https://github.com/codespaces)
+- Here we can see a list of the codespaces we have created
   ![image](https://github.com/r-devel/r-dev-env/assets/72031540/23ae4b6e-70fb-4fb2-98ec-d89833804742)
-- Currently, here we have one codespaces that we just stopped few seconds ago.
+- The screenshot shows we only have one stopped codespace
 - To restart it, we can just click on the codespaces we wanted to use and it will start the codespaces again for us.
 - You can also see an active label added to the codespaces we just started
   ![image](https://github.com/r-devel/r-dev-env/assets/72031540/ea0589f4-301c-4c65-bd72-0207c3c5e897)
