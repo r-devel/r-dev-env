@@ -190,7 +190,7 @@ For commiting changes using svn we need to first change directory to $TOP_SRCDIR
 4. `svn diff > path.diff` - This create a path file which will have changes made inside the files.
 
 ### SVN help
-While working with the R Contributors Workflow on Codespace, we might found some svn cmds handy.
+While working with the R Contributors Workflow on Codespace, we might find some svn commands handy.
 1. `svn status` - The svn status command is used to show the status of files and directories in your working copy. It displays information about the differences between your local copy and the repository, indicating which files are modified, added, deleted, or conflicted. 
 2. `svn cleanup --remove-unversioned` - The svn cleanup --remove-unversioned command is a specific variation of the svn cleanup command with an additional option. This command is used to perform a cleanup operation on the working copy while also removing any unversioned files and directories.
 3. svn update - The svn update command is used to bring your working copy up to date with the latest changes from the repository.
