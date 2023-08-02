@@ -95,7 +95,7 @@ Click on the R:(not attached) button to launch R in the terminal. You can then s
 5. After having built the current development version of R, we can now make changes in source code and make our contributions.
 
 ### Build Setup (With Recommended Packages)
-The above build setup doesn't installs the recommeded packages for R. To install the recommeded packages, we can install it by following steps
+This build setup differs from the above because the recommended packages for R are included.
 1. svn checkout using cmd
    ```bash
        svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
