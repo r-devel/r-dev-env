@@ -53,10 +53,10 @@ Click on the R:(not attached) button to launch R in the terminal. You can then s
 
 ## R Contribution Workflow
 
-### Build Setup
+### Build Setup (Without Recommended Packages)
 1. Environment Variables
     - We have environment variables for setting the paths for building R and storing the source code.
-    - The path ENV variable for R Build and R Source code are BUILDDIR and TOP_SRCDIR respectively.
+    - The path ENV variables for R Build and R Source code are BUILDDIR and TOP_SRCDIR respectively.
     - The environment variables are set in the codespace image and are available when the codespace starts.
       
       ![image](https://github.com/r-devel/r-dev-env/assets/72031540/7e208955-5cc1-4761-95f5-20ba85575dd3)
@@ -94,6 +94,39 @@ Click on the R:(not attached) button to launch R in the terminal. You can then s
 
 5. After having built the current development version of R, we can now make changes in source code and make our contributions.
 
+### Build Setup (With Recommended Packages)
+This build setup differs from the above because the recommended packages for R are included.
+1. Checkout the R source using svn.
+   ```bash
+       svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
+   ```
+2. Create a directory using the environment variable called BUILDDIR.
+   ```bash
+   mkdir -p $BUILDDIR
+   ```
+3. Then we will install recommended packages using cmd
+   ```bash
+    "$TOP_SRCDIR/tools/rsync-recommended"
+   ```
+   ![Screenshot from 2023-07-28 15-18-22](https://github.com/r-devel/r-dev-env/assets/72031540/532a3f40-ab17-43b4-b729-ab57b2e3ffe9)
+4. We can now change directory to $BUILDDIR using cmd
+   ```bash
+   cd $BUILLDIR
+   ```
+5. configure source code
+   - After we change directory to BUILDDIR we can configure and build R.
+   - CMD
+     ```bash
+     "$TOP_SRCDIR/configure" --enable-R-shlib
+     make
+     sudo make install
+     ```
+   - The configure script sets options and settings for building R, creating files and folders inside the BUILDDIR directory.
+   - After running the configure script the file structure of the build directory is something like the below.
+     
+     ![image](https://github.com/r-devel/r-dev-env/assets/72031540/0d4878fa-c1a8-462b-8365-76cc5dadf734)
+
+
 ### Contribution Workflow
 
 1. Example Contribution Workflow using DevContainer:
@@ -111,7 +144,13 @@ Click on the R:(not attached) button to launch R in the terminal. You can then s
       [1] TRUE
       ```
  2. Edit the source code of `utils::askYesNo()` to change the default options. The source code can be found in `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.
-
+    
+     **File Opening tip in VSCode** : We are editing the `askYesNo.R` file which is located at `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.  To open this file on the command line, without searching through directories, you can run the below.
+   
+     ```bash
+    code $TOP_SRCDIR/src/library/utils/R/askYesNo.R
+     ```
+    
     Before edit:
     ![image](https://github.com/r-devel/r-dev-env/assets/72031540/6e7f368a-7a71-457c-a08e-de0d1b3c476f)
 
@@ -141,6 +180,69 @@ Click on the R:(not attached) button to launch R in the terminal. You can then s
     Is this a good example? (Oh yeah!/don't think so/cancel) Oh yeah!
     [1] TRUE
     ```
+
+## Commiting Changes
+For commiting changes using svn we need to first change directory to $TOP_SRCDIR from $BUILDDIR
+1. `cd $TOP_SRCDIR` - Change Directory to $TOP_SRCDIR
+2. `svn status` - We could see the changes made in file askYesNo.R
+3. `svn update` - this command commits the changes made inside the file.
+4. `svn diff > path.diff` - This create a path file which will have changes made inside the files.
+
+### SVN help
+While working with the R Contributors Workflow on Codespace, we might find some svn commands handy.
+1. `svn status` - The svn status command is used to show the status of files and directories in your working copy. It displays information about the differences between your local copy and the repository, indicating which files are modified, added, deleted, or conflicted. 
+2. `svn cleanup --remove-unversioned` - The svn cleanup --remove-unversioned command is a specific variation of the svn cleanup command with an additional option. This command is used to perform a cleanup operation on the working copy while also removing any unversioned files and directories.
+3. svn update - The svn update command is used to bring your working copy up to date with the latest changes from the repository.
+
+Example :  To build the R from source code we checkout we need to be inside the $BUILLDIR directory. But sometimes mistakely we might build the R inside the $TOP_SRCDIR
+To roll back the changes made inside the $TOP_SRCDIR, we can use `svn cleanup --remove-unversioned`.
+
+## Stopping and Restarting Codespaces
+#### How to Stop Codespaces?
+- To stop codespaces we just need to navigate to the Codespaces option in the bottom left of the Codespace panel.
+   ![image](https://github.com/r-devel/r-dev-env/assets/72031540/6154aff9-2b46-44ab-aba7-4c454ef9d52d)
+- After clicking on codespaces option we will get a drop down above something like this👇
+  ![image](https://github.com/r-devel/r-dev-env/assets/72031540/9bac270a-63c9-44ed-aa43-ce9f37a754ca)
+- Click on "Stop Current Codespace". It will stop the codespaces you are currently using or running.
+- You will be redirected to a Restart Codespaces page. The page shows a link to restart the codespace you just stopped.
+  ![image](https://github.com/r-devel/r-dev-env/assets/72031540/e87082b3-fcd4-4943-9301-1a219eb58bf8)
+
+#### How to Restart Codespaces again?
+  > The code changes and operations we have performed inside the codespace will still be inside the stopped codespace. Also, the codespace may have an inactivity time limit and close after 30 minutes. If your codespace is stopped then you can restart it as shown below.
+- Go to [github.com/codespaces](https://github.com/codespaces)
+- Here we can see a list of the codespaces we have created
+  ![image](https://github.com/r-devel/r-dev-env/assets/72031540/23ae4b6e-70fb-4fb2-98ec-d89833804742)
+- The screenshot shows we only have one stopped codespace
+- To restart it, we can just click on the codespaces we wanted to use and it will start the codespaces again for us.
+- You can also see an active label added to the codespaces we just started
+  ![image](https://github.com/r-devel/r-dev-env/assets/72031540/ea0589f4-301c-4c65-bd72-0207c3c5e897)
+
+#### Using Locally
+ - We can also use this codespace locally. For that we need to have some prerequisites installed.
+ - - Prerequisites : 
+   1. Docker Engine or Docker Desktop. You can find the docker desktop install instructions [here](https://www.docker.com/products/docker-desktop/).
+   2. VSCode Editor. You can install VSCode from [here](https://code.visualstudio.com/download).
+ - Steps to run R Development Container locally
+   1. Head to the GitHub page for the R dev Github project link for R Development Container [R-Dev-Env](https://github.com/r-devel/r-dev-env)
+   2. You can clone the repo or download the zip file. Downloading the zip file is recommeded since it has latest updates are pushed to it
+      [r-dev-env zip](https://github.com/r-devel/r-dev-env/archive/refs/heads/devel.zip)
+   3. After downloading zip, unzip the file and change directory to `r-dev-env`.
+   4. After the changing directory to r-dev-env, we can open this code inside VSCode editor using cmd `code .`. This will redirect us to VSCode editor.
+      ![image](https://github.com/r-devel/r-dev-env/assets/72031540/52095a96-4912-431e-9c28-ada143f7cab9)
+   5. After this step please be sure that your docker engine is started. If you have installed Docker Desktop just open the Docker Desktop app the engine starts automatically and if you are using just docker engine make sure to start it with `systemctl start docker` cmd)
+   6. We can see pop-up at the bottom right of the VSCode editor which says reopen in Dev Container. Click on 'Reopen in DevContainer' button.
+      ![image](https://github.com/r-devel/r-dev-env/assets/72031540/5c29b955-972f-4a7c-bad8-2d8050b13b9d)
+   7. After clicking on that button we will see our container is getting ready. It will take some time. So till that time you can have coffee :)
+      ![image](https://github.com/r-devel/r-dev-env/assets/72031540/044d1e27-22a6-45df-82ec-8fb65abd75e8)
+   8. We can also test the dev container is working or not by just printing the env variables we have mentioned inside container. And there we go!!! We have setup our R-dev-env Locally.
+       ![image](https://github.com/r-devel/r-dev-env/assets/72031540/026668de-a9bb-49bc-a515-c16a218b685d)
+
+
+
+      
+
+
+   
 ## Useful Links
 
 * [R in Visual Studio code](https://code.visualstudio.com/docs/languages/r)
