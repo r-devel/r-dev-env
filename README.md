@@ -100,7 +100,7 @@ This build setup differs from the above because the recommended packages for R a
    ```bash
        svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
    ```
-2. Then we will create a directory using BUILDDIR env var.
+2. Create a directory using the environment variable called BUILDDIR.
    ```bash
    mkdir -p $BUILDDIR
    ```
