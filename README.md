@@ -183,7 +183,6 @@ This build setup differs from the above because the recommended packages for R a
 
 ## Commiting Changes
 For commiting changes using svn we need to first change directory to $TOP_SRCDIR from $BUILDDIR
-**Steps**
 1. `cd $TOP_SRCDIR` - Change Directory to $TOP_SRCDIR
 2. `svn status` - We could see the changes made in file askYesNo.R
 3. `svn update` - this command commits the changes made inside the file.
