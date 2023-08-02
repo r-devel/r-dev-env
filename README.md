@@ -102,7 +102,7 @@ This build setup differs from the above because the recommended packages for R a
    ```
 2. Then we will create a directory using BUILDDIR env var.
    ```bash
-   mkdir -p $BUILLDIR
+   mkdir -p $BUILDDIR
    ```
 3. Then we will install recommended packages using cmd
    ```bash
