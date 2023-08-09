@@ -1,4 +1,4 @@
-name: MkDocs Build and Deploy
+name: Build MKDocs website
 
 on:
   push:
