@@ -3,7 +3,6 @@ name: Build MKDocs website
 on:
   push:
     branches: ["devel"]
-    paths: ['docs/**']
 
 jobs:
   build-and-deploy:
