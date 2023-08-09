@@ -2,7 +2,8 @@ name: MkDocs Build and Deploy
 
 on:
   push:
-    branches: ["devel","docs"]
+    branches: 
+      - devel
     paths:
       - 'docs/**'
 
