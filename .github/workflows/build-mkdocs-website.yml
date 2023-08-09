@@ -2,10 +2,8 @@ name: Build MKDocs website
 
 on:
   push:
-    branches: 
-      - devel
-    paths:
-      - 'docs/**'
+    branches: ["devel"]
+    paths: ['docs/**']
 
 permissions:
       contents: write
