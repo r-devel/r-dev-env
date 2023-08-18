@@ -6,6 +6,7 @@
 	"hostRequirements": {
 		"cpus": 4
 	},
+	
 	"customizations": {
 		"vscode": {
 			"settings": {
@@ -20,7 +21,8 @@
 				"ms-vscode.cpptools",
 				"ms-vscode.makefile-tools",
 				"MS-vsliveshare.vsliveshare"
-			]
+			],
+			"postStartCommand": "source ./scripts/localscript.sh"
 		}
 	}
 	// Features to add to the dev container. More info: https://containers.dev/features.
