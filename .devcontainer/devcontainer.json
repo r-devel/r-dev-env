@@ -21,8 +21,8 @@
 				"ms-vscode.cpptools",
 				"ms-vscode.makefile-tools",
 				"MS-vsliveshare.vsliveshare"
-			],
-			"postStartCommand": "source ./scripts/localscript.sh"
+			]
+			
 		}
 	},
 	"postStartCommand":"bash scripts/localscript.sh"
