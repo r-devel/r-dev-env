@@ -25,7 +25,7 @@
 			
 		}
 	},
-	"postStartCommand":"/usr/bin/bash /workspaces/r-dev-env/scripts/welcome_msg.sh"
+	"postCreateCommand":"cat /workspaces/r-dev-env/scripts/welcome_msg.sh >> ~/.bashrc"
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
