@@ -1,7 +1,4 @@
 #!/bin/bash
-
-touch /tmp/the_script_has_run
-
 echo -e "
 Welcome to the Containerised R Development Environment
 
