@@ -1,3 +1,4 @@
+#!/bin/bash
 echo -e "
 Welcome to the Containerised R Development Environment
 
