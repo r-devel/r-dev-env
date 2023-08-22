@@ -78,8 +78,8 @@ This build setup differs from the above because the recommended packages for R a
    - CMD
      ```bash
      "$TOP_SRCDIR/configure" --enable-R-shlib
+     make check
      make
-     sudo make install
      ```
    - The configure script sets options and settings for building R, creating files and folders inside the BUILDDIR directory.
    - After running the configure script the file structure of the build directory is something like the below.
