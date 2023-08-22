@@ -10,8 +10,8 @@
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"r.rpath.linux": "usr/bin/R",
-                                "r.rterm.linux": "usr/bin/R"
+				"r.rpath.linux": "/usr/bin/R",
+                "r.rterm.linux": "/usr/bin/R"
 			},
 			"extensions": [
 				"REditorSupport.r",
