@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# clear the screen before displaying welcome message
+clear
+
+# welcome message to add to bashrc
 echo -e "
 Welcome to the Containerised R Development Environment
 
