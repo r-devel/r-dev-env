@@ -1,7 +1,7 @@
 # This workflow uses actions that are not certified by GitHub.  
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
-# documentation.  
+# documentation. 
 
 name: Build and publish Docker image
 
@@ -41,7 +41,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
-          images: ${{ env.REGISTRY }}/${{ env.VERSION }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
@@ -50,5 +50,6 @@ jobs:
           push: true
           build-args: |
             "CONTAINER_VERSION=${{ env.VERSION }}"
-          tags: ${{ steps.meta.outputs.tags }}
+          #tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ env.VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
