@@ -43,8 +43,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/r-dev-env
           tags: |
-            type=semver,pattern={{ env.VERSION }}
-            type=sha
+            type=raw,value={{ env.VERSION }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
