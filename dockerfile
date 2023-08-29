@@ -25,3 +25,4 @@ RUN apt install -y ccache
 #RUN echo 'export PATH="/usr/lib/ccache:$PATH"' | tee -a /home/vscode/.bashrc
 ENV BUILDDIR='/workspaces/r-dev-env/build'
 ENV TOP_SRCDIR='/workspaces/r-dev-env/svn'
+ENV PATCHDIR='/workspaces/r-dev-env/patches'
