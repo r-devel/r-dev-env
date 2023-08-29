@@ -1,6 +1,7 @@
 #!/bin/bash
 
 mkdir -p /home/vscode/.local/bin
+mkdir -p $PATCHDIR
 
 chmod +x /workspaces/r-dev-env/scripts/rterm.sh
 chmod +x /workspaces/r-dev-env/scripts/multi_r.sh
