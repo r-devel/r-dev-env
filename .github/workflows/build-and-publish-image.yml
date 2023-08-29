@@ -41,10 +41,8 @@ jobs:
         id: meta
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          images: ${{ env.REGISTRY }}/r-dev-env
           tags: |
-            type=ref,event=branch
-            type=ref,event=pr
             type=semver,pattern={{ env.VERSION }}
             type=sha
 
