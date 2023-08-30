@@ -8,6 +8,9 @@ nav:
         - 'Running R' : 'tutorials/running_r.md'
         - 'Building R': 'tutorials/building_r.md'
         - 'R Contribution Workflow' : 'tutorials/contribution_workflow.md'
+        - 'Updating Source Code' : 'tutorials/update_source.md'
+        - 'Creating a Patch File' : 'tutorials/patch_update.md'
+        - 'Multiple R Version' : 'tutorials/multi_r_compilation.md'
         - 'Local Setup' : 'tutorials/localsetup.md'
         - 'Restarting and Stopping' : 'tutorials/codespacestartstop.md'
     - 'Resources' : resources.md

@@ -16,7 +16,6 @@
 			"extensions": [
 				"REditorSupport.r",
 				"mads-hartmann.bash-ide-vscode",
-				"quarto.quarto",
 				"johnstoncode.svn-scm",
 				"ms-vscode.cpptools",
 				"ms-vscode.makefile-tools",

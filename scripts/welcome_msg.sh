@@ -16,6 +16,7 @@ To help you, we have already set the following environment variables:
 
 BUILDDIR = \"$BUILDDIR\"
 TOP_SRCDIR = \"$TOP_SRCDIR\"
+PATCHDIR = \"$PATCHDIR\"
 
 Have fun \U0001F601
 "

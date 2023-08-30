@@ -25,12 +25,6 @@ RUN apt install -y ccache
 #RUN echo 'export PATH="/usr/lib/ccache:$PATH"' | tee -a /home/vscode/.bashrc
 ENV BUILDDIR='/workspaces/r-dev-env/build'
 ENV TOP_SRCDIR='/workspaces/r-dev-env/svn'
-
-# Set container version number
+ENV PATCHDIR='/workspaces/r-dev-env/patches'
 ARG CONTAINER_VERSION
 ENV CONTAINER_VERSION ${CONTAINER_VERSION}
-
-# install quarto
-RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.433/quarto-1.3.433-linux-amd64.deb
-RUN dpkg --force-confold -i quarto-1.3.433-linux-amd64.deb
-RUN rm quarto-1.3.433-linux-amd64.deb
