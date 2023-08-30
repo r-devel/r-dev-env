@@ -6,7 +6,7 @@ We can also create a patch file for the update and changes that we made to the s
 
 If necessary, update the version of R you are working on, with the latest changes in <https://svn.r-project.org/R/trunk/>.
 
-E.g., if the version of R you are working on is named "R-devel-working"
+E.g. if the version of R you are working on is named "R-devel-working"
 
 ```bash
 cd $TOP_SRCDIR/R-devel-working
