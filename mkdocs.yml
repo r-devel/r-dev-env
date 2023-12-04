@@ -1,6 +1,7 @@
 site_name: R Development Environment Docs
 site_url: https://example.com/
 theme: readthedocs
+
 nav:
     - 'Home': index.md
     - 'Tutorials':
@@ -14,3 +15,9 @@ nav:
         - 'Local Setup' : 'tutorials/localsetup.md'
         - 'Restarting and Stopping' : 'tutorials/codespacestartstop.md'
     - 'Resources' : resources.md
+
+extra_javascript:
+  - javascripts/clipboard.js
+
+extra_css:
+  - styles/styles.css

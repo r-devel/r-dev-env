@@ -1,3 +1,4 @@
+
 ## Stopping and Restarting Codespaces
 #### How to Stop Codespaces?
 - To stop codespaces we just need to navigate to the Codespaces option in the bottom left of the Codespace panel.

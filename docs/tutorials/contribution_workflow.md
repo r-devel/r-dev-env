@@ -1,3 +1,4 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 ## Contribution Workflow
 
 #### 1. Example Contribution Workflow using DevContainer:
@@ -24,16 +25,22 @@
 ![image](https://github.com/r-devel/r-dev-env/assets/72031540/6e7f368a-7a71-457c-a08e-de0d1b3c476f)
 
     
-```R
+```{.R .clipboard-target .code-block-1}
     prompts = getOption("askYesNo", gettext(c("Yes", "No", "Cancel"))),
 ```
+<button class="btn custom-btn" data-clipboard-target=".code-block-1">
+   Copy to Clipboard
+</button>
 
 ###### > With edit (for example - change to whatever you like!):
 ![image](https://github.com/r-devel/r-dev-env/assets/72031540/b7476540-1030-4f88-ae3c-1c2f9dd90deb)
 
-```R
+```{.R .clipboard-target .code-block-2}
     prompts = getOption("askYesNo", gettext(c("Oh yeah!", "Don't think so", "Cancel"))),
 ```
+<button class="btn custom-btn" data-clipboard-target=".code-block-2">
+   Copy to Clipboard
+</button>
 
 #### 3. Rebuilding Package
 - Re-build the utils package (we only need to re-build the part we have modified). We can rebuild the package by following simple steps.
