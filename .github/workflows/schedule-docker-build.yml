@@ -6,9 +6,10 @@
 name: Build and publish Docker image
 
 on:
-  branches: ["devel"]
-  schedule:
-    - cron: '0 0 1,15 * *'
+  pull_request:
+    branches: ["devel"]
+    schedule:
+      - cron: '0 0 1,15 * *'
   
 
 env:
