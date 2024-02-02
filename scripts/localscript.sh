@@ -8,3 +8,7 @@ chmod +x /workspaces/r-dev-env/scripts/multi_r.sh
 
 mv /workspaces/r-dev-env/scripts/rterm.sh /home/vscode/.local/bin/rterm
 cp /workspaces/r-dev-env/scripts/multi_r.sh /home/vscode/.local/bin/multi_r
+
+#remove git directory
+cd /workspaces/r-dev-env
+rm -rf .git

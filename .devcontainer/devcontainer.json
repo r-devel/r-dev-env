@@ -11,7 +11,8 @@
 		"vscode": {
 			"settings": {
 				"r.rpath.linux": "/usr/bin/R",
-                "r.rterm.linux": "/usr/bin/R"
+                "r.rterm.linux": "/usr/bin/R",
+				"svn.multipleFolders.enabled": true
 			},
 			"extensions": [
 				"REditorSupport.r",
