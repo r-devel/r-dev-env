@@ -3,13 +3,14 @@ name: Build MKDocs website
 on:
   pull_request:
     branches: ["devel"]
+    types: [opened, closed]
     paths:
-      - './docs/**'
-      - './mkdocs.yml'
+      - 'docs/**/**'
+      - 'mkdocs.yml'
 
 jobs:
   build-and-deploy:
-    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.merged == true }}
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -24,7 +25,7 @@ jobs:
           python-version: 3.x 
 
       - name: Install dependencies
-        run: pip install mkdocs
+        run: pip install mkdocs mkdocs-material[imaging]
 
       - name: Build MkDocs
         run: mkdocs build
