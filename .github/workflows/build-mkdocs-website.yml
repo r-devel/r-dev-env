@@ -3,14 +3,14 @@ name: Build MKDocs website
 on:
   pull_request:
     branches: ["devel"]
-    types: [opened, closed]
+    types: [closed]
     paths:
       - 'docs/**/**'
       - 'mkdocs.yml'
 
 jobs:
   build-and-deploy:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+    if: ${{github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true}}
     runs-on: ubuntu-latest
     permissions:
       contents: write
