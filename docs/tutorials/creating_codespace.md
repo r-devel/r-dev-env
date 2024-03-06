@@ -1,4 +1,4 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
 ## Codespaces
 
 > You will see the message "Codespace usage for this repository is paid for by ...", with your username. Don't panic!
