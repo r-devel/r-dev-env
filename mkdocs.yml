@@ -12,6 +12,9 @@ nav:
         - 'SVN Help' : 'tutorials/svn-help.md'
         - 'Restarting and Stopping' : 'tutorials/codespacestartstop.md'
         - 'Local Setup' : 'tutorials/localsetup.md'
+    - 'Contributor Guide' : 
+        - 'contributor_guide/contributing_to_docs.md'
+        - 'contributor_guide/contributing_to_codebase.md'
     - 'Resources' : resources.md
 theme:
   name: material
@@ -49,7 +52,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/r-devel/r-dev-env
     - icon: fontawesome/brands/slack
-      link: https://github.com/r-devel/
+      link: https://r-contributors.slack.com/
 
 markdown_extensions:
   - pymdownx.highlight:

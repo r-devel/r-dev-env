@@ -9,7 +9,11 @@
 > For more details about codespaces billing, see the [Codespaces Billing Docs](https://github.com/features/codespaces). You can calculate your GitHub services usage with the [GitHub Services Pricing Calculator](https://github.com/pricing/calculator) and check your usage allowance under "Codespaces" [here](https://github.com/settings/billing).
 
 1) Click on the 'Open in GitHub Codespaces' button and then click the green 'Create Codespace' button.
-  ![image](https://github.com/r-devel/r-dev-env/assets/72031540/d42c5d89-7f1d-46fc-8fdd-44e03311c9b2)
+<figure markdown="span">
+  ![rdev1](./docs/assets/rdev1.png){ width="300" }
+  <figcaption>Image caption</figcaption>
+</figure>
+
 
 2) The codespace setup screen will then be shown. Starting the container may take a minute or so.
   ![image](https://github.com/StarTrooper08/SlimtoolkitActions/assets/72031540/57d88505-3939-402e-8b49-54d083d00afc)
