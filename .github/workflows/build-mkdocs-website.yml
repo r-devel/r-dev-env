@@ -21,7 +21,7 @@ jobs:
           python-version: 3.x 
 
       - name: Install dependencies
-        run: pip install mkdocs
+        run: pip install mkdocs mkdocs-material[imaging]
 
       - name: Build MkDocs
         run: mkdocs build
