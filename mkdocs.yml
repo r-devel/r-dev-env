@@ -1,7 +1,4 @@
-site_name: R Development Environment Docs
-site_url: https://example.com/
-theme: readthedocs
-
+site_name: R Devel Env Docs
 nav:
     - 'Home': index.md
     - 'Tutorials':
@@ -12,12 +9,61 @@ nav:
         - 'Updating Source Code' : 'tutorials/update_source.md'
         - 'Creating a Patch File' : 'tutorials/patch_update.md'
         - 'Multiple R Version' : 'tutorials/multi_r_compilation.md'
-        - 'Local Setup' : 'tutorials/localsetup.md'
+        - 'SVN Help' : 'tutorials/svn-help.md'
         - 'Restarting and Stopping' : 'tutorials/codespacestartstop.md'
+        - 'Local Setup' : 'tutorials/localsetup.md'
+    - 'Contributor Guide' : 
+        - 'contributor_guide/contributing_to_docs.md'
+        - 'contributor_guide/contributing_to_codebase.md'
     - 'Resources' : resources.md
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
 
-extra_javascript:
-  - javascripts/clipboard.js
 
-extra_css:
-  - styles/styles.css
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+      primary: indigo
+      accent: blue
+    - scheme: slate 
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode    
+      primary: indigo
+      accent: blue
+
+plugins:
+  - social
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/r-devel/r-dev-env
+    - icon: fontawesome/brands/slack
+      link: https://r-contributors.slack.com/
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
