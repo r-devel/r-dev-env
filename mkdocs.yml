@@ -9,7 +9,7 @@ nav:
         - 'Updating Source Code' : 'tutorials/update_source.md'
         - 'Creating a Patch File' : 'tutorials/patch_update.md'
         - 'Multiple R Version' : 'tutorials/multi_r_compilation.md'
-        - 'SVN Help' : 'tutorials/svn-help.md'
+        - 'SVN Help' : 'tutorials/svn_help.md'
         - 'Restarting and Stopping' : 'tutorials/codespacestartstop.md'
         - 'Local Setup' : 'tutorials/localsetup.md'
     - 'Contributor Guide' : 
