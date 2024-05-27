@@ -13,8 +13,8 @@
 				"r.rpath.linux": "/usr/bin/R",
         "r.rterm.linux": "/usr/bin/R",
         "workbench.editorAssociations": {   
-           "*.md": "vscode.markdown.preview.editor",
-        }   
+           "*.md": "vscode.markdown.preview.editor"
+        },   
 				"svn.multipleFolders.enabled": true,
 				"r.lsp.diagnostics": false
 			},
