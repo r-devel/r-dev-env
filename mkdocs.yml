@@ -1,4 +1,4 @@
-site_name: R Devel Env Docs
+site_name: R Devel Container Docs
 nav:
     - 'Home': index.md
     - 'Container Setup':
@@ -51,7 +51,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/r-devel/r-dev-env
+      link: https://github.com/r-devel/r-dev-env/
     - icon: fontawesome/brands/slack
       link: https://r-contributors.slack.com/
 
