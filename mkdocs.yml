@@ -1,8 +1,11 @@
 site_name: R Devel Env Docs
 nav:
     - 'Home': index.md
+    - 'Container Setup':
+        - 'Starting Codespace': 'container_setup/creating_codespace.md'
+        - 'Restarting and Stopping' : 'container_setup/codespacestartstop.md'
+        - 'Local Setup' : 'container_setup/localsetup.md'
     - 'Tutorials':
-        - 'Starting Codespace' : 'tutorials/creating_codespace.md'
         - 'Running R' : 'tutorials/running_r.md'
         - 'Building R': 'tutorials/building_r.md'
         - 'R Contribution Workflow' : 'tutorials/contribution_workflow.md'
@@ -10,8 +13,6 @@ nav:
         - 'Creating a Patch File' : 'tutorials/patch_update.md'
         - 'Multiple R Version' : 'tutorials/multi_r_compilation.md'
         - 'SVN Help' : 'tutorials/svn_help.md'
-        - 'Restarting and Stopping' : 'tutorials/codespacestartstop.md'
-        - 'Local Setup' : 'tutorials/localsetup.md'
     - 'Contributor Guide' : 
         - 'contributor_guide/contributing_to_docs.md'
         - 'contributor_guide/contributing_to_codebase.md'
