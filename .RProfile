@@ -1,0 +1,16 @@
+# Temporarily use site library to initialize VSCode-R extension.
+# This is where packages required by VSCode-R extension are installed, 
+# specifically jsonlite and rlang for R Session Watcher.
+# These are built and installed for the default R version when container is built.
+
+lp <- .libPaths() # already includes site library for default R version.
+.libPaths("/usr/local/lib/R/site-library")
+
+if (interactive() && Sys.getenv("RSTUDIO") == "") {
+  source(file.path(Sys.getenv(if (.Platform$OS.type == "windows") "USERPROFILE" else "HOME"), ".vscode-R", "init.R"))
+}
+
+options(vsc.dev.args = list(width = 800, height = 600))
+
+# Revert to vanilla .libPaths(), so built R only has base + recommended packages
+.libPaths(lp)
