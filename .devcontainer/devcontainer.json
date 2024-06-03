@@ -2,7 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp 
 {
 	"name": "R-Dev-Env",
-	"image": "ghcr.io/r-devel/r-dev-env:add-version-number-to-container",
+	"image": "ghcr.io/r-devel/r-dev-env:devel",
 	"hostRequirements": {
 		"cpus": 4
 	},
@@ -11,10 +11,11 @@
 		"vscode": {
 			"settings": {
 				"r.rpath.linux": "/usr/bin/R",
-        "r.rterm.linux": "/usr/bin/R",
-        "workbench.editorAssociations": {   
-           "*.md": "vscode.markdown.preview.editor"
-        },   
+				"r.plot.useHttpgd":true,
+                            "r.rterm.linux": "/usr/bin/R",
+                            "workbench.editorAssociations": {   
+                               "*.md": "vscode.markdown.preview.editor"
+                             },   
 				"svn.multipleFolders.enabled": true,
 				"r.lsp.diagnostics": false
 			},
