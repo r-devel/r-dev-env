@@ -46,7 +46,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          images: ghcr.io/${{ github.repository }}
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -58,7 +58,8 @@ jobs:
         with:
           context: .
           push: true
-          build-args: |
-            "CONTAINER_VERSION=${{ env.VERSION }}"
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:devel
+          #build-args: |
+            #"CONTAINER_VERSION=${{ env.VERSION }}"
+          
+          #labels: ${{ steps.meta.outputs.labels }}
