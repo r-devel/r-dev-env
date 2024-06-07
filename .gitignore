@@ -4,3 +4,4 @@ R-devel/
 R-devel.tar.gz
 /venv
 .cache/
+.Rproj.user
