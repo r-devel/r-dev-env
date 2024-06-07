@@ -21,5 +21,5 @@ You can refer to the remaining sections as needed!
 ## Other Docs
 
 - [Restarting And Stopping Codespace](docs/tutorials/codespacestartstop.md)
-- [Using R Dev Environment Locally](docs/tutorials/localsetup.md)
+- [Using R Dev Container Locally](docs/tutorials/localsetup.md)
 - [Useful Resources](docs/resources.md)

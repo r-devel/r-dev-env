@@ -4,65 +4,63 @@
 ### Build Setup (Without Recommended Packages)
 **1) Environment Variables**
 
-- We have environment variables for setting the paths for building R and storing the source code.
-- The path ENV variable for R Build and R Source code are BUILDDIR and TOP_SRCDIR respectively.
+- We have environment variables defining paths to directories for building R and storing the source code.
+- `BUILDDIR` defines the build directory: /workspaces/r-dev-env/build/r-devel
+`TOP_SRCDIR` defines the source directory: /workspaces/r-dev-env/svn/r-devel
 - The environment variables are set in the codespace image and are available when the codespace starts.
 
-  ![alt text](../assets/rdev6.png)
-
+  ![alt text](../assets/rdev6.png) //newss
 **2) svn checkout**
 
-- The svn checkout cmd lets us create working of a repository with specific tag/branch.
-- Command:
+- The svn checkout command lets us create a local copy of a specific tag/branch of a repository.
+- We can check out the latest version of the trunk (the main branch) of the R sources to $TOP_SRCDIR as follows:
    ```bash
-     svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
+     svn checkout https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
    ```
 - Output : We get file structure something like this after checking out R source code from R svn repository.
 
-   ![alt text](../assets/rdev7.png)
+   ![alt text](../assets/rdev7.png)//newss
 
-**3) Change Directory to BUILDDIR**
+**3) Change to the build directory**
    
-- We need to change our directory to R build directory(BUILDDIR) to build and configure our R source code.
+- To keep the source directory clean, we change to a build directory to configure and build R.
 
-- First we will create a directory using env var BUILDDIR.
-- Command:
+- First create the directory specified by the BUILDDIR environment variable.
 ```bash
 mkdir -p $BUILDDIR
 ```
 
-- Then we can change directory from root to $BUILDDIR one.
-- Command:
+- Then we can change directory from root to the build directory.
 ```bash
 cd $BUILDDIR
 ```
 
-**4) configure source code**
+**4) configure the build**
 
-- After we change directory to BUILDDIR we can configure and build R.
-- Commands :
+- After we change directory, we must run the configure script from the source directory.
+This step takes ~1 minute on the codespace.
 ```bash
-"$TOP_SRCDIR/configure" --enable-R-shlib --without-recommended-packages
+"$TOP_SRCDIR/configure"
 make
-sudo make install
+make check
 ```
 
 
 - The configure cmd prepares for building R, creating files and folders inside the BUILDDIR directory.
 - Output : We get file structure something like this after using configure command.
      
-   ![alt text](../assets/rdev8.png)
+   ![alt text](../assets/rdev8.png) //newss
 
 **5) Make Contributions**
 
 - After having built the current development version of R, we can now make changes to the source code and contribute to the project.
+- Follow the [R Contribution Workflow](./contribution_workflow.md)tutorial to learn how to do this.
 
 ### Build Setup (With Recommended Packages)
 This build setup differs from the above because the recommended packages for R are included.
 
 **1) Checkout the R source using svn.**
 
-- Command:
 ```bash
 svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
 ```
@@ -70,15 +68,16 @@ svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
 
 **2) Create a directory using the environment variable called BUILDDIR.**
 
-- Command:
 ```bash
 mkdir -p $BUILDDIR
 ```
 
 
-**3) Then we will install recommended packages using cmd**
+**3) Download the source code for the recommended packages**
 
-- Command:
+To build R with the recommended packages, we need to run the tools/rsync-recommended script from the source directory to download the source code for these packages:
+
+
 ```bash
 "$TOP_SRCDIR/tools/rsync-recommended"
 ```

@@ -4,9 +4,9 @@
 #### 1. Example Contribution Workflow using DevContainer:
 -  To start working in R we will click on `R:(not attach)` option which is in the bottom right of our R-dev codespace. It will open R terminal for us.
      
-    ![image](https://github.com/r-devel/r-dev-env/assets/72031540/4ad3ed18-108a-4f29-ab6c-7f32d81721a7)
+    ![alt text](../assets/rdev11.png)
 
-    ![image](https://github.com/r-devel/r-dev-env/assets/72031540/b3bdd3da-903d-4330-81c3-e41147d5dcd4)
+    ![alt text](../assets/rdev12.png)
 
 -  We can now run R commands. We will use the `utils::askYesNo()` function as an example
     
