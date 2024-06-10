@@ -58,7 +58,7 @@ make check
 
 If the check fails with an error, you have broken something with your local changes. Fix this before proceeding. Otherwise go back to the source directory to continue
 
- ```bash
+```bash
 cd $TOP_SRCDIR
 ```
 

@@ -19,6 +19,8 @@
 #### Idle timeout:
 If you do not interact with the codespace, it will close automatically when it reaches the idle timeout limit. By default, this is 30 minutes, but you can [set a personal timeout](https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces#setting-your-default-timeout-period) limit in your GitHub settings.
 
+The code changes and operations we have performed inside the codespace will still be inside the stopped codespace. If your codespace is stopped then you can restart it as shown below.
+
 #### How to Restart Codespaces again?
 
 - Go to [github.com/codespaces](https://github.com/codespaces)

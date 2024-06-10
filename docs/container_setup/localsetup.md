@@ -1,18 +1,19 @@
-
+>!!! note
+>Local setup is not recommended on macOS or Windows as the Docker container will work via a Virtual Machine and building R will take far longer (e.g. a full build may take 1 hour vs 10 minutes!).
+    
 We can also use this codespace locally. For that we need to have some prerequisites installed.
 
 #### > Prerequisites :
 
 1. Docker Engine or Docker Desktop. You can find the docker desktop install instructions on [Docker Desktop Docs](https://www.docker.com/products/docker-desktop/).
 2. VSCode Editor. You can download and install from [VSCode website](https://code.visualstudio.com/download).
-3. A local copy of the [R Dev Container Repo](https://github.com/r-devel/r-dev-env/).
 
 #### > Steps to run R Development Container locally :
 
-1. Clone the [R Dev Container repo](https://github.com/r-devel/r-dev-env/)
+1. Clone the [R Dev Env Github repo](https://github.com/r-devel/r-dev-env/)
 2. Change directory to r-dev-container
 ```
-cd r-dev-container
+cd r-dev-env
 ```
 3. Restart VSCode in the r-dev-env directory with the command:
 ```bash
@@ -37,7 +38,7 @@ Click on `Reopen in DevContainer` button.
 
 7. After clicking on that button we will see our container is getting ready. It will take some time. So till that time you can have coffee :)
 ![image](https://github.com/r-devel/r-dev-env/assets/72031540/044d1e27-22a6-45df-82ec-8fb65abd75e8)
-8. We can just print the environment variables mentioned in the welcome message on the terminal. And there we go!!! We have setup our R Dev Container locally.
+8. We can also test whether the dev container is working or not by just printing the environment variables mentioned in the welcome message on the terminal. And there we go!!! We have setup our R Dev Container locally.
 ![image](https://github.com/r-devel/r-dev-env/assets/72031540/026668de-a9bb-49bc-a515-c16a218b685d)
 
 9.  The container will be closed when you close VSCode. To reopen the container, open the r-dev-env directory in VSCode.
