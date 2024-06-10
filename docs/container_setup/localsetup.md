@@ -38,7 +38,7 @@ Click on `Reopen in DevContainer` button.
 
 7. After clicking on that button we will see our container is getting ready. It will take some time. So till that time you can have coffee :)
 ![image](https://github.com/r-devel/r-dev-env/assets/72031540/044d1e27-22a6-45df-82ec-8fb65abd75e8)
-8. We can also test whether the dev container is working or not by just printing the environment variables mentioned in the welcome message on the terminal. And there we go!!! We have setup our R Dev Container locally.
+8. We can also test whether the dev container is working or not by just printing the environment variables mentioned in the welcome message on the terminal. And there we go!!! We have setup our R Dev Env locally.
 ![image](https://github.com/r-devel/r-dev-env/assets/72031540/026668de-a9bb-49bc-a515-c16a218b685d)
 
 9.  The container will be closed when you close VSCode. To reopen the container, open the r-dev-env directory in VSCode.
