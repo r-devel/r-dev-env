@@ -2,12 +2,12 @@
 
 # File to store the paths
 STORAGE_FILE="/workspaces/r-dev-env/paths.txt"
-DEFAULT_LABEL="r-devel"
-DEFAULT_BUILDDIR="/workspaces/r-dev-env/build/$DEFAULT_LABEL"
-DEFAULT_TOP_SRCDIR="/workspaces/r-dev-env/svn/$DEFAULT_LABEL"
+DEFAULT_LABEL="${DEFAULT_LABEL:-r-devel}"
+DEFAULT_BUILDDIR="${BUILDDIR:-/workspaces/r-dev-env/build/$DEFAULT_LABEL}"
+DEFAULT_TOP_SRCDIR="${TOP_SRCDIR:-/workspaces/r-dev-env/svn/$DEFAULT_LABEL}"
 
 # Ensure the storage file exists
-touch $STORAGE_FILE
+#touch $STORAGE_FILE
 
 # Function to save the new directories to the storage file
 save_path() {
