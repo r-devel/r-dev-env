@@ -25,9 +25,8 @@ RUN apt install -y ccache
 #RUN echo 'export PATH="/usr/lib/ccache:$PATH"' | tee -a /home/vscode/.bashrc
 
 
-ENV DEFAULT_LABEL="r-devel"
-ENV BUILDDIR="/workspaces/r-dev-env/build/$DEFAULT_LABEL"
-ENV TOP_SRCDIR="/workspaces/r-dev-env/svn/$DEFAULT_LABEL"
+ENV BUILDDIR="/workspaces/r-dev-env/build/r-devel"
+ENV TOP_SRCDIR="/workspaces/r-dev-env/svn/r-devel"
 ENV PATCHDIR='/workspace/r-dev-env/patches'
 ARG CONTAINER_VERSION
 ENV CONTAINER_VERSION ${CONTAINER_VERSION}
