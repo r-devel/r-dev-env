@@ -7,7 +7,9 @@ DEFAULT_BUILDDIR="${BUILDDIR:-/workspaces/r-dev-env/build/$DEFAULT_LABEL}"
 DEFAULT_TOP_SRCDIR="${TOP_SRCDIR:-/workspaces/r-dev-env/svn/$DEFAULT_LABEL}"
 
 # Ensure the storage file exists
-#touch $STORAGE_FILE
+if [ ! -f "$STORAGE_FILE" ]; then
+    touch "$STORAGE_FILE"
+fi
 
 # Function to save the new directories to the storage file
 save_path() {
