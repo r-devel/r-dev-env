@@ -8,21 +8,16 @@
 	},
 	
 	"customizations": {
-	    "codespaces": {
-            "openFiles": [
-                "WELCOME.md"
-            ]
-        },
-		"vscode": {
+	    "vscode": {
 			"settings": {
+			    "r.lsp.diagnostics": false,
+			    "r.plot.useHttpgd": true,
 				"r.rpath.linux": "/usr/bin/R",
-				"r.plot.useHttpgd":true,
-                            "r.rterm.linux": "/usr/bin/R",
-                            "workbench.editorAssociations": {   
-                               "*.md": "vscode.markdown.preview.editor"
-                             },   
+				"r.rterm.linux": "/usr/bin/R",
 				"svn.multipleFolders.enabled": true,
-				"r.lsp.diagnostics": false
+                "workbench.editorAssociations": {   
+                    "*.md": "vscode.markdown.preview.editor"
+                }
 			},
 			"extensions": [
 				"REditorSupport.r",
