@@ -17,7 +17,8 @@
 				"svn.multipleFolders.enabled": true,
                 "workbench.editorAssociations": {   
                     "*.md": "vscode.markdown.preview.editor"
-                }
+                },
+				"workbench.startupEditor": "none"
 			},
 			"extensions": [
 				"REditorSupport.r",
