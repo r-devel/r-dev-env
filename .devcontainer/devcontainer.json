@@ -8,6 +8,11 @@
 	},
 	
 	"customizations": {
+	    "codespaces": {
+            "openFiles": [
+                "WELCOME.md"
+            ]
+        },
 		"vscode": {
 			"settings": {
 				"r.rpath.linux": "/usr/bin/R",
@@ -29,8 +34,7 @@
 			
 		}
 	},
-	//"postCreateCommand":"cat /workspaces/r-dev-env/scripts/welcome_msg.sh >> ~/.bashrc && bash /workspaces/r-dev-env/scripts/localscript.sh"
-	"postCreateCommand": "sleep 10 && code /workspaces/r-dev-env/WELCOME.md &"
+	"postCreateCommand":"cat /workspaces/r-dev-env/scripts/welcome_msg.sh >> ~/.bashrc && bash /workspaces/r-dev-env/scripts/localscript.sh"
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
