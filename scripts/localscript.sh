@@ -13,4 +13,4 @@ cp /workspaces/r-dev-env/scripts/set_build_r.sh /home/vscode/.local/bin/set_buil
 rm -rf .git
 
 # open WELCOME.md after workspace customisations have been made
-code WELCOME.md
+code /workspaces/r-dev-env/WELCOME.md
