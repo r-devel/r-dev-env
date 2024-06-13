@@ -6,11 +6,13 @@
 name: Build and publish Docker image
 
 on:
+  workflow_dispatch:
   pull_request:
     branches: ["devel"]
     types: [closed]
     paths:
-      - 'dockerfile'
+      - '.github/workflows/build-and-publish-image.yml'
+      - 'Dockerfile'
       - 'reinstall-cmake.sh'
   
 
