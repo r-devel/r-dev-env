@@ -11,6 +11,3 @@ cp /workspaces/r-dev-env/scripts/set_build_r.sh /home/vscode/.local/bin/set_buil
 
 # remove git directory
 rm -rf .git
-
-# open WELCOME.md after workspace customisations have been made
-code /workspaces/r-dev-env/WELCOME.md
