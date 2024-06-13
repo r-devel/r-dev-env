@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# open WELCOME.md unless MARKER file exists
+if [ ! -f "MARKER" ]; then
+    code WELCOME.md
+    touch MARKER
+fi
+
 # clear the screen before displaying welcome message
 clear
 
