@@ -24,8 +24,10 @@ RUN apt install shellcheck
 RUN apt install -y ccache
 #RUN /usr/sbin/update-ccache-symlinks
 #RUN echo 'export PATH="/usr/lib/ccache:$PATH"' | tee -a /home/vscode/.bashrc
-ENV BUILDDIR='/workspaces/r-dev-env/build'
-ENV TOP_SRCDIR='/workspaces/r-dev-env/svn'
-ENV PATCHDIR='/workspaces/r-dev-env/patches'
+
+
+ENV BUILDDIR="/workspaces/r-dev-env/build/r-devel"
+ENV TOP_SRCDIR="/workspaces/r-dev-env/svn/r-devel"
+ENV PATCHDIR='/workspace/r-dev-env/patches'
 ARG CONTAINER_VERSION
 ENV CONTAINER_VERSION ${CONTAINER_VERSION}
