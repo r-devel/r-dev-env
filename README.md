@@ -1,7 +1,7 @@
-# Welcome to the R Dev Env!
+# Welcome to the R Dev Container!
 
 If you haven't seen them yet, you can find the
-[R Dev Env Docs](https://contributor.r-project.org/r-dev-env/) online.
+[R Dev Container Docs](https://contributor.r-project.org/r-dev-env/) online.
 
 ## Tutorials
 

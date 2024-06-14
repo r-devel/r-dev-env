@@ -1,4 +1,4 @@
-site_name: R Devel Env Docs
+site_name: R Devel Container Docs
 nav:
     - 'Home': index.md
     - 'Container Setup':
