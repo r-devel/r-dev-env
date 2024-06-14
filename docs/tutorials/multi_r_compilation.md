@@ -3,7 +3,7 @@
 To install multiple R versions inside a single codespace.
 
 
-1) We have 2 env var path $BUILLDIR and $TOP_SRCDIR, we will leverage this var paths and build differeent R version inside it.
+1) We have 2 env var path $BUILDDIR and $TOP_SRCDIR, we will leverage these var paths and build differeent R versions inside it.
 
 2) In basic contribution workflow we have seen for checking out R source code from svn we use command 
 
