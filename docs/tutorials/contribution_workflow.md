@@ -20,6 +20,10 @@
 
 #### 2. Editing Source Code
 - Edit the source code of `utils::askYesNo()` to change the default options. The source code can be found in `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.
+- You can redirect to that file using 
+``` 
+code $TOP_SRCDIR/src/library/utils/R/askYesNo.R
+```
 
 **> Before edit:**
 ![alt text](../assets/rdev20.png)

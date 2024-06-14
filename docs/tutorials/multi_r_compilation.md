@@ -51,4 +51,5 @@ make
 ```
 
 
-> **Note** : We can install different R versions using the following steps but whenever we checkout or build the R source code. Please be caution and use the proper directory naming. For example we have 3 versions "4.2.4", "4.3" and "r-devel" directories. To build r-devel we can only use "$TOP_SRCDIR/r-devel" and "$BUILDDIR/r-devel" directory path.
+!!! note
+    We can install different R versions using the following steps but whenever we checkout or build the R source code. Please be caution and use the proper directory naming. For example we have 3 versions "4.2.4", "4.3" and "r-devel" directories. To build r-devel we can only use "$TOP_SRCDIR/r-devel" and "$BUILDDIR/r-devel" directory path.
