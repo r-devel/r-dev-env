@@ -17,7 +17,8 @@
 				"svn.multipleFolders.enabled": true,
                 "workbench.editorAssociations": {   
                     "*.md": "vscode.markdown.preview.editor"
-                }
+                },
+                "workbench.welcomePage.walkthroughs.openOnInstall": false
 			},
 			"extensions": [
 				"REditorSupport.r",
@@ -26,7 +27,6 @@
 				"ms-vscode.cpptools",
 				"MS-vsliveshare.vsliveshare"
 			]
-			
 		}
 	},
 	"postCreateCommand":"cat /workspaces/r-dev-env/scripts/welcome_msg.sh >> ~/.bashrc && bash /workspaces/r-dev-env/scripts/localscript.sh"

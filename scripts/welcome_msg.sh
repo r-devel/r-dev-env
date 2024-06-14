@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # open WELCOME.md unless MARKER file exists
-if [ ! -f "MARKER" ]; then
+if [ -f "INIT" ]; then
     code WELCOME.md
-    touch MARKER
+    rm INIT
 fi
 
 # clear the screen before displaying welcome message
