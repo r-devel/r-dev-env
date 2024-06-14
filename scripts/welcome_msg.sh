@@ -23,6 +23,7 @@ Have fun \U0001F601
 
 # open INDEX.md if INIT file exists
 if [ -f "INIT" ]; then
+    sleep 3
     code INDEX.md
     rm INIT
 fi
