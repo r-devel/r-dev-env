@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# open WELCOME.md unless MARKER file exists
-if [ -f "INIT" ]; then
-    code WELCOME.md
-    rm INIT
-fi
-
 # clear the screen before displaying welcome message
 clear
 
@@ -26,3 +20,9 @@ PATCHDIR = \"$PATCHDIR\"
 
 Have fun \U0001F601
 "
+
+# open INDEX.md if INIT file exists
+if [ -f "INIT" ]; then
+    code INDEX.md
+    rm INIT
+fi
