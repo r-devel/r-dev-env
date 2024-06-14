@@ -2,7 +2,7 @@
 ## Contribution Workflow
 
 #### 1. Example Contribution Workflow using the R Dev Container:
--  To start working in R we will click on `R:(not attach)` option which is in the bottom right of our R-dev codespace. It will open R terminal for us.
+-  To start working in R we will click on `R:(not attach)` which is in the bottom right of the VSCode window. This will open an R terminal for us.
      
     ![alt text](../assets/rdev11.png)
 
@@ -37,22 +37,21 @@
     prompts = getOption("askYesNo", gettext(c("Oh yeah!", "Don't think so", "Cancel"))),
 ```
 
-#### 3. Rebuid R
+#### 3. Rebuild R
 - We can re-build R with our changes. Since we have only modified the utils package, rebuilding R will only re-build the utils package.
 - First we need to be inside $BUILDDIR.
-- Quit R with q() or by closing the R terminal.
-In the bash terminal, change to the build directory:
+- Quit R with `q()` or by closing the R terminal.
+- In the bash terminal, change to the build directory:
 ```bash
 cd $BUILDDIR
 ```
-- After that we can run cmd `make` and `make check` in a series. The make command rebuilds R with the changes you made in 'step 2'. This will be much faster than the full build!"
+-  Now run the `make` command to rebuild R with the changes you made in step 2. This will be much faster than the full build!
 ```bash
 make
-make check
 ```
     
 ![alt text](../assets/rdev22.png)
-
+- - Optionally run `make check` to run R's test suite with your local changes. You may skip this step while you are iterating on a bug fix or other development, until you are ready to [create a patch](./patch_update.md).
 - To use the re-built R, simply open a new R terminal.
 
 #### 4. Cross check and Re-running Code 
