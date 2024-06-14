@@ -20,6 +20,8 @@ source ./venv/bin/activate
 pip install mkdocs mkdocs-material[imaging]
 ```
 
+**N.B.** mkdocs may have an issue finding the Cairo library. The issue is discussed on the [mkdocs](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/) pages
+
 6. After setting up the virtual environment and installing necessary libraries, navigate to the root directory of the project where the `mkdocs.yml` file is located.
 
 7. To start the local development server and preview changes, run the following command:
