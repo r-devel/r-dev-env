@@ -60,8 +60,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:devel
-          #build-args: |
-            #"CONTAINER_VERSION=${{ env.VERSION }}"
-          
-          #labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}
+          build-args: |
+            CONTAINER_VERSION=${{ env.VERSION }}
+          labels: ${{ steps.meta.outputs.labels }}
