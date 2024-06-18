@@ -10,8 +10,8 @@ We can also use this codespace locally. For that we need to have some prerequisi
 
 #### > Steps to run R Development Container locally :
 
-1. Clone the [R Dev Env Github repo](https://github.com/r-devel/r-dev-env/)
-2. In a terminal, Change directory to r-dev-container
+1. Clone the [R Dev Container Github repo](https://github.com/r-devel/r-dev-env/)
+2. In a terminal, change directory to r-dev-env
 ```
 cd r-dev-env
 ```

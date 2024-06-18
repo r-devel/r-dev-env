@@ -1,10 +1,10 @@
 
 ## Build Setup
-**1) Environment Variables**
+**1) Environment variables**
 
 - We have environment variables defining paths to directories for building R and storing the source code.
-- `BUILDDIR` defines the build directory: /workspaces/r-dev-env/build/r-devel. 
-- `TOP_SRCDIR` defines the source directory: /workspaces/r-dev-env/svn/r-devel
+- `BUILDDIR` defines the build directory: `/workspaces/r-dev-env/build/r-devel`. 
+- `TOP_SRCDIR` defines the source directory: `/workspaces/r-dev-env/svn/r-devel`
 - The environment variables are set in the codespace image and are available when the codespace starts.
 
   ![alt text](../assets/rdev6.png)
@@ -20,10 +20,11 @@
 
    ![alt text](../assets/rdev8.png)
 
-**3) Install Recommended Packages for R**
+**3) Download recommended packages for R**
+
 To build R with the recommended packages, we need to run the `tools/rsync-recommended` script from the source directory to download the source code for these packages:
 ```bash
-"$TOP_SRCDIR/tools/rsync-recommended"
+$TOP_SRCDIR/tools/rsync-recommended
 ```
 ![alt text](../assets/rdev9.png)
 
@@ -62,6 +63,7 @@ Having configured R, we run `make` to build R. This take 5-10 minutes on the cod
 make
 ```
 **7) Check R**
+
 Check that the build of R passes R's standard checks:
 ```bash
 make check
@@ -76,7 +78,7 @@ which_r
 ```
 This means that new R terminals will use the version of R you have just built!
 
-**9) Make Contributions**
+**9) Make contributions**
 
 - After having built the current development version of R, we can now make changes to the source code and contribute to the project.
-- Follow the [R Contribution Workflow](./contribution_workflow.md)tutorial to learn how to do this.
+- Follow the [R Contribution Workflow](./contribution_workflow.md) tutorial to learn how to do this.

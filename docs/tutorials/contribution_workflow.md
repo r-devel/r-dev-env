@@ -55,7 +55,9 @@ make
 ```
     
 ![alt text](../assets/rdev22.png)
-- - Optionally run `make check` to run R's test suite with your local changes. You may skip this step while you are iterating on a bug fix or other development, until you are ready to [create a patch](./patch_update.md).
+
+- Optionally run `make check` to run R's test suite with your local changes. You may skip this step while you are iterating on a bug fix or other development, until you are ready to [create a patch](./patch_update.md).
+
 - To use the re-built R, simply open a new R terminal.
 
 #### 4. Cross check and Re-running Code 

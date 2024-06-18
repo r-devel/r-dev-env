@@ -1,4 +1,4 @@
-# Useful Resources Links
+# Useful Links
 
 * [R in Visual Studio code](https://code.visualstudio.com/docs/languages/r)
 * [VSCode R Wiki](https://github.com/REditorSupport/vscode-R/wiki)
