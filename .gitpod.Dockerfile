@@ -23,7 +23,7 @@ RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
 
 RUN apt install -y shellcheck
 RUN apt install -y ccache
-RUN apt install rsync
+RUN apt install -y rsync
 #RUN /usr/sbin/update-ccache-symlinks
 #RUN echo 'export PATH="/usr/lib/ccache:$PATH"' | tee -a /home/vscode/.bashrc
 USER gitpod
