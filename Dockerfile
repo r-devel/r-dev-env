@@ -28,6 +28,6 @@ RUN apt install -y ccache
 
 ENV BUILDDIR="/workspaces/r-dev-env/build/r-devel"
 ENV TOP_SRCDIR="/workspaces/r-dev-env/svn/r-devel"
-ENV PATCHDIR='/workspace/r-dev-env/patches'
+ENV PATCHDIR='/workspaces/r-dev-env/patches'
 ARG CONTAINER_VERSION
 ENV CONTAINER_VERSION ${CONTAINER_VERSION}
