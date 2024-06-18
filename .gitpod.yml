@@ -1,7 +1,13 @@
 image:
   file: .gitpod.Dockerfile
+  #after first build of gitpod docker image change file to image with the tag.
+
+tasks:
+    - name: Initial Setup for R-dev-env Gitpod Workspace
+      init: cat /workspace/r-dev-env/scripts/welcome_msg.sh >> ~/.bashrc && bash /workspace/r-dev-env/scripts/localscript.sh
 
 vscode:
-   extensions:
+
+    extensions:
      - REditorSupport.r
      - johnstoncode.svn-scm
