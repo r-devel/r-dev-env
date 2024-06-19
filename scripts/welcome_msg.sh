@@ -5,7 +5,7 @@ clear
 
 # welcome message to add to bashrc
 echo -e "
-Welcome to the Containerised R Development Environment v$CONTAINER_VERSION
+Welcome to the R Dev Container v$CONTAINER_VERSION
 
 Here you can modify, compile and use R as described in
 the r development guide:
