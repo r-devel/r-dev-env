@@ -1,6 +1,3 @@
-
-## Updating Source Code
-
 The R Core Team commit changes to the development version of R sometimes multiple times a day. It's a good idea to update your local copy of the source code from time to time, especially before creating a patch. To do so, follow these steps:
 
 #### 1) Close R terminal

@@ -1,5 +1,3 @@
-## Creating a Patch File
-
 A patch file captures the local changes (additions and deletions) to the source code. It can be shared on [R's Bugzilla](https://bugs.r-project.org/) to propose a change to R, e.g. a fix for a bug.
 
 To make a patch
