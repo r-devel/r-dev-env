@@ -15,7 +15,7 @@ We can also use this codespace locally. For that we need to have some prerequisi
 ```
 cd r-dev-env
 ```
-3. Restart VSCode in the r-dev-env directory with the command:
+3. Restart VSCode in the `r-dev-env` directory with the command:
 ```bash
 code .
 ```
@@ -41,4 +41,4 @@ Click on `Reopen in DevContainer` button.
 8. We can also test whether the dev container is working or not by just printing the environment variables mentioned in the welcome message on the terminal. And there we go!!! We have setup our R Dev Container locally.
 ![start localsetup](../assets/rdev25.png)
 
-9.  The container will be closed when you close VSCode. To reopen the container, open the r-dev-env directory in VSCode.
+9.  The container will be closed when you close VSCode. To reopen the container, open the `r-dev-env` directory in VSCode.

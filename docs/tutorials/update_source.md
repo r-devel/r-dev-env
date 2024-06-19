@@ -69,7 +69,7 @@ svn update
 
 #### 7)  Rebuild and check with the updates
 
-To rebuild R with the latest changes from the R Core Team and any local changes you have kept, go to the build directory and to build and check R
+To rebuild R with the latest changes from the R Core Team and any local changes you have kept, go to the build directory to build and check R
 
 ```bash
 cd $BUILDDIR

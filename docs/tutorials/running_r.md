@@ -10,7 +10,7 @@ code R/test.R
 
 ![alt text](../assets/rdev11.png)
 
-3) Click on the `R:(not attached)` link to launch R in the terminal. You can then send code from the .R file to the R terminal by pressing `cmd/ctrl + enter`.
+3) Click on the `R:(not attached)` link to launch an R terminal. You can then send code from the `.R` file to the R terminal by pressing `cmd/ctrl + enter`.
 
 ![alt text](../assets/rdev12.png)
 ![alt text](../assets/rdev5.png)
