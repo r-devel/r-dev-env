@@ -1,72 +1,80 @@
+The R Core Team commit changes to the development version of R sometimes multiple times a day. It's a good idea to update your local copy of the source code from time to time, especially before creating a patch. To do so, follow these steps:
 
-## Updating Source Code
+#### 1) Close R terminal
 
-After following through the Contribution workflow and making the following changes, we need to update it inside the source code directory. To do so, first we need to follow this steps:
+If you have an R terminal open, quit R or close the terminal.
 
-#### 1) Change Directory to TOP_SRCDIR
+#### 2) Go to the source directory
 
-If you are currently inside the BUILDDIR directory or root directory(/workspaces/r-dev-env) make sure to change it to TOP_SRCDIR so that we can update the changes made inside our source code.
+In a bash terminal, change to the source directory
 
 ```bash
 cd $TOP_SRCDIR
 ```
 
+#### 3) Review local changes
 
-#### 2) Update using svn
-
-Now we want to update the source code for that we will use svn command update
-
-```bash
-svn update
-```
-
-
-#### 3) Check changes made using diff
-
-To cross check the changes we made in source code. We will use this command
+Use the Subversion diff command to review changes you have made to source code
 
 ```bash
 svn diff
 ```
 
-#### 4) Revert Changes(Optional step)
+#### 4) Revert changes (optional)
 
-In some cases, we might want to revert the changes we made. We can use the revert command
+If you no longer want to keep your local changes, you can revert them.
 
-To revert the changes made in specific file, we can use
+Revert the changes made in specific file
 
 ```bash
 svn revert src/library/utils/R/askYesNo.R
 ```
-
-
-To revert changes in a directory
+Revert changes in a directory
 
 ```bash
 svn revert src/lib/utils
 ```
 
-
-To revert all local changes
+Revert all local changes
 
 ```bash
 svn revert -R .
 ```
 
-#### 5) Change Directory and Rebuild
+#### 5) Rebuild and check with any local changes
 
-To rebuild the R version and reflect on the changes made, we want to change directory to BUILDDIR from TOP_SRCDIR
+If you have no local changes remaining, skip to the next step.
+
+Otherwise, go to the build directory to build and check R with your local changes.
 
 ```bash
 cd $BUILDDIR
+make
+make check
 ```
 
-
-#### 6) Rebuild the Source Code
-
-Now rebuild using make command
+If the check fails with an error, you have broken something with your local changes. Fix this before proceeding. Otherwise go back to the source directory to continue
 
 ```bash
-make check
-make
+cd $TOP_SRCDIR
 ```
+
+#### 6) Update using svn
+
+Use the Subversion command `update` to update your local copy with the latest changes by the R Core Team.
+
+```bash
+svn update
+```
+
+#### 7)  Rebuild and check with the updates
+
+To rebuild R with the latest changes from the R Core Team and any local changes you have kept, go to the build directory to build and check R
+
+```bash
+cd $BUILDDIR
+make 
+make check
+```
+
+If the check fails, this will be due to recent changes made by the R Core Team. See [SVN Help](./svn_help.md) for how to revert to a version that passes check.

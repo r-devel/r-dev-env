@@ -1,54 +1,84 @@
+The [Building R](./building_r.md) and [R Contribution Workflow](./building_r.md) 
+tutorials use the simplest set up, working on a single copy of the R sources.
 
-## Installing Multiple R versions
-To install multiple R versions inside a single codespace.
+It can be helpful to work with multiple versions of R:
 
+-   to compare your modifications with an unmodified copy, e.g. to
+    compare speed or memory usage, or
+-   to work on independent changes, so that each patch only contains the
+    changes for one bug fix or new feature.
 
-1) We have 2 env var path $BUILDDIR and $TOP_SRCDIR, we will leverage these var paths and build differeent R versions inside it.
+You can build multiple R versions in the same Codespaces environment.
 
-2) In basic contribution workflow we have seen for checking out R source code from svn we use command 
+1.  First choose a name for the R version. This will be used to identify
+    the version and to name the build/source directory. By default, we
+    use the name `r-devel` and the environment variables `BUILDDIR` and
+    `TOP_SRCDIR` are set to match.
 
-```bash
-svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR"
-```
+    For illustration, we will use `r-devel-raw`, which you might use to
+    name a version of R that you never modify.
 
-But to able to install multiple R versions we need create sub-directory for different R versions. Let's say we are installing R-2.5.1 or R-devel version. We can create a sub directory for a specific version by using command.
+2.  You can set the `BUILDDIR` and `TOP_SRCDIR` environment variables to
+    match your chosen name using the `set_build_r` function:
 
-```bash
-svn checkout https://svn.r-project.org/R/trunk/ "$TOP_SRCDIR/r-devel"
-```
+    -   Open a terminal in the codespace.
 
+    -   Run the `set_build_r` function with your chosen name as the argument, e.g.
 
-The following command will checkout source code from svn into directory $TOP_SRCDIR/r-devel(TOP_SRCDIR = /workspaces/r-dev-env/svn/).
+        ```         
+        set_build_r r-devel-raw
+        ```
 
-3) Now we need to build the R version using source code we just checkout. To do so we can use the $BUILDDIR env var. We have seen earlier that to create directory using the following env var we use command `mkdir -p "$BUILDDIR"`. To create a sub directory for our version we have svn checkout that is r-devel, we can use command
+        The new values of the environment variables will be printed as confirmation:
 
-```bash
-mkdir -p "$BUILDDIR/r-devel"
-```
+        ```         
+        BUILDDIR is now set to /workspaces/r-dev-env/build/r-devel-raw
+        TOP_SRCDIR is now set to /workspaces/r-dev-env/svn/r-devel-raw
+        ```
+        
+3.  If you have an unmodified build of R-devel using the default name of
+    `r-devel`, you can simply copy the sources and the build to the new
+    directories with `rsync`:
 
+    ```         
+    rsync -a "$(dirname "$BUILDDIR")/r-devel/"* $BUILDDIR
+    rsync -a "$(dirname "$TOP_SRCDIR")/r-devel/"* $TOP_SRCDIR
+    ```
 
-This will creates as a directory named as $BUILDDIR/r-devel(BUILDDOR = /workspaces/r-dev-env/build).
+    Otherwise you can follow the steps in the [Building R](./building_r.md)
+    tutorial to checkout the R sources and build R using the new source and
+    build directories.
 
-4) After creating the build directory for our r-devel branch. We can just change directory using cd command.
+4.  Once you have a build of R under the new build directory, you will
+    see your chosen name in the choices when running the `which_r` script to 
+    select the version of R to run in new terminals, e.g.
 
-```bash
-cd "$BUILDDIR/r-devel"
-```
+    ```         
+    which_r
+    ```
 
+    ```  
+    Which version of R should be used in new R terminals?
+      1. R 4.4.0 (release version built into this container)
+      Additional R builds available:
+        2. r-devel
+        3. r-devel-raw
+    Enter the number corresponding to the selected version: 
+    ```
 
-5) Now we need to configure R build and we can configure using the command
+!!! Note
 
-```bash
-"$TOP_SRCDIR/r-devel/configure" --enable-R-shlib --without-recommended-packages
-```
-
-
-6) Finally, we can run make check and make command to build our R version.
-
-```bash
-make check
-make
-```
-
-
-> **Note** : We can install different R versions using the following steps but whenever we checkout or build the R source code. Please be caution and use the proper directory naming. For example we have 3 versions "4.2.4", "4.3" and "r-devel" directories. To build r-devel we can only use "$TOP_SRCDIR/r-devel" and "$BUILDDIR/r-devel" directory path.
+    `BUILDDIR` and `TOP_SRCDIR` will be set to the defaults using the label `r-devel` 
+    whenever a new bash terminal is opened, e.g. when the codespace is restarted.
+    
+    Whenever following instructions that use these variables to refer to the build 
+    and source directory, be sure they are pointing to the desired version! 
+    
+    You can check the values any time with 
+    
+    ```
+    echo $BUILDDIR
+    echo $TOP_SRCDIR
+    ```
+    
+    and switch with `set_build_r <name>`.

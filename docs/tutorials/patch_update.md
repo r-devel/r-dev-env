@@ -1,33 +1,22 @@
+A patch file captures the local changes (additions and deletions) to the source code. It can be shared on [R's Bugzilla](https://bugs.r-project.org/) to propose a change to R, e.g. a fix for a bug.
 
-## Creating a Patch File
+To make a patch
 
-We can also create a patch file for the update and changes that we made to the source code.
+1) Update your local copy of the source
 
-1) Assuming we have made a change and we want to submit a patch.
+If you have not recently updated your local copy of the R Subversion repository, follow the instructions in [Updating the Source Code](./update_source.md) to do this first.
 
-If necessary, update the version of R you are working on, with the latest changes in <https://svn.r-project.org/R/trunk/>.
+2) Create a patch file
 
-E.g. if the version of R you are working on is named "R-devel-working"
-
-```bash
-cd $TOP_SRCDIR/R-devel-working
-svn update
-cd $BUILDDIR/R-devel-working
-make # this will run the configure as before
-```
-
-
-2) Now run R's test suite to make sure that your change has not broken anything:
+Go to the source directory and use `svn diff` to create a patch. 
 
 ```bash
-make check
-```
-
-
-3) Then create a patch. The patch file will be saved inside the patchdir directory.
-
-```bash
-cd "$TOP_SRCDIR"
-svn update
+cd $TOP_SRCDIR
 svn diff > $PATCHDIR/patch.diff
+```
+
+The patch file will be saved in the directory specified by the PATCHDIR environment variable that is defined when the codespace starts
+
+```bash
+echo $PATCHDIR/patch.diff
 ```

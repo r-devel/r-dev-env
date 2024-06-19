@@ -1,4 +1,4 @@
-# Containerised R Development Environment
+# R Dev Container
 
 ## Project Background
 
