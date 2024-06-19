@@ -1,5 +1,3 @@
-
-## Build Setup
 **1) Environment variables**
 
 - We have environment variables defining paths to directories for building R and storing the source code.
@@ -76,7 +74,18 @@ Run the `which_r` script to set which R to use for R terminals in VSCode. When p
 ```
 which_r
 ```
-This means that new R terminals will use the version of R you have just built!
+```
+Which version of R should be used in new R terminals?
+  1. R 4.4.0 (release version built into this container)
+  Additional R builds available:
+    2. r-devel
+Enter the number corresponding to the selected version: 
+```
+This means that new R terminals will use the version of R you have just built![^1]
+
+[^1]: To switch back to the release version, run `which_r` and type `1`. The 
+selected version is saved in the VSCode settings, so will be saved when you 
+stop and restart the codespace.
 
 **9) Make contributions**
 
