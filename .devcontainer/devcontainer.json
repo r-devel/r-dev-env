@@ -2,21 +2,24 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp 
 {
 	"name": "R-Dev-Env",
-	"image": "ghcr.io/r-devel/r-dev-env:add-version-number-to-container",
+	"image": "ghcr.io/r-devel/r-dev-env:devel",
 	"hostRequirements": {
 		"cpus": 4
 	},
 	
 	"customizations": {
-		"vscode": {
+	    "vscode": {
 			"settings": {
+			    "r.lsp.diagnostics": false,
+			    "r.plot.useHttpgd": true,
 				"r.rpath.linux": "/usr/bin/R",
-        "r.rterm.linux": "/usr/bin/R",
-        "workbench.editorAssociations": {   
-           "*.md": "vscode.markdown.preview.editor"
-        },   
+				"r.rterm.linux": "/usr/bin/R",
+				"terminal.integrated.sendKeybindingsToShell": true,
 				"svn.multipleFolders.enabled": true,
-				"r.lsp.diagnostics": false
+                "workbench.editorAssociations": {   
+                    "*.md": "vscode.markdown.preview.editor"
+                },
+                "workbench.welcomePage.walkthroughs.openOnInstall": false
 			},
 			"extensions": [
 				"REditorSupport.r",
@@ -25,7 +28,6 @@
 				"ms-vscode.cpptools",
 				"MS-vsliveshare.vsliveshare"
 			]
-			
 		}
 	},
 	"postCreateCommand":"cat /workspaces/r-dev-env/scripts/welcome_msg.sh >> ~/.bashrc && bash /workspaces/r-dev-env/scripts/localscript.sh"

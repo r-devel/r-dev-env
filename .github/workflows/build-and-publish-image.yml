@@ -6,11 +6,13 @@
 name: Build and publish Docker image
 
 on:
+  workflow_dispatch:
   pull_request:
     branches: ["devel"]
     types: [closed]
     paths:
-      - 'dockerfile'
+      - '.github/workflows/build-and-publish-image.yml'
+      - 'Dockerfile'
       - 'reinstall-cmake.sh'
   
 
@@ -46,7 +48,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          images: ${{ env.REGISTRY }}/${{ github.repository }}
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -58,7 +60,7 @@ jobs:
         with:
           context: .
           push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}
           build-args: |
-            "CONTAINER_VERSION=${{ env.VERSION }}"
-          tags: ${{ steps.meta.outputs.tags }}
+            CONTAINER_VERSION=${{ env.VERSION }}
           labels: ${{ steps.meta.outputs.labels }}

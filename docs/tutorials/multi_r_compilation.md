@@ -66,8 +66,7 @@ You can build multiple R versions in the same Codespaces environment.
     Enter the number corresponding to the selected version: 
     ```
 
-
-!!! Note 
+!!! Note
 
     `BUILDDIR` and `TOP_SRCDIR` will be set to the defaults using the label `r-devel` 
     whenever a new bash terminal is opened, e.g. when the codespace is restarted.
