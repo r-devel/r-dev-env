@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Specify the parent directory
-parent_dir="/workspaces/r-dev-env/build"  # Assuming this is the correct path
+parent_dir="/workspaces/r-dev-env/build"  # need to change to dynamic afterwards //TODO
 
 # Path to the settings.json file
 settings_file_path="/home/vscode/.vscode-remote/data/Machine/settings.json"
@@ -12,40 +12,42 @@ echo "  1. R 4.4.0 (release version built into this container)"
 
 # Check for additional R versions in subdirectories
 if [ -d "$parent_dir" ]; then
-  echo "  Additional R builds available:"
-  
   # Create an array to store subdirectory names
   subdirs=()
   
   # Loop through subdirectories and print numbered list
   counter=2  # Start counter at 2 to avoid conflict with built-in R
   for dir in "$parent_dir"/*; do
-    if [ -d "$dir" ]; then
+    if [ -d "$dir/bin" ] && [ -x "$dir/bin/R" ]; then
       subdir=$(basename "$dir")
       subdirs+=("$subdir")  # Populate subdirs array
-      echo "    $counter. $subdir"
+      echo "  $counter. $subdir"
       ((counter++))
     fi
   done
+  
+  # If no additional R builds were found
+  if [ ${#subdirs[@]} -eq 0 ]; then
+    echo "No additional R builds available."
+  fi
 fi
 
 # Get user choice
 read -p "Enter the number corresponding to the selected version: " choice
 
-# Validate user choice
-if [[ ! "$choice" =~ ^[1-9]$ ]]; then
-  echo "Invalid choice. Please enter a number between 1 and $(($counter - 1))"
-  exit 1
-fi
-
 # Define selected version based on choice
-if [[ $choice -eq 1 ]]; then
+if [[ "$choice" -eq 1 ]]; then
   # Use built-in R
   selected_version="/usr/bin/R"
-else
+elif [[ "$choice" -ge 2 ]] && [[ "$choice" -lt "$counter" ]]; then
   # Use R from chosen subdirectory
   chosen_subdir="${subdirs[((choice - 2))]}"  
-  selected_version="$parent_dir/$chosen_subdir/bin/R"  
+  selected_version="$parent_dir/$chosen_subdir/bin/R"
+else
+  # Invalid choice, default to built-in R
+  range=$((counter - 1))
+  echo "Invalid choice, plese select options between 1 to $range. Defaulting to built-in R version."
+  selected_version="/usr/bin/R"
 fi
 
 # Update settings.json with the chosen R path
@@ -53,4 +55,3 @@ updated_settings_data=$(cat "$settings_file_path" | jq --arg subdir "$selected_v
 echo "$updated_settings_data" > "$settings_file_path"
 
 echo "R terminal will now use version: $selected_version"
-
