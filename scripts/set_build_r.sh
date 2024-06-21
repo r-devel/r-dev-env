@@ -1,4 +1,3 @@
-#!/bin/bash
 
 set_build_r() {
   if [ -z "$1" ]; then
