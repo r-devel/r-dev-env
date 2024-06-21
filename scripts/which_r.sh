@@ -26,11 +26,14 @@ if [ -d "$parent_dir" ]; then
     fi
   done
   
-  # If no additional R builds were found
-  if [ ${#subdirs[@]} -eq 0 ]; then
-    echo "No additional R builds available."
-  fi
+# If no additional R builds were found
+if [ ${#subdirs[@]} -eq 0 ]; then
+  range=1
+  echo "No additional R builds available."
+else
+  range=$((counter - 1))
 fi
+
 
 # Get user choice
 read -p "Enter the number corresponding to the selected version: " choice
@@ -45,8 +48,11 @@ elif [[ "$choice" -ge 2 ]] && [[ "$choice" -lt "$counter" ]]; then
   selected_version="$parent_dir/$chosen_subdir/bin/R"
 else
   # Invalid choice, default to built-in R
-  range=$((counter - 1))
-  echo "Invalid choice, plese select options between 1 to $range. Defaulting to built-in R version."
+  if [[ $range -eq 1 ]]; then
+    echo "Invalid choice, please enter 1. Defaulting to built-in R version."
+  else
+    echo "Invalid choice, please select options between 1 to $range. Defaulting to built-in R version."
+  fi
   selected_version="/usr/bin/R"
 fi
 
