@@ -1,7 +1,7 @@
 
 set_build_r() {
   if [ -z "$1" ]; then
-    echo "Usage: set_build_r <name>"
+     echo "Usage: set_build_r <label>. Label example - rdev, r-dev-raw"
     echo "BUILDDIR is currently set to $BUILDDIR"
     echo "TOP_SRCDIR is currently set to $TOP_SRCDIR"
   else
