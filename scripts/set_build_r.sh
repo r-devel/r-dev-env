@@ -1,7 +1,6 @@
-
 set_build_r() {
   if [ -z "$1" ]; then
-     echo "Usage: set_build_r <label>. Label example - rdev, r-dev-raw"
+    echo "Usage: set_build_r <name>"
     echo "BUILDDIR is currently set to $BUILDDIR"
     echo "TOP_SRCDIR is currently set to $TOP_SRCDIR"
   else
@@ -10,5 +9,5 @@ set_build_r() {
     export TOP_SRCDIR="/workspaces/r-dev-env/svn/$NAME"
     echo "BUILDDIR is now set to $BUILDDIR"
     echo "TOP_SRCDIR is now set to $TOP_SRCDIR"
-  fi
+   fi
 }
