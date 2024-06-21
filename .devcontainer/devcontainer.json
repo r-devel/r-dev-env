@@ -30,7 +30,7 @@
 			]
 		}
 	},
-	"postCreateCommand":"cat /workspaces/r-dev-env/scripts/welcome_msg.sh >> ~/.bashrc && bash /workspaces/r-dev-env/scripts/localscript.sh"
+	"postCreateCommand":"cat /workspaces/r-dev-env/scripts/welcome_msg.sh >> ~/.bashrc && cat /workspaces/r-dev-env/scripts/set_build_r.sh >> ~/.bashrc && bash /workspaces/r-dev-env/scripts/localscript.sh"
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
