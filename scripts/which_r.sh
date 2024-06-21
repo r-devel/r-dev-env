@@ -26,6 +26,12 @@ if [ -d "$parent_dir" ]; then
     fi
   done
   
+  # If no additional R builds were found
+  if [ ${#subdirs[@]} -eq 0 ]; then
+    echo "No additional R builds available."
+  fi
+fi
+
 # If no additional R builds were found
 if [ ${#subdirs[@]} -eq 0 ]; then
   range=1
@@ -33,7 +39,6 @@ if [ ${#subdirs[@]} -eq 0 ]; then
 else
   range=$((counter - 1))
 fi
-
 
 # Get user choice
 read -p "Enter the number corresponding to the selected version: " choice
