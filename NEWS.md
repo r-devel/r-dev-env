@@ -1,4 +1,26 @@
-# R Development Container 0.1
+## R Development Container 0.2
+
+- Documentation split into set of markdown files. These are used to create the documentation website https://contributor.r-project.org/r-dev-env/ and the user-focused pages can be accessed directly within the codespace, linked from an index that opens when the codespace first starts. New documentation pages/topics:
+    - Restarting and stopping the codespace
+    - Live Share
+    - Local Setup
+    - Updating Source Code
+    - Creating a patch file
+    - Multiple R Versions
+    - SVN Help
+    - Contributor Guide (for R Dev Container itself)
+    - Troubleshooting
+- Updated GitHub Actions, so that the container is rebuilt twice a month with updated software, including the latest version of R.
+- Disconnected Codespace from r-dev-env GitHub repository, so changes are not tracked as changes to code for the container itself.
+- Updated Codespace settings so that checkouts of the R sources are recognised as Subversion repositories, connecting to VS Code version control tab.
+- Updated Codespace settings so that the R code linter is turned off (cannot define linter for base R!)
+- Enabled httpgd graphics device to replace the default of plotting to PNG.
+- Modified the default settings of `$BUILDDIR` and `$TOP_SRCDIR` to give a more logical setup for working with multiple R versions.
+- Added `which_r` script to set the R version to use in R terminals, rather than using `sudo make install` to overwrite installed R release version.
+- Added `set_build_r` bash function to facilitate custom settings of `$BUILDDIR` and `$TOP_SRCDIR` for working with multiple R versions.
+
+## R Development Container 0.1
+
 First version of the R Development Container, including:
 - DevContainer definition for creating a codespace allowing users to build R in a web based environment
 - Instructions for building the current version of R from the SVN trunk within the DevContainer in the README.md file
