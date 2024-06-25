@@ -13,6 +13,7 @@ nav:
         - 'Creating a Patch File' : 'tutorials/patch_update.md'
         - 'Multiple R Version' : 'tutorials/multi_r_compilation.md'
         - 'SVN Help' : 'tutorials/svn_help.md'
+        - 'Live Share' : 'tutorials/live_share.md'
     - 'Contributor Guide' : 
         - 'contributor_guide/contributing_to_docs.md'
         - 'contributor_guide/contributing_to_codebase.md'
