@@ -32,7 +32,11 @@ Alternatively you can go to Live Share extension tab and select the option to st
 3. Alternatively, you can **press `Ctrl+Shift+P`**, type `Live Share: Join Collaboration Session`, and then paste the link. Or you can again use the Live share extension tab and join the session using Join option. This will give a pop-up on the top of the VSCode window asking for Live Share session link. Enter link and click 'Enter'.
 ![alt text](../assets/live-share3.png). 
 
-### Step 5: Collaborate in Real-Time
+### Step 5: Close Live Share Session
+When you want to close live share session, you can go to Live Share Extension tab and click on stop icon. This will close the live share session.
+![alt text](../assets/live-share4.png).
+
+### Step 6: Collaborate in Real-Time
 
 Once joined, you can:
 
@@ -41,7 +45,10 @@ Once joined, you can:
 - **Debug Together**: Start debugging sessions that all participants can see and interact with.
 - **Share Servers**: If you’re running a local web server, you can share it with guests so they can access it in their browsers.
 
-### Step 6: Manage Permissions
+Live Chat using Live Share
+![alt text](../assets/live-share5.png).
+
+### Step 7: Manage Permissions
 
 The host has control over the session and can manage permissions:
 
@@ -49,7 +56,7 @@ The host has control over the session and can manage permissions:
 2. **Read-Only Access**: You can start a session in read-only mode where guests can only view the files but not edit them.
 3. **Follow Mode**: Both the host and guests can enable "Follow Mode" to follow each other’s cursor and view.
 
-### Step 7: End the Live Share Session
+### Step 8: End the Live Share Session
 
 1. **Click the "Live Share" button** again in the status bar.
 2. Select **"End Collaboration Session"** to stop sharing your environment.
