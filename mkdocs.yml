@@ -1,4 +1,6 @@
 site_name: R Devel Container Docs
+repo_name: r-devel/r-dev-env
+repo_url: https://github.com/r-devel/r-dev-env
 nav:
     - 'Home': index.md
     - 'Container Setup':
@@ -17,6 +19,7 @@ nav:
         - 'contributor_guide/contributing_to_docs.md'
         - 'contributor_guide/contributing_to_codebase.md'
     - 'Resources' : resources.md
+
 theme:
   name: material
   features:
@@ -47,7 +50,7 @@ theme:
 
 plugins:
   - social
-  - optimize
+
 
 extra:
   social:
@@ -55,6 +58,9 @@ extra:
       link: https://github.com/r-devel/r-dev-env/
     - icon: fontawesome/brands/slack
       link: https://r-contributors.slack.com/
+
+
+
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -69,3 +75,4 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.mark
   - attr_list
+
