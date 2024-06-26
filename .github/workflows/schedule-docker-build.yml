@@ -1,16 +1,9 @@
-# This workflow uses actions that are not certified by GitHub.  
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.  
-
 name: Build and publish Docker image (Schedule Workflow)
 
 on:
-  pull_request:
-    branches: ["devel"]
-    schedule:
-      - cron: '0 0 1,15 * *'
-  
+  schedule:
+    - cron: '0 0 1,15 * *'
+
 
 env:
   REGISTRY: ghcr.io
@@ -26,6 +19,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main  #branch to be checkout
 
       - name: Extract version number
         run: |
