@@ -31,7 +31,7 @@ Once joined, you can:
 - **Edit Code Together**: Both the host and guests can edit files, and changes will be synchronized in real-time.
 - **Share Terminals**: The host can share bash or R terminals. Guests can see the terminal output and, if granted permission, type commands.
 - **Live Chat**: Session chat can be opened from the Live share extension tab.
-
+![alt text](../assets/live-share6.png)
 ![alt text](../assets/live-share5.png)
 
 ### Manage control
