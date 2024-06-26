@@ -6,6 +6,7 @@ nav:
     - 'Container Setup':
         - 'Starting Codespace': 'container_setup/creating_codespace.md'
         - 'Restarting and Stopping' : 'container_setup/codespacestartstop.md'
+        - 'Collaborating with Live Share' : 'container_setup/live_share.md'
         - 'Local Setup' : 'container_setup/localsetup.md'
     - 'Tutorials':
         - 'Running R' : 'tutorials/running_r.md'
@@ -13,13 +14,12 @@ nav:
         - 'R Contribution Workflow' : 'tutorials/contribution_workflow.md'
         - 'Updating Source Code' : 'tutorials/update_source.md'
         - 'Creating a Patch File' : 'tutorials/patch_update.md'
-        - 'Multiple R Version' : 'tutorials/multi_r_compilation.md'
+        - 'Multiple R Versions' : 'tutorials/multi_r_compilation.md'
         - 'SVN Help' : 'tutorials/svn_help.md'
     - 'Contributor Guide' : 
         - 'contributor_guide/contributing_to_docs.md'
         - 'contributor_guide/contributing_to_codebase.md'
     - 'Resources' : resources.md
-
 theme:
   name: material
   features:
@@ -51,16 +51,12 @@ theme:
 plugins:
   - social
 
-
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/r-devel/r-dev-env/
     - icon: fontawesome/brands/slack
       link: https://r-contributors.slack.com/
-
-
-
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -75,4 +71,3 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.mark
   - attr_list
-
