@@ -10,6 +10,7 @@
     - SVN Help
     - Contributor Guide (for R Dev Container itself)
     - Troubleshooting
+- Building R documentation now instructs to build R with recommended packages as it only takes a few more minutes to set up and enables all the tests to be run with `make check`.
 - Updated GitHub Actions, so that the container is rebuilt twice a month with updated software, including the latest version of R.
 - Disconnected Codespace from r-dev-env GitHub repository, so changes are not tracked as changes to code for the container itself.
 - Updated Codespace settings so that checkouts of the R sources are recognised as Subversion repositories, connecting to VS Code version control tab.
