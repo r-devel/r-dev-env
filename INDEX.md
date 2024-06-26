@@ -11,15 +11,17 @@ Tutorials 2 and 3 are the minimum to get started with R development.
 You can run through these in about 30 minutes. 
 You can refer to the remaining sections as needed!
 
-1. [Running R on Codespace](docs/tutorials/running_r.md)
+1. [Running R](docs/tutorials/running_r.md)
 2. [Building R](docs/tutorials/building_r.md)
-3. [Contribution Workflow](docs/tutorials/contribution_workflow.md)
+3. [R Contribution Workflow](docs/tutorials/contribution_workflow.md)
 4. [Updating Source Code](docs/tutorials/update_source.md)
-5. [Creating Patch File](docs/tutorials/patch_update.md)
-6. [Multiple R version](docs/tutorials/multi_r_compilation.md)
+5. [Creating a Patch File](docs/tutorials/patch_update.md)
+6. [Multiple R versions](docs/tutorials/multi_r_compilation.md)
+7. [SVN Help](docs/tutorials/svn_help.md)
 
 ## Other Docs
 
-- [Restarting And Stopping Codespace](docs/tutorials/codespacestartstop.md)
-- [Using R Dev Container Locally](docs/tutorials/localsetup.md)
+- [Restarting And Stopping Codespace](docs/container_setup/codespacestartstop.md)
+- [Collaborating with Live Share]((docs/container_setup/live_share.md))
+- [Using R Dev Container Locally](docs/container_setup/localsetup.md)
 - [Useful Resources](docs/resources.md)
