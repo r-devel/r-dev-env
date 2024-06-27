@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full:latest
+FROM gitpod/openvscode-server:latest
 
 USER root
 
