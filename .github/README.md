@@ -1,6 +1,6 @@
 # R Dev Container
+![Release](https://img.shields.io/github/v/release/r-devel/r-dev-env)
 
-[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
 The aim of the R Dev Container is to provide a standard environment for the exploration and development of the R source code. A prototype was developed under Google Summer of Code 2023 and development is continuing under Google Summer of Code 2024. 
 
