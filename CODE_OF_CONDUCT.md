@@ -1,4 +1,4 @@
-# Code of Conduct - Containerised R Development Environment
+# Code of Conduct - R Dev Container
 
 ## Our Pledge
 

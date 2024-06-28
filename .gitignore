@@ -2,3 +2,6 @@ R-4.1.3/
 R-4.1.3.tar.gz
 R-devel/
 R-devel.tar.gz
+/venv
+.cache/
+.Rproj.user
