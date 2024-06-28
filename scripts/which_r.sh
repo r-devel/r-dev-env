@@ -6,9 +6,11 @@ parent_dir="/workspaces/r-dev-env/build"  # need to change to dynamic afterwards
 # Path to the settings.json file
 settings_file_path="/home/vscode/.vscode-remote/data/Machine/settings.json"
 
+built_in_r_version=$(R --version | grep "^R version" | awk '{print $3}')
+
 # Ask user which R version to use
 echo "Which version of R should be used in new R terminals?"
-echo "  1. R 4.4.0 (release version built into this container)"
+echo "  1. R $built_in_r_version (release version built into this container)"
 
 # Check for additional R versions in subdirectories
 if [ -d "$parent_dir" ]; then
@@ -26,10 +28,6 @@ if [ -d "$parent_dir" ]; then
     fi
   done
   
-  # If no additional R builds were found
-  if [ ${#subdirs[@]} -eq 0 ]; then
-    echo "No additional R builds available."
-  fi
 fi
 
 # If no additional R builds were found
