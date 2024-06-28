@@ -7,7 +7,9 @@ authors:
     given-names: Heather
   - family-names: Tripp
     given-names: James
+  - family-name: Emsley
+    given-names: Iain
 title: "R Development Container"
-version: 0.0.1
+version: 0.2.0
 doi: 
-date-released: 
+date-released: 28-06-2024
