@@ -3,7 +3,7 @@ name: Build MKDocs website
 on:
   workflow_dispatch:
   pull_request:
-    branches: ["devel"]
+    branches: ["main","devel"]
     types: [closed]
     paths:
       - 'build-mkdocs-website.yml'
