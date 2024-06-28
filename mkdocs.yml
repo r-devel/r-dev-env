@@ -1,4 +1,6 @@
 site_name: R Devel Container Docs
+repo_name: r-devel/r-dev-env
+repo_url: https://github.com/r-devel/r-dev-env
 nav:
     - 'Home': index.md
     - 'Container Setup':
