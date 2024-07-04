@@ -2,7 +2,7 @@ site_name: R Devel Container Docs
 repo_name: r-devel/r-dev-env
 repo_url: https://github.com/r-devel/r-dev-env
 nav:
-    - 'Home': index.md
+    - 'Home': 'index.md'
     - 'Container Setup':
         - 'Starting Codespace': 'container_setup/creating_codespace.md'
         - 'Restarting and Stopping' : 'container_setup/codespacestartstop.md'
@@ -19,7 +19,8 @@ nav:
     - 'Contributor Guide' : 
         - 'contributor_guide/contributing_to_docs.md'
         - 'contributor_guide/contributing_to_codebase.md'
-    - 'Resources' : resources.md
+    - 'Resources' : 'resources.md'
+    - 'Troubleshooting Info' : 'troubleshoot.md'
 theme:
   name: material
   features:
