@@ -11,3 +11,6 @@ set_build_r() {
     echo "TOP_SRCDIR is now set to $TOP_SRCDIR"
    fi
 }
+
+RNAME=$1
+set_build_r $RNAME
