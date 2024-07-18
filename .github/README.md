@@ -12,7 +12,7 @@ Click on the button below followed by "Create Codespace" to create and enter you
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=647768262&machine=premiumLinux&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestUs2)
 
-The [Starting Codespace section](https://contributor.r-project.org/r-dev-env/tutorials/creating_codespace/) of the R Dev Container Docs will walk you through the process. Then you can work through the tutorials in the docs to lean how to use the codespace for R development.
+The [Starting Codespace section](https://contributor.r-project.org/r-dev-env/container_setup/creating_codespace/) of the R Dev Container Docs will walk you through the process. Then you can work through the tutorials in the docs to lean how to use the codespace for R development.
 
 More details about GitHub codespaces can be found in the [GitHub Codespaces Docs](https://docs.github.com/en/codespaces/overview). GitHub currently offers up to 60 hours for free on dual core codespaces.
 
