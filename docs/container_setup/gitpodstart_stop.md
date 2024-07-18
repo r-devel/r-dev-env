@@ -4,14 +4,14 @@
 1. **Log In:**
 Go to the [Gitpod login page](https://gitpod.io/login/) and sign in with your GitHub, GitLab, or Bitbucket account. This allows Gitpod to create workspaces from your repositories.
 
-3. **Choose Your Repository:**
+2. **Choose Your Repository:**
 You can also use a Gitpod badge, which will redirect you to the Gitpod workspace creation dashboard page.
 
 [![Open in Gitpod](https://img.shields.io/badge/Gitpod-Open%20in%20Gitpod-blue?logo=gitpod&style=for-the-badge)](https://gitpod.io/github.com/r-devel/r-dev-env/tree/devel)
 
 
 ![start gitpod workspace](../assets/gitpod1.png)     
-4. **Create a New Workspace:**
+3. **Create a New Workspace:**
 In the Gitpod dashboard, click on the "Continue" button. You can change the resource option from standard to large. After clicking continue, it will take approximately 15-20 minutes to create the workspace for the first time. It will cache the environment for faster startup in the future.
 
 !!!Note
