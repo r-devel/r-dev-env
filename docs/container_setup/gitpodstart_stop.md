@@ -1,11 +1,8 @@
 
 ### Starting a Gitpod Workspace
 
-1. **Sign Up / Log In:**
-Visit [Gitpod](https://www.gitpod.io/) and sign up for an account if you don't have one, or log in if you do.
-
-2. **Connect Your Git Provider:**
-Connect Gitpod to your GitHub, GitLab, or Bitbucket account by authorizing access. This allows Gitpod to create workspaces from your repositories.
+1. **Log In:**
+Go to the [Gitpod login page](https://gitpod.io/login/) and sign in with your GitHub, GitLab, or Bitbucket account. This allows Gitpod to create workspaces from your repositories.
 
 3. **Choose Your Repository:**
 You can also use a Gitpod badge, which will redirect you to the Gitpod workspace creation dashboard page.
