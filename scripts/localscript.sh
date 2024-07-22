@@ -1,9 +1,9 @@
 #!/bin/bash
 
 WORK_DIR=$PWD
-BUILDDIR="$WORK_DIR/build/r-devel"
-TOP_SRCDIR="$WORK_DIR/svn/r-devel"
-PATCHDIR="$WORK_DIR/patches"
+export BUILDDIR="$WORK_DIR/build/r-devel"
+export TOP_SRCDIR="$WORK_DIR/svn/r-devel"
+export PATCHDIR="$WORK_DIR/patches"
 
 SCRIPT_DIR="$HOME/.local/bin"
 
@@ -24,6 +24,5 @@ local_script() {
       # Remove git directory if it exists
       rm -rf .git
 }
-
 
 local_script
