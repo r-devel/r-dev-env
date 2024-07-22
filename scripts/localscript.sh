@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WORK_DIR=$PWD
+export WORK_DIR=$PWD
 export BUILDDIR="$WORK_DIR/build/r-devel"
 export TOP_SRCDIR="$WORK_DIR/svn/r-devel"
 export PATCHDIR="$WORK_DIR/patches"
