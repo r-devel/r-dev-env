@@ -29,10 +29,5 @@ RUN apt install -y rsync
 #RUN echo 'export PATH="/usr/lib/ccache:$PATH"' | tee -a /home/vscode/.bashrc
 
 
-ENV BUILDDIR='/workspace/r-dev-env/build/r-devel'
-ENV TOP_SRCDIR='/workspace/r-dev-env/svn/r-devel'
-ENV PATCHDIR='/workspace/r-dev-env/patches'
-ENV WORK_DIR='/workspace/r-dev-env'
-
 ARG CONTAINER_VERSION
 ENV CONTAINER_VERSION ${CONTAINER_VERSION}

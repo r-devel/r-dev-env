@@ -1,6 +1,13 @@
 #!/bin/bash
 
-setup_environment() {
+WORK_DIR=$PWD
+BUILDDIR="$WORK_DIR/build/r-devel"
+TOP_SRCDIR="$WORK_DIR/svn/r-devel"
+PATCHDIR="$WORK_DIR/patches"
+
+SCRIPT_DIR="$HOME/.local/bin"
+
+local_script() {
 
       # Create necessary directories
       mkdir -p $SCRIPT_DIR
@@ -16,26 +23,6 @@ setup_environment() {
 
       # Remove git directory if it exists
       rm -rf .git
-}
-
-
-local_script() {
-  if [ "$WORK_DIR" = '/workspace/r-dev-env' ]; then
-      SCRIPT_DIR="/home/gitpod/.local/bin"
-      # Ensure PATCHDIR is set; if not, set a default value
-      PATCHDIR=${PATCHDIR:-/workspace/patchdir}
-      setup_environment
-
-
-  elif [ "$WORK_DIR" = '/workspaces/r-dev-env' ]; then
-      SCRIPT_DIR="/home/vscode/.local/bin"
-      setup_environment
-
-    
-  else
-    echo "Unknown WORK_DIR: $WORK_DIR"
-    exit 1
-  fi
 }
 
 

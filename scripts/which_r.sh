@@ -67,7 +67,7 @@ set_r() {
 }
 
 which_r() {
-  if [ "$WORK_DIR" = '/workspace/r-dev-env' ]; then
+  if [ "$HOME" = '/home/gitpod' ]; then
     NEWDIR="$WORK_DIR/.vscode"
     NEWFILE="$NEWDIR/settings.json"
 
@@ -92,7 +92,7 @@ EOL
 
     JSON_FILE_PATH="$NEWFILE"
     set_r
-  elif [ "$WORK_DIR" = '/workspaces/r-dev-env' ]; then
+  elif [ "$HOME" = '/home/vscode' ]; then
     JSON_FILE_PATH="/home/vscode/.vscode-remote/data/Machine/settings.json"
     set_r
   else
