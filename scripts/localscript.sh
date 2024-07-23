@@ -1,6 +1,5 @@
 #!/bin/bash
 
-"
 
 SCRIPT_DIR="$HOME/.local/bin"
 
