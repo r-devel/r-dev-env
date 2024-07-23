@@ -6,7 +6,7 @@ tasks:
     - name: Initial Setup for R-dev-env Gitpod Workspace
       before: |
          bash /workspace/r-dev-env/scripts/localscript.sh
-         bash ~/.bashrc
+         source ~/.bashrc
 
 
 vscode:
