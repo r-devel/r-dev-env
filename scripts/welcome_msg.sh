@@ -3,6 +3,11 @@
 # clear the screen before displaying welcome message
 clear
 
+export WORK_DIR=$PWD
+export BUILDDIR="$WORK_DIR/build/r-devel"
+export TOP_SRCDIR="$WORK_DIR/svn/r-devel"
+export PATCHDIR="$WORK_DIR/patches
+
 # welcome message to add to bashrc
 echo -e "
 Welcome to the R Dev Container v$CONTAINER_VERSION
