@@ -24,7 +24,7 @@ local_script() {
       cat $WORK_DIR/scripts/welcome_msg.sh >> ~/.bashrc
       cat $WORK_DIR/scripts/which_r.sh >> ~/.bashrc
       cat $WORK_DIR/scripts/set_build_r.sh >> ~/.bashrc
-      sh ~/.bashrc
+      bash ~/.bashrc
 
 
       # Remove git directory if it exists
