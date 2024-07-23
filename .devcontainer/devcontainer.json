@@ -2,7 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp 
 {
 	"name": "R-Dev-Env",
-	"image": "ghcr.io/r-devel/r-dev-env:main",
+	"image": "ghcr.io/startrooper08/r-dev-env:devel",
 	"hostRequirements": {
 		"cpus": 4
 	},
@@ -31,7 +31,7 @@
 		}
 
 	},
-	"postCreateCommand":"cat /workspaces/r-dev-env/scripts/welcome_msg.sh >> ~/.bashrc && cat /workspaces/r-dev-env/scripts/set_build_r.sh >> ~/.bashrc && bash /workspaces/r-dev-env/scripts/localscript.sh"
+	"postCreateCommand":"sh /workspaces/r-dev-env/scripts/localscript.sh"
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 set_r() {
   # Specify the parent directory
@@ -100,5 +100,3 @@ EOL
     exit 1
   fi
 }
-
-which_r
