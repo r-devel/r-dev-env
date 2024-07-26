@@ -1,11 +1,11 @@
 # This script is run after the workspace is created
 #!/bin/bash
 
-# Define helper environment variables based on workspace root ($PWD at start)
-export WORK_DIR=$PWD
-export BUILDDIR="$WORK_DIR/build/r-devel"
-export TOP_SRCDIR="$WORK_DIR/svn/r-devel"
-export PATCHDIR="$WORK_DIR/patches"
+# Workspace root is $PWD at the start
+WORK_DIR=$PWD
+
+# Define patch directory in workspace root ($PWD at start)
+PATCHDIR="$WORK_DIR/patches"
 
 # Define directory where bash will look for scripts
 SCRIPT_DIR="$HOME/.local/bin"
