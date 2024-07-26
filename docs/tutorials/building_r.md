@@ -45,9 +45,11 @@ cd $BUILDDIR
 - After we change directory, we must run the configure script from the source directory.
 This step takes ~1 minute on the codespace.
 ```bash
-$TOP_SRCDIR/configure
+$TOP_SRCDIR/configure --with-valgrind-instrumentation=1
 
 ```
+!!!Note
+    The `--with-valgrind-instrumentation` option is set to 1 for effective use of valgrind. See the [Using valgrind](https://cran.r-project.org/doc/manuals/R-exts.html#Using-valgrind) section of the R-admin manual for more information.
 
 - The configure cmd prepares for building R, creating files and folders inside the BUILDDIR directory.
 - Output : We get file structure something like this after using configure command.
