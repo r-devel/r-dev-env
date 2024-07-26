@@ -1,12 +1,13 @@
 #!/bin/bash
 
-# clear the screen before displaying welcome message
-clear
-
+# define helper environment variables based on startup working directory
 export WORK_DIR=$PWD
 export BUILDDIR="$WORK_DIR/build/r-devel"
 export TOP_SRCDIR="$WORK_DIR/svn/r-devel"
 export PATCHDIR="$WORK_DIR/patches"
+
+# clear the screen before displaying welcome message
+clear
 
 # welcome message to add to bashrc
 echo -e "
