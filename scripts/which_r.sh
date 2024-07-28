@@ -1,9 +1,19 @@
 
 
-set_r() {
+which_r() {
   # Specify the parent directory
-  parent_dir="$WORK_DIR/build"  # need to change to dynamic afterwards //TODO
+  parent_dir="$WORK_DIR/build"
+  
+  if [ "$HOME" = '/home/gitpod' ]; then
+    JSON_FILE_PATH="$WORK_DIR/.vscode/settings.json"
+    
+  elif [ "$HOME" = '/home/vscode' ]; then
+    JSON_FILE_PATH="/home/vscode/.vscode-remote/data/Machine/settings.json"
 
+  else
+    echo "Unknown WORK_DIR: $WORK_DIR"
+    exit 1
+  fi
   # Path to the settings.json file
   settings_file_path=$JSON_FILE_PATH
 
@@ -66,37 +76,4 @@ set_r() {
   echo "R terminal will now use version: $selected_version"
 }
 
-which_r() {
-  if [ "$HOME" = '/home/gitpod' ]; then
-    NEWDIR="$WORK_DIR/.vscode"
-    NEWFILE="$NEWDIR/settings.json"
-
-    # Create the new directory
-    mkdir -p $NEWDIR
-
-    # Write text directly into the new file using cat and a heredoc
-    cat <<EOL > $NEWFILE
-{
-  "r.lsp.diagnostics": false,
-  "r.plot.useHttpgd": true,
-  "r.rpath.linux": "/usr/bin/R",
-  "r.rterm.linux": "/usr/bin/R",
-  "terminal.integrated.sendKeybindingsToShell": true,
-  "svn.multipleFolders.enabled": true,
-  "workbench.editorAssociations": {
-    "*.md": "vscode.markdown.preview.editor"
-  },
-  "workbench.welcomePage.walkthroughs.openOnInstall": false
-}
-EOL
-
-    JSON_FILE_PATH="$NEWFILE"
-    set_r
-  elif [ "$HOME" = '/home/vscode' ]; then
-    JSON_FILE_PATH="/home/vscode/.vscode-remote/data/Machine/settings.json"
-    set_r
-  else
-    echo "Unknown WORK_DIR: $WORK_DIR"
-    exit 1
-  fi
-}
+which_r
