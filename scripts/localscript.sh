@@ -11,6 +11,7 @@ DEVCONTAINER_JSON="$WORK_DIR/.devcontainer/devcontainer.json"
 # Create patch directory in workspace root ($PWD at start)
 PATCHDIR="$WORK_DIR/patches"
 mkdir -p $PATCHDIR
+mkdir -p $VSCODE_DIR
 
 # Copy the which_r and set_build_r function definitions to .bashrc
 cat $WORK_DIR/scripts/which_r.sh >> ~/.bashrc
