@@ -75,5 +75,3 @@ which_r() {
 
   echo "R terminal will now use version: $selected_version"
 }
-
-which_r
