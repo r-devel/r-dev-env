@@ -29,3 +29,36 @@ The code changes and operations we have performed inside the codespace will stil
 - To restart it, we can just click on the codespaces we wanted to use and it will start the codespaces again for us.
 - You can also see an active label added to the codespaces we just started
  ![stop codespace](../../assets/rdev18.png)
+
+
+#### Managing and Sustaining Codespaces
+
+##### Setting a Default Retention Period for Your Codespaces
+
+**Access Settings:**
+- Click your profile photo in the upper-right corner of any GitHub page.
+- Click "Settings."
+
+**Navigate to Codespaces Settings:**
+- In the sidebar, under "Code, planning, and automation," click "Codespaces."
+
+**Set Retention Period:**
+- Under "Default retention period," enter the number of days (between 0 and 30) for which you want your codespaces to be retained after they have been stopped.
+Example: Setting it to 30 days.
+![retain codespace](../../assets/manage_codespace.png)
+
+**Warning:**
+- Setting the retention period to 0 days will result in immediate deletion of codespaces when stopped or when they timeout due to inactivity.
+For more details, refer to "Setting your timeout period for GitHub Codespaces."
+
+**Save Changes:**
+- Click "Save" to apply the new retention period.
+
+
+This allows you to customize how long your codespaces are kept before automatic deletion, balancing convenience and storage management.
+
+**Auto Delete Codespace:**
+- Go to the "Your codespaces" page at [github.com/codespaces](github.com/codespaces).
+- Find the codespace you want to exempt from deletion.
+- Click the options menu (three dots) to the right of the codespace.
+- Select "Auto Delete Codespace" from the dropdown menu. The bookmarked codespaces will be auto-deleted after the specified retention period.
