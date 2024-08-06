@@ -1,6 +1,4 @@
-image:
-  file: .gitpod.Dockerfile
-  #after first build of gitpod docker image change file to image with the tag.
+image: ghcr.io/r-devel/r-dev-env:gitpod.devel
 
 tasks:
     - name: Initial Setup for R-dev-env Gitpod Workspace
