@@ -60,7 +60,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .gitpod.Dockerfile
+          context: .
+          file: .gitpod.Dockerfile
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:gitpod.${{ github.ref_name }}
           build-args: |
