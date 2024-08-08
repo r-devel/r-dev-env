@@ -13,6 +13,7 @@ on:
     paths:
       - '.github/workflows/build-gitpod-image.yml'
       - '.gitpod.Dockerfile'
+      - '.gitpod.yml'
       - 'reinstall-cmake.sh'
       - 'VERSION'
   
