@@ -52,13 +52,15 @@ Example: Setting it to 30 days.
 For more details, refer to "Setting your timeout period for GitHub Codespaces."
 
 **Save Changes:**
+
 - Click "Save" to apply the new retention period.
 
 
 This allows you to customize how long your codespaces are kept before automatic deletion, balancing convenience and storage management.
 
 **Auto Delete Codespace:**
+
 - Go to the "Your codespaces" page at [github.com/codespaces](github.com/codespaces).
 - Find the codespace you want to exempt from deletion.
 - Click the options menu (three dots) to the right of the codespace.
-- Select "Auto Delete Codespace" from the dropdown menu. The bookmarked codespaces will be auto-deleted after the specified retention period.
+- Select "Auto Delete Codespace" from the dropdown menu. The bookmarked codespaces will not be auto-deleted.
