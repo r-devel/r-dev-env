@@ -22,3 +22,24 @@ Once you're in the Gitpod dashboard, navigate to the "Workspaces" section. In th
 ![restart gitpod workspace](../../assets/gitpod4.png)   
 2. **Restart the Workspace:**
 To restart a workspace, click on the workspace in the list you want to restart. This will launch the workspace, restoring it to the state it was in when it was last stopped.
+
+
+### Managing and Sustaining Codespaces
+
+**Gitpod Workspace Pinning**
+
+**Purpose:** Workspace pinning prevents important workspaces from being automatically deleted.
+
+**Pinned Workspace:** A workspace that has been pinned will never be deleted, regardless of inactivity or other automated processes.
+
+**How to Pin:**
+
+- Navigate to your workspace list in the Gitpod dashboard.
+- Identify the workspace you want to keep permanently.
+- Pin the workspace to ensure it remains available and is not subject to deletion.
+![manage gitpod workspace](../../assets/manage_workspace.png)
+
+**Benefits:**
+
+Protects critical projects or environments from accidental loss.
+Ensures long-term availability of specific workspaces that you frequently use or need to preserve.

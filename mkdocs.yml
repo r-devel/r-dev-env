@@ -10,7 +10,8 @@ nav:
             - 'Restarting and Stopping' : 'container_setup/github_codespace/codespacestartstop.md'
             - 'Collaborating with Live Share' : 'container_setup/github_codespace/live_share.md'
         - 'Gitpod Workspace':
-             - 'Start and Stop Workspace': 'container_setup/gitpod_workspace/gitpodstart_stop.md'
+             - 'Start Workspace': 'container_setup/gitpod_workspace/workspacestart.md'
+             - 'Restarting and Stopping' : 'container_setup/gitpod_workspace/workspacestop_and_restart.md'
         - 'Local Setup' : 
                - 'Docker': 'container_setup/local_setup/localsetup.md'
     - 'Tutorials':

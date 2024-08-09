@@ -36,18 +36,22 @@ The code changes and operations we have performed inside the codespace will stil
 ##### Setting a Default Retention Period for Your Codespaces
 
 **Access Settings:**
+
 - Click your profile photo in the upper-right corner of any GitHub page.
 - Click "Settings."
 
 **Navigate to Codespaces Settings:**
+
 - In the sidebar, under "Code, planning, and automation," click "Codespaces."
 
 **Set Retention Period:**
+
 - Under "Default retention period," enter the number of days (between 0 and 30) for which you want your codespaces to be retained after they have been stopped.
 Example: Setting it to 30 days.
 ![retain codespace](../../assets/manage_codespace.png)
 
 **Warning:**
+
 - Setting the retention period to 0 days will result in immediate deletion of codespaces when stopped or when they timeout due to inactivity.
 For more details, refer to "Setting your timeout period for GitHub Codespaces."
 
