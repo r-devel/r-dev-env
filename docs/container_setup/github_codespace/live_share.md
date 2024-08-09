@@ -8,10 +8,10 @@ Live Share is a powerful feature that allows you to collaborate with others in r
 
 1. **Click the "Live Share" button** in the status bar.
 Alternatively you can go to Live Share extension tab and select from the options to share with read/write permission or share with read-only permission.
-![alt text](../assets/live-share.png)
+![alt text](../../assets/live-share.png)
 
 2. **Share the Link**: A sharing link will be generated and copied to the clipboard for sharing with your collaborators. From the pop-up dialog, you can copy the link again or switch the permissions from read/write to read-only (or vice versa).
-![alt text](../assets/live-share2.png)
+![alt text](../../assets/live-share2.png)
 
 ### Join a Live Share Session
 
@@ -20,7 +20,7 @@ Alternatively you can go to Live Share extension tab and select from the options
 
     - **Open the link in a web browser**: click the link to open it in your web browser. If you have VS Code installed locally, a pop-up dialog will give you the choice of continuing in the web or opening the session in VS Code. You can join the session anonymously or sign in with your Microsoft or GitHub account.
     - **Copy the link into VSCode or the R Dev Container Codespace**: From the Live share extension tab, click the "Join" button. If you are using VS Code locally, you can choose to join the session anonymously or sign in with your Microsoft or GitHub account. If you are using the Codespace, you will already be signed in with your GitHub account. A pop-up at the top of the VSCode window will ask for the Live Share session link. Paste the link and click 'Enter'.
-![alt text](../assets/live-share3.png). 
+![alt text](../../assets/live-share3.png). 
 
 3. **Wait to be accepted by the host**. The host will receive a pop-up message where they can accept your request to join.
 
@@ -31,8 +31,8 @@ Once joined, you can:
 - **Edit Code Together**: Both the host and guests can edit files, and changes will be synchronized in real-time.
 - **Share Terminals**: The host can share bash or R terminals. Guests can see the terminal output and, if granted permission, type commands.
 - **Live Chat**: Session chat can be opened from the Live share extension tab.
-![alt text](../assets/live-share6.png)
-![alt text](../assets/live-share5.png)
+![alt text](../../assets/live-share6.png)
+![alt text](../../assets/live-share5.png)
 
 ### Manage control
 
@@ -46,7 +46,7 @@ You can rejoin a session if disconnected, and your previous state will be restor
 ### Close a Live Share Session
 
 When you want to close the live share session, you can go to Live Share Extension tab and click on stop icon. 
-![alt text](../assets/live-share4.png).
+![alt text](../../assets/live-share4.png).
 
 If you are a guest, the live share session will continue to run without you. If you are the host this will close the session for everyone.
 
