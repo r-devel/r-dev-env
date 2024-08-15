@@ -8,7 +8,13 @@ which_r() {
     JSON_FILE_PATH="$WORK_DIR/.vscode/settings.json"
     
   elif [ "$HOME" = '/home/vscode' ]; then
-    JSON_FILE_PATH="/home/vscode/.vscode-remote/data/Machine/settings.json"
+    # Check if it's running in a Codespace
+    if [ -d "/home/vscode/.vscode-remote" ]; then
+      JSON_FILE_PATH="/home/vscode/.vscode-remote/data/Machine/settings.json"
+    else
+      # Handle local devcontainer setup
+      JSON_FILE_PATH="$WORK_DIR/.vscode/settings.json"
+    fi
 
   else
     echo "Unknown WORK_DIR: $WORK_DIR"

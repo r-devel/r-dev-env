@@ -1,8 +1,6 @@
 {
     "name": "R-Dev-Env",
-    "dockerComposeFile": "Docker-Compose.yml",
-    "service": "app",
-    "workspaceFolder": "/workspaces/r-dev-env",
+    "image": "ghcr.io/r-devel/r-dev-env:devel",
     "hostRequirements": {
         "cpus": 4
     },
@@ -29,5 +27,5 @@
             ]
         }
     },
-    "postCreateCommand": "sh /workspaces/r-dev-env/scripts/localscript.sh"
+    "postCreateCommand": "chown -R vscode:vscode /workspaces/r-dev-env && sh /workspaces/r-dev-env/scripts/localscript.sh"
 }
