@@ -1,6 +1,8 @@
 {
     "name": "R-Dev-Env",
-    "image": "ghcr.io/r-devel/r-dev-env:devel",
+    "dockerComposeFile": "Docker-Compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspaces/r-dev-env",
     "hostRequirements": {
         "cpus": 4
     },
