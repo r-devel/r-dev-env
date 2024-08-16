@@ -1,0 +1,13 @@
+image: ghcr.io/r-devel/r-dev-env:gitpod.devel
+
+tasks:
+    - name: Initial Setup for R-dev-env Gitpod Workspace
+      before: |
+         bash /workspace/r-dev-env/scripts/localscript.sh
+         source ~/.bashrc
+
+
+vscode:
+    extensions:
+     - REditorSupport.r
+     - johnstoncode.svn-scm

@@ -1,45 +1,31 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the 
-// README at: https://github.com/devcontainers/templates/tree/main/src/cpp 
 {
-	"name": "R-Dev-Env",
-	"image": "ghcr.io/r-devel/r-dev-env:main",
-	"hostRequirements": {
-		"cpus": 4
-	},
-	
-	"customizations": {
-	    "vscode": {
-			"settings": {
-			    "r.lsp.diagnostics": false,
-			    "r.plot.useHttpgd": true,
-				"r.rpath.linux": "/usr/bin/R",
-				"r.rterm.linux": "/usr/bin/R",
-				"terminal.integrated.sendKeybindingsToShell": true,
-				"svn.multipleFolders.enabled": true,
+    "name": "R-Dev-Env",
+    "image": "ghcr.io/r-devel/r-dev-env:devel",
+    "hostRequirements": {
+        "cpus": 4
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "r.lsp.diagnostics": false,
+                "r.plot.useHttpgd": true,
+                "r.rpath.linux": "/usr/bin/R",
+                "r.rterm.linux": "/usr/bin/R",
+                "terminal.integrated.sendKeybindingsToShell": true,
+                "svn.multipleFolders.enabled": true,
                 "workbench.editorAssociations": {   
                     "*.md": "vscode.markdown.preview.editor"
                 },
                 "workbench.welcomePage.walkthroughs.openOnInstall": false
-			},
-			"extensions": [
-				"REditorSupport.r",
-				"mads-hartmann.bash-ide-vscode",
-				"johnstoncode.svn-scm",
-				"ms-vscode.cpptools",
-				"MS-vsliveshare.vsliveshare"
-			]
-		}
-
-	},
-	"postCreateCommand":"cat /workspaces/r-dev-env/scripts/welcome_msg.sh >> ~/.bashrc && cat /workspaces/r-dev-env/scripts/set_build_r.sh >> ~/.bashrc && bash /workspaces/r-dev-env/scripts/localscript.sh"
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "gcc -v",
-	// Configure tool-specific properties.
-	// "customizations": {},
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+            },
+            "extensions": [
+                "REditorSupport.r",
+                "mads-hartmann.bash-ide-vscode",
+                "johnstoncode.svn-scm",
+                "ms-vscode.cpptools",
+                "MS-vsliveshare.vsliveshare"
+            ]
+        }
+    },
+    "postCreateCommand": "chown -R vscode:vscode /workspaces/r-dev-env && sh /workspaces/r-dev-env/scripts/localscript.sh"
 }
