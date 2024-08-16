@@ -33,7 +33,7 @@ jobs:
         Rscript ./scripts/optimize.R
 
     - name: Commit and push optimized images
-      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      if: github.ref == 'refs/heads/devel' && github.event_name == 'push'
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -41,4 +41,4 @@ jobs:
         git commit -m 'Optimize docs images'
         git push
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
