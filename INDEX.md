@@ -20,6 +20,7 @@ Getting Started with R Development Container and setting up Environment like Cod
 ### Gitpod Workspace
 1. [Starting Gitpod](docs/container_setup/gitpod_workspace/workspacestart.md)
 2. [Restarting and Stopping Workspace](docs/container_setup/gitpod_workspace/workspacestop_and_restart.md)
+3. [Collaborating with Live Share](docs/container_setup/gitpod_workspace/live_share.md)
 
 ### Local Setup
 Documentation for setting up R Dev Container Locally
