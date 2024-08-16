@@ -27,10 +27,7 @@ jobs:
     - name: Install R packages
       run: |
         R -e 'install.packages(c("magick", "tools"), repos = "https://cloud.r-project.org/")'
-
-    - name: Optimize images
-      run: |
-        Rscript ./scripts/optimize.R
+        Rscript ./scripts/optimize.R   
 
     - name: Commit and push optimized images
       if: github.ref == 'refs/heads/devel' && github.event_name == 'push'
