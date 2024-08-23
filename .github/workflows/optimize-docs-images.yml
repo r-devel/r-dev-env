@@ -22,11 +22,11 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y libmagick++-dev
+        sudo apt-get install -y libmagick++-dev libcurl4-openssl-dev
 
     - name: Install R packages
       run: |
-        R -e 'install.packages(c("magick", "tools"), repos = "https://cloud.r-project.org/")'
+        R -e 'install.packages(c("magick"), repos = "https://cloud.r-project.org/")'
 
     - name: Optimize images
       run: |
