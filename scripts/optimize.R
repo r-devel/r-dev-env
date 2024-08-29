@@ -18,16 +18,16 @@ for (i in seq_along(files)) {
         next
     })
     
-    # Resize the image to 800 px width using Triangle filter for resampling
-    img <- image_resize(img, geometry_size_pixels(width = 800), filter = "Triangle")
+    # Resize the image to 1000 px width using Lanczos filter for resampling
+    img <- image_resize(img, geometry_size_pixels(width = 1000), filter = "Lanczos")
     
+    # Define the output path, changing the extension to .png
+    output_path <- file_path_sans_ext(file_path)
+    output_path <- paste0(output_path, ".png")
     
-    # Define the output path (overwrite original image)
-    output_path <- file_path
-    
-    # Write the optimized image (overwrite original image)
+    # Write the optimized image (overwrite original image) as PNG with compression
     tryCatch({
-        image_write(img, output_path, format = "jpg", quality = 82)
+        image_write(img, output_path, format = "png", compression = "Zip")
     }, error = function(e) {
         message("Error writing image: ", output_path)
     })
