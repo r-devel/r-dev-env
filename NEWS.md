@@ -1,3 +1,13 @@
+## R Development Container 0.3
+
+- Completed Gitpod setup with GitHub Actions workflow to build Docker images for the Gitpod workspace.
+- Improved which_r script with version choice validation and updated both which_r and set_build_r scripts for enhanced functionality.
+- Resolved local setup permission issues to ensure smoother operation within the devcontainer environment.
+- Restructured documentation, adding new Gitpod-specific content for easier setup and navigation.
+- Implemented a workflow to optimize images within the documentation for better performance.
+
+
+
 ## R Development Container 0.2
 
 - Documentation split into set of markdown files. These are used to create the documentation website https://contributor.r-project.org/r-dev-env/ and the user-focused pages can be accessed directly within the codespace, linked from an index that opens when the codespace first starts. New documentation pages/topics:
