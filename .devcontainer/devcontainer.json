@@ -1,6 +1,6 @@
 {
     "name": "R-Dev-Env",
-    "image": "ghcr.io/r-devel/r-dev-env:devel",
+    "image": "ghcr.io/r-devel/r-dev-env:main",
     "hostRequirements": {
         "cpus": 4
     },
