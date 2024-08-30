@@ -9,7 +9,12 @@ authors:
     given-names: James
   - family-name: Emsley
     given-names: Iain
+  - family-names: Crespo
+    given-names: Lorena
+  - family-names: Campitelli
+    given-names: Elio
+    
 title: "R Development Container"
-version: 0.2.0
+version: 0.3.0
 doi: 
-date-released: 28-06-2024
+date-released: 29-08-2024
