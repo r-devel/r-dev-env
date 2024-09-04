@@ -13,12 +13,12 @@ If you are collaborating with others, you may want to use Live Share so that you
 
 ### Github Codespace
 
-- [Restarting and Stopping Codespace](docs/container_setup/github_codespace/codespacestartstop.md)
+- [Stopping and Restarting Codespace](docs/container_setup/github_codespace/codespacestartstop.md)
 - [Collaborating with Live Share](docs/container_setup/github_codespace/live_share.md)
 
 ### Gitpod Workspace
 
-- [Restarting and Stopping Workspace](docs/container_setup/gitpod_workspace/workspacestop_and_restart.md)
+- [Stopping and Restarting Codespace](docs/container_setup/gitpod_workspace/workspacestop_and_restart.md)
 - [Collaborating with Live Share](docs/container_setup/gitpod_workspace/live_share.md)
 
 ## Tutorials
