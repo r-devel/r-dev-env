@@ -17,4 +17,3 @@ Checklist for release:
  - [ ] Make sure docker container is rebuilt
  - [ ] Test container and fix any issues
  - [ ] Make GitHub release
- - [ ] Rebuild docs
