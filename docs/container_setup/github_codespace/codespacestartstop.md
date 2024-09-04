@@ -3,17 +3,17 @@
 #### How to Stop Codespaces?
 - To stop codespaces we just need to navigate to the Codespaces option in the bottom left of the Codespace panel.
 
-  ![stop codespace](../../assets/rdev14.png)
+    ![stop codespace](../../assets/rdev14.png)
 
 - After clicking on codespaces option we will get a drop down above something like this👇
 
-  ![stop codespace](../../assets/rdev15.png)
+    ![stop codespace](../../assets/rdev15.png)
 
 - Click on "Stop Current Codespace". It will stop the codespaces you are currently using or running.
 
 - You will be redirected to a Restart Codespaces page. The page shows a link to restart the codespace you just stopped.
 
-  ![stop codespace](../../assets/rdev16.png)
+    ![stop codespace](../../assets/rdev16.png)
 
 
 #### Idle timeout:
@@ -64,7 +64,7 @@ This allows you to customize how long your codespaces are kept before automatic 
 
 **Auto Delete Codespace:**
 
-- Go to the "Your codespaces" page at [github.com/codespaces](github.com/codespaces).
+- Go to the "Your codespaces" page at [github.com/codespaces](https://github.com/codespaces).
 - Find the codespace you want to exempt from deletion.
 - Click the options menu (three dots) to the right of the codespace.
 - Select "Auto Delete Codespace" from the dropdown menu. The bookmarked codespaces will not be auto-deleted.
