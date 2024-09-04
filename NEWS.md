@@ -1,10 +1,10 @@
 ## R Development Container 0.3
 
-- Completed Gitpod setup with GitHub Actions workflow to build Docker images for the Gitpod workspace.
-- Improved which_r script with version choice validation and updated both which_r and set_build_r scripts for enhanced functionality.
-- Resolved local setup permission issues to ensure smoother operation within the devcontainer environment.
-- Restructured documentation, adding new Gitpod-specific content for easier setup and navigation.
-- Implemented a workflow to optimize images within the documentation for better performance.
+- Implemented Gitpod setup with GitHub Actions workflow to build Docker images for the Gitpod workspace.
+- Improved `which_r` script with version choice validation and updated both `which_r` and `set_build_r` scripts for enhanced functionality.
+- Resolved local setup permission issues to ensure smoother operation within the devcontainer environment on Linux.
+- Restructured documentation to incorporate Gitpod alternative setup.
+- Implemented a workflow to optimize images so that documentation files are more lightweight.
 
 
 
