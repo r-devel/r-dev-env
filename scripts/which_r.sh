@@ -3,25 +3,9 @@
 which_r() {
   # Specify the parent directory
   parent_dir="$WORK_DIR/build"
-  
-  if [ "$HOME" = '/home/gitpod' ]; then
-    JSON_FILE_PATH="$WORK_DIR/.vscode/settings.json"
-    
-  elif [ "$HOME" = '/home/vscode' ]; then
-    # Check if it's running in a Codespace
-    if [ -d "/home/vscode/.vscode-remote" ]; then
-      JSON_FILE_PATH="/home/vscode/.vscode-remote/data/Machine/settings.json"
-    else
-      # Handle local devcontainer setup
-      JSON_FILE_PATH="$WORK_DIR/.vscode/settings.json"
-    fi
 
-  else
-    echo "Unknown WORK_DIR: $WORK_DIR"
-    exit 1
-  fi
   # Path to the settings.json file
-  settings_file_path=$JSON_FILE_PATH
+  settings_file_path=$WORK_DIR/.vscode/settings.json
 
   built_in_r_version=$(R --version | grep "^R version" | awk '{print $3}')
 
