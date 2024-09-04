@@ -3,34 +3,27 @@
 If you haven't seen them yet, you can find the
 [R Dev Container Docs](https://contributor.r-project.org/r-dev-env/) online.
 
-## Home
-R Development Container [Project overview](docs/index.md)
+This index links to underlying markdown files for key sections of the docs, so you can preview them right here in VS Code. 
 
-## Container Setup
-Getting Started with R Development Container and setting up Environment like Codespaces, Gitpod and Localsetup.
+## Working with the container
 
-- R Dev Container usage [overview](docs/container_setup/index.md)
+The links below give more information on using the container via GitHub Codespaces or Gitpod Workspaces.
+Take a moment to review how to stop and restart your container, so you can continue your work.
+If you are collaborating with others, you may want to use Live Share so that you can share the same workspace.
 
 ### Github Codespace
-1. [Starting Codespace](docs/container_setup/github_codespace/creating_codespace.md)
-2. [Restarting and Stopping Codespace](docs/container_setup/github_codespace/codespacestartstop.md)
-3. [Collaborating with Live Share](docs/container_setup/github_codespace/live_share.md)
 
+- [Restarting and Stopping Codespace](docs/container_setup/github_codespace/codespacestartstop.md)
+- [Collaborating with Live Share](docs/container_setup/github_codespace/live_share.md)
 
 ### Gitpod Workspace
-1. [Starting Gitpod](docs/container_setup/gitpod_workspace/workspacestart.md)
-2. [Restarting and Stopping Workspace](docs/container_setup/gitpod_workspace/workspacestop_and_restart.md)
-3. [Collaborating with Live Share](docs/container_setup/gitpod_workspace/live_share.md)
 
-### Local Setup
-Documentation for setting up R Dev Container Locally
-- [Local Setup](docs/container_setup/local_setup/localsetup.md)
-
-Note: For Now R Dev Container Local setup is recommended for Linux Systems.
+- [Restarting and Stopping Workspace](docs/container_setup/gitpod_workspace/workspacestop_and_restart.md)
+- [Collaborating with Live Share](docs/container_setup/gitpod_workspace/live_share.md)
 
 ## Tutorials
 
-You can also preview the tutorials right here in VSCode, making them easier to work through. 
+Learn how to use the container with these mini tutorials. 
 If you have used R in VSCode before, you can skip Tutorial 1. 
 Tutorials 2 and 3 are the minimum to get started with R development. 
 You can run through these in about 30 minutes. 
@@ -44,14 +37,6 @@ You can refer to the remaining sections as needed!
 6. [Multiple R versions](docs/tutorials/multi_r_compilation.md)
 7. [SVN Help](docs/tutorials/svn_help.md)
 
+## Further docs
 
-## Contributor Guide
-Contributor Guide to R Dev Container
-1. [Documentation](docs/contributor_guide/contributing_to_docs.md)
-2. [Codebase](docs/contributor_guide/contributing_to_codebase.md)
-## Resources
-Extra Resources and Installation Information [Guide](docs/resources.md)
-
-## Troubleshoot Information
-Information to troubleshoot rsync on R Dev Container
-- [Troubleshoot Docs](docs/troubleshoot.md)
+See the [full documentation](https://contributor.r-project.org/r-dev-env/) for background information on this project, how to contribute to the [documentation](docs/contributor_guide/contributing_to_docs.md) or the [codebase](docs/contributor_guide/contributing_to_codebase.md), [external resources](docs/resources.md) and [troubleshooting](docs/troubleshoot.md).
