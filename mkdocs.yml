@@ -2,12 +2,19 @@ site_name: R Devel Container Docs
 repo_name: r-devel/r-dev-env
 repo_url: https://github.com/r-devel/r-dev-env
 nav:
-    - 'Home': index.md
+    - 'Home': 'index.md'
     - 'Container Setup':
-        - 'Starting Codespace': 'container_setup/creating_codespace.md'
-        - 'Restarting and Stopping' : 'container_setup/codespacestartstop.md'
-        - 'Collaborating with Live Share' : 'container_setup/live_share.md'
-        - 'Local Setup' : 'container_setup/localsetup.md'
+        - 'Overview': 'container_setup/index.md'
+        - 'Github Codespace':
+            - 'Starting Codespace': 'container_setup/github_codespace/creating_codespace.md'
+            - 'Stopping and Restarting' : 'container_setup/github_codespace/codespacestartstop.md'
+            - 'Collaborating with Live Share' : 'container_setup/github_codespace/live_share.md'
+        - 'Gitpod Workspace':
+             - 'Start Workspace': 'container_setup/gitpod_workspace/workspacestart.md'
+             - 'Stopping and Restarting' : 'container_setup/gitpod_workspace/workspacestop_and_restart.md'
+             - 'Collaborating with Live Share' : 'container_setup/gitpod_workspace/live_share.md'
+        - 'Local Setup' : 
+               - 'Docker': 'container_setup/local_setup/localsetup.md'
     - 'Tutorials':
         - 'Running R' : 'tutorials/running_r.md'
         - 'Building R': 'tutorials/building_r.md'
@@ -19,7 +26,8 @@ nav:
     - 'Contributor Guide' : 
         - 'contributor_guide/contributing_to_docs.md'
         - 'contributor_guide/contributing_to_codebase.md'
-    - 'Resources' : resources.md
+    - 'Resources' : 'resources.md'
+    - 'Troubleshooting Info' : 'troubleshoot.md'
 theme:
   name: material
   features:

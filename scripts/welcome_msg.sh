@@ -1,4 +1,11 @@
+# This script is run everytime workspace is started (when bash terminal started)
 #!/bin/bash
+
+# define helper environment variables based on workspace root ($PWD at start)
+export WORK_DIR=$PWD
+export BUILDDIR="$WORK_DIR/build/r-devel"
+export TOP_SRCDIR="$WORK_DIR/svn/r-devel"
+export PATCHDIR="$WORK_DIR/patches"
 
 # clear the screen before displaying welcome message
 clear
