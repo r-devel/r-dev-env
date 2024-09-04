@@ -5,18 +5,18 @@
 - `TOP_SRCDIR` defines the source directory: `/workspaces/r-dev-env/svn/r-devel`
 - The environment variables are set in the codespace image and are available when the codespace starts.
 
-  ![alt text](../assets/rdev6.png)
+    ![alt text](../assets/rdev6.png)
   
 **2) svn checkout**
 
 - The svn checkout command lets us create a local copy of a specific tag/branch of a repository.
 - We can check out the latest version of the trunk (the main branch) of the R sources to $TOP_SRCDIR as follows:
-```bash
-   svn checkout https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
-```
+    ```bash
+    svn checkout https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
+    ```
 - Output : We get file structure something like this after checking out R source code from R svn repository.
 
-   ![alt text](../assets/rdev8.png)
+    ![alt text](../assets/rdev8.png)
 
 **3) Download recommended packages for R**
 
@@ -48,13 +48,14 @@ This step takes ~1 minute on the codespace.
 $TOP_SRCDIR/configure --with-valgrind-instrumentation=1
 
 ```
-!!!Note
-    The `--with-valgrind-instrumentation` option is set to 1 for effective use of valgrind. See the [Using valgrind](https://cran.r-project.org/doc/manuals/R-exts.html#Using-valgrind) section of the R-admin manual for more information.
+
+    !!! Note
+        The `--with-valgrind-instrumentation` option is set to 1 for effective use of valgrind. See the [Using valgrind](https://cran.r-project.org/doc/manuals/R-exts.html#Using-valgrind) section of the R-admin manual for more information.
 
 - The configure cmd prepares for building R, creating files and folders inside the BUILDDIR directory.
 - Output : We get file structure something like this after using configure command.
      
-   ![alt text](../assets/rdev7.png)
+    ![alt text](../assets/rdev7.png)
 
 **6) Build R**
 
