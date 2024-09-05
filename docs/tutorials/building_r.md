@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD036 -->
 **1) Environment variables**
 
 - We have environment variables defining paths to directories for building R and

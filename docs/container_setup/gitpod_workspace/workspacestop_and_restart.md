@@ -28,7 +28,9 @@ the state it was in when it was last stopped.
 
 ### Managing and Sustaining Codespaces
 
-**Gitpod Workspace Pinning**
+#### Gitpod Workspace Pinning
+
+<!-- markdownlint-disable MD036 -->
 
 **Purpose:** Workspace pinning prevents important workspaces from being
 automatically deleted.
@@ -48,3 +50,5 @@ deletion.  ![manage gitpod workspace](../../assets/manage_workspace.png)
 Protects critical projects or environments from accidental loss.  Ensures
 long-term availability of specific workspaces that you frequently use or need to
 preserve.
+
+<!-- markdownlint-enable MD036 -->
