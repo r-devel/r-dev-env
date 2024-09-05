@@ -21,6 +21,7 @@ contributions. 🎉
 <!-- omit in toc -->
 ## Table of Contents
 
+<!-- markdownlint-disable link-fragments -->
 - [Code of Conduct](#code-of-conduct)
 - [I Have a Question](#i-have-a-question)
 - [I Want To Contribute](#i-want-to-contribute)
@@ -31,6 +32,7 @@ contributions. 🎉
 - [Styleguides](#styleguides)
   - [Commit Messages](#commit-messages)
 - [Join The Project Team](#join-the-project-team)
+<!-- markdownlint-enable link-fragments -->
 
 ## Code of Conduct
 
