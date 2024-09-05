@@ -69,6 +69,7 @@ You can build multiple R versions in the same Codespaces environment.
 
 !!! Note
 
+<!-- markdownlint-disable MD046 -->
     `BUILDDIR` and `TOP_SRCDIR` will be set to the defaults using the label `r-devel`
     whenever a new bash terminal is opened, e.g. when the codespace is restarted.
 
@@ -83,3 +84,4 @@ You can build multiple R versions in the same Codespaces environment.
     ```
 
     and switch with `set_build_r <name>`.
+<!-- markdownlint-enable MD046 -->
