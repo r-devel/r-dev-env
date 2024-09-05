@@ -12,7 +12,7 @@ Click the Gitpod badge below to open the Gitpod workspace creation dialog with t
     </figure>
 
     <figure markdown="span">
-    ![start gitpod workspace](../../assets/gitpod1.png){width="70%"} 
+    ![start gitpod workspace](../../assets/gitpod1.png){width="70%"}
     </figure>
 
     Click the "Continue" button in the Gitpod dialog to create a workspace. It will take approximately 15-20 minutes to create the workspace for the first time. The environment will be cached for faster startup in the future.

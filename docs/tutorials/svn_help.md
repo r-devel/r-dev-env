@@ -8,10 +8,10 @@ svn checkout -r 1234 https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
 
 ### Finding the last revision that passed check
 
-Occasionally, the latest revision of the R sources does not pass `make check`. 
+Occasionally, the latest revision of the R sources does not pass `make check`.
 In this case, it can be a good idea to revert to an earlier revision until the R Core Team have made further updates to fix the issue.
 
-Visit the [Build from SVN](https://github.com/r-devel/r-svn/actions/workflows/build-svn.yaml) page that summarises attempted builds of R using GitHub actions on the unofficial GitHub mirror. 
+Visit the [Build from SVN](https://github.com/r-devel/r-svn/actions/workflows/build-svn.yaml) page that summarises attempted builds of R using GitHub actions on the unofficial GitHub mirror.
 Find the latest run that completed successfully (green checkmark) and use the commit message to search for the corresponding Subversion revision.
 For example, to search the last 10 revisions for the log message "More @apifun and such annotations"
 
@@ -19,6 +19,7 @@ For example, to search the last 10 revisions for the log message "More @apifun a
 cd $TOP_SRCDIR
 svn log --limit 10 --search "More @apifun and such annotations"
 ```
+
 ```
 /workspaces/r-dev-env/svn/r-devel $ svn log --limit 10 --search "More @apifun and such annotations"
 ------------------------------------------------------------------------

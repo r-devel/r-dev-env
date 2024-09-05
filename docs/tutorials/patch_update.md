@@ -8,7 +8,7 @@ If you have not recently updated your local copy of the R Subversion repository,
 
 2) Create a patch file
 
-Go to the source directory and use `svn diff` to create a patch. 
+Go to the source directory and use `svn diff` to create a patch.
 
 ```bash
 cd $TOP_SRCDIR

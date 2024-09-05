@@ -1,6 +1,6 @@
 
-
 #### How to Stop Codespaces?
+
 - To stop codespaces we just need to navigate to the Codespaces option in the bottom left of the Codespace panel.
 
     ![stop codespace](../../assets/rdev14.png)
@@ -15,8 +15,8 @@
 
     ![stop codespace](../../assets/rdev16.png)
 
+#### Idle timeout
 
-#### Idle timeout:
 If you do not interact with the codespace, it will close automatically when it reaches the idle timeout limit. By default, this is 30 minutes, but you can [set a personal timeout](https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces#setting-your-default-timeout-period) limit in your GitHub settings.
 
 The code changes and operations we have performed inside the codespace will still be inside the stopped codespace. If your codespace is stopped then you can restart it as shown below.
@@ -29,7 +29,6 @@ The code changes and operations we have performed inside the codespace will stil
 - To restart it, we can just click on the codespaces we wanted to use and it will start the codespaces again for us.
 - You can also see an active label added to the codespaces we just started
  ![stop codespace](../../assets/rdev18.png)
-
 
 #### Managing and Sustaining Codespaces
 
@@ -58,7 +57,6 @@ For more details, refer to "Setting your timeout period for GitHub Codespaces."
 **Save Changes:**
 
 - Click "Save" to apply the new retention period.
-
 
 This allows you to customize how long your codespaces are kept before automatic deletion, balancing convenience and storage management.
 

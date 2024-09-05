@@ -29,6 +29,7 @@ Revert the changes made in specific file
 ```bash
 svn revert src/library/utils/R/askYesNo.R
 ```
+
 Revert changes in a directory
 
 ```bash
@@ -73,7 +74,7 @@ To rebuild R with the latest changes from the R Core Team and any local changes 
 
 ```bash
 cd $BUILDDIR
-make 
+make
 make check
 ```
 

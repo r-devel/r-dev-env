@@ -1,9 +1,9 @@
-# Welcome to the R Dev Container!
+# Welcome to the R Dev Container
 
 If you haven't seen them yet, you can find the
 [R Dev Container Docs](https://contributor.r-project.org/r-dev-env/) online.
 
-This index links to underlying markdown files for key sections of the docs, so you can preview them right here in VS Code. 
+This index links to underlying markdown files for key sections of the docs, so you can preview them right here in VS Code.
 
 ## Working with the container
 
@@ -23,10 +23,10 @@ If you are collaborating with others, you may want to use Live Share so that you
 
 ## Tutorials
 
-Learn how to use the container with these mini tutorials. 
-If you have used R in VSCode before, you can skip Tutorial 1. 
-Tutorials 2 and 3 are the minimum to get started with R development. 
-You can run through these in about 30 minutes. 
+Learn how to use the container with these mini tutorials.
+If you have used R in VSCode before, you can skip Tutorial 1.
+Tutorials 2 and 3 are the minimum to get started with R development.
+You can run through these in about 30 minutes.
 You can refer to the remaining sections as needed!
 
 1. [Running R](docs/tutorials/running_r.md)
