@@ -3,23 +3,23 @@ tutorials use the simplest set up, working on a single copy of the R sources.
 
 It can be helpful to work with multiple versions of R:
 
-- to compare your modifications with an unmodified copy, e.g. to
-    compare speed or memory usage, or
-- to work on independent changes, so that each patch only contains the
-    changes for one bug fix or new feature.
+- to compare your modifications with an unmodified copy, e.g. to compare speed
+    or memory usage, or
+- to work on independent changes, so that each patch only contains the changes
+    for one bug fix or new feature.
 
 You can build multiple R versions in the same Codespaces environment.
 
-1. First choose a name for the R version. This will be used to identify
-    the version and to name the build/source directory. By default, we
-    use the name `r-devel` and the environment variables `BUILDDIR` and
-    `TOP_SRCDIR` are set to match.
+1. First choose a name for the R version. This will be used to identify the
+    version and to name the build/source directory. By default, we use the name
+    `r-devel` and the environment variables `BUILDDIR` and `TOP_SRCDIR` are set
+    to match.
 
-    For illustration, we will use `r-devel-raw`, which you might use to
-    name a version of R that you never modify.
+    For illustration, we will use `r-devel-raw`, which you might use to name a
+    version of R that you never modify.
 
-2. You can set the `BUILDDIR` and `TOP_SRCDIR` environment variables to
-    match your chosen name using the `set_build_r` function:
+2. You can set the `BUILDDIR` and `TOP_SRCDIR` environment variables to match
+    your chosen name using the `set_build_r` function:
 
     - Open a terminal in the codespace.
 
@@ -29,7 +29,8 @@ You can build multiple R versions in the same Codespaces environment.
         set_build_r r-devel-raw
         ```
 
-        The new values of the environment variables will be printed as confirmation:
+        The new values of the environment variables will be printed as
+        confirmation:
 
         ```
         BUILDDIR is now set to /workspaces/r-dev-env/build/r-devel-raw
@@ -49,9 +50,9 @@ You can build multiple R versions in the same Codespaces environment.
     tutorial to checkout the R sources and build R using the new source and
     build directories.
 
-4. Once you have a build of R under the new build directory, you will
-    see your chosen name in the choices when running the `which_r` script to
-    select the version of R to run in new terminals, e.g.
+4. Once you have a build of R under the new build directory, you will see your
+    chosen name in the choices when running the `which_r` script to select the
+    version of R to run in new terminals, e.g.
 
     ```
     which_r
