@@ -7,19 +7,19 @@
 
 3. Create virtual environment using python venv
 
-```
+```bash
 python3 -m venv venv
 ```
 
 4. Now activate the virtual environment
 
-```
+```bash
 source ./venv/bin/activate
 ```
 
 5. Now install libraries and dependencies for mkdocs
 
-```
+```bash
 pip install mkdocs "mkdocs-material[imaging]"
 ```
 
@@ -30,7 +30,7 @@ pip install mkdocs "mkdocs-material[imaging]"
 7. To start the local development server and preview changes, run the following
    command:
 
-```
+```bash
 mkdocs serve
 ```
 

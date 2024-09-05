@@ -100,11 +100,11 @@ Help](./svn_help.md) for how to revert to a version that passes check.
 Run the `which_r` script to set which R to use for R terminals in VSCode. When
 prompted, enter the number corresponding to `r-devel`
 
-```
+```bash
 which_r
 ```
 
-```
+```bash
 Which version of R should be used in new R terminals?
   1. R 4.4.0 (release version built into this container)
   Additional R builds available:

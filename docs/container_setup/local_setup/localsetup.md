@@ -19,7 +19,7 @@ prerequisites installed.
    repo](https://github.com/r-devel/r-dev-env/)
 2. In a terminal, change directory to r-dev-env
 
-```
+```bash
 cd r-dev-env
 ```
 
@@ -31,7 +31,7 @@ code .
 
 4. Checkout the main branch and pull the latest changes
 
-```
+```bash
 git checkout main
 git pull
 ```

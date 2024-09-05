@@ -25,7 +25,7 @@ cd $TOP_SRCDIR
 svn log --limit 10 --search "More @apifun and such annotations"
 ```
 
-```
+```bash
 /workspaces/r-dev-env/svn/r-devel $ svn log --limit 10 --search "More @apifun and such annotations"
 ------------------------------------------------------------------------
 r86726 | luke | 2024-06-12 18:00:19 +0000 (Wed, 12 Jun 2024) | 2 lines
@@ -43,7 +43,7 @@ More @apifun and such annotations.
 If you have already attempted to build R, you can re-run the make with the
 version identified in your search as follows:
 
-```
+```bash
 svn checkout -r 86726 https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
 cd $BUILDDIR
 make

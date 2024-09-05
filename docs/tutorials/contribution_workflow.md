@@ -24,7 +24,7 @@
   source code can be found in `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.
 - You can redirect to that file using
 
-```
+```bash
 code $TOP_SRCDIR/src/library/utils/R/askYesNo.R
 ```
 

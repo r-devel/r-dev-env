@@ -25,14 +25,14 @@ You can build multiple R versions in the same Codespaces environment.
 
     - Run the `set_build_r` function with your chosen name as the argument, e.g.
 
-        ```
+        ```bash
         set_build_r r-devel-raw
         ```
 
         The new values of the environment variables will be printed as
         confirmation:
 
-        ```
+        ```bash
         BUILDDIR is now set to /workspaces/r-dev-env/build/r-devel-raw
         TOP_SRCDIR is now set to /workspaces/r-dev-env/svn/r-devel-raw
         ```
@@ -41,7 +41,7 @@ You can build multiple R versions in the same Codespaces environment.
     `r-devel`, you can simply copy the sources and the build to the new
     directories with `rsync`:
 
-    ```
+    ```bash
     rsync -a "$(dirname "$BUILDDIR")/r-devel/"* $BUILDDIR
     rsync -a "$(dirname "$TOP_SRCDIR")/r-devel/"* $TOP_SRCDIR
     ```
@@ -54,11 +54,11 @@ You can build multiple R versions in the same Codespaces environment.
     chosen name in the choices when running the `which_r` script to select the
     version of R to run in new terminals, e.g.
 
-    ```
+    ```bash
     which_r
     ```
 
-    ```
+    ```bash
     Which version of R should be used in new R terminals?
       1. R 4.4.0 (release version built into this container)
       Additional R builds available:
@@ -77,7 +77,7 @@ You can build multiple R versions in the same Codespaces environment.
 
     You can check the values any time with
 
-    ```
+    ```bash
     echo $BUILDDIR
     echo $TOP_SRCDIR
     ```
