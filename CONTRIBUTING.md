@@ -14,9 +14,10 @@ contributions. 🎉
 > fine. There are other easy ways to support the project and show your
 > appreciation, which we would also be very happy about:
 >
-> - Star the project - Tweet about it - Refer this project in your project's
->   readme - Mention the project at local meetups and tell your
->   friends/colleagues
+> - Star the project
+> - Tweet about it
+> - Refer this project in your project's readme
+> - Mention the project at local meetups and tell your friends/colleagues
 
 <!-- omit in toc -->
 ## Table of Contents
