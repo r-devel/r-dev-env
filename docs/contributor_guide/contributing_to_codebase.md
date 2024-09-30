@@ -2,4 +2,4 @@
 
 ![alt text](../assets/image.png)
 
-1. 
+1.
