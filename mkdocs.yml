@@ -37,10 +37,10 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
+    - search.share
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
-
 
   palette:
     - scheme: default
@@ -58,6 +58,7 @@ theme:
 
 plugins:
   - social
+  - search
 
 extra:
   social:
