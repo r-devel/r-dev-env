@@ -6,23 +6,27 @@ Live Share is a powerful feature that allows you to collaborate with others in r
 
 ### Start a Live Share Session
 
-1. **Click the "Live Share" button** in the status bar.
-Alternatively you can go to Live Share extension tab and select from the options to share with read/write permission or share with read-only permission.
+#### 1. Click the "Live Share" button in the status bar
+ Alternatively you can go to Live Share extension tab and select from the options to share with read/write permission or share with read-only permission.
 ![alt text](../../assets/live-share.png)
 
-2. **Share the Link**: A sharing link will be generated and copied to the clipboard for sharing with your collaborators. From the pop-up dialog, you can copy the link again or switch the permissions from read/write to read-only (or vice versa).
+#### 2. Share the Link
+ A sharing link will be generated and copied to the clipboard for sharing with your collaborators. From the pop-up dialog, you can copy the link again or switch the permissions from read/write to read-only (or vice versa).
 ![alt text](../../assets/live-share2.png)
 
 ### Join a Live Share Session
 
-1. **Receive the link** from the host. The link will be of the form `https://prod.liveshare.vsengsaas.visualstudio.com/join?[37 alphanumberic characters]`
-2. **Choose how to join the session:**
+#### 1. Receive the link from the host.
+ The link will be of the form `https://prod.liveshare.vsengsaas.visualstudio.com/join?[37 alphanumberic characters]`
 
-    - **Open the link in a web browser**: click the link to open it in your web browser. If you have VS Code installed locally, a pop-up dialog will give you the choice of continuing in the web or opening the session in VS Code. You can join the session anonymously or sign in with your Microsoft or GitHub account.
-    - **Copy the link into VSCode or the R Dev Container Codespace**: From the Live share extension tab, click the "Join" button. If you are using VS Code locally, you can choose to join the session anonymously or sign in with your Microsoft or GitHub account. If you are using the Codespace, you will already be signed in with your GitHub account. A pop-up at the top of the VSCode window will ask for the Live Share session link. Paste the link and click 'Enter'.
+#### 2. Choose how to join the session
+
+- **Open the link in a web browser**: click the link to open it in your web browser. If you have VS Code installed locally, a pop-up dialog will give you the choice of continuing in the web or opening the session in VS Code. You can join the session anonymously or sign in with your Microsoft or GitHub account.
+- **Copy the link into VSCode or the R Dev Container Codespace**: From the Live share extension tab, click the "Join" button. If you are using VS Code locally, you can choose to join the session anonymously or sign in with your Microsoft or GitHub account. If you are using the Codespace, you will already be signed in with your GitHub account. A pop-up at the top of the VSCode window will ask for the Live Share session link. Paste the link and click 'Enter'.
 ![alt text](../../assets/live-share3.png). 
 
-3. **Wait to be accepted by the host**. The host will receive a pop-up message where they can accept your request to join.
+#### 3. Wait for Host Approval
+Wait to be accepted by the host. The host will receive a pop-up message where they can accept your request to join.
 
 ### Collaborate in Real-Time
 
