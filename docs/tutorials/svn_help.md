@@ -6,7 +6,7 @@ You can check out a specific revision of the R sources with
 svn checkout -r 1234 https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
 ```
 
-### Finding the last revision that passed check
+## Finding the last revision that passed check
 
 Occasionally, the latest revision of the R sources does not pass `make check`. 
 In this case, it can be a good idea to revert to an earlier revision until the R Core Team have made further updates to fix the issue.

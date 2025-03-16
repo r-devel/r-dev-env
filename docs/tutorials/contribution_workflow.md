@@ -1,4 +1,5 @@
-#### 1. Example Contribution Workflow using the R Dev Container:
+# Example Contribution Workflow using the R Dev Container
+#### 1. Starting R in the Dev Container
 -  To start working in R we will click on `R:(not attach)` which is in the bottom right of the VSCode window. This will open an R terminal for us.
      
     ![alt text](../assets/rdev11.png)
