@@ -4,6 +4,8 @@
     "hostRequirements": {
         "cpus": 4
     },
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/r-dev-env,type=bind,consistency=cached",
+    "workspaceFolder": "/workspaces/r-dev-env",
     "customizations": {
         "vscode": {
             "settings": {
