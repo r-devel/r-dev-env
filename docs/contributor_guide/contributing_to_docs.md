@@ -7,24 +7,24 @@
 
 3. Create virtual environment using python venv
 ```
-python3 -m venv venv
+$ python3 -m venv venv
 ```
 
 4. Now activate the virtual environment 
 ```
-source ./venv/bin/activate
+$ source ./venv/bin/activate
 ```
 
 5. Now install libraries and dependencies for mkdocs
 ```
-pip install mkdocs "mkdocs-material[imaging]"
+$ pip install mkdocs "mkdocs-material[imaging]"
 ```
 
 6. After setting up the virtual environment and installing necessary libraries, navigate to the root directory of the project where the `mkdocs.yml` file is located.
 
 7. To start the local development server and preview changes, run the following command:
 ```
-mkdocs serve
+$ mkdocs serve
 ```
 This will compile the documentation and serve it locally. You can access the documentation by opening a web browser and navigating to http://localhost:8000.
 

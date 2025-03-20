@@ -19,7 +19,7 @@
 - Edit the source code of `utils::askYesNo()` to change the default options. The source code can be found in `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.
 - You can redirect to that file using 
 ``` 
-code $TOP_SRCDIR/src/library/utils/R/askYesNo.R
+$ code $TOP_SRCDIR/src/library/utils/R/askYesNo.R
 ```
 
 **> Before edit:**
@@ -44,11 +44,11 @@ code $TOP_SRCDIR/src/library/utils/R/askYesNo.R
 - Quit R with `q()` or by closing the R terminal.
 - In the bash terminal, change to the build directory:
 ```bash
-cd $BUILDDIR
+$ cd $BUILDDIR
 ```
 -  Now run the `make` command to rebuild R with the changes you made in step 2. This will be much faster than the full build!
 ```bash
-make
+$ make
 ```
     
 ![alt text](../assets/rdev22.png)
