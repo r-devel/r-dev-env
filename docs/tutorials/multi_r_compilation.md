@@ -23,17 +23,12 @@ You can build multiple R versions in the same Codespaces environment.
 
     -   Open a terminal in the codespace.
 
-    -   Run the `set_build_r` function with your chosen name as the argument, e.g.
+    -   Run the `set_build_r` function with your chosen name as the argument. The new values of the environment variables will then be printed as confirmation, e.g.
 
         ```         
-        set_build_r r-devel-raw
-        ```
-
-        The new values of the environment variables will be printed as confirmation:
-
-        ```         
-        BUILDDIR is now set to /workspaces/r-dev-env/build/r-devel-raw
-        TOP_SRCDIR is now set to /workspaces/r-dev-env/svn/r-devel-raw
+        $ set_build_r r-devel-raw
+        << BUILDDIR is now set to /workspaces/r-dev-env/build/r-devel-raw
+        << TOP_SRCDIR is now set to /workspaces/r-dev-env/svn/r-devel-raw
         ```
         
 3.  If you have an unmodified build of R-devel using the default name of
@@ -41,8 +36,8 @@ You can build multiple R versions in the same Codespaces environment.
     directories with `rsync`:
 
     ```         
-    rsync -a "$(dirname "$BUILDDIR")/r-devel/"* $BUILDDIR
-    rsync -a "$(dirname "$TOP_SRCDIR")/r-devel/"* $TOP_SRCDIR
+    $ rsync -a "$(dirname "$BUILDDIR")/r-devel/"* $BUILDDIR
+    $ rsync -a "$(dirname "$TOP_SRCDIR")/r-devel/"* $TOP_SRCDIR
     ```
 
     Otherwise you can follow the steps in the [Building R](./building_r.md)
@@ -53,17 +48,14 @@ You can build multiple R versions in the same Codespaces environment.
     see your chosen name in the choices when running the `which_r` script to 
     select the version of R to run in new terminals, e.g.
 
-    ```         
-    which_r
-    ```
-
-    ```  
-    Which version of R should be used in new R terminals?
-      1. R 4.4.0 (release version built into this container)
-      Additional R builds available:
-        2. r-devel
-        3. r-devel-raw
-    Enter the number corresponding to the selected version: 
+    ```bash
+    $ which_r
+    << Which version of R should be used in new R terminals?
+    <<   1. R 4.4.0 (release version built into this container)
+    <<   Additional R builds available:
+    <<     2. r-devel
+    <<     3. r-devel-raw
+    << Enter the number corresponding to the selected version: 
     ```
 
 !!! Note
@@ -77,8 +69,8 @@ You can build multiple R versions in the same Codespaces environment.
     You can check the values any time with 
     
     ```
-    echo $BUILDDIR
-    echo $TOP_SRCDIR
+    $ echo $BUILDDIR
+    $ echo $TOP_SRCDIR
     ```
     
     and switch with `set_build_r <name>`.

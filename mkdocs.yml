@@ -79,3 +79,10 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.mark
   - attr_list
+
+extra_css:
+  - extra/stylesheets/codeblocks.css
+
+extra_javascript:
+  - extra/js/setup_codeblocks.js
+

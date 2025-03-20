@@ -1,0 +1,11 @@
+.code-noselect {
+    user-select: none;
+}
+
+.console-input {
+    color: var(--md-primary-fg-color);
+}
+
+.console-output {
+    color: var(--md-default-fg-color--light);
+}

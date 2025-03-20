@@ -11,12 +11,12 @@ If you have not recently updated your local copy of the R Subversion repository,
 Go to the source directory and use `svn diff` to create a patch. 
 
 ```bash
-cd $TOP_SRCDIR
-svn diff > $PATCHDIR/patch.diff
+$ cd $TOP_SRCDIR
+$ svn diff > $PATCHDIR/patch.diff
 ```
 
 The patch file will be saved in the directory specified by the PATCHDIR environment variable that is defined when the codespace starts
 
 ```bash
-echo $PATCHDIR/patch.diff
+$ echo $PATCHDIR/patch.diff
 ```
