@@ -65,8 +65,8 @@ $TOP_SRCDIR/configure --with-valgrind-instrumentation=1
 
 ```
 
-!!! Note
 <!-- markdownlint-disable MD046 -->
+!!! Note
     The `--with-valgrind-instrumentation` option is set to 1 for effective use of valgrind. See the [Using valgrind](https://cran.r-project.org/doc/manuals/R-exts.html#Using-valgrind) section of the R-admin manual for more information.
 <!-- markdownlint-enable MD046 -->
 
