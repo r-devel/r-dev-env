@@ -29,14 +29,14 @@ up to 60 hours for free on dual core codespaces.
 
 [![Open in Gitpod](https://img.shields.io/badge/Gitpod-Open%20in%20Gitpod-blue?logo=gitpod&style=for-the-badge)](https://gitpod.io/github.com/r-devel/r-dev-env/tree/main)
 
-The [Starting Gitpod 
-section](https://contributor.r-project.org/r-dev-env/container_setup/gitpod_workspace/workspacestart/) 
-of the R Dev Container Docs will walk you through the process. Then you can 
-work through the tutorials in the docs to lean how to use the codespace for R 
+The [Starting Gitpod
+section](https://contributor.r-project.org/r-dev-env/container_setup/gitpod_workspace/workspacestart/)
+of the R Dev Container Docs will walk you through the process. Then you can
+work through the tutorials in the docs to lean how to use the codespace for R
 development.
 
-More details about Gitpod Workspaces can be found in the 
-[Gitpod Workspace Docs](https://www.gitpod.io/docs/introduction). Gitpod 
+More details about Gitpod Workspaces can be found in the
+[Gitpod Workspace Docs](https://www.gitpod.io/docs/introduction). Gitpod
 currently offers Up to 896 cores, 12,000 GB RAM & GPUs in free tier.
 
 ### Run on your local computer
