@@ -11,24 +11,22 @@ It can be helpful to work with multiple versions of R:
 You can build multiple R versions in the same Codespaces environment. To do so, follow these steps:
 
 
-#### 1. Choose a name for the R version
--   First choose a name for the R version. This will be used to identify
+
+- rst choose a name for the R version. This will be used to identify
     the version and to name the build/source directory. By default, we
     use the name `r-devel` and the environment variables `BUILDDIR` and
     `TOP_SRCDIR` are set to match.
 
-
-    For illustration, we will use `r-devel-raw`, which you might use to name a
     version of R that you never modify.
 
 #### 2.  Set Environment variables
--   You can set the `BUILDDIR` and `TOP_SRCDIR` environment variables to
+
+
+- u can set the `BUILDDIR` and `TOP_SRCDIR` environment variables to
     match your chosen name using the `set_build_r` function:
 
 
-    - Open a terminal in the codespace.
-
-    - Run the `set_build_r` function with your chosen name as the argument, e.g.
+  - Run the `set_build_r` function with your chosen name as the argument, e.g.
 
         ```bash
         set_build_r r-devel-raw
@@ -42,10 +40,10 @@ You can build multiple R versions in the same Codespaces environment. To do so, 
         TOP_SRCDIR is now set to /workspaces/r-dev-env/svn/r-devel-raw
         ```
 
-        
 #### 3.  Copy or build source
--   If you have an unmodified build of R-devel using the default name of
+- If you have an unmodified build of R-devel using the default name of
 
+ 
     `r-devel`, you can simply copy the sources and the build to the new
     directories with `rsync`:
 
@@ -59,12 +57,12 @@ You can build multiple R versions in the same Codespaces environment. To do so, 
     build directories.
 
 #### 4.  Select R version
--   Once you have a build of R under the new build directory, you will see
-    your chosen name in the choices when running the `which_r` script to 
+
+
+- ce you have a build of R under the new build directory, you will see
+    your chosen name in the choices when running the `which_r` script to
     select the version of R to run in new terminals, e.g.
 
-
-    ```bash
     which_r
     ```
 

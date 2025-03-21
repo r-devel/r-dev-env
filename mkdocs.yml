@@ -59,7 +59,7 @@ theme:
 
 plugins:
   - social
-  - search 
+  - search
 extra:
   social:
     - icon: fontawesome/brands/github

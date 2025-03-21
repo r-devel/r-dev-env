@@ -2,14 +2,16 @@
 # Starting a Gitpod Workspace
 
 
-#### 1. Log In to Gitpod
+
 Go to the [Gitpod login page](https://gitpod.io/login/) and sign in with your GitHub,
-GitLab, or Bitbucket account. This allows Gitpod to create workspaces from your 
+GitLab, or Bitbucket account. This allows Gitpod to create workspaces from your
 repositories.
 
-#### 2. Create a workspace 
+#### 2. Create a workspace
+
+
 To create a workspace using the R Dev Container repo,
-click the Gitpod badge below to open the Gitpod workspace creation dialog with the 
+click the Gitpod badge below to open the Gitpod workspace creation dialog with the
 relevant options pre-filled:
 
 <figure markdown="span">
@@ -17,16 +19,15 @@ relevant options pre-filled:
 </figure>
 
 <figure markdown="span">
-![start gitpod workspace](../../assets/gitpod1.png){width="70%"} 
+![start gitpod workspace](../../assets/gitpod1.png){width="70%"}
 </figure>
 
-Click the "Continue" button in the Gitpod dialog to create a workspace. 
-It will take approximately 15-20 minutes to create the workspace for the 
+Click the "Continue" button in the Gitpod dialog to create a workspace.
+It will take approximately 15-20 minutes to create the workspace for the
 first time. The environment will be cached for faster startup in the future.
 
 !!! Note
     Changing the resource option from Standard to Large will reduce the free
-    monthly Gitpod usage, which is 50 hours per month of Standard workspace 
+    monthly Gitpod usage, which is 50 hours per month of Standard workspace
     usage. See the [billing](https://www.gitpod.io/docs/configure/billing) docs
     for more information.
-    

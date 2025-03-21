@@ -2,7 +2,7 @@
 #### 1. Creating an R file in VS Code
 
 - Create a file in VS Code ending with a .R extension. You can create new files
-  by clicking on the new file icon in VS Code Explorer, or use the `code` 
+  by clicking on the new file icon in VS Code Explorer, or use the `code`
   command in the terminal to create and open an R file
 
 ```bash
@@ -12,9 +12,7 @@ code R/test.R
 ![alt text](../assets/rdev4.png)
 
 
-#### 2. Launching R terminal
-
-- You should see `R:(not attached)` in the Status Bar at the bottom of 
+- You should see `R:(not attached)` in the Status Bar at the bottom of
   the VSCode window.
 
 ![alt text](../assets/rdev11.png)

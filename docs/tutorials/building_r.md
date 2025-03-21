@@ -1,8 +1,6 @@
 
 #### 1. Environment variables
 
-
-- We have environment variables defining paths to directories for building R and
   storing the source code.
 - `BUILDDIR` defines the build directory: `/workspaces/r-dev-env/build/r-devel`.
 - `TOP_SRCDIR` defines the source directory: `/workspaces/r-dev-env/svn/r-devel`
@@ -11,13 +9,9 @@
 
     ![alt text](../assets/rdev6.png)
 
-  
 #### 2. svn checkout
-
-
 - The svn checkout command lets us create a local copy of a specific tag/branch
   of a repository.
-- We can check out the latest version of the trunk (the main branch) of the R
   sources to $TOP_SRCDIR as follows:
 
     ```bash
@@ -41,18 +35,14 @@ $TOP_SRCDIR/tools/rsync-recommended
 
 ![alt text](../assets/rdev9.png)
 
-
 #### 4. Change to the build directory
-   
-- To keep the source directory clean, we change to a build directory
-  to configure and build R.
 
+- To keep the source directory clean, we change to a build directory
 
 - First create the directory specified by the BUILDDIR environment variable.
 
 ```bash
 mkdir -p $BUILDDIR
-```
 
 - Then we can change directory from root to the build directory.
 
@@ -96,13 +86,11 @@ make
 
 #### 7. Check R
 
-
 Check that the build of R passes R's standard checks:
 
 ```bash
 make check
 ```
-
 This takes a couple of minutes in the codespace. The check will stop with a
 error message if any of the tests fail. If this happens, see [SVN
 Help](./svn_help.md) for how to revert to a version that passes check.
