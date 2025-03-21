@@ -36,8 +36,8 @@ repository](https://github.com/r-devel/r-dev-env) in VSCode you will be prompted
 to start the dev container.
 
 The [Local setup
-section](https://contributor.r-project.org/r-dev-env/container_setup/local_setup/localsetup/) 
-of the R Dev Container Docs will walk you through the process.  Then you can 
+section](https://contributor.r-project.org/r-dev-env/container_setup/local_setup/localsetup/)
+of the R Dev Container Docs will walk you through the process.  Then you can
 work through the following the tutorials in the docs to learn how to use the
 codespace for R development.
 
