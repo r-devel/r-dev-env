@@ -1,6 +1,6 @@
 ### Common Errors
 
-While working with an R Dev Container, you may encounter 
+While working with an R Dev Container, you may encounter
 some known errors. Here are a few common ones:
 
 #### **1. Error: Rsync Connection Limit Reached, Preventing New Connections**
@@ -14,19 +14,17 @@ $TOP_SRCDIR/tools/rsync-recommended @ERROR: max connections (59) reached -- try 
 ```
 
 
-##### **Cause**
-
 This error occurs because the rsync server has reached its maximum allowed
-number of simultaneous connections, which is set to 59. As a result, new 
-connection attempts are rejected until some of the existing connections are 
+number of simultaneous connections, which is set to 59. As a result, new
+connection attempts are rejected until some of the existing connections are
 closed.
 
 ##### **Solutions**
 
 1. **Retry After Some Time**
-Wait for a few minutes and try running the `rsync` command again. The 
+Wait for a few minutes and try running the `rsync` command again. The
 number of active connections may decrease, allowing you to connect.
 2. **Restart Codespace**
-Sometimes, simply restarting your Codespace can resolve temporary 
-connection issues. Try restarting your Codespace and then attempt 
+Sometimes, simply restarting your Codespace can resolve temporary
+connection issues. Try restarting your Codespace and then attempt
 the `rsync` command again.
