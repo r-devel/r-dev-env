@@ -25,6 +25,8 @@ Share with the R Dev Container follow the guide below.
 #### 1. Receive the link from the host
 
 #### 2. Choose how to join the session
+
+
 - **Open the link in a web browser**: click the link to open it in your web
   browser. If you have VS Code installed locally, a pop-up dialog will give
   you the choice of continuing in the web or opening the session in VS Code.
@@ -53,16 +55,18 @@ Once joined, you can:
 
 #### 2.Share Terminals
 
-  The host can share bash or R terminals. Guests can 
+  The host can share bash or R terminals. Guests can
   see the terminal output and, if granted permission, type commands.
 
 #### 3.Live Chat
 
   Session chat can be opened from the Live share extension tab.
-  ![alt text](../../assets/live-share6.png) 
+  ![alt text](../../assets/live-share6.png)
   ![alt text](../../assets/live-share5.png)
 
+
 ### Manage control
+
 #### 1.Manage permissions
 
   In a session with read/write permissions, the host

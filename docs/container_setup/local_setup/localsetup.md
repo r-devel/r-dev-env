@@ -42,6 +42,8 @@ code .
 #### 4. Checkout Main Branch and Pull Latest Changes
 
 Checkout the main branch and pull the latest changes
+
+
 ```bash
 git checkout main
 git pull

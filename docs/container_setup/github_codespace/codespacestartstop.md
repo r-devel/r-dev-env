@@ -52,6 +52,8 @@ Here we can see a list of the codespaces we have created
 To restart it, we can just click on the codespaces we wanted
 
 #### 4. Manage Codespaces
+
+
 You can also see an active label added to the codespaces we just started
 
 ![stop codespace](../../assets/rdev18.png)

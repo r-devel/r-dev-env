@@ -12,8 +12,6 @@ You can build multiple R versions in the same Codespaces environment.
 To do so, follow these steps:
 
 
-#### 1. Choose a name for the R version
-
 - First choose a name for the R version. This will be used to identify
 the version and to name the build/source directory. By default, we
 use the name `r-devel` and the environment variables `BUILDDIR` and
@@ -52,9 +50,7 @@ rsync -a "$(dirname "$BUILDDIR")/r-devel/"* $BUILDDIR
 rsync -a "$(dirname "$TOP_SRCDIR")/r-devel/"* $TOP_SRCDIR
 ```
 
-
   Otherwise you can follow the steps in the [Building R](./building_r.md)
-  tutorial to checkout the R sources and build R using the new source and
   build directories.
 
 #### 4.  Select R version
