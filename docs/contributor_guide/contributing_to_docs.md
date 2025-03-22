@@ -3,7 +3,17 @@
 
 1. Fork and Clone the repo -
 
+
+```
+git clone gh repo clone https://github.com/r-devel/r-dev-env.git
+```
+
+
 2. Change directory to r-dev-env
+
+```
+cd r-dev-env
+```
 
 3. Create virtual environment using python venv
 
@@ -39,13 +49,7 @@ documentation by opening a web browser and navigating to
 <http://localhost:8000>.
 
 8. Edit Documentation: Make changes to the documentation content files located
-   in the `docs` directory. You can use Markdown syntax for formatting.
 
-9. Preview Changes: As you make changes, the local development server will
-   automatically detect them and update the preview in real-time. Refresh your
-   browser to see the changes.
+!!! Note
 
-**N.B.** There is a known issue with mkdocs not alwayds finding Cairo. The issue
-and suggested fixes are on the [MkDocs Image
-Processing](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/)
-page.
+    There is a known issue with mkdocs not always finding Cairo. The issue and suggested fixes are on the [MkDocs Image Processing](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/) page.
