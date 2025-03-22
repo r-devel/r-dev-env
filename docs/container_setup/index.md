@@ -13,7 +13,7 @@ You can run the R Dev Container in one of the ways:
   Offers 50 hours per month of free usage. Check out the
   [Gitpod pricing docs](https://www.gitpod.io/pricing) for more information.
 
-- **[Local Setup](local_setup)**: Currently recommended for Linux users only.
+- **[Local Setup](local_setup/localsetup.md)**: Currently recommended for Linux users only.
 
 Explore the sub-sections for detailed instructions on setting up and using the
 container for each option.

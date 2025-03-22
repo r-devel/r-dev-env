@@ -2,13 +2,12 @@
 # Starting a Gitpod Workspace
 
 
-
+#### 1. Log In to Gitpod
 Go to the [Gitpod login page](https://gitpod.io/login/) and sign in with your GitHub,
 GitLab, or Bitbucket account. This allows Gitpod to create workspaces from your
 repositories.
 
 #### 2. Create a workspace
-
 
 To create a workspace using the R Dev Container repo,
 click the Gitpod badge below to open the Gitpod workspace creation dialog with the

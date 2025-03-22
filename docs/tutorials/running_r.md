@@ -5,9 +5,9 @@
   by clicking on the new file icon in VS Code Explorer, or use the `code`
   command in the terminal to create and open an R file
 
-```bash
-code R/test.R
-```
+    ```bash
+    code R/test.R
+    ```
 
 ![alt text](../assets/rdev4.png)
 

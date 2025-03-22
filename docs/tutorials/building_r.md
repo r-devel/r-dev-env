@@ -7,7 +7,7 @@
 - The environment variables are set in the codespace image and are available
   when the codespace starts.
 
-    ![alt text](../assets/rdev6.png)
+  ![alt text](../assets/rdev6.png)
 
 #### 2. svn checkout
 - The svn checkout command lets us create a local copy of a specific tag/branch

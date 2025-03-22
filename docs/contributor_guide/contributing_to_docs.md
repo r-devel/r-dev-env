@@ -1,11 +1,10 @@
-
+Contributing to documentation helps improve the project and
 and makes it more accessible. Follow these steps to set
 up your environment, edit content, and preview changes
 locally.
 
 #### 1. Fork and Clone the Repository
 - Fork the [r-dev-env repository](https://github.com/r-devel/r-dev-env) on GitHub and clone
-
   it to your local machine.
 
 #### 2. Change to the Project Directory
@@ -13,9 +12,7 @@ locally.
 
  
 #### 3. Create a Virtual Environment
-
-
-- t up a Python virtual environment using the venv module.
+- Set up a Python virtual environment using the venv module.
 
 
 ```
@@ -23,7 +20,7 @@ python3 -m venv venv
 ```
 
 
-#  4. Activate the Virtual Environment
+#### 4. Activate the Virtual Environment
 
 
 - Activate the virtual environment to isolate dependencies.
@@ -31,7 +28,7 @@ python3 -m venv venv
 ```
 source ./venv/bin/activate
 
-` 
+``` 
 
 
 #### 5. Install MkDocs and Dependencies
@@ -39,7 +36,7 @@ source ./venv/bin/activate
 - Install MkDocs and its required libraries, including mkdocs-material.
 
 
-` 
+``` 
 pip install mkdocs "mkdocs-material[imaging]"
 ```
 
@@ -55,16 +52,15 @@ pip install mkdocs "mkdocs-material[imaging]"
 
 
 - To start the local development server and preview changes, run the
-    following command:
+  following command:
 
 ```
-
  
 mkdocs serve
 ```
 
 
-T will compile the documentation and serve it locally. You can access the
+This will compile the documentation and serve it locally. You can access the
 documentation by opening a web browser and navigating to
 <http://localhost:8000>.
 

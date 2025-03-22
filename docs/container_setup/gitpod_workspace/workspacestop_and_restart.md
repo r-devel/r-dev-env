@@ -41,7 +41,6 @@ To restart a workspace, click on the workspace in the list you want to restart.
 
 #### Gitpod Workspace Pinning
 
-<!-- markdownlint-disable MD036 -->
 
 **Purpose:** Workspace pinning prevents important workspaces from being
 automatically deleted.
@@ -62,4 +61,4 @@ Protects critical projects or environments from accidental loss.  Ensures
 long-term availability of specific workspaces that you frequently use or need to
 preserve.
 
-<!-- markdownlint-enable MD036 -->
+

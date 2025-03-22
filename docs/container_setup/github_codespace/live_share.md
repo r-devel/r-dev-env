@@ -12,6 +12,7 @@ Share with the R Dev Container follow the guide below.
 ### Start a Live Share Session
 
 
+#### 1. Click the "Live Share" button in the status bar
 
  Alternatively you can go to Live Share extension tab and select from the options
  to share with read/write permission or share with read-only permission.
@@ -49,28 +50,35 @@ Share with the R Dev Container follow the guide below.
 
 
 #### 3. Wait for Host Approval
+  Wait to be accepted by the host. The host will receive a pop-up message where
+  they can accept your request to join.
 
-they can accept your request to join.
 
 ### Collaborate in Real-Time
 
 Once joined, you can:
 
-- **Edit Code Together**: Both the host and guests can edit files, and changes
+#### 1.Edit Code Together 
+  Both the host and guests can edit files, and changes
   will be synchronized in real-time.
-- **Share Terminals**: The host can share bash or R terminals. Guests can see
+#### 2.Share Terminals 
+  The host can share bash or R terminals. Guests can see
   the terminal output and, if granted permission, type commands.
-- **Live Chat**: Session chat can be opened from the Live share extension tab.
-![alt text](../../assets/live-share6.png) ![alt
-text](../../assets/live-share5.png)
+#### 3.Live Chat 
+  Session chat can be opened from the Live share extension tab.
+  ![alt text](../../assets/live-share6.png) ![alt
+  text](../../assets/live-share5.png)
 
 ### Manage control
 
-1. **Manage permissions**: In a session with read/write permissions, the host
-   can change permissions for each shared terminal by right-clicking the
-   terminal name on the Live Share tab.
-2. **Follow Mode**: Both the host and guests can enable "Follow Mode" to follow
-   each other’s cursor and view.
+#### 1.Manage permissions 
+  In a session with read/write permissions, the host
+  can change permissions for each shared terminal by right-clicking the
+  terminal name on the Live Share tab.
+#### 2.Follow Mode
+  Both the host and guests can enable "Follow Mode" to follow
+  each other’s cursor and view.
+
 
 ### Session persistance
 
