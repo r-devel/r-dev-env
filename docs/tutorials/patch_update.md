@@ -2,11 +2,11 @@ A patch file captures the local changes (additions and deletions) to the source 
 
 To make a patch
 
-1) Update your local copy of the source
+1. Update your local copy of the source
 
 If you have not recently updated your local copy of the R Subversion repository, follow the instructions in [Updating the Source Code](./update_source.md) to do this first.
 
-2) Create a patch file
+2. Create a patch file
 
 Go to the source directory and use `svn diff` to create a patch. 
 

@@ -8,6 +8,6 @@ For these reasons, we propose to create containerized development environments f
 
 ## Contributors
 
-GSoC contributor: Atharva Shirdhankar
-
-Mentors: Heather Turner, James Tripp, Iain Emsley
+**GSoC contributor:** Atharva Shirdhankar
+<br>
+**Mentors:** Heather Turner, James Tripp, Iain Emsley

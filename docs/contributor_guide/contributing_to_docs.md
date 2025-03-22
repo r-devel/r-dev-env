@@ -2,8 +2,14 @@
 
 ##### Installation Setup
 1. Fork and Clone the repo - 
+```
+git clone gh repo clone https://github.com/r-devel/r-dev-env.git
+```
 
 2. Change directory to r-dev-env
+```
+cd r-dev-env
+```
 
 3. Create virtual environment using python venv
 ```
@@ -32,5 +38,6 @@ This will compile the documentation and serve it locally. You can access the doc
 
 9. Preview Changes: As you make changes, the local development server will automatically detect them and update the preview in real-time. Refresh your browser to see the changes.
 
-**N.B.** There is a known issue with mkdocs not alwayds finding Cairo. The issue and suggested fixes are on the [MkDocs Image Processing](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/) page.
+!!! Note
 
+    There is a known issue with mkdocs not always finding Cairo. The issue and suggested fixes are on the [MkDocs Image Processing](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/) page.
