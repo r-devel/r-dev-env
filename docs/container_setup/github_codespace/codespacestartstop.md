@@ -53,13 +53,9 @@ To restart it, we can just click on the codespaces we wanted
 
 #### 4. Manage Codespaces
 
-
-You can also see an active label added to the codespaces we just started
 <!-- markdownlint-disable-next-line MD012 -->
 
-
 ![stop codespace](../../assets/rdev18.png)
-
 ### Setting a Default Retention Period for Your Codespaces
 
 #### 1.Access Settings

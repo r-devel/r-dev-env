@@ -27,9 +27,11 @@ Share with the R Dev Container follow the guide below.
 ### Join a Live Share Session
 
 #### 1. Receive the link from the host
-The link will be of the form 
+
+
+The link will be of the form
+
 `https://prod.liveshare.vsengsaas.visualstudio.com/join?[37 alphanumberic characters]`
-#### 2. Choose how to join the session
 
 
 - **Open the link in a web browser**: click the link to open it in your web
@@ -68,8 +70,6 @@ Once joined, you can:
   Session chat can be opened from the Live share extension tab.
   ![alt text](../../assets/live-share6.png)
   ![alt text](../../assets/live-share5.png)
-
-
 ### Manage control
 
 #### 1.Manage permissions

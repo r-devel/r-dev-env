@@ -23,6 +23,8 @@ workspaces. Locate the workspace you want to restart. Stopped workspaces
 ![restart gitpod workspace](../../assets/gitpod4.png)
 
 #### 2. Restart the Workspace
+
+
 To restart a workspace, click on the workspace in the list you want to
 restart. This will launch the workspace, restoring it to the state it
 
