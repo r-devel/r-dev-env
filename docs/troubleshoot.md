@@ -6,12 +6,15 @@ Here are a few common ones:
 
 
 ```bash
-$TOP_SRCDIR/tools/rsync-recommended @ERROR: max connections (59) reached -- try again later rsync error: error starting client-server protocol (code 5) at main.c(1863) [Receiver=3.2.7] *** rsync failed to update Recommended files ***
+    $TOP_SRCDIR/tools/rsync-recommended @ERROR: max connections (59) reached -- try again later rsync error: error starting client-server protocol (code 5) at main.c(1863) [Receiver=3.2.7] *** rsync failed to update Recommended files ***
 ```
 
 #### **Cause**
 
 This error occurs because the rsync server has reached its
+maximum allowed number of simultaneous connections, which is
+set to 59. As a result, new connection attempts are rejected
+until some of the existing connections are closed.
 
 #### **Solutions**
 

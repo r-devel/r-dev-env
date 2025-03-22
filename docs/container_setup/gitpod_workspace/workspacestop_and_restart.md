@@ -6,7 +6,6 @@ button in the bottom left corner of the workspace.
 
 ![stop gitpod workspace](../../assets/gitpod2.png)
 
-
 #### 2. Open the Command Palette and Stop the Workspace
 
 stop the current workspace.

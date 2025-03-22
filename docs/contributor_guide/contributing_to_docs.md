@@ -8,22 +8,22 @@ locally.
 - Fork the [r-dev-env repository](https://github.com/r-devel/r-dev-env)
   on GitHub and clone it to your local machine.
 
-
+#### 2. Change to the Project Directory
 
 - Navigate to the r-dev-env directory where the project is located.
 
-
+#### 3. Create a Virtual Environment
 
 - Set up a Python virtual environment using the venv module.
-
 
     ```bash
     python3 -m venv venv
 
     ```
 
-
 #### 4. Activate the Virtual Environment
+
+- Activate the virtual environment to isolate dependencies.
 
     ```bash
     source ./venv/bin/activate
@@ -41,8 +41,8 @@ locally.
 #### 6. Navigate to the Project Root
 
 - After setting up the virtual environment and installing necessary
-
-    libraries, navigate to the root directory of the project where the
+  libraries, navigate to the root directory of the project where the
+  `mkdocs.yml` file is located.
 
 #### 7. Start the Local Development Server
 
@@ -56,6 +56,8 @@ locally.
 This will compile the documentation and serve it locally. You can access the
 documentation by opening a web browser and navigating to
 <http://localhost:8000>.
+
+#### 8. Edit Documentation
 
 - Make changes to the documentation content files located in the
 

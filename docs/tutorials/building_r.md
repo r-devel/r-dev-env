@@ -1,8 +1,8 @@
 
 #### 1. Environment variables
 
+- We have environment variables defining paths to directories for building R and
   storing the source code.
-
 - `TOP_SRCDIR` defines the source directory: `/workspaces/r-dev-env/svn/r-devel`
 - The environment variables are set in the codespace image and are available
   when the codespace starts.
@@ -10,8 +10,10 @@
   ![alt text](../assets/rdev6.png)
 
 #### 2. svn checkout
+
 - The svn checkout command lets us create a local copy of a specific tag/branch
   of a repository.
+- We can check out the latest version of the trunk (the main branch) of the R
   sources to $TOP_SRCDIR as follows:
 
     ```bash

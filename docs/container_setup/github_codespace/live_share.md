@@ -44,21 +44,23 @@ Share with the R Dev Container follow the guide below.
 
 ### Collaborate in Real-Time
 
+Once joined, you can:
 
 #### 1.Edit Code Together
-
 
   Both the host and guests can edit files, and changes
   will be synchronized in real-time.
 
 #### 2.Share Terminals
 
+  The host can share bash or R terminals. Guests can 
+  see the terminal output and, if granted permission, type commands.
 
-  the terminal output and, if granted permission, type commands.
 #### 3.Live Chat
 
   Session chat can be opened from the Live share extension tab.
-  ![alt text](../../assets/live-share6.png) ![alt
+  ![alt text](../../assets/live-share6.png) 
+  ![alt text](../../assets/live-share5.png)
 
 ### Manage control
 #### 1.Manage permissions
@@ -66,7 +68,6 @@ Share with the R Dev Container follow the guide below.
   In a session with read/write permissions, the host
 
   can change permissions for each shared terminal by right-clicking the
-
 
 #### 2.Follow Mode
 
