@@ -43,8 +43,6 @@ code .
 
 Checkout the main branch and pull the latest changes
 
-
-```bash
 git checkout main
 git pull
 
