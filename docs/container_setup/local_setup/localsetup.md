@@ -43,9 +43,9 @@ code .
 
 Checkout the main branch and pull the latest changes
 
+```bash
 git checkout main
 git pull
-
 ```
 
 The main branch provides the stable release. If you require an in-development
