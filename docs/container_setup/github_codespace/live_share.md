@@ -12,26 +12,20 @@ Share with the R Dev Container follow the guide below.
 ### Start a Live Share Session
 
 
-#### 1. Click the "Live Share" button in the status bar
-
  Alternatively you can go to Live Share extension tab and select from the options
  to share with read/write permission or share with read-only permission.
 ![alt text](../../assets/live-share.png)
 
 #### 2. Share the Link
 
-
  A sharing link will be generated and copied to the clipboard for sharing with
- your collaborators. From the pop-up dialog, you can copy the link again or switch
  the permissions from read/write to read-only (or vice versa).
 ![alt text](../../assets/live-share2.png)
 
 ### Join a Live Share Session
 
-
 #### 1. Receive the link from the host
 
- The link will be of the form `https://prod.liveshare.vsengsaas.visualstudio.com/join?[37 alphanumberic characters]`
 
 #### 2. Choose how to join the session
 
@@ -48,37 +42,49 @@ Share with the R Dev Container follow the guide below.
   for the Live Share session link. Paste the link and click 'Enter'.
 ![alt text](../../assets/live-share3.png).
 
-
 #### 3. Wait for Host Approval
+
   Wait to be accepted by the host. The host will receive a pop-up message where
-  they can accept your request to join.
 
 
 ### Collaborate in Real-Time
 
 Once joined, you can:
+#### 1.Edit Code Together
 
-#### 1.Edit Code Together 
   Both the host and guests can edit files, and changes
   will be synchronized in real-time.
-#### 2.Share Terminals 
+
+
+#### 2.Share Terminals
+
+
   The host can share bash or R terminals. Guests can see
+
   the terminal output and, if granted permission, type commands.
-#### 3.Live Chat 
+
+
+#### 3.Live Chat
+
+
   Session chat can be opened from the Live share extension tab.
   ![alt text](../../assets/live-share6.png) ![alt
   text](../../assets/live-share5.png)
 
 ### Manage control
 
-#### 1.Manage permissions 
+
+#### 1.Manage permissions
+
   In a session with read/write permissions, the host
+
   can change permissions for each shared terminal by right-clicking the
+
   terminal name on the Live Share tab.
+
 #### 2.Follow Mode
   Both the host and guests can enable "Follow Mode" to follow
   each other’s cursor and view.
-
 
 ### Session persistance
 

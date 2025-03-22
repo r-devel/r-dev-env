@@ -1,9 +1,9 @@
 
 #### 1. Create a Codespace
 
-From the main branch of the 
+From the main branch of the
 [r-dev-env repo](https://github.com/r-devel/r-dev-env/tree/main),
- click on the 'Open in GitHub Codespaces' button and then click 
+ click on the 'Open in GitHub Codespaces' button and then click
  the green 'Create Codespace' button.
 ![create codespace](../../assets/rdev1.png)
 

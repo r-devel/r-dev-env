@@ -11,8 +11,6 @@
 
 ![alt text](../assets/rdev4.png)
 
-
-- You should see `R:(not attached)` in the Status Bar at the bottom of
   the VSCode window.
 
 ![alt text](../assets/rdev11.png)

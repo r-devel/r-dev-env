@@ -1,10 +1,6 @@
 
 ## Example Contribution Workflow using the R Dev Container
 
-
-
-### 1. Starting R in the Dev Container
-
 - To start working in R we will click on `R:(not attach)` which is in the
 
     ![alt text](../assets/rdev11.png)

@@ -2,6 +2,8 @@
 #### 1. Environment variables
 
   storing the source code.
+
+
 - `BUILDDIR` defines the build directory: `/workspaces/r-dev-env/build/r-devel`.
 - `TOP_SRCDIR` defines the source directory: `/workspaces/r-dev-env/svn/r-devel`
 - The environment variables are set in the codespace image and are available
@@ -9,7 +11,9 @@
 
   ![alt text](../assets/rdev6.png)
 
+
 #### 2. svn checkout
+
 - The svn checkout command lets us create a local copy of a specific tag/branch
   of a repository.
   sources to $TOP_SRCDIR as follows:
@@ -89,8 +93,10 @@ make
 Check that the build of R passes R's standard checks:
 
 ```bash
+
 make check
 ```
+
 This takes a couple of minutes in the codespace. The check will stop with a
 error message if any of the tests fail. If this happens, see [SVN
 Help](./svn_help.md) for how to revert to a version that passes check.

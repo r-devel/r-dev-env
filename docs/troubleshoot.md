@@ -5,8 +5,6 @@ While working with an R Dev Container, you may encounter some known errors.
 Here are a few common ones:
 
 
-#### **Description**
-
 When attempting to use rsync, you may encounter the following error message:
 
 ```bash
@@ -14,6 +12,8 @@ $TOP_SRCDIR/tools/rsync-recommended @ERROR: max connections (59) reached -- try 
 ```
 
 #### **Cause**
+
+
 This error occurs because the rsync server has reached its
 maximum allowed number of simultaneous connections,which
 

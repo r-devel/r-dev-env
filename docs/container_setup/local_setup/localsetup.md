@@ -12,49 +12,29 @@ prerequisites installed.
 #### 1. Install Docker Engine or Docker Desktop
 
 
- You can find the docker desktop install instructions on
-
  [Docker Desktop Docs](https://www.docker.com/products/docker-desktop/).
 
-
 #### 2. Install VSCode Editor
-
  You can download and install from [VSCode website](https://code.visualstudio.com/download).
-
 
 ## Run R Development Container locally
 
 
-
-#### 1. Clone the R Dev Container Repository
-
-
 Clone the [R Dev Container Github repo](https://github.com/r-devel/r-dev-env/)
 
-
-#### 2. Change Directory to r-dev-env
-
-
-
 In a terminal, change directory to r-dev-env
-
 ```bash
 
-cd r-dev-env
 
 ```
-
-
-#### 3. Restart VSCode in r-dev-env Directory
 
 Restart VSCode in the `r-dev-env` directory with the command:
 
 ```bash
 code .
 ```
+
 #### 4. Checkout Main Branch and Pull Latest Changes
-
-
 Checkout the main branch and pull the latest changes
 
 ```bash
@@ -62,10 +42,9 @@ git checkout main
 git pull
 ```
 
+
 The main branch provides the stable release. If you require an in-development
 feature, use the devel branch instead.
-
-
 #### 5. Start Docker Engine
 
 After this step please be sure that your docker engine is started. If you
@@ -76,7 +55,6 @@ start it with the following command
 
 ```bash
 
-systemctl start docker
 
 ```
 

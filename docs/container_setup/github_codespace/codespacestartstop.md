@@ -2,10 +2,6 @@
 #### 1. Navigate to Codespaces Panel
 
 
-
-To stop codespace we just need to navigate to the Codespaces option in the
-bottom left of the Codespace panel.
-
 #### 2. Open Dropdown Menu
 
 After clicking on codespaces option we will get a drop down above something
@@ -13,7 +9,9 @@ After clicking on codespaces option we will get a drop down above something
 like this👇
 
 ![stop codespace](../../assets/rdev15.png)
+
 #### 3. Stop Current Codespace
+
 
 Click on "Stop Current Codespace". It will stop the codespaces you are
 
@@ -21,14 +19,10 @@ currently using or running.
 
 #### 4. Redirect to Restart Page'
 
-
 You will be redirected to a Restart Codespace page. The page shows a
-link to restart the codespace you just stopped.
-
 
 #### Idle timeout
 
-!!! Note
     If you do not interact with the codespace, it will close automatically when
     it reaches the idle timeout limit. By default, this is 30 minutes, but you
     can [set a personal timeout](https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces#setting-your-default-timeout-period)
@@ -40,39 +34,29 @@ still be inside the stopped codespace. If your codespace is stopped then you can
 ## How to Restart Codespaces again?
 
 #### 1. Access Codespaces List
+
 Go to [github.com/codespaces](https://github.com/codespaces)
+
 
 #### 2. Restart a Codespace
 
-
-
 Here we can see a list of the codespaces we have created
-
- ![stop codespace](../../assets/rdev17.png)
-
 
 #### 3. Check Active Status
 
-
 To restart it, we can just click on the codespaces we wanted
-
-to use and it will start the codespaces again for us.
 
 
 #### 4. Manage Codespaces
-
 You can also see an active label added to the codespaces we
  ![stop codespace](../../assets/rdev18.png)
 
-
 ### Setting a Default Retention Period for Your Codespaces
-
 #### 1.Access Settings
 
 - Click your profile photo in the upper-right corner of any GitHub page.
 - Click "Settings."
 
-#### 2.Navigate to Codespaces Settings
 
 - In the sidebar, under "Code, planning, and automation," click "Codespaces."
 
@@ -87,7 +71,6 @@ codespace](../../assets/manage_codespace.png)
     of codespaces when stopped or when they timeout due to inactivity.
     For more details, refer to ["Setting your timeout period for GitHub Codespaces."](https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces#setting-your-default-timeout-period)
 
-
 - Click "Save" to apply the new retention period.
 
 This allows you to customize how long your codespaces are kept before automatic
@@ -96,7 +79,6 @@ deletion, balancing convenience and storage management.
 ### Auto Delete Codespace
 
 - Go to the "Your codespaces" page at
-  [github.com/codespaces](https://github.com/codespaces).
 - Find the codespace you want to exempt from deletion.
 - Click the options menu (three dots) to the right of the codespace.
 - Select "Auto Delete Codespace" from the dropdown menu. The bookmarked
