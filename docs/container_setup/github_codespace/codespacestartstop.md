@@ -55,6 +55,8 @@ To restart it, we can just click on the codespaces we wanted
 
 
 You can also see an active label added to the codespaces we just started
+<!-- markdownlint-disable-next-line MD012 -->
+
 
 ![stop codespace](../../assets/rdev18.png)
 

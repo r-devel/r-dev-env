@@ -4,26 +4,31 @@ terminal, debugging sessions, and more with your collaborators. To use Live
 Share with the R Dev Container follow the guide below.
 
 !!! Note
-
     If you are using the R Dev Container locally you must have the Live Share Extension
     installed to start a Live Share Session. You will be asked to sign in using your
     Microsoft or GitHub account when starting the session.
 
 ### Start a Live Share Session
 
+#### 1. Click the "Live Share" button in the status bar
+
+ Alternatively you can go to Live Share extension tab and select from the options
  to share with read/write permission or share with read-only permission.
+
 ![alt text](../../assets/live-share.png)
 
 #### 2. Share the Link
 
  A sharing link will be generated and copied to the clipboard for sharing with
  the permissions from read/write to read-only (or vice versa).
+
 ![alt text](../../assets/live-share2.png)
 
 ### Join a Live Share Session
 
 #### 1. Receive the link from the host
-
+The link will be of the form 
+`https://prod.liveshare.vsengsaas.visualstudio.com/join?[37 alphanumberic characters]`
 #### 2. Choose how to join the session
 
 
@@ -81,7 +86,6 @@ Once joined, you can:
 ### Session persistance
 
 You can rejoin a session if disconnected, and your previous state will be
-
 restored.
 
 ### Close a Live Share Session

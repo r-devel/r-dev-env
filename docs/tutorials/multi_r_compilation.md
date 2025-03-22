@@ -23,53 +23,54 @@ use the name `r-devel` and the environment variables `BUILDDIR` and
 #### 2.  Set Environment variables
 
 - You can set the `BUILDDIR` and `TOP_SRCDIR` environment variables to
-    match your chosen name using the `set_build_r` function:
-- Open  a terminal in the codespace.
+  match your chosen name using the `set_build_r` function:
+    - Open  a terminal in the codespace.
 
-- Run the `set_build_r` function with your chosen name as the argument, e.g.
+    - Run the `set_build_r` function with your chosen name as the argument, e.g.
 
-```bash
-set_build_r r-devel-raw
-```
+        ```bash
+        set_build_r r-devel-raw
+        ```
 
-    The new values of the environment variables will be printed as
-    confirmation:
+        The new values of the environment variables will be printed as
+        confirmation:
 
-```bash
-BUILDDIR is now set to /workspaces/r-dev-env/build/r-devel-raw
-TOP_SRCDIR is now set to /workspaces/r-dev-env/svn/r-devel-raw
-```
+        ```bash
+        BUILDDIR is now set to /workspaces/r-dev-env/build/r-devel-raw
+        TOP_SRCDIR is now set to /workspaces/r-dev-env/svn/r-devel-raw
+        ```
 
 #### 3.  Copy or build source
 
+- If you have an unmodified build of R-devel using the default name of
   `r-devel`, you can simply copy the sources and the build to the new
   directories with `rsync`:
 
-```bash
-rsync -a "$(dirname "$BUILDDIR")/r-devel/"* $BUILDDIR
-rsync -a "$(dirname "$TOP_SRCDIR")/r-devel/"* $TOP_SRCDIR
-```
+    ```bash
+    rsync -a "$(dirname "$BUILDDIR")/r-devel/"* $BUILDDIR
+    rsync -a "$(dirname "$TOP_SRCDIR")/r-devel/"* $TOP_SRCDIR
+    ```
 
   Otherwise you can follow the steps in the [Building R](./building_r.md)
   build directories.
 
 #### 4.  Select R version
+- Once you have a build of R under the new build directory, you will
+  see your chosen name in the choices when running the `which_r` script to
+  select the version of R to run in new terminals, e.g.
 
-  your chosen name in the choices when running the `which_r` script to
-    select the version of R to run in new terminals, e.g.
+    ```bash
+    which_r
+    ```
 
-```bash
-which_r
-```
-
-```bash
-Which version of R should be used in new R terminals?
-    1. R 4.4.0 (release version built into this container)
-    Additional R builds available:
-    2. r-devel
-    3. r-devel-raw
-Enter the number corresponding to the selected version:
-```
+    ```bash
+    Which version of R should be used in new R terminals?
+        1. R 4.4.0 (release version built into this container)
+        Additional R builds available:
+        2. r-devel
+        3. r-devel-raw
+    Enter the number corresponding to the selected version:
+    ```
 
 !!! Note
     `BUILDDIR` and `TOP_SRCDIR` will be set to the defaults using the label `r-devel`

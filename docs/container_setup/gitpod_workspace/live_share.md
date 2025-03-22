@@ -1,4 +1,4 @@
-
+#### 1. Start Live Share from Dashboard
 `Share` option on dashboard.
 
 ![liveshare](../../assets/gitpod5.png)
