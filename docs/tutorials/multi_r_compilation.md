@@ -80,11 +80,13 @@ Enter the number corresponding to the selected version:
     is restarted. Whenever following instructions that use these variables to 
     refer to the build and source directory, be sure they are pointing to the
     desired version!
-    You can check the values any time with
+    
+    You can check the values any time with:
 
-    ```bash
-    echo $BUILDDIR
-    echo $TOP_SRCDIR
-    ```
+        ```
+        echo $BUILDDIR
+        echo $TOP_SRCDIR
+        ```
     
     and switch with `set_build_r <name>`.
+
