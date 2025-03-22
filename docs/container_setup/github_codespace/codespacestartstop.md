@@ -56,6 +56,7 @@ To restart it, we can just click on the codespaces we wanted
 <!-- markdownlint-disable-next-line MD012 -->
 
 ![stop codespace](../../assets/rdev18.png)
+
 ### Setting a Default Retention Period for Your Codespaces
 
 #### 1.Access Settings
