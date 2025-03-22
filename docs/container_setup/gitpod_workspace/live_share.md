@@ -1,6 +1,4 @@
 
-
-Gitpod live share can be started from dashboard itself by clicking on
 `Share` option on dashboard.
 
 ![liveshare](../../assets/gitpod5.png)

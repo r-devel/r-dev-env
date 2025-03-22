@@ -12,7 +12,7 @@ You can build multiple R versions in the same Codespaces environment.
 To do so, follow these steps:
 
 
-#### 1. Choose a name for the R version
+
 - First choose a name for the R version. This will be used to identify
 the version and to name the build/source directory. By default, we
 use the name `r-devel` and the environment variables `BUILDDIR` and
@@ -25,9 +25,9 @@ use the name `r-devel` and the environment variables `BUILDDIR` and
 
 - You can set the `BUILDDIR` and `TOP_SRCDIR` environment variables to
     match your chosen name using the `set_build_r` function:
-    - Open  a terminal in the codespace.
+- Open  a terminal in the codespace.
 
-    - Run the `set_build_r` function with your chosen name as the argument, e.g.
+- Run the `set_build_r` function with your chosen name as the argument, e.g.
 
         ```bash
         set_build_r r-devel-raw
@@ -43,8 +43,6 @@ use the name `r-devel` and the environment variables `BUILDDIR` and
 
 #### 3.  Copy or build source
 
-
-- If you have an unmodified build of R-devel using the default name of
   `r-devel`, you can simply copy the sources and the build to the new
   directories with `rsync`:
 
@@ -52,6 +50,8 @@ use the name `r-devel` and the environment variables `BUILDDIR` and
     rsync -a "$(dirname "$BUILDDIR")/r-devel/"* $BUILDDIR
     rsync -a "$(dirname "$TOP_SRCDIR")/r-devel/"* $TOP_SRCDIR
     ```
+
+
   Otherwise you can follow the steps in the [Building R](./building_r.md)
   tutorial to checkout the R sources and build R using the new source and
   build directories.
@@ -61,8 +61,6 @@ use the name `r-devel` and the environment variables `BUILDDIR` and
   your chosen name in the choices when running the `which_r` script to
     select the version of R to run in new terminals, e.g.
 
-
-```bash
 which_r
 ```
 

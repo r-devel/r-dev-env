@@ -9,21 +9,29 @@ locally.
   on GitHub and clone it to your local machine.
 
 
-#### 2. Change to the Project Directory
+
 - Navigate to the r-dev-env directory where the project is located.
 
 
-#### 3. Create a Virtual Environment
+
 - Set up a Python virtual environment using the venv module.
+
+
     ```bash
     python3 -m venv venv
+
     ```
+
+
 #### 4. Activate the Virtual Environment
+
     ```bash
     source ./venv/bin/activate
+
     ```
 
 #### 5. Install MkDocs and Dependencies
+
 - Install MkDocs and its required libraries, including mkdocs-material.
 
     ```bash

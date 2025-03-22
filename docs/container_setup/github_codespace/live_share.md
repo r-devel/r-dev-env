@@ -11,8 +11,6 @@ Share with the R Dev Container follow the guide below.
 
 ### Start a Live Share Session
 
-
- Alternatively you can go to Live Share extension tab and select from the options
  to share with read/write permission or share with read-only permission.
 ![alt text](../../assets/live-share.png)
 
@@ -26,9 +24,7 @@ Share with the R Dev Container follow the guide below.
 
 #### 1. Receive the link from the host
 
-
 #### 2. Choose how to join the session
-
 - **Open the link in a web browser**: click the link to open it in your web
   browser. If you have VS Code installed locally, a pop-up dialog will give
   you the choice of continuing in the web or opening the session in VS Code.
@@ -46,49 +42,41 @@ Share with the R Dev Container follow the guide below.
 
   Wait to be accepted by the host. The host will receive a pop-up message where
 
-
 ### Collaborate in Real-Time
 
-Once joined, you can:
+
 #### 1.Edit Code Together
+
 
   Both the host and guests can edit files, and changes
   will be synchronized in real-time.
 
-
 #### 2.Share Terminals
 
 
-  The host can share bash or R terminals. Guests can see
-
   the terminal output and, if granted permission, type commands.
-
-
 #### 3.Live Chat
-
 
   Session chat can be opened from the Live share extension tab.
   ![alt text](../../assets/live-share6.png) ![alt
-  text](../../assets/live-share5.png)
 
 ### Manage control
-
-
 #### 1.Manage permissions
 
   In a session with read/write permissions, the host
 
   can change permissions for each shared terminal by right-clicking the
 
-  terminal name on the Live Share tab.
 
 #### 2.Follow Mode
+
   Both the host and guests can enable "Follow Mode" to follow
   each other’s cursor and view.
 
 ### Session persistance
 
 You can rejoin a session if disconnected, and your previous state will be
+
 restored.
 
 ### Close a Live Share Session

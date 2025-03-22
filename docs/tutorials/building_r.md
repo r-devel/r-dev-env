@@ -3,17 +3,13 @@
 
   storing the source code.
 
-
-- `BUILDDIR` defines the build directory: `/workspaces/r-dev-env/build/r-devel`.
 - `TOP_SRCDIR` defines the source directory: `/workspaces/r-dev-env/svn/r-devel`
 - The environment variables are set in the codespace image and are available
   when the codespace starts.
 
   ![alt text](../assets/rdev6.png)
 
-
 #### 2. svn checkout
-
 - The svn checkout command lets us create a local copy of a specific tag/branch
   of a repository.
   sources to $TOP_SRCDIR as follows:

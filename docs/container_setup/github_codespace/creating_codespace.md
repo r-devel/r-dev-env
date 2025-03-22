@@ -18,7 +18,7 @@ From the main branch of the
     30hrs of free usage per month. This can be changed according to your preference.
 
 - For more details about codespaces billing, see the [Codespaces Billing Docs](https://github.com/features/codespaces).
-- You can calculate your GitHub services usage with the 
+- You can calculate your GitHub services usage with the
   [GitHub Services Pricing Calculator](https://github.com/pricing/calculator)
 - Check your usage allowance under "Codespaces" on your [GitHub Billing page](https://github.com/settings/billing).
 
