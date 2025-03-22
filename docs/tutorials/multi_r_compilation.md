@@ -83,9 +83,9 @@ Enter the number corresponding to the selected version:
 
     You can check the values any time with:
 
-        ```bash
-        echo $BUILDDIR
-        echo $TOP_SRCDIR
-        ```
+    ```bash
+    echo $BUILDDIR
+    echo $TOP_SRCDIR
+    ```
 
     and switch with `set_build_r <name>`.
