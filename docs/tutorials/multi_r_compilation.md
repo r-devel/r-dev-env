@@ -11,6 +11,7 @@ It can be helpful to work with multiple versions of R:
 You can build multiple R versions in the same Codespaces environment.
 To do so, follow these steps:
 
+#### 1. Choose a name for the R version
 
 - First choose a name for the R version. This will be used to identify
 the version and to name the build/source directory. By default, we
