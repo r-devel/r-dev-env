@@ -89,5 +89,5 @@ Enter the number corresponding to the selected version:
       echo $BUILDDIR
       echo $TOP_SRCDIR
       ```
-      
+
     and switch with `set_build_r <name>`.
