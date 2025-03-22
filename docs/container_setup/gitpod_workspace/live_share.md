@@ -12,4 +12,4 @@
 
     !!! Note
 
-         The live share will be enabled even if you close the workspace.       
+         The live share will be enabled even if you close the workspace.

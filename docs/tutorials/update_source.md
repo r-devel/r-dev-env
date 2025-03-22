@@ -85,6 +85,8 @@ cd $BUILDDIR
 make
 make check
 ```
+
+
 !!! Note
 
-    If the check fails, this will be due to recent changes made by the R Core Team. See [SVN Help](./svn_help.md) for how to revert to a version that passes check.    
+    If the check fails, this will be due to recent changes made by the R Core Team. See [SVN Help](./svn_help.md) for how to revert to a version that passes check.

@@ -1,8 +1,6 @@
 
 **1. Environment variables**
 
-
-- We have environment variables defining paths to directories for building R and
   storing the source code.
 - `BUILDDIR` defines the build directory: `/workspaces/r-dev-env/build/r-devel`.
 - `TOP_SRCDIR` defines the source directory: `/workspaces/r-dev-env/svn/r-devel`
@@ -11,13 +9,9 @@
 
     ![alt text](../assets/rdev6.png)
 
-
 **2. svn checkout**
-
-
 - The svn checkout command lets us create a local copy of a specific tag/branch
   of a repository.
-- We can check out the latest version of the trunk (the main branch) of the R
   sources to $TOP_SRCDIR as follows:
 
     ```bash
@@ -42,7 +36,7 @@ $TOP_SRCDIR/tools/rsync-recommended
 ![alt text](../assets/rdev9.png)
 
 **4. Change to the build directory**
-   
+
 - First create the directory specified by the BUILDDIR environment variable.
 
 ```bash
@@ -123,6 +117,6 @@ Enter the number corresponding to the selected version:
 - After having built the current development version of R, we can now make changes to the source code and contribute to the project.
 - Follow the [R Contribution Workflow](./contribution_workflow.md) tutorial to learn how to do this.
 
-[^]: To switch back to the release version, run `which_r` and type `1`. The 
-selected version is saved in the VSCode settings, so will be saved when you 
+[^]: To switch back to the release version, run `which_r` and type `1`. The
+selected version is saved in the VSCode settings, so will be saved when you
 stop and restart the codespace.

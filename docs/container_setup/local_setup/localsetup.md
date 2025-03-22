@@ -3,24 +3,18 @@
     longer (e.g. a full build may take 1 hour vs 10 minutes!).
 
 
-#### Prerequisites :
-
 We can also use this codespace locally. For that we need to have some
 prerequisites installed.
 
-
-#### Steps to run R Development Container locally :
-
-1. Docker Engine or Docker Desktop. You can find the docker desktop install
+#### Steps to run R Development Container locally
+1. Docker Engine or Docker Desktop. You can find e docker desktop install
    instructions on [Docker Desktop
    Docs](https://www.docker.com/products/docker-desktop/).
 2. VSCode Editor. You can download and install from [VSCode
    website](https://code.visualstudio.com/download).
 
-
 #### > Steps to run R Development Container locally
 
-1. Clone the [R Dev Container Github
    repo](https://github.com/r-devel/r-dev-env/)
 2. In a terminal, change directory to r-dev-env
 
