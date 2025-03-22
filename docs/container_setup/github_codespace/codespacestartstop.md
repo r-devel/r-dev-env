@@ -1,11 +1,13 @@
+### How to Stop Codespaces?
 
 #### 1. Navigate to Codespaces Panel
+To stop codespace we just need to navigate to the Codespaces option in the
+bottom left of the Codespace panel.
 
 
 #### 2. Open Dropdown Menu
 
 After clicking on codespaces option we will get a drop down above something
-
 like this👇
 
 ![stop codespace](../../assets/rdev15.png)
@@ -21,8 +23,8 @@ currently using or running.
 
 You will be redirected to a Restart Codespace page. The page shows a
 
-#### Idle timeout
-
+!!! Note 
+    Idle Timeout:
     If you do not interact with the codespace, it will close automatically when
     it reaches the idle timeout limit. By default, this is 30 minutes, but you
     can [set a personal timeout](https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces#setting-your-default-timeout-period)
@@ -31,7 +33,7 @@ You will be redirected to a Restart Codespace page. The page shows a
 The code changes and operations we have performed inside the codespace will
 still be inside the stopped codespace. If your codespace is stopped then you can
 
-## How to Restart Codespaces again?
+### How to Restart Codespaces again?
 
 #### 1. Access Codespaces List
 
@@ -57,7 +59,7 @@ You can also see an active label added to the codespaces we
 - Click your profile photo in the upper-right corner of any GitHub page.
 - Click "Settings."
 
-
+#### 2.Navigate to Codespaces Settings
 - In the sidebar, under "Code, planning, and automation," click "Codespaces."
 
 #### 3.Set Retention Period
@@ -71,6 +73,7 @@ codespace](../../assets/manage_codespace.png)
     of codespaces when stopped or when they timeout due to inactivity.
     For more details, refer to ["Setting your timeout period for GitHub Codespaces."](https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces#setting-your-default-timeout-period)
 
+#### 4.Save Changes
 - Click "Save" to apply the new retention period.
 
 This allows you to customize how long your codespaces are kept before automatic

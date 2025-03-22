@@ -12,29 +12,29 @@ You can build multiple R versions in the same Codespaces environment.
 To do so, follow these steps:
 
 
-
-- rst choose a name for the R version. This will be used to identify
-    the version and to name the build/source directory. By default, we
-    use the name `r-devel` and the environment variables `BUILDDIR` and
-    `TOP_SRCDIR` are set to match.
+#### 1. Choose a name for the R version
+- First choose a name for the R version. This will be used to identify
+the version and to name the build/source directory. By default, we
+use the name `r-devel` and the environment variables `BUILDDIR` and
+`TOP_SRCDIR` are set to match.
 
     For illustration, we will use `r-devel-raw`, which you might use to
     name a version of R that you never modify.
 
 #### 2.  Set Environment variables
 
-- u can set the `BUILDDIR` and `TOP_SRCDIR` environment variables to
+- You can set the `BUILDDIR` and `TOP_SRCDIR` environment variables to
     match your chosen name using the `set_build_r` function:
-- O  a terminal in the codespace.
+    - Open  a terminal in the codespace.
 
-- Run the `set_build_r` function with your chosen name as the argument, e.g.
+    - Run the `set_build_r` function with your chosen name as the argument, e.g.
 
         ```bash
         set_build_r r-devel-raw
         ```
 
-        The new values of the environment variables will be printed as
-        confirmation:
+    The new values of the environment variables will be printed as
+    confirmation:
 
         ```bash
         BUILDDIR is now set to /workspaces/r-dev-env/build/r-devel-raw
@@ -45,17 +45,16 @@ To do so, follow these steps:
 
 
 - If you have an unmodified build of R-devel using the default name of
-    `r-devel`, you can simply copy the sources and the build to the new
-    directories with `rsync`:
+  `r-devel`, you can simply copy the sources and the build to the new
+  directories with `rsync`:
 
     ```bash
     rsync -a "$(dirname "$BUILDDIR")/r-devel/"* $BUILDDIR
     rsync -a "$(dirname "$TOP_SRCDIR")/r-devel/"* $TOP_SRCDIR
     ```
-
-    Otherwise you can follow the steps in the [Building R](./building_r.md)
-    tutorial to checkout the R sources and build R using the new source and
-    build directories.
+  Otherwise you can follow the steps in the [Building R](./building_r.md)
+  tutorial to checkout the R sources and build R using the new source and
+  build directories.
 
 #### 4.  Select R version
 
@@ -63,18 +62,18 @@ To do so, follow these steps:
     select the version of R to run in new terminals, e.g.
 
 
-    ```
-    which_r
-    ```
+```bash
+which_r
+```
 
-    ```bash
-    Which version of R should be used in new R terminals?
-      1. R 4.4.0 (release version built into this container)
-      Additional R builds available:
-      2. r-devel
-      3. r-devel-raw
-    Enter the number corresponding to the selected version:
-    ```
+```bash
+Which version of R should be used in new R terminals?
+    1. R 4.4.0 (release version built into this container)
+    Additional R builds available:
+    2. r-devel
+    3. r-devel-raw
+Enter the number corresponding to the selected version:
+```
 
 !!! Note
     `BUILDDIR` and `TOP_SRCDIR` will be set to the defaults using the label `r-devel`
@@ -85,7 +84,7 @@ To do so, follow these steps:
 
     You can check the values any time with
 
-        ```
+        ```bash
         echo $BUILDDIR
         echo $TOP_SRCDIR
         ```

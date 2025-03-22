@@ -1,4 +1,4 @@
-## Stopping a Gitpod Workspace
+### Stopping a Gitpod Workspace
 
 #### 1. Locate the Gitpod Command Palette Button
 
@@ -12,7 +12,7 @@ stop the current workspace.
 !!! Note
     Stopping a workspace will save its state, so you can resume later
     without losing your progress.
-## Restarting a Gitpod Workspace
+### Restarting a Gitpod Workspace
 
 #### 1. Open Gitpod Dashboard
 
@@ -24,9 +24,13 @@ workspaces. Locate the workspace you want to restart. Stopped workspaces
 ![restart gitpod workspace](../../assets/gitpod4.png)
 
 #### 2. Restart the Workspace
+To restart a workspace, click on the workspace in the list you want to
+restart. This will launch the workspace, restoring it to the state it
+was in when it was last stopped.
 
 
-## Managing and Sustaining Codespaces
+### Managing and Sustaining Codespaces
+
 #### Gitpod Workspace Pinning
 
 **Purpose:** Workspace pinning prevents important workspaces from being
