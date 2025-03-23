@@ -21,6 +21,8 @@ the current workspace.
     resume later without losing your progress.
 
 ### Restarting a Gitpod Workspace
+
+
 #### 1. Open Gitpod Dashboard
 
 Once you're in the Gitpod dashboard, navigate to the "Workspaces"
@@ -37,8 +39,6 @@ to restart. This will launch the workspace, restoring it to the state
 it was in when it was last stopped.
 
 ### Managing and Sustaining Codespaces
-
-
 **Purpose:** Workspace pinning prevents important workspaces from being
 automatically deleted.
 
