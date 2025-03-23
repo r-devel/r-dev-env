@@ -74,18 +74,19 @@ Which version of R should be used in new R terminals?
 Enter the number corresponding to the selected version:
 ```
 
-!!! Note
-    `BUILDDIR` and `TOP_SRCDIR` will be set to the defaults using the label
-    `r-devel` whenever a new bash terminal is opened, e.g. when the codespace
-    is restarted. Whenever following instructions that use these variables to
-    refer to the build and source directory, be sure they are pointing to the
-    desired version!
+### Important
 
-    You can check the values any time with:
+`BUILDDIR` and `TOP_SRCDIR` will be set to the defaults using the label
+`r-devel` whenever a new bash terminal is opened, e.g. when the codespace
+is restarted. Whenever following instructions that use these variables to
+refer to the build and source directory, be sure they are pointing to the
+desired version!
 
-    ```bash
-    echo $BUILDDIR
-    echo $TOP_SRCDIR
-    ```
+You can check the values any time with:
 
-    and switch with `set_build_r <name>`.
+```bash
+echo $BUILDDIR
+echo $TOP_SRCDIR
+```
+
+and switch with `set_build_r <name>`.
