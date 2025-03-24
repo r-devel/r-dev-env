@@ -58,7 +58,8 @@ Documentation](https://code.visualstudio.com/docs/devcontainers/containers).
 
 ## Opening an R Terminal
 
-After setting up your environment, you can start an R terminal in VS Code using one of these methods:
+After setting up your environment, you can start an R terminal in VS Code 
+using one of these methods:
 
 ### Method 1: Using the Command Palette
 
@@ -76,7 +77,8 @@ If you have an R file open in VS Code:
 1. Look for "R:(not attached)" in the status bar at the bottom-right corner
 2. Click on "R:(not attached)" to launch an R terminal
 
-Both methods will open an R terminal, allowing you to run R commands directly in VS Code.
+Both methods will open an R terminal, allowing you to run R commands directly
+in VS Code.
 
 ## Project Background
 
