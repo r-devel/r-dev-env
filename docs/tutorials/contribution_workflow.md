@@ -32,14 +32,18 @@ code $TOP_SRCDIR/src/library/utils/R/askYesNo.R
 
 ### Before and After Edit
 
-#### Before edit:
+#### Before edit
+
+
 ![alt text](../assets/rdev20.png)
 
 ```R title="askYesNo.R" linenums="20"
     prompts = getOption("askYesNo", gettext(c("Yes", "No", "Cancel"))),
 ```
 
-#### After edit (for example - change to whatever you like!):
+
+#### After edit (for example - change to whatever you like!)
+
 ![alt text](../assets/rdev21.png)
 
 ```R title="askYesNo.R" linenums="20"
@@ -75,7 +79,7 @@ make
 
 ## 4. Cross-checking Changes
 
-- Check the edit has worked as expected by re-running the example code: 
+- Check the edit has worked as expected by re-running the example code:
 ![alt text](../assets/rdev23.png)
 
 ```R

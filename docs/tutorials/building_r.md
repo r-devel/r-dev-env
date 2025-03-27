@@ -40,11 +40,15 @@ $TOP_SRCDIR/tools/rsync-recommended
 To keep the source directory clean, we'll use a separate build directory:
 
 1. Create the build directory:
+
+
    ```bash
    mkdir -p $BUILDDIR
    ```
 
+
 2. Change to the build directory:
+
    ```bash
    cd $BUILDDIR
    ```
@@ -92,7 +96,9 @@ Run `which_r` to set which R version to use in VSCode's R terminals:
 which_r
 ```
 
+
 You'll see this prompt:
+
 ```
 Which version of R should be used in new R terminals?
   1. R 4.4.0 (release version built into this container)

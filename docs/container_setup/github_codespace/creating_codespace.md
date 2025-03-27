@@ -10,12 +10,12 @@ Follow these steps to create a new codespace for R development:
 
 !!! Note "About Codespace Billing"
     You will see the message "Codespace usage for this repository is paid for by [your username]". Don't worry!
-    
+
     - GitHub Codespaces offers 120 core hours of free usage per month for every GitHub user
     - The actual free hours = 120 / number of cores used
     - The r-dev-env codespace uses 4 cores by default = 30 hours free usage per month
     - You can adjust the core count based on your needs
-    
+
     **Useful Resources:**
     - [Codespaces Billing Documentation](https://github.com/features/codespaces)
     - [GitHub Services Pricing Calculator](https://github.com/pricing/calculator)
