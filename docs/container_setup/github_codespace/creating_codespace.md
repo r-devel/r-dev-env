@@ -11,12 +11,12 @@ Follow these steps to create a new codespace:
 !!! Note "About Codespace Billing"
     You will see "Codespace usage for this repository is paid for by [user]".
     Don't worry!
-    
+
     - GitHub Codespaces: 120 core hours free per month
     - Free hours = 120 / number of cores
     - Default: 4 cores = 30 hours free per month
     - Core count can be adjusted
-    
+
     **Resources:**
     - [Billing Docs](https://github.com/features/codespaces)
     - [Pricing Calculator](https://github.com/pricing/calculator)
