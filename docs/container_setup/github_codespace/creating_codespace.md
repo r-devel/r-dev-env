@@ -1,29 +1,30 @@
 # Creating a GitHub Codespace
 
-Follow these steps to create a new codespace for R development:
+Follow these steps to create a new codespace:
 
-1. Navigate to the [r-dev-env repo](https://github.com/r-devel/r-dev-env/tree/main) main branch
-2. Click the 'Open in GitHub Codespaces' button
-3. Click the green 'Create Codespace' button
+1. Navigate to the [r-dev-env repo](https://github.com/r-devel/r-dev-env)
+2. Click 'Open in GitHub Codespaces'
+3. Click 'Create Codespace'
 
 ![create codespace](../../assets/rdev1.png)
 
 !!! Note "About Codespace Billing"
-    You will see the message "Codespace usage for this repository is paid for by [your username]". Don't worry!
+    You will see "Codespace usage for this repository is paid for by [user]".
+    Don't worry!
+    
+    - GitHub Codespaces: 120 core hours free per month
+    - Free hours = 120 / number of cores
+    - Default: 4 cores = 30 hours free per month
+    - Core count can be adjusted
+    
+    **Resources:**
+    - [Billing Docs](https://github.com/features/codespaces)
+    - [Pricing Calculator](https://github.com/pricing/calculator)
+    - [Billing Page](https://github.com/settings/billing)
 
-    - GitHub Codespaces offers 120 core hours of free usage per month for every GitHub user
-    - The actual free hours = 120 / number of cores used
-    - The r-dev-env codespace uses 4 cores by default = 30 hours free usage per month
-    - You can adjust the core count based on your needs
+## Setup
 
-    **Useful Resources:**
-    - [Codespaces Billing Documentation](https://github.com/features/codespaces)
-    - [GitHub Services Pricing Calculator](https://github.com/pricing/calculator)
-    - [Your GitHub Billing Page](https://github.com/settings/billing) (check "Codespaces" section)
-
-## Setting Up Your Environment
-
-1. Wait for the codespace setup screen to complete (about 1 minute)
-2. You'll be redirected to VSCode in your browser:
+1. Wait for codespace setup (about 1 minute)
+2. You'll be redirected to VSCode:
 
 ![codespace](../../assets/rdev3.png)
