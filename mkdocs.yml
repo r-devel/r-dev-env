@@ -1,85 +1,109 @@
-site_name: R Devel Container Docs
-repo_name: r-devel/r-dev-env
+site_name: R Development Environment
+site_url: https://r-devel.github.io/r-dev-env/
 repo_url: https://github.com/r-devel/r-dev-env
-nav:
-    - 'Home': 'index.md'
-    - 'Container Setup':
-        - 'Overview': 'container_setup/index.md'
-        - 'Github Codespace':
-            - 'Starting Codespace': 'container_setup/github_codespace/creating_codespace.md'
-            - 'Stopping and Restarting' : 'container_setup/github_codespace/codespacestartstop.md'
-            - 'Collaborating with Live Share' : 'container_setup/github_codespace/live_share.md'
-        - 'Gitpod Workspace':
-             - 'Start Workspace': 'container_setup/gitpod_workspace/workspacestart.md'
-             - 'Stopping and Restarting' : 'container_setup/gitpod_workspace/workspacestop_and_restart.md'
-             - 'Collaborating with Live Share' : 'container_setup/gitpod_workspace/live_share.md'
-        - 'Local Setup' :
-               - 'Docker': 'container_setup/local_setup/localsetup.md'
-    - 'Tutorials':
-        - 'Running R' : 'tutorials/running_r.md'
-        - 'Building R': 'tutorials/building_r.md'
-        - 'R Contribution Workflow' : 'tutorials/contribution_workflow.md'
-        - 'Updating Source Code' : 'tutorials/update_source.md'
-        - 'Creating a Patch File' : 'tutorials/patch_update.md'
-        - 'Multiple R Versions' : 'tutorials/multi_r_compilation.md'
-        - 'SVN Help' : 'tutorials/svn_help.md'
-    - 'Contributor Guide' :
-        - 'contributor_guide/contributing_to_docs.md'
-        - 'contributor_guide/contributing_to_codebase.md'
-    - 'Resources' : 'resources.md'
-    - 'Troubleshooting Info' : 'troubleshoot.md'
+repo_name: r-devel/r-dev-env
+edit_uri: edit/main/docs/
+
 theme:
   name: material
   features:
-    - navigation.tabs
+    - navigation.instant
+    - navigation.tracking
     - navigation.sections
-    - toc.integrate
+    - navigation.expand
+    - navigation.indexes
     - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-    - content.code.annotation
+    - toc.follow
     - content.code.copy
-
-
+    - content.code.annotate
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: indigo
-      accent: blue
-    - scheme: slate
+      accent: indigo
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-      primary: indigo
-      accent: blue
 
 plugins:
-  - social
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/r-devel/r-dev-env/
-    - icon: fontawesome/brands/slack
-      link: https://r-contributors.slack.com/
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
 
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - abbr
   - admonition
-  - pymdownx.arithmatex:
-      generic: true
-  - footnotes
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.mark
   - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
   - toc:
       permalink: true
-      permalink_title: Anchor link to this section for reference
-      slugify: !!python/name:pymdownx.slugs.uslugify
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: material.extensions.emoji.to_svg
+      emoji_index: material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: r-devel
+      repo: r-dev-env
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+nav:
+  - Home: index.md
+  - Container Setup:
+      - container_setup/index.md
+      - GitHub Codespace:
+          - container_setup/github_codespace/creating_codespace.md
+          - container_setup/github_codespace/codespacestartstop.md
+          - container_setup/github_codespace/live_share.md
+      - Gitpod Workspace:
+          - container_setup/gitpod_workspace/workspacestart.md
+          - container_setup/gitpod_workspace/workspacestop_and_restart.md
+          - container_setup/gitpod_workspace/live_share.md
+      - Local Setup:
+          - container_setup/local_setup/localsetup.md
+  - Tutorials:
+      - tutorials/building_r.md
+      - tutorials/running_r.md
+      - tutorials/contribution_workflow.md
+      - tutorials/update_source.md
+      - tutorials/patch_update.md
+      - tutorials/svn_help.md
+      - tutorials/multi_r_compilation.md
+  - Contributor Guide:
+      - contributor_guide/contributing_to_codebase.md
+      - contributor_guide/contributing_to_docs.md
+  - Resources: resources.md
+  - Troubleshooting: troubleshoot.md
