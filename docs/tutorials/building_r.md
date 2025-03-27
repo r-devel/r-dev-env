@@ -9,7 +9,11 @@ The following environment variables define paths for building R:
 
 These variables are set in the codespace image and available at startup.
 
+ 
+
 ![alt text](../assets/rdev6.png)
+
+ 
 
 ## 2. SVN Checkout
 
@@ -19,9 +23,15 @@ Get a local copy of R source code from the repository:
 svn checkout https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
 ```
 
+ 
+
 After checkout, you'll see:
 
+ 
+
 ![alt text](../assets/rdev8.png)
+
+ 
 
 ## 3. Download Packages
 
@@ -31,7 +41,11 @@ Get recommended packages:
 $TOP_SRCDIR/tools/rsync-recommended
 ```
 
+ 
+
 ![alt text](../assets/rdev9.png)
+
+ 
 
 ## 4. Set Up Build Directory
 
@@ -49,6 +63,8 @@ Keep source directory clean by using a separate build directory:
    cd $BUILDDIR
    ```
 
+ 
+
 ## 5. Configure the Build
 
 Run configure (~1 minute):
@@ -57,14 +73,22 @@ Run configure (~1 minute):
 $TOP_SRCDIR/configure --with-valgrind-instrumentation=1
 ```
 
+ 
+
 !!! Note
     The `--with-valgrind-instrumentation` option enables effective use of
     valgrind. See the [docs](https://cran.r-project.org/doc/manuals/R-exts.html#Using-valgrind)
     for details.
 
+ 
+
 After configuration:
 
+ 
+
 ![alt text](../assets/rdev7.png)
+
+ 
 
 ## 6. Build R
 
@@ -74,6 +98,8 @@ Build R (5-10 minutes):
 make
 ```
 
+ 
+
 ## 7. Run Tests
 
 Run standard tests:
@@ -82,7 +108,11 @@ Run standard tests:
 make check
 ```
 
+ 
+
 If tests fail, see [SVN Help](./svn_help.md).
+
+ 
 
 ## 8. Configure R Terminal
 
@@ -91,6 +121,8 @@ Set R version for VSCode:
 ```bash
 which_r
 ```
+
+ 
 
 You'll see:
 
@@ -102,10 +134,14 @@ Additional R builds available:
 Enter the number corresponding to the selected version:
 ```
 
+ 
+
 Select `r-devel` to use your built version.[^1]
 
 [^1]: To switch back to release version, run `which_r` and select `1`.
     Selection persists across restarts.
+
+ 
 
 ## 9. Next Steps
 
