@@ -9,29 +9,33 @@ The following environment variables define paths for building R:
 
 These variables are set in the codespace image and available at startup.
 
-![alt text](../assets/rdev6.png)
-
 ## 2. SVN Checkout
 
 Get a local copy of R source code from the repository:
 
-```bash
-svn checkout https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
+```console
+$ svn checkout https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
+A    trunk/COPYING
+A    trunk/INSTALL
+...
+Checked out revision 86543.
 ```
-
-After checkout, you'll see:
-
-![alt text](../assets/rdev8.png)
 
 ## 3. Download Packages
 
 Get recommended packages:
 
-```bash
-$TOP_SRCDIR/tools/rsync-recommended
+```console
+$ $TOP_SRCDIR/tools/rsync-recommended
+downloading recommended packages
+trying URL 'https://cran.r-project.org/src/contrib/Recommended/MASS_7.3-60.tar.gz'
+...
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE
 ```
-
-![alt text](../assets/rdev9.png)
 
 ## 4. Set Up Build Directory
 
@@ -53,18 +57,19 @@ Keep source directory clean by using a separate build directory:
 
 Run configure (~1 minute):
 
-```bash
-$TOP_SRCDIR/configure --with-valgrind-instrumentation=1
+```console
+$ $TOP_SRCDIR/configure --with-valgrind-instrumentation=1
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+...
+config.status: creating po/Makefile
+config.status: creating src/include/config.h
 ```
 
 !!! Note
     The `--with-valgrind-instrumentation` option enables effective use of
     valgrind. See the [docs](https://cran.r-project.org/doc/manuals/R-exts.html#Using-valgrind)
     for details.
-
-After configuration:
-
-![alt text](../assets/rdev7.png)
 
 ## 6. Build R
 
@@ -88,13 +93,8 @@ If tests fail, see [SVN Help](./svn_help.md).
 
 Set R version for VSCode:
 
-```bash
-which_r
-```
-
-You'll see:
-
-```text
+```console
+$ which_r
 Which version of R should be used in new R terminals?
 1. R 4.4.0 (release version built into this container)
 Additional R builds available:
