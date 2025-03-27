@@ -1,4 +1,6 @@
-#### 1. Example Contribution Workflow using the R Dev Container
+# Example Contribution Workflow using the R Dev Container
+
+## 1. Starting R
 
 - To start working in R we will click on `R:(not attach)` which is in the bottom
   right of the VSCode window. This will open an R terminal for us.
@@ -18,7 +20,7 @@
     [1] TRUE
 ```
 
-#### 2. Editing Source Code
+## 2. Editing Source Code
 
 - Edit the source code of `utils::askYesNo()` to change the default options. The
   source code can be found in `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.
@@ -28,21 +30,23 @@
 code $TOP_SRCDIR/src/library/utils/R/askYesNo.R
 ```
 
-**> Before edit:** ![alt text](../assets/rdev20.png)
+### Before and After Edit
+
+#### Before edit:
+![alt text](../assets/rdev20.png)
 
 ```R title="askYesNo.R" linenums="20"
     prompts = getOption("askYesNo", gettext(c("Yes", "No", "Cancel"))),
 ```
 
-**> With edit (for example - change to whatever you like!):**
-
+#### After edit (for example - change to whatever you like!):
 ![alt text](../assets/rdev21.png)
 
 ```R title="askYesNo.R" linenums="20"
     prompts = getOption("askYesNo", gettext(c("Oh yeah!", "Don't think so", "Cancel"))),
 ```
 
-#### 3. Rebuild R
+## 3. Rebuilding R
 
 - We can re-build R with our changes. Since we have only modified the utils
   package, rebuilding R will only re-build the utils package.
@@ -69,13 +73,12 @@ make
 
 - To use the re-built R, simply open a new R terminal.
 
-#### 4. Cross check and Re-running Code
+## 4. Cross-checking Changes
 
-- Check the edit has worked as expected by re-running the example code: ![alt
-text](../assets/rdev23.png)
+- Check the edit has worked as expected by re-running the example code: 
+![alt text](../assets/rdev23.png)
 
 ```R
     > askYesNo("Is this a good example?")
     Is this a good example? (Oh yeah!/don't think so/cancel) Oh yeah!
     [1] TRUE
-```

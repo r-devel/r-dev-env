@@ -1,21 +1,29 @@
+# Creating a GitHub Codespace
 
-1. From the main branch of the [r-dev-env
-repo](https://github.com/r-devel/r-dev-env/tree/main), click on the 'Open in
-GitHub Codespaces' button and then click the green 'Create Codespace' button.
+Follow these steps to create a new codespace for R development:
+
+1. Navigate to the [r-dev-env repo](https://github.com/r-devel/r-dev-env/tree/main) main branch
+2. Click the 'Open in GitHub Codespaces' button
+3. Click the green 'Create Codespace' button
+
 ![create codespace](../../assets/rdev1.png)
 
-    !!! Note You will see the message "Codespace usage for this repository is
-        paid for by ...", with your username. Don't panic!
+!!! Note "About Codespace Billing"
+    You will see the message "Codespace usage for this repository is paid for by [your username]". Don't worry!
+    
+    - GitHub Codespaces offers 120 core hours of free usage per month for every GitHub user
+    - The actual free hours = 120 / number of cores used
+    - The r-dev-env codespace uses 4 cores by default = 30 hours free usage per month
+    - You can adjust the core count based on your needs
+    
+    **Useful Resources:**
+    - [Codespaces Billing Documentation](https://github.com/features/codespaces)
+    - [GitHub Services Pricing Calculator](https://github.com/pricing/calculator)
+    - [Your GitHub Billing Page](https://github.com/settings/billing) (check "Codespaces" section)
 
-        GitHub Codespaces offers 120 core hours of free usage per month for every GitHub user. So the actual number of free hours is 120 divided by the number of cores you are using to run your codespaces.
-        For the r-dev-env codespace we have set the codespace usage to 4 cores which leads to 30hrs of free usage per month. This can be changed according to your preference.
+## Setting Up Your Environment
 
-        For more details about codespaces billing, see the [Codespaces Billing Docs](https://github.com/features/codespaces).
-        You can calculate your GitHub services usage with the [GitHub Services
-        Pricing Calculator](https://github.com/pricing/calculator) and check your usage allowance under "Codespaces" on your [GitHub Billing page](https://github.com/settings/billing).
+1. Wait for the codespace setup screen to complete (about 1 minute)
+2. You'll be redirected to VSCode in your browser:
 
-2. The codespace setup screen will then be shown. Starting the container may
-   take a minute or so.
-
-3. You will be taken to a VSCode editor within your browser.
 ![codespace](../../assets/rdev3.png)

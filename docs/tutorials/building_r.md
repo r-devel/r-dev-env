@@ -1,36 +1,33 @@
-<!-- markdownlint-disable MD036 -->
-**1) Environment variables**
+# Building R from Source
 
-- We have environment variables defining paths to directories for building R and
-  storing the source code.
-- `BUILDDIR` defines the build directory: `/workspaces/r-dev-env/build/r-devel`.
-- `TOP_SRCDIR` defines the source directory: `/workspaces/r-dev-env/svn/r-devel`
-- The environment variables are set in the codespace image and are available
-  when the codespace starts.
+## 1. Environment Variables
 
-    ![alt text](../assets/rdev6.png)
+The following environment variables define important paths for building R:
 
-**2) svn checkout**
+- `BUILDDIR`: Build directory location at `/workspaces/r-dev-env/build/r-devel`
+- `TOP_SRCDIR`: Source directory location at `/workspaces/r-dev-env/svn/r-devel`
 
-- The svn checkout command lets us create a local copy of a specific tag/branch
-  of a repository.
-- We can check out the latest version of the trunk (the main branch) of the R
-  sources to $TOP_SRCDIR as follows:
+These environment variables are set in the codespace image and are available
+when the codespace starts.
 
-    ```bash
-    svn checkout https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
-    ```
+![alt text](../assets/rdev6.png)
 
-- Output : We get file structure something like this after checking out R source
-  code from R svn repository.
+## 2. SVN Checkout
 
-    ![alt text](../assets/rdev8.png)
+The SVN checkout command creates a local copy of a specific tag/branch from the R repository.
+To check out the latest version of the trunk (main branch) of the R sources to `$TOP_SRCDIR`:
 
-**3) Download recommended packages for R**
+```bash
+svn checkout https://svn.r-project.org/R/trunk/ $TOP_SRCDIR
+```
 
-To build R with the recommended packages, we need to run the
-`tools/rsync-recommended` script from the source directory to download the
-source code for these packages:
+After checking out, you'll see a file structure like this:
+
+![alt text](../assets/rdev8.png)
+
+## 3. Download Recommended Packages
+
+To build R with the recommended packages, run the `tools/rsync-recommended` script from the source directory:
 
 ```bash
 $TOP_SRCDIR/tools/rsync-recommended
@@ -38,79 +35,65 @@ $TOP_SRCDIR/tools/rsync-recommended
 
 ![alt text](../assets/rdev9.png)
 
-**4) Change to the build directory**
+## 4. Set Up Build Directory
 
-- To keep the source directory clean, we change to a build directory to
-  configure and build R.
+To keep the source directory clean, we'll use a separate build directory:
 
-- First create the directory specified by the BUILDDIR environment variable.
+1. Create the build directory:
+   ```bash
+   mkdir -p $BUILDDIR
+   ```
 
-```bash
-mkdir -p $BUILDDIR
-```
+2. Change to the build directory:
+   ```bash
+   cd $BUILDDIR
+   ```
 
-- Then we can change directory from root to the build directory.
+## 5. Configure the Build
 
-```bash
-cd $BUILDDIR
-```
-
-**5) Configure the build**
-
-- After we change directory, we must run the configure script from the source
-directory.  This step takes ~1 minute on the codespace.
+Run the configure script from the source directory (~1 minute on codespace):
 
 ```bash
 $TOP_SRCDIR/configure --with-valgrind-instrumentation=1
-
 ```
 
-<!-- markdownlint-disable MD046 -->
 !!! Note
     The `--with-valgrind-instrumentation` option is set to 1 for effective use
-    of valgrind. See the [Using
-    valgrind](https://cran.r-project.org/doc/manuals/R-exts.html#Using-valgrind)
+    of valgrind. See the [Using valgrind](https://cran.r-project.org/doc/manuals/R-exts.html#Using-valgrind)
     section of the R-admin manual for more information.
-<!-- markdownlint-enable MD046 -->
 
-- The configure cmd prepares for building R, creating files and folders inside
-  the BUILDDIR directory.
-- Output : We get file structure something like this after using configure
-  command.
+After configuration, you'll see a file structure like this:
 
-    ![alt text](../assets/rdev7.png)
+![alt text](../assets/rdev7.png)
 
-**6) Build R**
+## 6. Build R
 
-Having configured R, we run `make` to build R. This take 5-10 minutes on the
-codespace.
+Run `make` to build R (5-10 minutes on codespace):
 
 ```bash
 make
 ```
 
-**7) Check R**
+## 7. Run Tests
 
-Check that the build of R passes R's standard checks:
+Check that the build passes R's standard tests:
 
 ```bash
 make check
 ```
 
-This takes a couple of minutes in the codespace. The check will stop with a
-error message if any of the tests fail. If this happens, see [SVN
-Help](./svn_help.md) for how to revert to a version that passes check.
+This takes a couple of minutes. If any tests fail, see [SVN Help](./svn_help.md) for how to revert to a working version.
 
-**8) Make R terminals use the built R**
+## 8. Configure R Terminal
 
-Run the `which_r` script to set which R to use for R terminals in VSCode. When
-prompted, enter the number corresponding to `r-devel`
+Run `which_r` to set which R version to use in VSCode's R terminals:
 
 ```bash
 which_r
 ```
 
-```bash
+You'll see this prompt:
+```
 Which version of R should be used in new R terminals?
   1. R 4.4.0 (release version built into this container)
   Additional R builds available:
@@ -118,16 +101,11 @@ Which version of R should be used in new R terminals?
 Enter the number corresponding to the selected version:
 ```
 
-This means that new R terminals will use the version of R you have just
-built![^1]
+Select the number for `r-devel`. New R terminals will now use your newly built version.[^1]
 
-[^1]: To switch back to the release version, run `which_r` and type `1`. The
-selected version is saved in the VSCode settings, so will be saved when you stop
-and restart the codespace.
+[^1]: To switch back to the release version, run `which_r` and select `1`. Your selection is saved in VSCode settings and persists across codespace restarts.
 
-**9) Make contributions**
+## 9. Next Steps
 
-- After having built the current development version of R, we can now make
-  changes to the source code and contribute to the project.
-- Follow the [R Contribution Workflow](./contribution_workflow.md) tutorial to
-  learn how to do this.
+Now that you've built the development version of R, you can start contributing to the project.
+Follow the [R Contribution Workflow](./contribution_workflow.md) tutorial to learn how.
