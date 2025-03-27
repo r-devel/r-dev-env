@@ -3,7 +3,7 @@
    in the terminal to create and open an R file:
 
 ```console
-$ code R/test.R
+de R/test.R
 ```
 
 2. You should see `R:(not attached)` in the Status Bar at the bottom of the
