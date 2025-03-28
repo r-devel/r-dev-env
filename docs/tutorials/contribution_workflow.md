@@ -1,48 +1,48 @@
-#### 1. Example Contribution Workflow using the R Dev Container
+# Example Contribution Workflow using the R Dev Container
 
-- To start working in R we will click on `R:(not attach)` which is in the bottom
-  right of the VSCode window. This will open an R terminal for us.
+## 1. Starting R
 
-    ![alt text](../assets/rdev11.png)
+- To start working in R, click on `R:(not attach)` in the bottom right of
+  VSCode. This will open an R terminal.
 
-    ![alt text](../assets/rdev12.png)
+![alt text](../assets/rdev11.png)
 
-- We can now run R commands. We will use the `utils::askYesNo()` function as an
-  example
+![alt text](../assets/rdev12.png)
 
-    ![alt text](../assets/rdev19.png)
+- We can now run R commands. We will use the `utils::askYesNo()` function as
+  an example:
 
 ```R
-    > askYesNo("Is this a good example?")
-    Is this a good example? (Yes/no/cancel) Yes
-    [1] TRUE
+> askYesNo("Is this a good example?")
+Is this a good example? (Yes/no/cancel) Yes
+[1] TRUE
 ```
 
-#### 2. Editing Source Code
+## 2. Editing Source Code
 
-- Edit the source code of `utils::askYesNo()` to change the default options. The
-  source code can be found in `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.
-- You can redirect to that file using
+- Edit the source code of `utils::askYesNo()` to change the default options.
+  The source code is in `$TOP_SRCDIR/src/library/utils/R/askYesNo.R`.
+- You can redirect to that file using:
 
 ```bash
 code $TOP_SRCDIR/src/library/utils/R/askYesNo.R
 ```
 
-**> Before edit:** ![alt text](../assets/rdev20.png)
+### Before and After Edit
+
+#### Before edit
 
 ```R title="askYesNo.R" linenums="20"
-    prompts = getOption("askYesNo", gettext(c("Yes", "No", "Cancel"))),
+prompts = getOption("askYesNo", gettext(c("Yes", "No", "Cancel"))),
 ```
 
-**> With edit (for example - change to whatever you like!):**
-
-![alt text](../assets/rdev21.png)
+#### After edit
 
 ```R title="askYesNo.R" linenums="20"
-    prompts = getOption("askYesNo", gettext(c("Oh yeah!", "Don't think so", "Cancel"))),
+prompts = getOption("askYesNo", gettext(c("Oh yeah!", "Don't think so", "Cancel"))),
 ```
 
-#### 3. Rebuild R
+## 3. Rebuilding R
 
 - We can re-build R with our changes. Since we have only modified the utils
   package, rebuilding R will only re-build the utils package.
@@ -61,21 +61,17 @@ cd $BUILDDIR
 make
 ```
 
-![alt text](../assets/rdev22.png)
-
-- Optionally run `make check` to run R's test suite with your local changes. You
-  may skip this step while you are iterating on a bug fix or other development,
+- Optionally run `make check` to run R's test suite with your local changes.
+  You may skip this step while iterating on a bug fix or other development,
   until you are ready to [create a patch](./patch_update.md).
 
 - To use the re-built R, simply open a new R terminal.
 
-#### 4. Cross check and Re-running Code
+## 4. Cross-checking Changes
 
-- Check the edit has worked as expected by re-running the example code: ![alt
-text](../assets/rdev23.png)
+- Check the edit has worked as expected by re-running the example code:
 
 ```R
-    > askYesNo("Is this a good example?")
-    Is this a good example? (Oh yeah!/don't think so/cancel) Oh yeah!
-    [1] TRUE
-```
+> askYesNo("Is this a good example?")
+Is this a good example? (Oh yeah!/don't think so/cancel) Oh yeah!
+[1] TRUE
