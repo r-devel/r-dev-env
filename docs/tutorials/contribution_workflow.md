@@ -23,8 +23,6 @@ Both methods will open an R terminal, allowing you to run R commands directly
 in VS Code.
 
 
-    ![alt text](../assets/rdev12.png)
-
 We can now run R commands. We will use the `utils::askYesNo()` function as an
   example
 
