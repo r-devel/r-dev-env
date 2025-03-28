@@ -1,13 +1,14 @@
-## Gitpod Live Share Alternative
+#### 1. Start Live Share from Dashboard
 
-1. Gitpod live share can be started from dashboard itself by clicking on `Share`
-   option on dashboard.
+`Share` option on dashboard.
 
-    ![liveshare](../../assets/gitpod5.png)
+![liveshare](../../assets/gitpod5.png)
 
-2. After that whenever you open Gitpod Workspace the live share is enabled and
-   ready to share workspace with others.
+#### 2. Live Share Enabled in Workspace
 
-    ![liveshare](../../assets/gitpod6.png)
+After that whenever you open Gitpod Workspace the live share is enabled
+and ready to share workspace with others.
+![liveshare](../../assets/gitpod6.png)
 
-    !!! Note: The live share will be enabled even if you close the workspace.
+!!! Note
+    The live share will be enabled even if you close the workspace.
