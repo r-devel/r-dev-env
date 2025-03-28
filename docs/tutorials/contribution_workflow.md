@@ -1,13 +1,33 @@
 #### 1. Example Contribution Workflow using the R Dev Container
 
-- To start working in R we will click on `R:(not attach)` which is in the bottom
-  right of the VSCode window. This will open an R terminal for us.
+To start working in R we can use one of the following methods to open an R 
+terminal for us.
+
+##### Method 1: Using the Command Palette
+
+  1. Open the command palette:
+      - Press `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (Mac)
+      - If using Firefox and this opens a private window, press `F1` instead
+      - Or select **View > Command Palette** from the top menu bar
+  2. In the command palette, type "R terminal"
+  3. Or from the dropdown list, click on "R: Create R terminal"
+
+##### Method 2: Using the Status Bar
+
+  If you have an R file open in VS Code:
+
+  1. Look for "R:(not attached)" in the status bar at the bottom-right corner
+  2. Click on "R:(not attached)" to launch an R terminal
+
+Both methods will open an R terminal, allowing you to run R commands directly
+in VS Code.
+
 
     ![alt text](../assets/rdev11.png)
 
     ![alt text](../assets/rdev12.png)
 
-- We can now run R commands. We will use the `utils::askYesNo()` function as an
+We can now run R commands. We will use the `utils::askYesNo()` function as an
   example
 
     ![alt text](../assets/rdev19.png)

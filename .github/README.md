@@ -56,30 +56,6 @@ codespace for R development.
 More information about Dev Containers can be found in the [Microsoft
 Documentation](https://code.visualstudio.com/docs/devcontainers/containers).
 
-## Opening an R Terminal
-
-After setting up your environment, you can start an R terminal in VS Code
-using one of these methods:
-
-### Method 1: Using the Command Palette
-
-1. Open the command palette:
-    - Press `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (Mac)
-    - If using Firefox and this opens a private window, press `F1` instead
-    - Or select **View > Command Palette** from the top menu bar
-2. In the command palette, type "R terminal"
-3. Or from the dropdown list, click on "R: Create R terminal"
-
-### Method 2: Using the Status Bar
-
-If you have an R file open in VS Code:
-
-1. Look for "R:(not attached)" in the status bar at the bottom-right corner
-2. Click on "R:(not attached)" to launch an R terminal
-
-Both methods will open an R terminal, allowing you to run R commands directly
-in VS Code.
-
 ## Project Background
 
 The standard development process used by members of the R Core Team involves an
