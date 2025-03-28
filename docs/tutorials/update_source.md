@@ -3,11 +3,11 @@ multiple times a day. It's a good idea to update your local copy of the source
 code from time to time, especially before creating a patch. To do so, follow
 these steps:
 
-#### 1) Close R terminal
+#### 1. Close R terminal
 
 If you have an R terminal open, quit R or close the terminal.
 
-#### 2) Go to the source directory
+#### 2. Go to the source directory
 
 In a bash terminal, change to the source directory
 
@@ -15,7 +15,7 @@ In a bash terminal, change to the source directory
 cd $TOP_SRCDIR
 ```
 
-#### 3) Review local changes
+#### 3. Review local changes
 
 Use the Subversion diff command to review changes you have made to source code
 
@@ -23,7 +23,7 @@ Use the Subversion diff command to review changes you have made to source code
 svn diff
 ```
 
-#### 4) Revert changes (optional)
+#### 4. Revert changes (optional)
 
 If you no longer want to keep your local changes, you can revert them.
 
@@ -45,7 +45,7 @@ Revert all local changes
 svn revert -R .
 ```
 
-#### 5) Rebuild and check with any local changes
+#### 5. Rebuild and check with any local changes
 
 If you have no local changes remaining, skip to the next step.
 
@@ -66,7 +66,7 @@ to continue
 cd $TOP_SRCDIR
 ```
 
-#### 6) Update using svn
+#### 6. Update using svn
 
 Use the Subversion command `update` to update your local copy with the latest
 changes by the R Core Team.
@@ -75,7 +75,7 @@ changes by the R Core Team.
 svn update
 ```
 
-#### 7)  Rebuild and check with the updates
+#### 7.  Rebuild and check with the updates
 
 To rebuild R with the latest changes from the R Core Team and any local changes
 you have kept, go to the build directory to build and check R
@@ -86,6 +86,7 @@ make
 make check
 ```
 
-If the check fails, this will be due to recent changes made by the R Core
-Team. See [SVN Help](./svn_help.md) for how to revert to a version that passes
-check.
+
+!!! Note
+
+    If the check fails, this will be due to recent changes made by the R Core Team. See [SVN Help](./svn_help.md) for how to revert to a version that passes check.
