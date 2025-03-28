@@ -1,6 +1,6 @@
 #### 1. Example Contribution Workflow using the R Dev Container
 
-To start working in R we can use one of the following methods to open an R 
+To start working in R we can use one of the following methods to open an R
 terminal for us.
 
 ##### Method 1: Using the Command Palette
@@ -22,8 +22,6 @@ terminal for us.
 Both methods will open an R terminal, allowing you to run R commands directly
 in VS Code.
 
-
-    ![alt text](../assets/rdev11.png)
 
     ![alt text](../assets/rdev12.png)
 
