@@ -33,7 +33,7 @@ RUN add-apt-repository --enable-source --yes "ppa:marutter/rrutter4.0" \
     && wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc \
     && apt update \
     && apt -y build-dep r-base-dev \
-    && apt -y install r-base-dev 
+    && apt -y install r-base-dev
 
 # Install R packages
 RUN Rscript -e "install.packages('languageserver', repos='https://cran.rstudio.com')" \
