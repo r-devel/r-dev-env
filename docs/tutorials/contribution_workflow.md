@@ -76,6 +76,6 @@ text](../assets/rdev23.png)
 
 ```R
     > askYesNo("Is this a good example?")
-    Is this a good example? (Yes/no/cancel) Yes
+    Is this a good example? (Oh yeah!/don't think so/cancel) Oh yeah!
     [1] TRUE
 ```
