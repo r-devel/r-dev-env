@@ -74,8 +74,8 @@ make
 - Check the edit has worked as expected by re-running the example code: ![alt
 text](../assets/rdev23.png)
 
-```R
+    ```Rconsole
     > askYesNo("Is this a good example?")
     Is this a good example? (Oh yeah!/don't think so/cancel) Oh yeah!
     [1] TRUE
-```
+    ```
