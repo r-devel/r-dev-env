@@ -10,12 +10,15 @@ on:
       - 'docs/**/**'
       - 'mkdocs.yml'
 
+permissions:
+  contents: write
+  
 jobs:
   build-and-deploy:
-    if: ${{github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true}}
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout repository
@@ -24,7 +27,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.x 
+          python-version: 3.x
 
       - name: Install dependencies
         run: pip install mkdocs mkdocs-material[imaging]

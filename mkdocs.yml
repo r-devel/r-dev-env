@@ -13,7 +13,7 @@ nav:
              - 'Start Workspace': 'container_setup/gitpod_workspace/workspacestart.md'
              - 'Stopping and Restarting' : 'container_setup/gitpod_workspace/workspacestop_and_restart.md'
              - 'Collaborating with Live Share' : 'container_setup/gitpod_workspace/live_share.md'
-        - 'Local Setup' : 
+        - 'Local Setup' :
                - 'Docker': 'container_setup/local_setup/localsetup.md'
     - 'Tutorials':
         - 'Running R' : 'tutorials/running_r.md'
@@ -23,7 +23,7 @@ nav:
         - 'Creating a Patch File' : 'tutorials/patch_update.md'
         - 'Multiple R Versions' : 'tutorials/multi_r_compilation.md'
         - 'SVN Help' : 'tutorials/svn_help.md'
-    - 'Contributor Guide' : 
+    - 'Contributor Guide' :
         - 'contributor_guide/contributing_to_docs.md'
         - 'contributor_guide/contributing_to_codebase.md'
     - 'Resources' : 'resources.md'
@@ -37,6 +37,7 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
+    - search.share
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
@@ -45,19 +46,20 @@ theme:
   palette:
     - scheme: default
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
       primary: indigo
       accent: blue
-    - scheme: slate 
+    - scheme: slate
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode    
+        name: Switch to light mode
       primary: indigo
       accent: blue
 
 plugins:
   - social
+  - search
 
 extra:
   social:
