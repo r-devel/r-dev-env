@@ -1,5 +1,7 @@
-# This script is run after the workspace is created
 #!/bin/bash
+
+# This script is run after the workspace is created
+
 
 local_script(){
 
