@@ -10,6 +10,7 @@ RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
     fi \
     && rm -f /tmp/reinstall-cmake.sh
 
+# software-properties-common installed for apt-add-repository
 RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
     && apt -y update \
     && apt install -y --no-install-recommends \
@@ -22,13 +23,6 @@ RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
     && Rscript -e "install.packages('languageserver', repos='https://cran.rstudio.com')" \
     && Rscript -e "install.packages('httpgd', repos='https://cran.rstudio.com')" \
     && rm -rf /var/lib/apt/lists/*
-
-RUN apt install shellcheck
-RUN apt install -y ccache
-#RUN /usr/sbin/update-ccache-symlinks
-#RUN echo 'export PATH="/usr/lib/ccache:$PATH"' | tee -a /home/vscode/.bashrc
-
-
 
 ARG CONTAINER_VERSION
 ENV CONTAINER_VERSION ${CONTAINER_VERSION}
