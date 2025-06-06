@@ -21,7 +21,7 @@ RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
     && apt -y build-dep r-base-dev \
     && apt -y install r-base-dev \
     && Rscript -e "install.packages(c('languageserver', 'httpgd'), \
-    repos = c(runiverse='https://r-universe.dev', CRAN='https://cloud.r-project.org'))" \
+    repos = c(CRAN='https://cloud.r-project.org'))" \
     && rm -rf /var/lib/apt/lists/*
 
 ARG CONTAINER_VERSION
