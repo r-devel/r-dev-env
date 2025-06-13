@@ -22,12 +22,12 @@ cd $TOP_SRCDIR
 svn diff > $PATCHDIR/16629-infinite-recursion.diff
 ```
 
-> e.g. `16629-infinite-recursion.diff` - This name follows the convention:
-bug number (16629), short description (infinite-recursion), and .diff extension,
- making patches easy to identify and review.
+The example above uses `16629-infinite-recursion.diff` - this name follows the
+convention: bug number (16629), short description (infinite-recursion), and
+`.diff` extension, making patches easy to identify and review.
 
 The patch file will be saved in the directory specified by the PATCHDIR
-environment variable that is defined when the codespace starts
+environment variable that is defined when the codespace starts.
 
 ```bash
 ls $PATCHDIR
