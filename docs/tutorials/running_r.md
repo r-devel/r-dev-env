@@ -18,3 +18,7 @@ VSCode window.
 send code from the `.R` file to the R terminal by pressing `cmd/ctrl + enter`.
 
 ![alt text](../assets/rdev12.png) ![alt text](../assets/rdev5.png)
+
+```Rconsole
+hist(rnorm(1000))
+```
