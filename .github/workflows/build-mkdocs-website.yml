@@ -31,6 +31,21 @@ jobs:
       - name: Install dependencies
         run: pip install mkdocs mkdocs-material[imaging]
 
+      - name: Determine deployment path
+        id: path
+        run: |
+          if [[ "${{ github.ref_name }}" == "main" ]]; then
+            echo "url=https://contributor.r-project.org/r-dev-env" >> "$GITHUB_OUTPUT"
+          else
+            echo "url=https://contributor.r-project.org/r-dev-env/devel" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Modify site_url in mkdocs.yml
+        run: |
+          echo "Setting site_url to ${{ steps.path.outputs.url }}"
+          sed -i "s|^site_url:.*|site_url: '${{ steps.path.outputs.url }}'|" mkdocs.yml
+
+
       - name: Build MkDocs
         run: mkdocs build
 
