@@ -14,14 +14,24 @@ this first.
 
 Go to the source directory and use `svn diff` to create a patch.
 
+**Use a descriptive patch name with the bug number and a short description,
+rather than a generic name like `patch.diff`.**
+
 ```bash
 cd $TOP_SRCDIR
-svn diff > $PATCHDIR/patch.diff
+svn diff > $PATCHDIR/16629-infinite-recursion.diff
 ```
+
+> e.g. `16629-infinite-recursion.diff` - This name follows the convention:
+bug number (16629), short description (infinite-recursion), and .diff extension,
+ making patches easy to identify and review.
 
 The patch file will be saved in the directory specified by the PATCHDIR
 environment variable that is defined when the codespace starts
 
 ```bash
-echo $PATCHDIR/patch.diff
+ls $PATCHDIR
 ```
+
+lists all patch files in your patch directory, allowing you to easily
+see and verify the patch files you have created.
