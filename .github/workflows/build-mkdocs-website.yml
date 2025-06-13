@@ -10,22 +10,21 @@ on:
       - 'docs/**/**'
       - 'mkdocs.yml'
 
-permissions:
-  contents: write
-
 jobs:
   build-and-deploy:
     if: |
       github.event_name == 'workflow_dispatch' ||
       (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: 3.x
 
@@ -36,8 +35,9 @@ jobs:
         run: mkdocs build
 
       - name: Deploy to GitHub Pages
-        run: |
-           mkdocs gh-deploy --force
-           git push origin gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
+           mkdocs gh-deploy --force
+           git push origin gh-pages
