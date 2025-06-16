@@ -18,6 +18,7 @@ RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
       subversion \
     && add-apt-repository --enable-source --yes "ppa:marutter/rrutter4.0" \
     && wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc \
+    && apt -y build-dep r-base-dev \
     && apt-get install -y r-base-dev \
     && rm -rf /var/lib/apt/lists/*
 
@@ -31,17 +32,6 @@ RUN Rscript -e "runiverse <- sprintf('r-universe.dev/bin/linux/%s-%s/%s/', \
                  repos = c(runiverse = paste0('https://cran.', runiverse), \
                            nx10 = paste0('https://nx10.', runiverse))); \
                 print('Packages installed.')"
-
-
-# Install ShellCheck using apt-get from the PPA
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-    shellcheck
-
-# Install ccache
-RUN apt-get install -y --no-install-recommends \
-    ccache \
-    && rm -rf /var/lib/apt/lists/*
 
 ARG CONTAINER_VERSION
 ENV CONTAINER_VERSION=${CONTAINER_VERSION}

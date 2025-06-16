@@ -7,6 +7,9 @@
     "customizations": {
         "vscode": {
             "settings": {
+                "editor.tabSize": 8,
+                "editor.indentSize": 4,
+                "editor.detectIndentation": false,
                 "r.lsp.diagnostics": false,
                 "r.plot.useHttpgd": true,
                 "r.rpath.linux": "/usr/bin/R",
