@@ -6,7 +6,7 @@ on:
     branches: ["main","devel"]
     types: [closed]
     paths:
-      - 'build-mkdocs-website.yml'
+      - '.github/workflows/build-mkdocs-website.yml'
       - 'docs/**/**'
       - 'mkdocs.yml'
 
