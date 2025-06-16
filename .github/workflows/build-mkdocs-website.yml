@@ -31,28 +31,39 @@ jobs:
       - name: Install dependencies
         run: pip install mkdocs mkdocs-material[imaging]
 
-      - name: Determine deployment path
-        id: path
+      - name: Determine deployment settings
+        id: config
         run: |
           if [[ "${{ github.ref_name }}" == "main" ]]; then
+            echo "target_repo=${{ github.repository }}" >> "$GITHUB_OUTPUT"
             echo "url=https://contributor.r-project.org/r-dev-env" >> "$GITHUB_OUTPUT"
           else
-            echo "url=https://contributor.r-project.org/r-dev-env/devel" >> "$GITHUB_OUTPUT"
+            echo "target_repo=r-devel/r-dev-env-devel" >> "$GITHUB_OUTPUT"
+            echo "url=https://contributor.r-project.org/r-dev-env-devel" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Modify site_url in mkdocs.yml
         run: |
-          echo "Setting site_url to ${{ steps.path.outputs.url }}"
-          sed -i "s|^site_url:.*|site_url: '${{ steps.path.outputs.url }}'|" mkdocs.yml
-
+          echo "Setting site_url to ${{ steps.config.outputs.url }}"
+          sed -i "s|^site_url:.*|site_url: '${{ steps.config.outputs.url }}'|" mkdocs.yml
 
       - name: Build MkDocs
         run: mkdocs build
 
+      - name: Validate PAT
+        env:
+          GH_PAT: ${{ secrets.R_DEV_ENV_DOCS }}
+        run: |
+          curl -H "Authorization: token $GH_PAT" https://api.github.com/user || {
+            echo "PAT is invalid or expired" >&2
+            exit 1
+          }
+
       - name: Deploy to GitHub Pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.R_DEV_ENV_DOCS }}
         run: |
-           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
-           mkdocs gh-deploy --force
-           git push origin gh-pages
+           echo "Deploying from branch: ${{ github.ref_name }}"
+           echo "Commit: ${{ github.sha }}"
+           git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ steps.config.outputs.target_repo }}
+           mkdocs gh-deploy --config-file mkdocs.yml --remote-branch gh-pages --force
