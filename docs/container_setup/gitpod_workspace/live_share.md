@@ -10,4 +10,5 @@
 
     ![liveshare](../../assets/gitpod6.png)
 
-    !!! Note: The live share will be enabled even if you close the workspace.
+    !!! Note 
+        The live share will be enabled even if you close the workspace.
