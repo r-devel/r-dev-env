@@ -74,6 +74,7 @@ jobs:
            git config --global user.email "github-actions@github.com"
            git config --global user.name "github-actions"
 
+           git fetch origin gh-pages
            git worktree add gh-pages gh-pages
            cp -r site/* gh-pages/
            cd gh-pages
