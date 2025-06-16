@@ -1,0 +1,23 @@
+config:
+
+# MD013 - line-length
+  line_length:
+    line_length: 80
+    code_blocks: false
+    tables: false
+  html:
+    allowed_elements:
+      - div
+      - figure
+# MD029 - ol-prefix disabled as ordered lists are interspersed wit code in multiple places
+  ol-prefix: false
+# MD041 - first-line-heading disable due to splitting of sections across multiple files
+  first-line-h1: false
+
+globs:
+
+- "docs/**/*.md"
+- "*.md"
+
+
+fix: true
