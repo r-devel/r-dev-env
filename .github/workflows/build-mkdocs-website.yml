@@ -65,5 +65,7 @@ jobs:
         run: |
            echo "Deploying from branch: ${{ github.ref_name }}"
            echo "Commit: ${{ github.sha }}"
-           git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ steps.config.outputs.target_repo }}
+           git config --global credential.helper store
+           echo "https://x-access-token:${GH_PAT}@github.com" > ~/.git-credentials
+           git remote set-url origin https://github.com/${{ steps.config.outputs.target_repo }}
            mkdocs gh-deploy --config-file mkdocs.yml --remote-branch gh-pages --force
