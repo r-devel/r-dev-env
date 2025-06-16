@@ -18,7 +18,8 @@ RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
       subversion \
     && add-apt-repository --enable-source --yes "ppa:marutter/rrutter4.0" \
     && wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc \
-    && apt -y build-dep r-base-dev \
+    && apt-get update \
+    && apt-get build-dep r-base-dev \
     && apt-get install -y r-base-dev \
     && rm -rf /var/lib/apt/lists/*
 
