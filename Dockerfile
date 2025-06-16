@@ -12,6 +12,7 @@ RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
     && apt-get update \
     && apt-get build-dep -y r-base-dev \
     && apt-get install -y r-base-dev \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # Install R packages, with dynamic r-universe URL
@@ -25,5 +26,6 @@ RUN Rscript -e "runiverse <- sprintf('r-universe.dev/bin/linux/%s-%s/%s/', \
                            nx10 = paste0('https://nx10.', runiverse))); \
                 print('Packages installed.')"
 
+# Define env var used in GitHub Actions that build and deploy container
 ARG CONTAINER_VERSION
 ENV CONTAINER_VERSION=${CONTAINER_VERSION}
