@@ -1,16 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/cpp:dev-ubuntu
 
-ARG REINSTALL_CMAKE_VERSION_FROM_SOURCE="none"
-
-# Optionally install the cmake for vcpkg
-COPY ./reinstall-cmake.sh /tmp/
-
-RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
-    chmod +x /tmp/reinstall-cmake.sh && /tmp/reinstall-cmake.sh ${REINSTALL_CMAKE_VERSION_FROM_SOURCE}; \
-    fi \
-    && rm -f /tmp/reinstall-cmake.sh
-
 # Update and install necessary dependencies
+# (software-properties-common installed for apt-add-repository)
 RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -23,7 +14,7 @@ RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
     && apt-get install -y r-base-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Install R packages, with dynamic runiverse URL
+# Install R packages, with dynamic r-universe URL
 RUN Rscript -e "runiverse <- sprintf('r-universe.dev/bin/linux/%s-%s/%s/', \
                                  system2('lsb_release', '-sc', stdout = TRUE), \
                                  R.version\$arch, \
