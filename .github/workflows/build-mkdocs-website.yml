@@ -81,5 +81,4 @@ jobs:
            git add .
            git commit -m "Automated site update for r-dev-env ${{ github.sha }}" \
              || echo "No changes to commit"
-           git push https://x-access-token:${GH_PAT}@github.com/${{
-             steps.config.outputs.target_repo }} gh-pages
+           git push https://x-access-token:${GH_PAT}@github.com/${{ steps.config.outputs.target_repo }} gh-pages
