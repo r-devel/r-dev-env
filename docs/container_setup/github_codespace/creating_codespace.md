@@ -4,7 +4,8 @@ repo](https://github.com/r-devel/r-dev-env/tree/main), click on the 'Open in
 GitHub Codespaces' button and then click the green 'Create Codespace' button.
 ![create codespace](../../assets/rdev1.png)
 
-    !!! Note You will see the message "Codespace usage for this repository is
+    !!! Note
+        You will see the message "Codespace usage for this repository is
         paid for by ...", with your username. Don't panic!
 
         GitHub Codespaces offers 120 core hours of free usage per month for every GitHub user. So the actual number of free hours is 120 divided by the number of cores you are using to run your codespaces.
@@ -17,5 +18,5 @@ GitHub Codespaces' button and then click the green 'Create Codespace' button.
 2. The codespace setup screen will then be shown. Starting the container may
    take a minute or so.
 
-3. You will be taken to a VSCode editor within your browser.
+3. You will be taken to a VS Code editor within your browser.
 ![codespace](../../assets/rdev3.png)
