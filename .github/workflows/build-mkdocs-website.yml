@@ -1,4 +1,4 @@
-name: Build MKDocs website
+name: Build MkDocs website
 
 on:
   workflow_dispatch:
