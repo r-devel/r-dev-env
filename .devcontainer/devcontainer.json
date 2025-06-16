@@ -31,5 +31,4 @@
         }
     },
     "postCreateCommand": "find . -wholename '*.git*'  -type d -prune -o -type f -exec chown vscode:vscode {} \\; && sh /workspaces/r-dev-env/scripts/localscript.sh"
-    //"postCreateCommand": "chown -R vscode:vscode /workspaces/r-dev-env && sh /workspaces/r-dev-env/scripts/localscript.sh"
 }
