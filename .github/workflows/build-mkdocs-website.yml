@@ -53,9 +53,9 @@ jobs:
         id: config
         run: |
           if [[ "${{ github.ref_name }}" == "main" ]]; then
-            echo "target_repo=${{ github.repository }}" >> "$GITHUB_OUTPUT"
+            echo "repo=${{ github.repository }}" >> "$GITHUB_OUTPUT"
           else
-            echo "target_repo=${{ github.repository }}-devel" >> "$GITHUB_OUTPUT"
+            echo "repo=${{ github.repository }}-devel" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Modify site_url for development documentation
@@ -73,12 +73,12 @@ jobs:
         run: |
            echo "Deploying from branch: ${{ github.ref_name }}"
            echo "Commit: ${{ github.sha }}"
-           echo "Deploying to: ${{ steps.config.outputs.target_repo}}"
+           echo "Deploying to: ${{ steps.config.outputs.repo}}"
 
            git config --global user.email "github-actions@github.com"
            git config --global user.name "github-actions"
 
            git remote set-url origin \
-             https://github.com/${{ steps.config.outputs.target_repo }}
+             https://github.com/${{ steps.config.outputs.repo }}
            mkdocs gh-deploy --config-file mkdocs.yml \
              --remote-branch gh-pages --force
