@@ -2,6 +2,10 @@ name: Build MkDocs website
 
 on:
   workflow_dispatch:
+  push:
+    branches: ["main","devel"]
+    paths:
+      - '.github/workflows/build-mkdocs-website.yml'
   pull_request:
     branches: ["main","devel"]
     types: [closed]
@@ -14,6 +18,7 @@ jobs:
   build-and-deploy:
     if: |
       github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'push' ||
       (github.event_name == 'pull_request' &&
        github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
@@ -21,39 +26,6 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: 3.x
-
-      - name: Install dependencies
-        run: pip install mkdocs mkdocs-material[imaging]
-
-      - name: Determine deployment settings
-        id: config
-        run: |
-          if [[ "${{ github.ref_name }}" == "main" ]]; then
-            echo "target_repo=${{ github.repository }}" >> "$GITHUB_OUTPUT"
-            echo "url=https://contributor.r-project.org/r-dev-env" \
-              >> "$GITHUB_OUTPUT"
-          else
-            echo "target_repo=r-devel/r-dev-env-devel" >> "$GITHUB_OUTPUT"
-            echo "url=https://contributor.r-project.org/r-dev-env-devel" \
-              >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Modify site_url in mkdocs.yml
-        run: |
-          echo "Setting site_url to ${{ steps.config.outputs.url }}"
-          sed -i "s|^site_url:.*|site_url: '${{
-            steps.config.outputs.url }}'|" mkdocs.yml
-
-      - name: Build MkDocs
-        run: mkdocs build
-
       - name: Validate PAT
         env:
           GH_PAT: ${{ secrets.R_DEV_ENV_DOCS }}
@@ -64,21 +36,49 @@ jobs:
               exit 1
           }
 
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.R_DEV_ENV_DOCS }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: pip install mkdocs mkdocs-material[imaging]
+
+      - name: Determine target repo
+        id: config
+        run: |
+          if [[ "${{ github.ref_name }}" == "main" ]]; then
+            echo "target_repo=${{ github.repository }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "target_repo=${{ github.repository }}-devel" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Modify site_url for development documentation
+        run: |
+          if [[ "${{ github.ref_name }}" != "main" ]]; then
+            site_url=https://contributor.r-project.org/r-dev-env-devel
+            echo "Setting site_url to '${site_url}'"
+            sed -i "s|^site_url:.*|site_url: '${site_url}'|" mkdocs.yml
+          fi
+
+      - name: Build MkDocs
+        run: mkdocs build
+
       - name: Deploy to GitHub Pages
-        env:
-          GH_PAT: ${{ secrets.R_DEV_ENV_DOCS }}
         run: |
            echo "Deploying from branch: ${{ github.ref_name }}"
            echo "Commit: ${{ github.sha }}"
+           echo "Deploying to: ${{ steps.config.outputs.target_repo}}"
 
            git config --global user.email "github-actions@github.com"
            git config --global user.name "github-actions"
 
-           git fetch origin gh-pages
-           git worktree add gh-pages gh-pages
-           cp -r site/* gh-pages/
-           cd gh-pages
-           git add .
-           git commit -m "Automated site update for r-dev-env ${{ github.sha }}" \
-             || echo "No changes to commit"
-           git push https://x-access-token:${GH_PAT}@github.com/${{ steps.config.outputs.target_repo }} gh-pages
+           git remote set-url origin \
+             https://github.com/${{ steps.config.outputs.target_repo }}
+           mkdocs gh-deploy --config-file mkdocs.yml \
+             --remote-branch gh-pages --force
