@@ -60,6 +60,7 @@ localsetup](../../assets/rdev24.png)
 the environment variables mentioned in the welcome message on the
 terminal. And there we go!!! We have setup our R Dev Container locally.
 
-   ```bash
-   echo $BUILDDIR
-   ```
+    ```console
+    $ echo $BUILDDIR
+    /workspaces/r-dev-env/bin/R
+    ```
