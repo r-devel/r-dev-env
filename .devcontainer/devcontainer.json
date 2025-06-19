@@ -7,6 +7,9 @@
     "customizations": {
         "vscode": {
             "settings": {
+                "editor.tabSize": 8,
+                "editor.indentSize": 4,
+                "editor.detectIndentation": false,
                 "r.lsp.diagnostics": false,
                 "r.plot.useHttpgd": true,
                 "r.rpath.linux": "/usr/bin/R",
@@ -27,5 +30,5 @@
             ]
         }
     },
-    "postCreateCommand": "chown -R vscode:vscode /workspaces/r-dev-env && sh /workspaces/r-dev-env/scripts/localscript.sh"
+    "postCreateCommand": "find . -wholename '*.git*'  -type d -prune -o -type f -exec chown vscode:vscode {} \\; && sh /workspaces/r-dev-env/scripts/localscript.sh"
 }

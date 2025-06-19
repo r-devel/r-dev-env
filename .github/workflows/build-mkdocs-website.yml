@@ -1,43 +1,84 @@
-name: Build MKDocs website
+name: Build MkDocs website
 
 on:
   workflow_dispatch:
+  push:
+    branches: ["main","devel"]
+    paths:
+      - '.github/workflows/build-mkdocs-website.yml'
   pull_request:
     branches: ["main","devel"]
     types: [closed]
     paths:
-      - 'build-mkdocs-website.yml'
+      - '.github/workflows/build-mkdocs-website.yml'
       - 'docs/**/**'
       - 'mkdocs.yml'
-
-permissions:
-  contents: write
 
 jobs:
   build-and-deploy:
     if: |
       github.event_name == 'workflow_dispatch' ||
-      (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+      github.event_name == 'push' ||
+      (github.event_name == 'pull_request' &&
+       github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
+      - name: Validate PAT
+        env:
+          GH_PAT: ${{ secrets.R_DEV_ENV_DOCS }}
+        run: |
+          curl -H "Authorization: token $GH_PAT" \
+            https://api.github.com/user || {
+              echo "PAT is invalid or expired" >&2
+              exit 1
+          }
+
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.R_DEV_ENV_DOCS }}
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: 3.x
 
       - name: Install dependencies
         run: pip install mkdocs mkdocs-material[imaging]
 
+      - name: Determine target repo
+        id: config
+        run: |
+          if [[ "${{ github.ref_name }}" == "main" ]]; then
+            echo "repo=${{ github.repository }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "repo=${{ github.repository }}-devel" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Modify site_url for development documentation
+        run: |
+          if [[ "${{ github.ref_name }}" != "main" ]]; then
+            site_url=https://contributor.r-project.org/r-dev-env-devel
+            echo "Setting site_url to '${site_url}'"
+            sed -i "s|^site_url:.*|site_url: '${site_url}'|" mkdocs.yml
+          fi
+
       - name: Build MkDocs
         run: mkdocs build
 
       - name: Deploy to GitHub Pages
         run: |
-           mkdocs gh-deploy --force
-           git push origin gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           echo "Deploying from branch: ${{ github.ref_name }}"
+           echo "Commit: ${{ github.sha }}"
+           echo "Deploying to: ${{ steps.config.outputs.repo}}"
+
+           git config --global user.email "github-actions@github.com"
+           git config --global user.name "github-actions"
+
+           git remote set-url origin \
+             https://github.com/${{ steps.config.outputs.repo }}
+           mkdocs gh-deploy --config-file mkdocs.yml \
+             --remote-branch gh-pages --force
