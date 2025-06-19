@@ -7,6 +7,7 @@ RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
     && apt-get install -y --no-install-recommends \
       software-properties-common \
       subversion \
+      libmagick++-dev \
     && add-apt-repository --enable-source --yes "ppa:marutter/rrutter4.0" \
     && wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc \
     && apt-get update \
