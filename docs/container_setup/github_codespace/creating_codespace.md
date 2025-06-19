@@ -22,18 +22,24 @@ GitHub Codespaces' button and then click the green 'Create Codespace' button.
 
 4. Rename your codespace for easier identification:
 
-By default, your codespace will have a randomly generated name. Renaming it to something descriptive — such as referencing the issue or feature you’re working on makes it much easier to find and manage your codespaces, especially if you use several.
+By default, your codespace will have a randomly generated name. Renaming it to
+something descriptive — such as referencing the issue or feature you’re working
+on makes it much easier to find and manage your codespaces, especially if
+you use several.
 
 To rename your codespace:**
 
-- Open your [GitHub Codespaces dashboard](https://github.com/codespaces) in your browser.
-- Find the codespace you just created (it will show the repository name and the current random display name).
+- Open your [GitHub Codespaces dashboard](https://github.com/codespaces) in
+  your browser.
+- Find the codespace you just created (it will show the repository name and
+  the current random display name).
 - Click the ellipsis (**...**) next to your codespace to open the options menu.
 - Select **Rename** from the dropdown.
-- Enter a descriptive new display name (e.g., `r-dev-env-issue-229` or `r-dev-env-patch-naming`) and confirm.
+- Enter a descriptive new display name (e.g., `r-dev-env-issue-229` or
+  `r-dev-env-patch-naming`) and confirm.
 
 ![rename codespace](../../assets/rdev3_5.png)
 
-> **Tip:**  
-> You can rename your codespace at any time. The display name is for your convenience and does not affect your code or environment.
-
+> **Tip:**
+> You can rename your codespace at any time. The display name is
+  for your convenience and does not affect your code or environment.
