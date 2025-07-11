@@ -63,6 +63,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+          registry: ${{ secrets.DOCKERHUB_USERNAME }}
           #registry: ${{ env.REGISTRY }}
           #username: ${{ github.actor }}
           #password: ${{ secrets.GITHUB_TOKEN }}
@@ -88,3 +89,6 @@ jobs:
           build-args: |
             CONTAINER_VERSION=${{ env.VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
+          platforms: linux/amd64,linux/arm64/v8
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
