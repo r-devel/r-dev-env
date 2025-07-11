@@ -63,8 +63,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          registry: ${{ secrets.DOCKERHUB_USERNAME }}
-          #registry: ${{ env.REGISTRY }}
+          #registry: ${{ secrets.DOCKERHUB_USERNAME }}
+          registry: ${{ env.REGISTRY }}
           #username: ${{ github.actor }}
           #password: ${{ secrets.GITHUB_TOKEN }}
 
