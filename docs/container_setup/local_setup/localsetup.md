@@ -51,7 +51,7 @@ prerequisites installed.
 
 6. We can see pop-up at the bottom right of the VSCode editor which says reopen
 in Dev Container.
-Click on `Reopen in DevContainer` button.  
+Click on `Reopen in DevContainer` button.
 ![startlocalsetup](../../assets/rdev13.png)
 
 7. After clicking on that button we will see our container is getting ready. It
@@ -69,6 +69,5 @@ the environment variables mentioned in the welcome message on the terminal.
       And there we go!!! We have setup our R Dev Container locally.  ![start
       localsetup](../../assets/rdev25.png)
 
-
 9. The container will be closed when you close VSCode. To reopen the container,
-open the `r-dev-env` directory in VSCode.
+   open the `r-dev-env` directory in VSCode.
