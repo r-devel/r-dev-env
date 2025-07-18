@@ -27,6 +27,9 @@ RUN Rscript -e "runiverse <- sprintf('r-universe.dev/bin/linux/%s-%s/%s/', \
                            nx10 = paste0('https://nx10.', runiverse))); \
                 print('Packages installed.')"
 
+#Set the CFLAGS environment variable to include debugging symbols for better debugging
+ENV CFLAGS="-g -O0"
+                
 # Define env var used in GitHub Actions that build and deploy container
 ARG CONTAINER_VERSION
 ENV CONTAINER_VERSION=${CONTAINER_VERSION}

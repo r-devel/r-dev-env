@@ -4,6 +4,7 @@
     "hostRequirements": {
         "cpus": 4
     },
+    "runArgs": ["--cap-add=SYS_PTRACE"],
     "customizations": {
         "vscode": {
             "settings": {
@@ -28,9 +29,10 @@
                 "johnstoncode.svn-scm",
                 "ms-vscode.cpptools",
                 "MS-vsliveshare.vsliveshare",
-                "natqe.reload"
+                "natqe.reload",
+                "vadimcn.vscode-lldb"
             ]
         }
     },
-    "postCreateCommand": "find . -wholename '*.git*'  -type d -prune -o -type f -exec chown vscode:vscode {} \\; && sh /workspaces/r-dev-env/scripts/localscript.sh"
+    "postCreateCommand": "find . -wholename '.git*' -type d -prune -o -type f -exec chown vscode:vscode {} \; && gcc -shared -fPIC -o /workspaces/r-dev-env/scripts/allow_ptrace.so /workspaces/r-dev-env/scripts/allow_ptrace.c && chmod +x /workspaces/r-dev-env/scripts/launch_r.sh && sh /workspaces/r-dev-env/scripts/localscript.sh"
 }

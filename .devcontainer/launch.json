@@ -1,0 +1,18 @@
+{
+"version": "0.2.0",
+"configurations": [
+    {
+        "type": "lldb",
+        "request": "attach",
+        "name": "Attach",
+        "pid": "${command:pickMyProcess}" // use ${command:pickProcess} to pick other users' processes
+    },
+    {
+      "name": "(lldb) Attach to R",
+      "type": "lldb",
+      "request": "attach",
+      "pid": "${command:pickMyProcess}",
+      "stopOnEntry": false
+    }
+  ]
+}
