@@ -15,7 +15,7 @@ jobs:
     with:
       event_name: ${{ github.event_name }}
       pull_request: ${{ github.pull_request.merged }}
-      repository: ${{ github.event_name }}
+      repository: ${{ github.repository }}
       image_name: ${{ github.repository }}
       ref_name: ${{ github.branch }}
     secrets: inherit
