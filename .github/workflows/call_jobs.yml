@@ -10,6 +10,7 @@ jobs:
   call-workflow-amd64:
     permissions:
       contents: read
+      packages: write
       pull-requests: write
     uses: iaine/r-dev-env/.github/workflows/reuse-build-and-publish.yml@devel
     with:
