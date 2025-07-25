@@ -14,7 +14,6 @@ jobs:
       pull-requests: write
     uses: iaine/r-dev-env/.github/workflows/reuse-build-and-publish.yml@devel
     with:
-      config-path: .github/labeler.yml
       event_name: ${{ github.event_name }}
       pull_request: ${{ github.pull_request.merged }}
       repository: ${{ github.event_name }}
