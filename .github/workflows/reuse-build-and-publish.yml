@@ -38,13 +38,6 @@ on:
         description: github actor 
         required: true
         type: string
-    secrets:
-      gh_token:
-        required: true
-      username:
-        required: true
-      password:
-        required: true
   push:
     branches:
       - main
