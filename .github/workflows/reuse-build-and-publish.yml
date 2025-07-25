@@ -42,15 +42,20 @@ on:
         required: true
         type: string
     secrets:
-      github_token:
+      gh_token:
         required: true
   push:
-    branches: ["main","devel"]
+    branches:
+      - main
+      - devel
     paths:
       - '.github/workflows/reuse-build-and-publish.yml'
   pull_request:
-    branches: ["main","devel"]
-    types: [closed]
+    branches:
+      - main
+      - devel
+    types:
+      - closed
     paths:
       - '.github/workflows/reuse-build-and-publish.yml'
       - '.devcontainer/devcontainer.json'
@@ -85,7 +90,7 @@ jobs:
         with:
           registry: $REGISTRY
           username: ${{ inputs.actor }}
-          password: ${{ secrets.github_token }}
+          password: ${{ secrets.gh_token }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
