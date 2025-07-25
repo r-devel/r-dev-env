@@ -34,5 +34,5 @@
             ]
         }
     },
-    "postCreateCommand": "find . -wholename '.git*' -type d -prune -o -type f -exec chown vscode:vscode {} \; && gcc -shared -fPIC -o /workspaces/r-dev-env/scripts/allow_ptrace.so /workspaces/r-dev-env/scripts/allow_ptrace.c && chmod +x /workspaces/r-dev-env/scripts/launch_r.sh && sh /workspaces/r-dev-env/scripts/localscript.sh"
+    "postCreateCommand": "find . -wholename '.git*' -type d -prune -o -type f -exec chown vscode:vscode {} \\; && gcc -shared -fPIC -o /workspaces/r-dev-env/scripts/allow_ptrace.so /workspaces/r-dev-env/scripts/allow_ptrace.c && chmod +x /workspaces/r-dev-env/scripts/launch_r.sh && sh /workspaces/r-dev-env/scripts/localscript.sh"
 }
