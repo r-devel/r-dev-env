@@ -5,7 +5,7 @@
 
 #https://github.com/r-devel/r-dev-env/issues/252
 
-name: Build and publish Docker image
+name: Build and publish amd 64 Docker image
 
 env:
   REGISTRY: ghcr.io
