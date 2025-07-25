@@ -26,10 +26,6 @@ on:
         description: repository name
         required: true
         type: string
-      version: 
-        description: container version
-        required: true
-        type: number
       image_name:
         description: image name
         required: true
