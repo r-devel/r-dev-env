@@ -17,7 +17,7 @@ jobs:
       event_name: ${{ github.event_name }}
       pull_request: ${{ github.pull_request.merged }}
       repository: ${{ github.event_name }}
-      #version: ${{ github.event_name }}
+      version: $(cat VERSION)
       image_name: ${{ github.repository }}
       ref_name: ${{ github.branch }}
       actor: ${{ github.actor }}
