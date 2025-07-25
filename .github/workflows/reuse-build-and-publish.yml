@@ -1,0 +1,109 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+#https://github.com/r-devel/r-dev-env/issues/252
+
+name: Build and publish Docker image
+
+env:
+  REGISTRY: ghcr.io
+
+on:
+  workflow_call:
+    inputs:
+      event_name: 
+        description: event name
+        required: true
+        type: string
+      pull_request: 
+        description: pull request
+        required: false
+        type: string
+      repository: 
+        description: repository name
+        required: true
+        type: string
+      version: 
+        description: container version
+        required: true
+        type: number
+      image_name:
+        description: image name
+        required: true
+        type: string
+      ref_name: 
+        description: ref name
+        required: true
+        type: string
+      actor: 
+        description: github actor 
+        required: true
+        type: string
+    secrets:
+      github_token:
+        required: true
+  push:
+    branches: ["main","devel"]
+    paths:
+      - '.github/workflows/reuse-build-and-publish.yml'
+  pull_request:
+    branches: ["main","devel"]
+    types: [closed]
+    paths:
+      - '.github/workflows/reuse-build-and-publish.yml'
+      - '.devcontainer/devcontainer.json'
+      - 'Dockerfile'
+      - 'reinstall-cmake.sh'
+      - 'VERSION'
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  reuse-build-and-push:
+    if:  |
+      ${{ inputs.event_name }} == 'workflow_dispatch' ||
+      ${{ inputs.event_name }} == 'push' ||
+      (${{ inputs.event_name }} == 'pull_request' &&
+       ${{ inputs.pull_request }} == true)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      #- name: Extract version number
+      #  run: |
+      #    VER=$(cat VERSION)
+      #    echo "VERSION=$VER" >> $GITHUB_ENV
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: $REGISTRY
+          username: ${{ inputs.actor }}
+          password: ${{ secrets.github_token }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: $REGISTRY/${{ inputs.repository }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern=${{ inputs.version }}
+            type=sha
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: $REGISTRY/${{ inputs.image_name }}:${{ inputs.ref_name }}
+          build-args: |
+            CONTAINER_VERSION=${{ inputs.version }}
+          labels: ${{ steps.meta.outputs.labels }}
