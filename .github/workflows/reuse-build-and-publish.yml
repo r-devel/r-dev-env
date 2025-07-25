@@ -112,7 +112,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: $REGISTRY/${{ inputs.image_name }}:${{ inputs.ref_name }}
+          tags: ${{ env.REGISTRY }}/${{ inputs.image_name }}:${{ inputs.ref_name }}
           build-args: |
             CONTAINER_VERSION=${{ inputs.version }}
           labels: ${{ steps.meta.outputs.labels }}
