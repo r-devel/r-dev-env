@@ -21,7 +21,4 @@ jobs:
       image_name: ${{ github.repository }}
       ref_name: ${{ github.branch }}
       actor: ${{ github.actor }}
-    secrets:
-      personal_access_token: ${{ secrets.GITHUB_TOKEN }}
-      username: ${{ secrets.username }}
-      password: ${{ secrets.password}}
+    secrets: inherit
