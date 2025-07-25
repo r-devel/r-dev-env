@@ -23,3 +23,5 @@ jobs:
       actor: ${{ github.actor }}
     secrets:
       personal_access_token: ${{ secrets.GITHUB_TOKEN }}
+      username: ${{ secrets.username }}
+      password: ${{ secrets.password}}
