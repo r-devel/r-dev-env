@@ -70,7 +70,7 @@ on:
 
 permissions:
   contents: read
-  packages:write
+  packages: write
 
 jobs:
   reuse-build-and-push:
