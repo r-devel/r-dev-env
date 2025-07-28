@@ -90,7 +90,7 @@ jobs:
           tags: |
             type=ref,event=branch
             type=ref,event=pr
-            type=semver,pattern=${{ VER }}
+            type=semver,pattern=${{ env.VERSION }}
             type=sha
 
       - name: Build and push Docker image
