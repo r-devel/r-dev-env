@@ -7,10 +7,6 @@
 
 name: Build and publish amd 64 Docker image
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-
 on:
   workflow_call:
     inputs:
@@ -22,8 +18,8 @@ on:
         description: pull request
         required: false
         type: string
-      repository: 
-        description: repository name
+      image_name: 
+        description: image name
         required: true
         type: string
       ref_name: 
@@ -32,6 +28,10 @@ on:
         type: string
       actor: 
         description: actor
+        required: true
+        type: string
+      registry: 
+        description: registry
         required: true
         type: string
   push:
@@ -78,7 +78,7 @@ jobs:
       - name: Log in to the Container registry
         uses: docker/login-action@v3
         with:
-          registry: ${{ env.REGISTRY }}
+          registry: ${{ inputs.repository }}
           username: ${{ inputs.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
@@ -86,7 +86,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ inputs.repository }}
+          images: ${{ inputs.registry }}/${{ inputs.image_name }}
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -98,7 +98,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ inputs.ref_name }}
+          tags: ${{ inputs.registry }}/${{ inputs.image_name }}:${{ inputs.ref_name }}
           build-args: |
             CONTAINER_VERSION=${{ env.VERSION }}
           labels: ${{ steps.meta.outputs.labels }}

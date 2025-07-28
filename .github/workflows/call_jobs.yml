@@ -15,7 +15,8 @@ jobs:
     with:
       event_name: ${{ github.event_name }}
       pull_request: ${{ github.pull_request.merged }}
-      repository: ${{ github.repository }}
+      image_name: ${{ github.repository }}
       ref_name: ${{ github.ref_name }}
       actor: ${{ github.actor }}
+      registry: ghcr.io
     secrets: inherit
