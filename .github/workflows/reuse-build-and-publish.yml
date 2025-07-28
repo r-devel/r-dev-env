@@ -100,5 +100,5 @@ jobs:
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ inputs.ref_name }}
           build-args: |
-            CONTAINER_VERSION=${{ VER }}
+            CONTAINER_VERSION=${{ env.VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
