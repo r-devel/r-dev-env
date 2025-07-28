@@ -90,7 +90,7 @@ jobs:
           tags: |
             type=ref,event=branch
             type=ref,event=pr
-            type=semver,pattern=${{ $VER }}
+            type=semver,pattern=${{ VER }}
             type=sha
 
       - name: Build and push Docker image
@@ -100,5 +100,5 @@ jobs:
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ inputs.ref_name }}
           build-args: |
-            CONTAINER_VERSION=${{ $VER }}
+            CONTAINER_VERSION=${{ VER }}
           labels: ${{ steps.meta.outputs.labels }}
