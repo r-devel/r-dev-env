@@ -16,6 +16,6 @@ jobs:
       event_name: ${{ github.event_name }}
       pull_request: ${{ github.pull_request.merged }}
       repository: ${{ github.repository }}
-      ref_name: ${{ github.branch }}
+      ref_name: ${{ github.ref_name }}
       actor: ${{ github.actor }}
     secrets: inherit
