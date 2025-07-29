@@ -27,8 +27,6 @@ jobs:
       packages: write
     uses: iaine/r-dev-env/.github/workflows/reuse-build-and-publish.yml@devel
     with:
-      event_name: ${{ github.event_name }}
-      pull_request: ${{ github.pull_request.merged }}
       image_name: ${{ github.repository }}
       ref_name: ${{ github.ref_name }}
       actor: ${{ github.actor }}
