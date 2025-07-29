@@ -22,7 +22,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-    uses: ./.github/workflows/reuse-build-and-publish.yml@${{github.ref_name}}
+    uses: ./.github/workflows/reuse-build-and-publish.yml
     with:
       image_name: ${{ github.repository }}
       ref_name: ${{ github.ref_name }}
