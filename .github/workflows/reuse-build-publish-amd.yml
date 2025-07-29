@@ -12,15 +12,15 @@ on:
         description: image name
         required: true
         type: string
-      ref_name: 
+      ref_name:
         description: ref name
         required: true
         type: string
-      actor: 
+      actor:
         description: actor
         required: true
         type: string
-      registry: 
+      registry:
         description: registry
         required: true
         type: string
