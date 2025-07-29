@@ -8,14 +8,6 @@ name: Build and publish amd 64 Docker image
 on:
   workflow_call:
     inputs:
-      event_name: 
-        description: event name
-        required: true
-        type: string
-      pull_request: 
-        description: pull request
-        required: false
-        type: string
       image_name: 
         description: image name
         required: true
@@ -32,36 +24,13 @@ on:
         description: registry
         required: true
         type: string
-  push:
-    branches:
-      - main
-      - devel
-    paths:
-      - '.github/workflows/reuse-build-and-publish.yml'
-  pull_request:
-    branches:
-      - main
-      - devel
-    types:
-      - closed
-    paths:
-      - '.github/workflows/reuse-build-and-publish.yml'
-      - '.devcontainer/devcontainer.json'
-      - 'Dockerfile'
-      - 'reinstall-cmake.sh'
-      - 'VERSION'
-
 permissions:
   contents: read
   packages: write
 
 jobs:
   reuse-build-and-push:
-    if:  |
-      ${{ inputs.event_name }} == 'workflow_dispatch' ||
-      ${{ inputs.event_name }} == 'push' ||
-      (${{ inputs.event_name }} == 'pull_request' &&
-       ${{ inputs.pull_request }} == true)
+
     runs-on: ubuntu-latest
 
     steps:
@@ -96,6 +65,7 @@ jobs:
         with:
           context: .
           push: true
+          pull: true
           tags: ${{ inputs.registry }}/${{ inputs.image_name }}:${{ inputs.ref_name }}
           build-args: |
             CONTAINER_VERSION=${{ env.VERSION }}
