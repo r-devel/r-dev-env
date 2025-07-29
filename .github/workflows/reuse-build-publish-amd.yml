@@ -8,27 +8,27 @@ name: Build and publish amd 64 Docker image
 on:
   workflow_call:
     inputs:
-      event_name: 
+      event_name:
         description: event name
         required: true
         type: string
-      pull_request: 
+      pull_request:
         description: pull request
         required: false
         type: string
-      image_name: 
+      image_name:
         description: image name
         required: true
         type: string
-      ref_name: 
+      ref_name:
         description: ref name
         required: true
         type: string
-      actor: 
+      actor:
         description: actor
         required: true
         type: string
-      registry: 
+      registry:
         description: registry
         required: true
         type: string
