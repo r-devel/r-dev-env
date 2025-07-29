@@ -18,12 +18,21 @@ on:
       - 'VERSION'
 
 jobs:
-  call-workflow-amd64:
+  call-workflow-amd64-main:
+    if: ${{ github.ref_name == 'main' }}
     permissions:
       contents: read
       packages: write
-    if: ${{ github.ref_name == 'main' }} || ${{ github.ref_name == 'devel' }}
-    uses: ./.github/workflows/reuse-build-and-publish.yml
+    uses: iaine/r-dev-env/.github/workflows/reuse-build-and-publish.yml@main
+    with:
+      image_name: ${{ github.repository }}
+      ref_name: ${{ github.ref_name }}
+      actor: ${{ github.actor }}
+      registry: ghcr.io
+    secrets: inherit
+  call-workflow-amd64-devel:
+    if: ${{ github.ref_name == 'devel' }}
+    uses: iaine/r-dev-env/.github/workflows/reuse-build-and-publish.yml@devel
     with:
       image_name: ${{ github.repository }}
       ref_name: ${{ github.ref_name }}
