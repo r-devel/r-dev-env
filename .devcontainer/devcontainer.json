@@ -19,14 +19,16 @@
                 "workbench.editorAssociations": {
                     "*.md": "vscode.markdown.preview.editor"
                 },
-                "workbench.welcomePage.walkthroughs.openOnInstall": false
+                "workbench.welcomePage.walkthroughs.openOnInstall": false,
+                "r.libPaths": ["/usr/local/lib/R/site-library"]
             },
             "extensions": [
                 "REditorSupport.r",
                 "mads-hartmann.bash-ide-vscode",
                 "johnstoncode.svn-scm",
                 "ms-vscode.cpptools",
-                "MS-vsliveshare.vsliveshare"
+                "MS-vsliveshare.vsliveshare",
+                "natqe.reload"
             ]
         }
     },

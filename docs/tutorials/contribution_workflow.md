@@ -67,7 +67,9 @@ make
   may skip this step while you are iterating on a bug fix or other development,
   until you are ready to [create a patch](./patch_update.md).
 
-- To use the re-built R, simply open a new R terminal.
+- To use the re-built R, simply open a new R terminal. If you have made changes
+  to the help files, click "Reload" in the VS Code status bar (bottom right) to
+  reload your VS Code window.
 
 #### 4. Cross check and Re-running Code
 
