@@ -3,8 +3,22 @@ name: Call reusable workflows
 on:
   push:
     branches:
-      - master
+      - main
       - devel
+    paths:
+      - '.github/workflows/reuse-build-and-publish-amd.yml'
+  pull_request:
+    branches:
+      - main
+      - devel
+    types:
+      - closed
+    paths:
+      - '.github/workflows/reuse-build-and-publish-amd.yml'
+      - '.devcontainer/devcontainer.json'
+      - 'Dockerfile'
+      - 'reinstall-cmake.sh'
+      - 'VERSION'
 
 jobs:
   call-workflow-amd64:
