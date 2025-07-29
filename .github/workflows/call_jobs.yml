@@ -1,0 +1,22 @@
+name: Call reusable workflows
+
+on:
+  push:
+    branches:
+      - master
+      - devel
+
+jobs:
+  call-workflow-amd64:
+    permissions:
+      contents: read
+      packages: write
+    uses: r-devel/r-dev-env/.github/workflows/reuse-build-and-publish.yml@devel
+    with:
+      event_name: ${{ github.event_name }}
+      pull_request: ${{ github.pull_request.merged }}
+      image_name: ${{ github.repository }}
+      ref_name: ${{ github.ref_name }}
+      actor: ${{ github.actor }}
+      registry: ghcr.io
+    secrets: inherit
