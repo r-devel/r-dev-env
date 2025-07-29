@@ -8,7 +8,7 @@ name: Build and publish amd 64 Docker image
 on:
   workflow_call:
     inputs:
-      image_name: 
+      image_name:
         description: image name
         required: true
         type: string
