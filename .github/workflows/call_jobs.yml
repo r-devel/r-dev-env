@@ -19,7 +19,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-    uses: r-devel/r-dev-env/.github/workflows/reuse-build-and-publish.yml@${{ github.ref_name }}
+    uses: r-devel/r-dev-env/.github/workflows/reuse-build-and-publish.yml@${{github.ref_name}}
     with:
       image_name: ${{ github.repository }}
       ref_name: ${{ github.ref_name }}
