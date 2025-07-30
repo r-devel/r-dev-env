@@ -38,3 +38,7 @@ fi
 
 # Run the main function
 local_script
+
+# Remove the .vscode/settings.json file if it exists so that
+# it does not interfere with the devcontainer.json
+rm -f .vscode/settings.json
