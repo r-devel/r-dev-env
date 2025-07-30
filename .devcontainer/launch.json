@@ -2,11 +2,16 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(lldb) Attach to R",
-      "type": "lldb",
-      "request": "attach",
-      "pid": "${command:pickMyProcess}",
-      "stopOnEntry": false
+      "name": "Debug R (C debugging)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "/workspaces/r-dev-env/scripts/launch_r.sh",
+      "args": ["/workspaces/r-dev-env/build/r-devel/bin/R"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb"
     }
   ]
 }
