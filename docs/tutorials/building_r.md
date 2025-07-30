@@ -64,8 +64,11 @@ cd $BUILDDIR
 CFLAGS="-g -O0"
 ```
 
-- After running this command, the CFLAGS setting will apply only to the
-current terminal session.
+- These flags modify the configuration defined in the next step,
+so that when R is built, C code will be compiled with debugging
+symbols (`-g`) and compiler optimizations will be disabled
+(`-O0`) so that the structure of the code closely matches the
+original source.
 
 **6) Configure the build**
 

@@ -42,6 +42,7 @@ local_script
 
 # Remove the .vscode/settings.json file if it exists so that
 # it does not interfere with the devcontainer.json
+<<<<<<< HEAD
 rm -f "$WORK_DIR/.vscode/settings.json"
 
 # 1. Build the ptrace helper library
@@ -49,3 +50,6 @@ gcc -shared -fPIC -o "$SCRIPTS_DIR/allow_ptrace.so" "$SCRIPTS_DIR/allow_ptrace.c
 
 # 2. Mark the wrapper executable
 chmod +x "$SCRIPTS_DIR/launch_r.sh"
+=======
+rm -f .vscode/settings.json
+>>>>>>> 964acc0 ([pre-commit.ci] Fixing issues with pre-commit)
