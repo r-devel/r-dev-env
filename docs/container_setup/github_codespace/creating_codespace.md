@@ -25,9 +25,7 @@ GitHub Codespaces' button and then click the green 'Create Codespace' button.
 
     By default, your codespace will have a randomly generated name. Renaming it to
     something descriptive — such as referencing the issue or feature you’re working
-    on makes it much easier to find and manage your codespaces:
-
-    **To Rename your codespace:**
+    on makes it much easier to manage your codespaces:
 
     - Open your [GitHub Codespaces dashboard](https://github.com/codespaces) (<https://github.com/codespaces>s>) in
     your browser.
