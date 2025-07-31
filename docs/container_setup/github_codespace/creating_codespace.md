@@ -29,7 +29,7 @@ GitHub Codespaces' button and then click the green 'Create Codespace' button.
 
     **To Rename your codespace:**
 
-    - Open your [GitHub Codespaces dashboard](https://github.com/codespaces) in
+    - Open your [GitHub Codespaces dashboard](https://github.com/codespaces) (https://github.com/codespaces) in
     your browser.
     - Find the codespace you just created (it will show the repository name and
     the current random display name).
