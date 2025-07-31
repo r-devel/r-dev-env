@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
-export LD_PRELOAD=/workspaces/r-dev-env/scripts/allow_ptrace.so
+# Preload helper for ptrace
+export LD_PRELOAD="$(dirname "$0")/allow_ptrace.so"
 
-# If the first argument is a file, use that as R_BINARY; otherwise default.
-if [ -x "$1" ]; then
-  R_BINARY="$1"
-  shift
+# VS Code sets the env var R_RPATH_LINUX to the path from r.rpath.linux
+if [ -n "${R_RPATH_LINUX:-}" ] && [ -x "$R_RPATH_LINUX" ]; then
+  R_BINARY="$R_RPATH_LINUX"
 else
   R_BINARY="/usr/bin/R"
 fi
 
-# Exec R with all remaining arguments
 exec "$R_BINARY" "$@"
