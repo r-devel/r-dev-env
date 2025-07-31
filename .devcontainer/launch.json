@@ -6,10 +6,15 @@
       "type": "cppdbg",
       "request": "launch",
       "program": "/workspaces/r-dev-env/scripts/launch_r.sh",
-      "args": ["/workspaces/r-dev-env/build/r-devel/bin/R"],
+      "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
-      "environment": [],
+      "environment": [
+        {
+          "name": "R_RPATH_LINUX",
+          "value": "${config:r.rpath.linux}"
+        }
+      ],
       "externalConsole": false,
       "MIMode": "lldb"
     }
