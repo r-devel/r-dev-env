@@ -39,10 +39,6 @@ fi
 # Run the main function
 local_script
 
-# Remove the .vscode/settings.json file if it exists so that
-# it does not interfere with the devcontainer.json
-rm -f "$WORK_DIR/.vscode/settings.json"
-
 # 1. Build the ptrace helper library
 gcc -shared -fPIC -o "$SCRIPTS_DIR/allow_ptrace.so" "$SCRIPTS_DIR/allow_ptrace.c"
 
