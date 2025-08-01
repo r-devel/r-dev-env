@@ -1,68 +1,53 @@
-
+#!/usr/bin/env bash
 
 which_r() {
-  # Specify the parent directory
-  parent_dir="$WORK_DIR/build"
+  parent_dir="$PWD/build"
+  settings_file_path="$PWD/.vscode/settings.json"
+  launch_script="$PWD/scripts/launch_r.sh"
 
-  # Path to the settings.json file
-  settings_file_path=$WORK_DIR/.vscode/settings.json
+  built_in_r_version=$(R --version | awk '/^R version/ {print $3}')
 
-  built_in_r_version=$(R --version | grep "^R version" | awk '{print $3}')
-
-  # Ask user which R version to use
   echo "Which version of R should be used in new R terminals?"
-  echo "  1. R $built_in_r_version (release version built into this container)"
+  echo "  1. R $built_in_r_version (built-in)"
 
-  # Check for additional R versions in subdirectories
+  # Detect additional R builds
+  subdirs=()
+  counter=2
   if [ -d "$parent_dir" ]; then
-    # Create an array to store subdirectory names
-    subdirs=()
-
-    # Loop through subdirectories and print numbered list
-    counter=2  # Start counter at 2 to avoid conflict with built-in R
     for dir in "$parent_dir"/*; do
-      if [ -d "$dir/bin" ] && [ -x "$dir/bin/R" ]; then
-        subdir=$(basename "$dir")
-        subdirs+=("$subdir")  # Populate subdirs array
-        echo "  $counter. $subdir"
+      if [ -x "$dir/bin/R" ]; then
+        subdirs+=("$(basename "$dir")")
+        echo "  $counter. ${subdirs[-1]}"
         ((counter++))
       fi
     done
   fi
 
-  # If no additional R builds were found
-  if [ ${#subdirs[@]} -eq 0 ]; then
-    range=1
-    echo "No additional R builds available."
+  range=$((counter - 1))
+  [ "${#subdirs[@]}" -eq 0 ] && echo "No additional R builds found."
+
+  read -p "Enter number (1–$range): " choice
+
+  if [ "$choice" -eq 1 ] 2>/dev/null; then
+    selected="/usr/bin/R"
+  elif [ "$choice" -ge 2 ] && [ "$choice" -le "$range" ] 2>/dev/null; then
+    idx=$((choice - 2))
+    selected="$parent_dir/${subdirs[$idx]}/bin/R"
   else
-    range=$((counter - 1))
+    echo "Invalid choice; defaulting to built-in"
+    selected="/usr/bin/R"
   fi
 
-  # Get user choice
-  read -p "Enter the number corresponding to the selected version: " choice
+  # Update launch_r.sh to call the selected R
+  sed -i "s|^exec .*/R|exec $selected|" "$launch_script"
 
-  # Define selected version based on choice
-  if [[ "$choice" -eq 1 ]]; then
-    # Use built-in R
-    selected_version="/usr/bin/R"
-  elif [[ "$choice" -ge 2 ]] && [[ "$choice" -lt "$counter" ]]; then
-    # Use R from chosen subdirectory
-    chosen_subdir="${subdirs[((choice - 2))]}"
-    selected_version="$parent_dir/$chosen_subdir/bin/R"
-  else
-    # Invalid choice, default to built-in R
-    if [[ $range -eq 1 ]]; then
-      echo "Invalid choice, please enter 1. Defaulting to built-in R version."
-    else
-      echo "Invalid choice, please select options between 1 to $range. Defaulting to built-in R version."
-    fi
-    selected_version="/usr/bin/R"
+  # Update VS Code setting if it exists
+  if [ -f "$settings_file_path" ]; then
+    jq --arg r "$selected" '."r.rpath.linux"=$r' \
+      "$settings_file_path" > "${settings_file_path}.tmp" \
+      && mv "${settings_file_path}.tmp" "$settings_file_path"
   fi
 
-  # Update settings.json with the chosen R path
-  updated_settings_data=$(cat "$settings_file_path" | jq --arg subdir "$selected_version" '."r.rpath.linux"=$subdir')
-  echo "$updated_settings_data" > "$settings_file_path"
-
-  echo "R terminal will now use version: $selected_version"
-  echo "To update the HTML help, click \"Reload\" in the VS Code status bar (bottom right) to reload your VS Code window."
+  echo "Now using R at: $selected"
+  echo "Reload VS Code to apply updates."
 }
