@@ -7,6 +7,10 @@
     "customizations": {
         "vscode": {
             "settings": {
+                "files.exclude": {
+                   "**/.git": true
+
+              },
                 "editor.tabSize": 8,
                 "editor.indentSize": 4,
                 "editor.detectIndentation": false,
@@ -32,5 +36,5 @@
             ]
         }
     },
-    "postCreateCommand": "find . -wholename '*.git*'  -type d -prune -o -type f -exec chown vscode:vscode {} \\; && sh /workspaces/r-dev-env/scripts/localscript.sh"
+    "postCreateCommand": "find . -wholename '*.git*'  -type d -prune -o -type f -exec chown vscode:vscode {} \\; && sh /workspaces/r-dev-env/scripts/localscript.sh && sudo chown root:root .git && sudo chmod 700 .git"
 }
