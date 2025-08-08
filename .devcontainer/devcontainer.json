@@ -7,10 +7,20 @@
     "customizations": {
         "vscode": {
             "settings": {
-                "files.exclude": {
-                   "**/.git": true
-
-              },
+                "git.ignoredRepositories": ["."],
+                  "files.exclude": {
+                       "**/.vscode": true,
+                       "**/.devcontainer": true,
+                       "**/.git": true,
+                       "**/.gitignore": true,
+                       "**/.gitpod.Dockerfile": true,
+                       "**/.gitpod.yml": true,
+                       "**/.markdownlint-cli2.yaml": true,
+                       "**/.pre-commit-config.yaml": true,
+                       "**/Dockerfile": true,
+                       "**/mkdocs.yml": true,
+                       "**/scripts": true
+  },
                 "editor.tabSize": 8,
                 "editor.indentSize": 4,
                 "editor.detectIndentation": false,
@@ -36,5 +46,5 @@
             ]
         }
     },
-    "postCreateCommand": "find . -wholename '*.git*'  -type d -prune -o -type f -exec chown vscode:vscode {} \\; && sh /workspaces/r-dev-env/scripts/localscript.sh && sudo chown root:root .git && sudo chmod 700 .git"
+    "postCreateCommand": "find . -wholename '*.git*'  -type d -prune -o -type f -exec chown vscode:vscode {} \\; && sh /workspaces/r-dev-env/scripts/localscript.sh"
 }
