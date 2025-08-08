@@ -12,6 +12,7 @@
                        "**/.vscode": true,
                        "**/.devcontainer": true,
                        "**/.git": true,
+                       "**/.github": true,
                        "**/.gitignore": true,
                        "**/.gitpod.Dockerfile": true,
                        "**/.gitpod.yml": true,
