@@ -1,4 +1,4 @@
-
+#!/usr/bin/env bash
 
 which_r() {
   # Specify the parent directory

@@ -4,6 +4,9 @@
     "hostRequirements": {
         "cpus": 4
     },
+    "runArgs": [
+    "--cap-add=SYS_PTRACE"
+    ],
     "customizations": {
         "vscode": {
             "settings": {
@@ -12,8 +15,8 @@
                 "editor.detectIndentation": false,
                 "r.lsp.diagnostics": false,
                 "r.plot.useHttpgd": true,
+                "r.rterm.linux": "/workspaces/r-dev-env/scripts/launch_r.sh",
                 "r.rpath.linux": "/usr/bin/R",
-                "r.rterm.linux": "/usr/bin/R",
                 "terminal.integrated.sendKeybindingsToShell": true,
                 "svn.multipleFolders.enabled": true,
                 "workbench.editorAssociations": {
@@ -28,9 +31,10 @@
                 "johnstoncode.svn-scm",
                 "ms-vscode.cpptools",
                 "MS-vsliveshare.vsliveshare",
-                "natqe.reload"
+                "natqe.reload",
+                "vadimcn.vscode-lldb"
             ]
         }
     },
-    "postCreateCommand": "find . -wholename '*.git*'  -type d -prune -o -type f -exec chown vscode:vscode {} \\; && sh /workspaces/r-dev-env/scripts/localscript.sh"
+"postCreateCommand": "find . -wholename '.git*' -type d -prune -o -type f -exec chown vscode:vscode {} \\; && sh ./scripts/localscript.sh"
 }

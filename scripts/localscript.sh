@@ -9,6 +9,7 @@ local_script(){
 WORK_DIR=$PWD
 VSCODE_DIR="$WORK_DIR/.vscode"
 DEVCONTAINER_JSON="$WORK_DIR/.devcontainer/devcontainer.json"
+SCRIPTS_DIR="$WORK_DIR/scripts"
 
 # Create patch directory in workspace root ($PWD at start)
 PATCHDIR="$WORK_DIR/patches"
@@ -16,14 +17,13 @@ mkdir -p $PATCHDIR
 mkdir -p $VSCODE_DIR
 
 # Copy the which_r and set_build_r function definitions to .bashrc
-cat $WORK_DIR/scripts/which_r.sh >> ~/.bashrc
-cat $WORK_DIR/scripts/set_build_r.sh >> ~/.bashrc
+cat $SCRIPTS_DIR/which_r.sh >> ~/.bashrc
+cat $SCRIPTS_DIR/set_build_r.sh >> ~/.bashrc
 
 # Copy over the welcome message script to be run when bash terminal starts
-cat $WORK_DIR/scripts/welcome_msg.sh >> ~/.bashrc
+cat $SCRIPTS_DIR/welcome_msg.sh >> ~/.bashrc
 
 #bash ~/.bashrc
-
 # Remove git directory if it exists
 rm -rf .git
 
@@ -38,3 +38,9 @@ fi
 
 # Run the main function
 local_script
+
+# 1. Build the ptrace helper library
+gcc -shared -fPIC -o "$SCRIPTS_DIR/allow_ptrace.so" "$SCRIPTS_DIR/allow_ptrace.c"
+
+# 2. Mark the wrapper executable
+chmod +x "$SCRIPTS_DIR/launch_r.sh"
