@@ -205,7 +205,7 @@ manifest_string <- function() {
 # Docker functions
 docker_start <- function() {
   args <- system2("docker", args = c("run", "-i -d", "-a stdout", "-a stderr",
-                                     docker_id), stdout = TRUE)
+                                     docker_id, "bash"), stdout = TRUE)
   args
 }
 
