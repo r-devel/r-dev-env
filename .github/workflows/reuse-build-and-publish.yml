@@ -102,3 +102,26 @@ jobs:
           build-args: |
             CONTAINER_VERSION=${{ env.VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
+      - name: Write manifest and build history file 🏷
+        run: |
+          Rscript manifestR.R \
+            --registry ${{ env.REGISTRY }} \
+            --owner ${{ env.OWNER }} \
+            --image ${{ inputs.image }} \
+            --variant ${{ inputs.variant }} \
+            --hist-lines-dir /tmp/r-dev/hist_lines/ \
+            --manifests-dir /tmp/r-dev/manifests/ \
+            --repository ${{ github.repository }}
+        shell: bash
+      - name: Upload manifest file 💾
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.image }}-${{ inputs.platform }}-${{ inputs.variant }}-manifest
+          path: /tmp/jupyter/manifests/${{ inputs.platform }}-${{ inputs.variant }}-${{ inputs.image }}-*.md
+          retention-days: 3
+      - name: Upload build history line 💾
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.image }}-${{ inputs.platform }}-${{ inputs.variant }}-history_line
+          path: /tmp/jupyter/hist_lines/${{ inputs.platform }}-${{ inputs.variant }}-${{ inputs.image }}-*.txt
+          retention-days: 3
