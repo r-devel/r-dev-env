@@ -74,13 +74,13 @@ jobs:
         run: |
           sudo apt-get install r-base -y && sudo Rscript -e "install.packages('optparse')" \
             && Rscript scripts/manifestR.R \
-            --registry ${{ env.REGISTRY }} \
-            --owner ${{ env.OWNER }} \
-            --image ${{ inputs.image }} \
-            --variant ${{ inputs.variant }} \
+            --registry ${{ inputs.registry }} \
+            --owner ${{ inputs.actor}} \
+            --image ${{ inputs.image_name }} \
+            --version ${{ inputs.ref_name }} \
             --hist-lines-dir /tmp/r-devel/hist_lines/ \
             --manifests-dir /tmp/r-devel/manifests/ \
-            --repository ${{ github.repository }}
+            --repository ${{ inputs.ref_name }}
         shell: bash
       - name: Upload manifest file 💾
         uses: actions/upload-artifact@v4
