@@ -167,7 +167,8 @@ r_version <- function() {
 
   r_version <- docker_command(c("R", "--version"))
   details <- strsplit(r_version, "\r", fixed = TRUE)
-  version <- paste(details[[1]], details[[3]], sep = " ", collapse = "\n\n")
+  #version <- paste(details[[1]], details[[3]], sep = " ", collapse = "\n\n")
+  version <- paste(details, sep = " ", collapse = "\n\n")
   version
 }
 
