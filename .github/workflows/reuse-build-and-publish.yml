@@ -77,7 +77,6 @@ jobs:
             --registry ${{ inputs.registry }} \
             --owner ${{ inputs.actor}} \
             --image ${{ inputs.image_name }} \
-            --version ${{ inputs.ref_name }} \
             --hist-lines-dir /tmp/r-devel/hist_lines/ \
             --manifests-dir /tmp/r-devel/manifests/ \
             --repository ${{ inputs.ref_name }}

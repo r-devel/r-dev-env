@@ -21,8 +21,6 @@ option_list <- list(
               help = "Current owner of the Repository"),
   make_option(c("-i", "--image"), type = "character", default = "devel",
               help = "Provide the image name [default %default]"),
-  make_option(c("-v", "--version"), type = "double", default = 0.3,
-              help = "version of the image  [default %default]"),
   make_option(c("-t", "--historydir"), type = "character",
               default = "/tmp/hist_lines/", help = "location of history lines"),
   make_option(c("-m", "--manifestdir"), type = "character",
