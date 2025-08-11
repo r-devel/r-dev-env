@@ -76,10 +76,10 @@ jobs:
             && Rscript scripts/manifestR.R \
             --registry ${{ inputs.registry }} \
             --owner ${{ inputs.actor}} \
-            --image ${{ inputs.image_name }} \
+            --image ${{ inputs.ref_name }} \
             --historydir /tmp/r-devel/hist_lines/ \
             --manifestdir /tmp/r-devel/manifests/ \
-            --repository ${{ inputs.ref_name }}
+            --repository ${{ inputs.image_name }}
         shell: bash
       - name: Upload manifest file 💾
         uses: actions/upload-artifact@v4
