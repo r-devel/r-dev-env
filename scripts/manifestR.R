@@ -204,7 +204,7 @@ manifest_string <- function() {
 
 # Docker functions
 docker_start <- function() {
-  args <- system2("docker", args = c("run", "-it -d",  docker_id),
+  args <- system2("docker", args = c("run", "-i -d",  docker_id),
                                      stdout = TRUE)
   args
 }
@@ -214,7 +214,7 @@ docker_stop <- function() {
 }
 
 docker_command <- function(arguments) {
-  docker <- paste("run", "-it",  docker_id, "bash", "-c",
+  docker <- paste("exec", "-i",  docker_id, "bash", "-c",
                   sep = " ", collapse = "")
 
   a <- paste('"', paste(arguments, sep = " ", collapse = " "), '"',
