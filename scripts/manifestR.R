@@ -48,7 +48,7 @@ history_filename <- paste("history-", build_time, ".md", collapse = NULL,
                           sep = "")
 
 #set up docker
-docker_id <- paste(opt$registry, "/", opt$owner, "/", opt$repository, ":",
+docker_id <- paste(opt$registry, "/", opt$repository, ":",
                    opt$image, collapse = NULL, sep = "")
 
 container_id = system2("docker", args = c("run", "-it -d",  docker_id, "bash"),
