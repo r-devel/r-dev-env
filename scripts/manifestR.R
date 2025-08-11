@@ -73,7 +73,7 @@ write_manifest <- function(manifestdata, filepth, filename) {
 
   my_directory <- file.path(filepth)
   if (!dir.exists(my_directory)) {
-    dir.create(my_directory)
+    dir.create(my_directory, recursive = TRUE)
   }
 
   file_conn <- file(manifest_filename)

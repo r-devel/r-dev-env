@@ -77,19 +77,19 @@ jobs:
             --registry ${{ inputs.registry }} \
             --owner ${{ inputs.actor}} \
             --image ${{ inputs.ref_name }} \
-            --historydir /tmp/hist_lines \
-            --manifestdir /tmp/manifests \
+            --historydir /tmp/r-devel/hist_lines \
+            --manifestdir /tmp/r-devel/manifests \
             --repository ${{ inputs.image_name }}
         shell: bash
       - name: Upload manifest file 💾
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ inputs.image }}-${{ inputs.platform }}-${{ inputs.variant }}-manifest
-          path: /tmp/r-devel/manifests/${{ inputs.platform }}-${{ inputs.variant }}-${{ inputs.image }}-*.md
+          name: ${{ inputs.image }}-manifest
+          path: /tmp/r-devel/manifests/${{ inputs.image }}-*.md
           retention-days: 3
       - name: Upload build history line 💾
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ inputs.image }}-${{ inputs.platform }}-${{ inputs.variant }}-history_line
-          path: /tmp/r-devel/hist_lines/${{ inputs.platform }}-${{ inputs.variant }}-${{ inputs.image }}-*.txt
+          name: ${{ inputs.image }}-history_line
+          path: /tmp/r-devel/hist_lines/${{ inputs.image }}-*.txt
           retention-days: 3
