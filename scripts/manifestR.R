@@ -214,7 +214,7 @@ docker_stop <- function() {
 }
 
 docker_command <- function(arguments) {
-  docker <- paste("run", "-it -d",  docker_id, "bash", "-c",
+  docker <- paste("run", "-it",  docker_id, "bash", "-c",
                   sep = " ", collapse = "")
 
   a <- paste('"', paste(arguments, sep = " ", collapse = " "), '"',
