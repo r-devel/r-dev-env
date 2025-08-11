@@ -27,6 +27,11 @@ cat $WORK_DIR/scripts/welcome_msg.sh >> ~/.bashrc
 # Remove git directory if it exists
 #rm -rf .git
 
+# copy launch.json for debugging config if present
+if [ -f "$DEVCONTAINER_JSON/launch.json" ]; then
+    cp "$DEVCONTAINER_JSON/launch.json" "$VSCODE_DIR/launch.json"
+fi
+
 # copying vscode extension settings from devcontainer json to vscode settings json using jq
 if [ -f "$DEVCONTAINER_JSON" ]; then
         jq '.customizations.vscode.settings' "$DEVCONTAINER_JSON" > "$VSCODE_DIR/settings.json"
