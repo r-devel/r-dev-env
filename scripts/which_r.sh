@@ -3,6 +3,7 @@
 which_r() {
   # Specify the parent directory
   parent_dir="$WORK_DIR/build"
+  launch_script="$WORK_DIR/scripts/launch_r.sh"
 
   # Path to the settings.json file
   settings_file_path=$WORK_DIR/.vscode/settings.json
@@ -59,9 +60,21 @@ which_r() {
     selected_version="/usr/bin/R"
   fi
 
+  # Update launch_r.sh to call the selected R binary
+  if [ -f "$launch_script" ]; then
+    sed -i "s|^exec .*/R|exec $selected_version|" "$launch_script"
+  else
+    echo "Warning: launch_r.sh script not found, skipping update."
+  fi
+
   # Update settings.json with the chosen R path
-  updated_settings_data=$(cat "$settings_file_path" | jq --arg subdir "$selected_version" '."r.rterm.linux"=$subdir | ."r.rpath.linux"=$subdir')
-  echo "$updated_settings_data" > "$settings_file_path"
+  if [ -f "$settings_file_path" ]; then
+    tmpfile="${settings_file_path}.tmp.$$"
+    jq --arg r "$selected_version" '."r.rpath.linux"=$r' "$settings_file_path" > "$tmpfile" && mv "$tmpfile" "$settings_file_path"
+  else
+    echo "Warning: VS Code settings.json not found, skipping update."
+  fi
+
 
   echo "R terminal will now use version: $selected_version"
   echo "To update the HTML help, click \"Reload\" in the VS Code status bar (bottom right) to reload your VS Code window."
