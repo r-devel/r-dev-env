@@ -37,6 +37,11 @@ if [ -f "$DEVCONTAINER_JSON" ]; then
         jq '.customizations.vscode.settings' "$DEVCONTAINER_JSON" > "$VSCODE_DIR/settings.json"
 fi
 
+# Build the ptrace helper library
+gcc -shared -fPIC -o "$WORK_DIR/scripts/allow_ptrace.so" "$WORK_DIR/scripts/allow_ptrace.c"
+
+# Mark the wrapper executable
+chmod +x "$WORK_DIR/scripts/launch_r.sh"
 
 }
 
