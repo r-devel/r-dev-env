@@ -51,7 +51,7 @@ history_filename <- paste("history-", build_time, ".txt", collapse = NULL,
 docker_id <- paste(opt$registry, "/", opt$repository, ":",
                    opt$image, collapse = NULL, sep = "")
 
-container_id = system2("docker", args = c("run", "-it -d",  docker_id, "bash"),
+container_id = system2("docker", args = c("run", "-i -d",  docker_id, "bash"),
                        stdout = TRUE)
 
 write_all <- function() {
