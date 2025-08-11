@@ -85,11 +85,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.image }}-manifest
-          path: /tmp/r-devel/manifests/${{ inputs.image }}-*.md
+          path: /tmp/r-devel/manifests/manifest-*.md
           retention-days: 3
       - name: Upload build history line 💾
         uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.image }}-history_line
-          path: /tmp/r-devel/hist_lines/${{ inputs.image }}-*.txt
+          path: /tmp/r-devel/hist_lines/history-*.txt
           retention-days: 3

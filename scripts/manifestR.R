@@ -44,7 +44,7 @@ utc_time <- strftime(tm, "%Y-%m-%dT%H:%M:%S%z")
 manifest_filename <- paste("manifest-", build_time, ".md", collapse = NULL,
                            sep = "")
 
-history_filename <- paste("history-", build_time, ".md", collapse = NULL,
+history_filename <- paste("history-", build_time, ".txt", collapse = NULL,
                           sep = "")
 
 #set up docker
