@@ -7,6 +7,21 @@
     "customizations": {
         "vscode": {
             "settings": {
+                "git.ignoredRepositories": ["."],
+                  "files.exclude": {
+                       "**/.vscode": true,
+                       "**/.devcontainer": true,
+                       "**/.git": true,
+                       "**/.github": true,
+                       "**/.gitignore": true,
+                       "**/.gitpod.Dockerfile": true,
+                       "**/.gitpod.yml": true,
+                       "**/.markdownlint-cli2.yaml": true,
+                       "**/.pre-commit-config.yaml": true,
+                       "**/Dockerfile": true,
+                       "**/mkdocs.yml": true,
+                       "**/scripts": true
+  },
                 "editor.tabSize": 8,
                 "editor.indentSize": 4,
                 "editor.detectIndentation": false,
