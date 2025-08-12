@@ -8,23 +8,23 @@ name: Build and publish amd 64 Docker image
 on:
   workflow_call:
     inputs:
-      image_name: 
+      image_name:
         description: image name
         required: true
         type: string
-      ref_name: 
+      ref_name:
         description: ref name
         required: true
         type: string
-      actor: 
+      actor:
         description: actor
         required: true
         type: string
-      registry: 
+      registry:
         description: registry
         required: true
         type: string
-      platform: 
+      platform:
         description: platform
         required: true
         type: string
@@ -74,10 +74,10 @@ jobs:
           build-args: |
             CONTAINER_VERSION=${{ env.VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
-      - name: Write manifest and build history file 🏷
+      - name: Write manifest and build history file
         run: |
           sudo apt-get install r-base -y && sudo Rscript -e "install.packages('optparse')" \
-            && Rscript scripts/manifestR.R \
+            && Rscript scripts/manifest.R \
             --registry ${{ inputs.registry }} \
             --owner ${{ inputs.actor}} \
             --image ${{ inputs.ref_name }} \
@@ -85,13 +85,13 @@ jobs:
             --manifestdir /tmp/r-devel/manifests \
             --repository ${{ inputs.image_name }}
         shell: bash
-      - name: Upload manifest file 💾
+      - name: Upload manifest file
         uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.platform }}-manifest
           path: /tmp/r-devel/manifests/manifest-*.md
           retention-days: 3
-      - name: Upload build history line 💾
+      - name: Upload build history line
         uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.platform }}-history_line
