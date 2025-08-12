@@ -18,7 +18,7 @@ on:
       - 'VERSION'
 
 jobs:
-  call-workflow-amd64-main:
+  call-workflow-amd64:
     permissions:
       contents: read
       packages: write
