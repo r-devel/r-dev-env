@@ -38,4 +38,5 @@ jobs:
       ref_name: ${{ github.ref_name }}
       actor: ${{ github.actor }}
       registry: ghcr.io
+      platform: amd64
     secrets: inherit
