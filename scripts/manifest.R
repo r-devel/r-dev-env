@@ -1,4 +1,4 @@
-# manifestR.R
+# manifest.R
 #
 # Files takes the container arguments and creates two files inside the
 # given container. These are the build history and manifest files.
