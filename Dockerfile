@@ -30,3 +30,5 @@ RUN Rscript -e "runiverse <- sprintf('r-universe.dev/bin/linux/%s-%s/%s/', \
 # Define env var used in GitHub Actions that build and deploy container
 ARG CONTAINER_VERSION
 ENV CONTAINER_VERSION=${CONTAINER_VERSION}
+
+USER vscode
