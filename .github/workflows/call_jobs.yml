@@ -27,3 +27,15 @@ jobs:
       registry: ghcr.io
       platform: amd64
     secrets: inherit
+  call-workflow-arm64:
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/reuse-build-and-publish-arm.yml
+    with:
+      image_name: ${{ github.repository }}
+      ref_name: ${{ github.ref_name }}
+      actor: ${{ github.actor }}
+      registry: ghcr.io
+      platform: arm64
+    secrets: inherit
