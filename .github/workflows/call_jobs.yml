@@ -1,6 +1,10 @@
 name: Call reusable workflows
 
 on:
+  push:
+    branches:
+     - main
+     - devel
   pull_request:
     branches:
       - main
