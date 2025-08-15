@@ -1,6 +1,7 @@
 {
     "name": "R-Dev-Env",
     "image": "ghcr.io/r-devel/r-dev-env:devel",
+    "remoteUser": "vscode",
     "hostRequirements": {
         "cpus": 4
     },
@@ -47,5 +48,5 @@
             ]
         }
     },
-    "postCreateCommand": "find . -wholename '*.git*'  -type d -prune -o -type f -exec chown vscode:vscode {} \\; && sh /workspaces/r-dev-env/scripts/localscript.sh"
+    "postCreateCommand": "sh /workspaces/r-dev-env/scripts/localscript.sh"
 }
