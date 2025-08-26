@@ -60,8 +60,9 @@ which_r() {
   fi
 
   # Update settings.json with the chosen R path
-  updated_settings_data=$(cat "$settings_file_path" | jq --arg subdir "$selected_version" '."r.rterm.linux"=$subdir')
+  updated_settings_data=$(cat "$settings_file_path" | jq --arg subdir "$selected_version" '."r.rterm.linux"=$subdir | ."r.rpath.linux"=$subdir')
   echo "$updated_settings_data" > "$settings_file_path"
 
   echo "R terminal will now use version: $selected_version"
+  echo "To update the HTML help, click \"Reload\" in the VS Code status bar (bottom right) to reload your VS Code window."
 }

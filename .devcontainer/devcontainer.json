@@ -1,12 +1,28 @@
 {
     "name": "R-Dev-Env",
     "image": "ghcr.io/r-devel/r-dev-env:devel",
+    "remoteUser": "vscode",
     "hostRequirements": {
         "cpus": 4
     },
     "customizations": {
         "vscode": {
             "settings": {
+                "git.ignoredRepositories": ["."],
+                  "files.exclude": {
+                       "**/.vscode": true,
+                       "**/.devcontainer": true,
+                       "**/.git": true,
+                       "**/.github": true,
+                       "**/.gitignore": true,
+                       "**/.gitpod.Dockerfile": true,
+                       "**/.gitpod.yml": true,
+                       "**/.markdownlint-cli2.yaml": true,
+                       "**/.pre-commit-config.yaml": true,
+                       "**/Dockerfile": true,
+                       "**/mkdocs.yml": true,
+                       "**/scripts": true
+  },
                 "editor.tabSize": 8,
                 "editor.indentSize": 4,
                 "editor.detectIndentation": false,
@@ -19,16 +35,18 @@
                 "workbench.editorAssociations": {
                     "*.md": "vscode.markdown.preview.editor"
                 },
-                "workbench.welcomePage.walkthroughs.openOnInstall": false
+                "workbench.welcomePage.walkthroughs.openOnInstall": false,
+                "r.libPaths": ["/usr/local/lib/R/site-library"]
             },
             "extensions": [
                 "REditorSupport.r",
                 "mads-hartmann.bash-ide-vscode",
                 "johnstoncode.svn-scm",
                 "ms-vscode.cpptools",
-                "MS-vsliveshare.vsliveshare"
+                "MS-vsliveshare.vsliveshare",
+                "natqe.reload"
             ]
         }
     },
-    "postCreateCommand": "find . -wholename '*.git*'  -type d -prune -o -type f -exec chown vscode:vscode {} \\; && sh /workspaces/r-dev-env/scripts/localscript.sh"
+    "postCreateCommand": "sh /workspaces/r-dev-env/scripts/localscript.sh"
 }
