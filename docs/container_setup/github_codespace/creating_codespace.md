@@ -45,4 +45,3 @@ GitHub Codespaces' button and then click the green 'Create Codespace' button.
 
         You can rename your codespace at any time. The display name is
         for your convenience and **does not** affect your code or environment.
- 
