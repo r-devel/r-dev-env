@@ -26,18 +26,22 @@ GitHub Codespaces' button and then click the green 'Create Codespace' button.
 
     By default, your codespace will have a randomly generated name. Renaming it to
     something descriptive — such as referencing the issue or feature you’re working
-    on makes it much easier to manage your codespaces. You can also disable auto-delete to ensure your codespace isn't removed unexpectedly:
+    on makes it much easier to manage your codespaces. You can also disable
+    auto-delete to ensure your codespace isn't removed unexpectedly:
 
-    - Open your [GitHub Codespaces dashboard](https://github.com/codespaces) (<https://github.com/codespaces>) in
-    your browser.
+    - Open your [GitHub Codespaces dashboard](https://github.com/codespaces)
+    (<https://github.com/codespaces>) in your browser.
     - Find the codespace you just created (it will show the repository name and
     the current random display name).
-    - A: Click the ellipsis (**...**) next to your codespace to open the options menu.
+    - A: Click the ellipsis (**...**) next to your codespace to open the
+    options menu.
     - B: Select **Rename** from the dropdown.
     - Enter a descriptive new display name, e.g.,
     `Bug 7084 - text() recycling problems` or
     `Ignore deprecated/defunct fns in checkS3methods`, and confirm.
-    - C: In the same options menu, click on **Auto-delete codespace** to toggle off auto-delete (remove the check mark). This will prevent the codespace from being deleted automatically.
+    - C: In the same options menu, click on **Auto-delete codespace** to toggle
+     off auto-delete (remove the check mark). This will prevent the
+     codespace from being deleted automatically.
 
     ![rename codespace](../../assets/rdev3_5.png)
 
@@ -45,4 +49,3 @@ GitHub Codespaces' button and then click the green 'Create Codespace' button.
 
         You can rename your codespace at any time. The display name is
         for your convenience and **does not** affect your code or environment.
- 
