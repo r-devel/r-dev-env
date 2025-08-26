@@ -9,6 +9,23 @@
 # .libPaths() already includes site library for default R version.
 .libPaths(c(.libPaths(), .Library.site))
 
+# The remotes package is installed to install httpgd from GitHub
+# The gdiff package is installed to support visual difference testing
+
+# Configure r-universe for binary package installations dynamically
+linux_binary_repo <- function(universe){
+  runiverse <- sprintf('r-universe.dev/bin/linux/%s-%s/%s/',
+                       system2('lsb_release', '-sc', stdout = TRUE),
+                       R.version$arch,
+                       substr(getRversion(), 1, 3))
+  sprintf('https://%s.%s', universe, runiverse)
+}
+
+# Set repos for CRAN and nx10 (httpgd) to use r-universe linux binaries
+options(repos = c(
+  cran = linux_binary_repo("cran")
+))
+
 # For PNG graphics uncomment following lines
 # options(vsc.use_httpgd = FALSE,
 #         vsc.dev.args = list(width = 800, height = 600))
