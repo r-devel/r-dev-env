@@ -1,11 +1,12 @@
-!!! note Local setup is not recommended on macOS or Windows as the Docker
+!!! note
+    Local setup is not recommended on macOS or Windows as the Docker
     container will work via a Virtual Machine and building R will take far
     longer (e.g. a full build may take 1 hour vs 10 minutes!).
 
 We can also use this codespace locally. For that we need to have some
 prerequisites installed.
 
-#### > Prerequisites
+#### Prerequisites
 
 1. Docker Engine or Docker Desktop. You can find the docker desktop install
    instructions on [Docker Desktop
@@ -13,7 +14,7 @@ prerequisites installed.
 2. VSCode Editor. You can download and install from [VSCode
    website](https://code.visualstudio.com/download).
 
-#### > Steps to run R Development Container locally
+#### Steps to run R Development Container locally
 
 1. Clone the [R Dev Container Github
    repo](https://github.com/r-devel/r-dev-env/)
@@ -53,8 +54,8 @@ prerequisites installed.
 in Dev Container.
 Click on `Reopen in Container` button.
 
-    ![startlocalsetup](../../assets/rdev13.png)   
-   
+    ![startlocalsetup](../../assets/rdev13.png)
+
 7. After clicking on that button we will see our container is getting ready. It
 will take some time. So till that time you can have coffee :) ![start
 localsetup](../../assets/rdev24.png)
