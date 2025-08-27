@@ -21,7 +21,7 @@ linux_binary_repo <- function(universe){
   sprintf('https://%s.%s', universe, runiverse)
 }
 
-# Set repos for CRAN and nx10 (httpgd) to use r-universe linux binaries
+# Set repos for CRAN to use r-universe linux binaries
 options(repos = c(
   cran = linux_binary_repo("cran")
 ))
