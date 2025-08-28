@@ -31,4 +31,8 @@ Click on the `R:(not attached)` link to launch an R terminal.
 3) You can then send code from the `.R` file to the R terminal by pressing
 `cmd/ctrl + enter`.
 
+```R
+hist(rnorm(1000))
+```
+
 ![alt text](../assets/rdev5.png)

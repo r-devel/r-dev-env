@@ -1,0 +1,37 @@
+/* customise CSS for bash code chunks and bash sessions ("console") */
+
+/* .gp = Generic Prompt (e.g., shell prompt like $ or >) */
+/* default: var(--md-code-hl-generic-color); */
+/* prompts treated as normal code in bash code chunks */
+.language-console.highlight code span.gp{
+  color: #7aa2cd;
+}
+
+/* .go = Generic output: output from a command */
+/* default: var(--md-code-hl-generic-color); */
+.language-console.highlight code span.go,
+.language-bash.highlight code span.go {
+  color: var(--md-code-hl-generic-color);
+}
+
+/* .nb = Built-in name like print, echo */
+/* default: var(--md-code-hl-constant-color); */
+.language-console.highlight code span.nb,
+.language-bash.highlight code span.nb {
+  color: var(--md-code-hl-constant-color);
+}
+
+/* .nv = Named variables like $BUILDDIR */
+/* default: var(--md-code-hl-variable-color); */
+/* use same as normal text: var(--md-code-fg-color); */
+.language-console.highlight code span.nv,
+.language-bash.highlight code span.nv {
+  color: var(--md-code-fg-color);
+}
+
+/* .c1 = Built-in name like print, echo */
+/* default: var(--md-code-hl-comment-color); */
+.language-console.highlight code span.c1,
+.language-bash.highlight code span.c1 {
+  color: var(--md-code-hl-comment-color);
+}
