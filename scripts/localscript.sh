@@ -37,6 +37,12 @@ if [ -f "$DEVCONTAINER_JSON" ]; then
         jq '.customizations.vscode.settings' "$DEVCONTAINER_JSON" > "$VSCODE_DIR/settings.json"
 fi
 
+# Update r.rterm.linux setting to use the launch_r.sh script with full dynamic path
+if [ -f "$VSCODE_DIR/settings.json" ]; then
+    tmpfile="${VSCODE_DIR/settings.json}.tmp.$$"
+    jq --arg rterm "$WORK_DIR/scripts/launch_r.sh" '."r.rterm.linux"=$rterm' "$VSCODE_DIR/settings.json" > "$tmpfile" && mv "$tmpfile" "$VSCODE_DIR/settings.json"
+fi
+
 # Build the ptrace helper library
 gcc -shared -fPIC -o "$WORK_DIR/scripts/allow_ptrace.so" "$WORK_DIR/scripts/allow_ptrace.c"
 
