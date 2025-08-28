@@ -55,29 +55,13 @@ mkdir -p $BUILDDIR
 cd $BUILDDIR
 ```
 
-**5) Set CFLAGS (Optional—For Debugging C Code)**
-
-- **This step is optional and recommended for those who want to debug C code.**
-- Set the `CFLAGS` environment variable before running configure:
-
-```bash
-CFLAGS="-g -O0"
-```
-
-- These flags modify the configuration defined in the next step,
-so that when R is built, C code will be compiled with debugging
-symbols (`-g`) and compiler optimizations will be disabled
-(`-O0`) so that the structure of the code closely matches the
-original source.
-
-**6) Configure the build**
+**5) Configure the build**
 
 - After we change directory, we must run the configure script from the source
 directory.  This step takes ~1 minute on the codespace.
 
 ```bash
-$TOP_SRCDIR/configure --with-valgrind-instrumentation=1
-
+$TOP_SRCDIR/configure --with-valgrind-instrumentation=1 CFLAGS="-g -O0"
 ```
 
 <!-- markdownlint-disable MD046 -->
@@ -86,6 +70,9 @@ $TOP_SRCDIR/configure --with-valgrind-instrumentation=1
     of valgrind. See the [Using
     valgrind](https://cran.r-project.org/doc/manuals/R-exts.html#Using-valgrind)
     section of the R-admin manual for more information.
+    The `CFLAGS="-g -O0"` setting compiles C code with debugging symbols
+    (`-g`) and disables optimization (`-O0`) so the compiled code closely
+    matches the original source, which aids debugging.
 <!-- markdownlint-enable MD046 -->
 
 - The configure cmd prepares for building R, creating files and folders inside
@@ -95,7 +82,7 @@ $TOP_SRCDIR/configure --with-valgrind-instrumentation=1
 
     ![alt text](../assets/rdev7.png)
 
-**7) Build R**
+**6) Build R**
 
 Having configured R, we run `make` to build R. This take 5-10 minutes on the
 codespace.
@@ -104,7 +91,7 @@ codespace.
 make
 ```
 
-**8) Check R**
+**7) Check R**
 
 Check that the build of R passes R's standard checks:
 
@@ -116,7 +103,7 @@ This takes a couple of minutes in the codespace. The check will stop with a
 error message if any of the tests fail. If this happens, see [SVN
 Help](./svn_help.md) for how to revert to a version that passes check.
 
-**9) Make R terminals use the built R**
+**8) Make R terminals use the built R**
 
 Run the `which_r` script to set which R to use for R terminals in VSCode. When
 prompted, enter the number corresponding to `r-devel`
@@ -140,7 +127,7 @@ built![^1]
 selected version is saved in the VSCode settings, so will be saved when you stop
 and restart the codespace.
 
-**10) Make contributions**
+**9) Make contributions**
 
 - After having built the current development version of R, we can now make
   changes to the source code and contribute to the project.
