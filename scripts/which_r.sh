@@ -3,7 +3,6 @@
 which_r() {
   # Specify the parent directory
   parent_dir="$WORK_DIR/build"
-  launch_script="$WORK_DIR/scripts/launch_r.sh"
 
   # Path to the settings.json file
   settings_file_path=$WORK_DIR/.vscode/settings.json
@@ -60,6 +59,9 @@ which_r() {
     selected_version="/usr/bin/R"
   fi
 
+  # Define launch script path here where it's actually used
+  launch_script="$WORK_DIR/scripts/launch_r.sh"
+  
   # Update launch_r.sh to call the selected R binary
   if [ -f "$launch_script" ]; then
     sed -i "s|^exec .*/R|exec $selected_version|" "$launch_script"
