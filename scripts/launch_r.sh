@@ -1,6 +1,5 @@
 #!/bin/bash
 
-WORK_DIR=$PWD
-export LD_PRELOAD="$WORK_DIR/scripts/allow_ptrace.so"
-# exec "$WORK_DIR/build/r-devel/bin/R" "$@"
+export LD_PRELOAD="./scripts/allow_ptrace.so"
+# # `which_r.sh` sets the R binary used in the command below
 exec /usr/bin/R "$@"
