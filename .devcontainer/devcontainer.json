@@ -47,5 +47,5 @@
             ]
         }
     },
-    "postCreateCommand": "sh /workspaces/r-dev-env/scripts/localscript.sh"
+    "postCreateCommand": "sh ./scripts/localscript.sh"
 }

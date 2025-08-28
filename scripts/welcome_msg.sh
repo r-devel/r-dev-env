@@ -28,9 +28,8 @@ PATCHDIR = \"$PATCHDIR\"
 Have fun \U0001F601
 "
 
-# open INDEX.md if INIT file exists
+# open INDEX.md if svn and build directories exist
 if [ ! -d "svn" ] && [ ! -d "build" ]; then
     sleep 2
     code INDEX.md
-    rm INIT
 fi

@@ -1,4 +1,6 @@
 #!/bin/bash
-export LD_PRELOAD=/workspaces/r-dev-env/scripts/allow_ptrace.so
-# exec /workspaces/r-dev-env/build/r-devel/bin/R "$@"
+
+WORK_DIR=$PWD
+export LD_PRELOAD="$WORK_DIR/scripts/allow_ptrace.so"
+# exec "$WORK_DIR/build/r-devel/bin/R" "$@"
 exec /usr/bin/R "$@"
