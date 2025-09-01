@@ -61,7 +61,7 @@ cd $BUILDDIR
 directory.  This step takes ~1 minute on the codespace.
 
 ```bash
-$TOP_SRCDIR/configure --with-valgrind-instrumentation=1
+$TOP_SRCDIR/configure --enable-R-shlib --with-valgrind-instrumentation=1
 
 ```
 
