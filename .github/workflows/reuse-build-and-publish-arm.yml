@@ -35,7 +35,7 @@ permissions:
 jobs:
   reuse-build-and-push:
 
-    runs-on: ubuntu-latest-arm
+    runs-on: ubuntu-24.04-arm
 
     steps:
       - name: Checkout repository
