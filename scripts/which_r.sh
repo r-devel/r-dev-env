@@ -64,7 +64,7 @@ which_r() {
 
   # Update launch_r.sh to call the selected R binary
   if [ -f "$launch_script" ]; then
-    sed -i "s|^exec .*/R|exec $selected_version|" "$launch_script"
+    sed -i "s|^exec [^ ]*/R|exec $selected_version|" "$launch_script"
   else
     echo "Warning: launch_r.sh script not found, skipping update."
   fi
