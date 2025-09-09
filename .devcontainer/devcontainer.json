@@ -1,7 +1,6 @@
 {
     "name": "R-Dev-Env",
     "image": "ghcr.io/r-devel/r-dev-env:devel",
-    "runArgs": ["--cap-add=SYS_PTRACE"],
     "remoteUser": "vscode",
     "hostRequirements": {
         "cpus": 4
@@ -42,10 +41,9 @@
                 "johnstoncode.svn-scm",
                 "ms-vscode.cpptools",
                 "MS-vsliveshare.vsliveshare",
-                "natqe.reload",
-                "vadimcn.vscode-lldb"
+                "natqe.reload"
             ]
         }
     },
-    "postCreateCommand": "sh ./scripts/localscript.sh"
+    "postCreateCommand": "bash /workspaces/r-dev-env/scripts/localscript.sh"
 }
