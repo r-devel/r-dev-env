@@ -61,7 +61,7 @@ which_r() {
 
   # Define launch script path here where it's actually used
   launch_script="$WORK_DIR/scripts/launch_r.sh"
-  
+
   # Update launch_r.sh to call the selected R binary
   if [ -f "$launch_script" ]; then
     sed -i "s|^exec .*/R|exec $selected_version|" "$launch_script"
