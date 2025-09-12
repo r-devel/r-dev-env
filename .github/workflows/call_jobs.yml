@@ -29,7 +29,7 @@ jobs:
       ref_name: ${{ github.ref_name }}
       actor: ${{ github.actor }}
       registry: ghcr.io
-      platform: amd64
+      platform: amd
     secrets: inherit
   call-workflow-arm64:
     permissions:
@@ -41,7 +41,7 @@ jobs:
       ref_name: ${{ github.ref_name }}
       actor: ${{ github.actor }}
       registry: ghcr.io
-      platform: arm64
+      platform: arm
     secrets: inherit
   call-workflow-both:
     permissions:
