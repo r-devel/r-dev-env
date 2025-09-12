@@ -70,7 +70,7 @@ jobs:
           context: .
           push: true
           pull: true
-          tags: ${{ inputs.registry }}/${{ inputs.image_name }}:${{ inputs.ref_name }}-{{ inputs.platform }}
+          tags: ${{ inputs.registry }}/${{ inputs.image_name }}:${{ inputs.ref_name }}-${{ inputs.platform }}
           build-args: |
             CONTAINER_VERSION=${{ env.VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
