@@ -19,18 +19,18 @@ on:
       - 'VERSION'
 
 jobs:
-  #call-workflow-amd64:
-  #  permissions:
-  #    contents: read
-  #    packages: write
-  #  uses: ./.github/workflows/reuse-build-and-publish.yml
-  #  with:
-  #    image_name: ${{ github.repository }}
-  #    ref_name: ${{ github.ref_name }}
-  #    actor: ${{ github.actor }}
-  #    registry: ghcr.io
-  #    platform: amd64
-  #  secrets: inherit
+  call-workflow-amd64:
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/reuse-build-and-publish.yml
+    with:
+      image_name: ${{ github.repository }}
+      ref_name: ${{ github.ref_name }}
+      actor: ${{ github.actor }}
+      registry: ghcr.io
+      platform: amd64
+    secrets: inherit
   call-workflow-arm64:
     permissions:
       contents: read
@@ -43,15 +43,15 @@ jobs:
       registry: ghcr.io
       platform: arm64
     secrets: inherit
-  #call-workflow-both:
-  #  permissions:
-  #    contents: read
-  #    packages: write
-  #  uses: ./.github/workflows/reuse-build-and-publish-buildx.yml
-  #  with:
-  #    image_name: ${{ github.repository }}
-  #    ref_name: ${{ github.ref_name }}
-  #    actor: ${{ github.actor }}
-  #    registry: ghcr.io
-  #    platform: arm64/amd64
-  #  secrets: inherit
+  call-workflow-both:
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/reuse-build-and-publish-buildx.yml
+    with:
+      image_name: ${{ github.repository }}
+      ref_name: ${{ github.ref_name }}
+      actor: ${{ github.actor }}
+      registry: ghcr.io
+      platform: buildx
+    secrets: inherit
