@@ -18,13 +18,13 @@
 
 ### What are the different features of Source Control?
 
-  * Shows all modified, added, deleted, and renamed files since the last commit.
+Shows all modified, added, deleted, and renamed files since the last commit.
 
-  * ***Files are grouped into:***
+***Files are grouped into:***
 
-    * Changes ->
-      * Files that have been modified, created, or deleted but not     yet staged.
-      * These are shown uncommitted.
+* Changes ->
+  * Files that have been modified, created, or deleted but not     yet staged.
+  * These are shown uncommitted.
 
      ![alt text](../assets/svn9.png)
 
