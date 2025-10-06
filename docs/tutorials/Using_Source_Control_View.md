@@ -18,8 +18,6 @@
 
 ### What are the different features of Source Control?
 
-
-* ***Version Tracking:***
   * Shows all modified, added, deleted, and renamed files since the last commit.
 
   * ***Files are grouped into:***
