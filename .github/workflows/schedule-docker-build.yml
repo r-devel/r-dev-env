@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '0 0 1,15 * *'
 
+permissions:
+  contents: read
+  packages: write
 
 env:
   REGISTRY: ghcr.io
@@ -12,9 +15,6 @@ env:
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
     strategy:
       matrix:
         branch: [main, devel]

@@ -4,7 +4,8 @@ repo](https://github.com/r-devel/r-dev-env/tree/main), click on the 'Open in
 GitHub Codespaces' button and then click the green 'Create Codespace' button.
 ![create codespace](../../assets/rdev1.png)
 
-    !!! Note You will see the message "Codespace usage for this repository is
+    !!! Note
+        You will see the message "Codespace usage for this repository is
         paid for by ...", with your username. Don't panic!
 
         GitHub Codespaces offers 120 core hours of free usage per month for every GitHub user. So the actual number of free hours is 120 divided by the number of cores you are using to run your codespaces.
@@ -17,5 +18,34 @@ GitHub Codespaces' button and then click the green 'Create Codespace' button.
 2. The codespace setup screen will then be shown. Starting the container may
    take a minute or so.
 
-3. You will be taken to a VSCode editor within your browser.
+3. You will be taken to a VS Code editor within your browser.
 ![codespace](../../assets/rdev3.png)
+
+4. Rename your codespace and manage auto-delete for easier identification and to
+   prevent accidental removal:
+
+    By default, your codespace will have a randomly generated name. Renaming it to
+    something descriptive — such as referencing the issue or feature you’re working
+    on makes it much easier to manage your codespaces. You can also disable
+    auto-delete to ensure your codespace isn't removed unexpectedly:
+
+    - Open your [GitHub Codespaces dashboard](https://github.com/codespaces)
+    (<https://github.com/codespaces>) in your browser.
+    - Find the codespace you just created (it will show the repository name and
+    the current random display name).
+    - A: Click the ellipsis (**...**) next to your codespace to open the
+    options menu.
+    - B: Select **Rename** from the dropdown.
+    - Enter a descriptive new display name, e.g.,
+    `Bug 7084 - text() recycling problems` or
+    `Ignore deprecated/defunct fns in checkS3methods`, and confirm.
+    - C: In the same options menu, click on **Auto-delete codespace** to toggle
+     off auto-delete (remove the check mark). This will prevent the
+     codespace from being deleted automatically.
+
+    ![rename codespace](../../assets/rdev3_5.png)
+
+    !!! Tip
+
+        You can rename your codespace at any time. The display name is
+        for your convenience and **does not** affect your code or environment.

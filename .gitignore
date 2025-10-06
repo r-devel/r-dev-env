@@ -5,3 +5,4 @@ R-devel.tar.gz
 /venv
 .cache/
 .Rproj.user
+.vscode/

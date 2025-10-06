@@ -1,5 +1,7 @@
-# This script is run after the workspace is created
 #!/bin/bash
+
+# This script is run after the workspace is created
+
 
 local_script(){
 
@@ -23,7 +25,7 @@ cat $WORK_DIR/scripts/welcome_msg.sh >> ~/.bashrc
 #bash ~/.bashrc
 
 # Remove git directory if it exists
-rm -rf .git
+#rm -rf .git
 
 # copying vscode extension settings from devcontainer json to vscode settings json using jq
 if [ -f "$DEVCONTAINER_JSON" ]; then

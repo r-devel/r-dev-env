@@ -1,4 +1,5 @@
 site_name: R Devel Container Docs
+site_url: ''
 repo_name: r-devel/r-dev-env
 repo_url: https://github.com/r-devel/r-dev-env
 nav:
@@ -57,6 +58,9 @@ theme:
       primary: indigo
       accent: blue
 
+extra_css:
+  - css/custom.css
+
 plugins:
   - social
   - search
@@ -70,6 +74,8 @@ extra:
 
 markdown_extensions:
   - pymdownx.highlight:
+      use_pygments: true
+      pygments_lang_class: true
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets

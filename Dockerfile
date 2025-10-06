@@ -1,31 +1,36 @@
-FROM mcr.microsoft.com/devcontainers/cpp:dev-ubuntu-22.04
+FROM mcr.microsoft.com/devcontainers/cpp:dev-ubuntu
 
-ARG REINSTALL_CMAKE_VERSION_FROM_SOURCE="none"
-
-# Optionally install the cmake for vcpkg
-COPY ./reinstall-cmake.sh /tmp/
-
-RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
-    chmod +x /tmp/reinstall-cmake.sh && /tmp/reinstall-cmake.sh ${REINSTALL_CMAKE_VERSION_FROM_SOURCE}; \
-    fi \
-    && rm -f /tmp/reinstall-cmake.sh
-
+# Update and install necessary dependencies
+# (software-properties-common installed for apt-add-repository)
 RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
-    && echo "deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" >> /etc/apt/sources.list \
-    && wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc \
-    && apt update \
-    && apt -y install subversion \
-    && apt -y build-dep r-base-dev \
-    && apt -y install r-base-dev \
-    && Rscript -e "install.packages('languageserver', repos='https://cran.rstudio.com')" \
-    && Rscript -e "install.packages('httpgd', repos='https://cran.rstudio.com')"
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
+      software-properties-common \
+      subversion \
+      libmagick++-dev \
+      libpoppler-cpp-dev \
+    && add-apt-repository --enable-source --yes "ppa:marutter/rrutter4.0" \
+    && wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc \
+    && apt-get update \
+    && apt-get build-dep -y r-base-dev \
+    && apt-get install -y r-base-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN apt install shellcheck
-RUN apt install -y ccache
-#RUN /usr/sbin/update-ccache-symlinks
-#RUN echo 'export PATH="/usr/lib/ccache:$PATH"' | tee -a /home/vscode/.bashrc
+# Install R packages, with dynamic r-universe URL
+RUN Rscript -e "runiverse <- sprintf('r-universe.dev/bin/linux/%s-%s/%s/', \
+                                 system2('lsb_release', '-sc', stdout = TRUE), \
+                                 R.version\$arch, \
+                                 substr(getRversion(), 1, 3)); \
+                print('Installing packages...'); \
+                install.packages(c('languageserver', 'gdiff', 'remotes'), \
+                 repos = c(runiverse = paste0('https://cran.', runiverse))); \
+                print('Installing httpgd from GitHub...'); \
+                remotes::install_github('nx10/httpgd'); \
+                print('Packages installed.')"
 
-
-
+# Define env var used in GitHub Actions that build and deploy container
 ARG CONTAINER_VERSION
-ENV CONTAINER_VERSION ${CONTAINER_VERSION}
+ENV CONTAINER_VERSION=${CONTAINER_VERSION}
+
+USER vscode
