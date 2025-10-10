@@ -6,11 +6,16 @@
 
 ### What exactly Source Control is ?
 
-1. Source Control in Visual Studio Code (VS Code) is a built-in feature that helps you to track, manage, and collaborate on code changes using version control systems, especially Git.
+1. Source Control in Visual Studio Code (VS Code) is a built-in feature that helps you
+   to track, manage, and collaborate on code changes using version control systems,
+   especially Git.
 
-2. Source Control tracks every change you make to your code, lets you undo mistakes, and helps you work with others.
+2. Source Control tracks every change you make to your code, lets you undo mistakes,
+   and helps you work with others.
 
-3. *for example*:- *Let's take a example rewriting a code of askYesNo() function which we have seen previously in* [contribution_workflow.md](https://upgraded-computing-machine-4j6p6p44q5vvcq74x-8000.app.github.dev/tutorials/contribution_workflow/)
+3. *for example*:- *Let's take a example rewriting a code of askYesNo() function which we have seen
+    previously in*
+    [contribution_workflow.md](https://upgraded-computing-machine-4j6p6p44q5vvcq74x-8000.app.github.dev/tutorials/contribution_workflow/)
 
 *
 
@@ -52,10 +57,12 @@ Shows all modified, added, deleted, and renamed files since the last commit.
     * ![alt text](../assets/svn7.png)
 
   * **Note:**
-      *Creating a Change-List for your changes helps you revert a block of changes, undoing all of them at once.*
+      *Creating a Change-List for your changes helps you revert a block of changes,
+       undoing all of them at once.*
 
 * **Note:**
-      *When we restart our VSCode, Codespace session, or workspace, it forgets about the SVN repository that we fetched.*
+      *When we restart our VSCode, Codespace session, or workspace, it forgets about the
+       SVN repository that we fetched.*
 
   * *The svn command lets you recognize your fetched SVN repository again in the Source Control panel.*
 
