@@ -80,6 +80,7 @@ since the last commit.
      ```
 
 * ***Update:***
-  * The Update option shown in the image below provides the same output as the command mentioned above.
+  * The Update option shown in the image below provides
+    the same output as the command mentioned above.
 
   * ![alt text](../assets/svn15.png)
