@@ -74,26 +74,3 @@ jobs:
           build-args: |
             CONTAINER_VERSION=${{ env.VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
-      - name: Write manifest and build history file
-        run: |
-          sudo apt-get update && sudo apt-get install r-base -y && sudo Rscript -e "install.packages('optparse')" \
-            && Rscript scripts/manifest.R \
-            --registry ${{ inputs.registry }} \
-            --owner ${{ inputs.actor}} \
-            --image ${{ inputs.ref_name }} \
-            --historydir /tmp/r-devel/hist_lines \
-            --manifestdir /tmp/r-devel/manifests \
-            --repository ${{ inputs.image_name }}
-        shell: bash
-      - name: Upload manifest file
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ inputs.platform }}-manifest
-          path: /tmp/r-devel/manifests/manifest-*.md
-          retention-days: 3
-      - name: Upload build history line
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ inputs.platform }}-history_line
-          path: /tmp/r-devel/hist_lines/history-*.txt
-          retention-days: 3
