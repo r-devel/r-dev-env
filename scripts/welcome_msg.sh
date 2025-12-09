@@ -16,7 +16,7 @@ Welcome to the R Dev Container v$CONTAINER_VERSION
 
 Here you can modify, compile and use R as described in
 the r development guide:
-    https://contributor.r-project.org/rdevguide/GetStart.html#building-r
+    https://contributor.r-project.org/r-dev-env/tutorials/building_r/
 
 
 To help you, we have already set the following environment variables:
