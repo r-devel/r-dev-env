@@ -1,116 +1,104 @@
-#### 1. Go to the Source Directory
+This tutorial introduces debugging C code with LLDB (the Low-Level Debugger) 
+via VS Code's Run and Debug functionality. It is also possible to use lldb 
+to debug R via the command line using bash terminals in the R Dev Container.
 
-Rebuild R with debugging symbols so LLDB can access C source lines and
-variables. Make sure your build uses the `-g` flag. Open a bash terminal
-and navigate to the root of your project’s source directory.
+#### 1. Open an R Terminal Running R Built from Source
 
-```bash
-cd $TOP_SRCDIR
-```
+If necessary, run `which_r` to switch to a version of R you have built 
+following the [Building R](tutorials/building_r) tutorial.
 
-#### 2. Run R Using the Debug Wrapper Script
+Then open an R terminal by clicking on `R: (not attached)` in the status bar, 
+or running `R: Create R terminal` from the VS Code command palette.
 
-Run R through the wrapper script (`launch_r.sh`) that
-sets up `LD_PRELOAD` and debugging environment:
+<!-- markdownlint-disable MD046 -->
+!!! Note
+Debugging C code requires R to have been built with `CFLAGS="-g -O0"`.
+<!-- markdownlint-enable MD046 -->
 
-```bash
-./scripts/launch_r.sh
-```
+#### 2. Attach LLDB to the Running R Process
 
-This ensures the ptrace helper library is loaded
-for debugging support.
+Open the "Run and Debug" sidebar and click the green arrow next to the 
+drop-down box at the top. This will open a dialog for you to select the 
+process to attach the LLDB debugger to.
 
-#### 3. Attach LLDB to the Running R Process
+[screenshot here]
 
-Find the process ID (PID) of your R session. You
-can do this within R, Start an R terminal by using
-the command R in the terminal,then:
+Enter the process ID (PID) shown after the R version number in the status bar, 
+e.g. here the PID is [TBA]
 
-```r
-Sys.getpid()
-```
+[screenshot here]
 
-Attach LLDB to this PID, using the command palette type
-`LLDB: Attach to Process` then select the PID you just
-got or you can do this via the terminal:
+<!-- markdownlint-disable MD046 -->
+!!! Note
+    If you can't see the R version number in the status bar, you can get the PID 
+    by calling `Sys.getpid()` in R before starting debugging.
+<!-- markdownlint-enable MD046 -->
 
-```bash
-lldb -p <PID>
-```
+#### 3. Set a Breakpoint in C Code
 
-#### 4. Set a Breakpoint in Native C Code
-
-For example, to debug `rlogis.c`, set a breakpoint at
-the start of its function in `rlogis.c` (line 25):
-
-```lldb
-breakpoint set --file rlogis.c --line 25
-```
-
-You can do this by clicking the r
-ed dot on the left side
-of a line in a program as shown i
-n the screenshot below:
+For example, to debug the `rlogis` C function, open 
+`$TOP_SRCDIR/src/nmath/rlogis.c` and set a breakpoint by clicking to the left 
+of the line number corresponding to the first line in the body of the function: 
 
 ![alt text](../assets/rdev26.png)
 
-#### 5. Trigger the Function in R
+#### 4. Trigger the Debugger
 
-Use this command directly in the LLDB debug
-console to call the C function and see its
-result:
+In the R terminal, run the `rlogis()` command, which calls the `rlogis` C 
+function:
 
-```lldb
-expr (double)rlogis(1.0, 1.0)
+```r
+rlogis(1)
 ```
 
-This will activate your breakpoint and pause
-at the specified line for inspection as shown
-below.
+This will trigger the LLDB debugger and pause at the line where the 
+breakpoint was added:
 
-![alt text](../assets/rdev27.png)
+[new screenshot here]
 
-#### 6. Debugging Actions in LLDB
+#### 5. Using the Debugger Toolbar
 
 After pausing at a breakpoint, use the LLDB
 toolbar buttons and commands to control execution:
 
-- **Continue Execution:** Resume running until
-the next breakpoint (Run icon ▷ in blue).
-- **Step Through the Code:** Move line-by-line,
-stepping into functions (Step Into ↓ in blue)
-or stepping out of the current function
-(Step Out ↑ in blue).
-- **Stop Execution:** Pause the running process
-(interrupt command, icon may not always be shown).
-- **Additional Controls:**
-ack (↶ in blue) for reverse debugging
-    if available.
-t (⟲ in green) to restart the session.
-nect (🔗 in orange) to detach the debugger
-    while leaving the process running.
+- **Continue/Pause** (▷ in blue, or F5): Resume running until the next 
+breakpoint or the end of the call from R. This changes to a pause button 
+(⏸ in blue) when the code is running, allowing you to pause execution.
+- **Step Over** (↷ in blue, or F10): Run the current line of code and stop 
+at the next line.
+- **Step Into** (↓ in blue, or F11): Run the current line of code and step 
+into the next function called to start debugging the code in that function.
+- **Step Out** (↑ in blue, or Shift+F11): Run the remainder of the current 
+function and stop at the point where the function was called. This will step 
+out through several internal C functions in the call stack - use 
+**Continue** instead to finish and return to R.
+- **Restart** (⟲ in green, or Cmd/Ctrl+Shift+F5): Start again from the 
+beginning.
+- **Disconnect** (🔌 in red, or Shift+F5): Detach the debugger but keep R 
+running.
+- **Stop** (access from more controls): Teminate the debugging session and 
+the R process (closes the R terminal).
 
-Use these controls to navigate and inspect your native
-C code during debugging within R.
+#### 6. Inspect Variables and Expressions
 
-#### 7. Inspect Variables and Expressions
+The Variables sub-panel of the Run and Debug side panel shows the current value 
+of variables in the current environment. This is particularly helpful for 
+local variables defined in the function, e.g. before `u` is defined:
 
-LLDB allows watching variables and
-evaluating expressions. For example,
-in the context of debugging `rlogis`,
-you can inspect the variable `u` or
-watch the result of an expression:
+[screenshot]
 
-```lldb
-expr u
-expr log(u / 1.0 - u)
-```
+and after
 
-The side panel or variable/watch
-window updates as you step through
-the code. Finally, when you exit
-the debugger using the disconnect
-button or te exit command, the
-screen shown below is displayed:
+[screenshot]
 
-![alt text](../assets/rdev28.png)
+In the Watch sub-panel we can define expressions to watch as we step through 
+the code. For example, we might watch `u / (1 - u)` and `scale == 0`:
+
+[screenshot]
+
+Note these expressions can only use simple operations, for example, we can't 
+watch `log (u / (1 - u))` as this uses the `log` function. 
+
+The watch panel can also be used to dereference pointers (e.g. `*ptr`) or 
+access elements of an array (e.g. `array[5]`).
+
