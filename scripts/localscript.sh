@@ -43,8 +43,9 @@ if [ -f "$VSCODE_DIR/settings.json" ]; then
     jq --arg rterm "$WORK_DIR/scripts/launch_r.sh" '."r.rterm.linux"=$rterm' "$VSCODE_DIR/settings.json" > "$tmpfile" && mv "$tmpfile" "$VSCODE_DIR/settings.json"
 fi
 
-# Build the ptrace helper library
-gcc -shared -fPIC -o "$WORK_DIR/scripts/allow_ptrace.so" "$WORK_DIR/scripts/allow_ptrace.c"
+# Compile the ptrace helper executable
+gcc -O2 -o "$WORK_DIR/scripts/allow_ptrace" "$WORK_DIR/scripts/allow_ptrace.c"
+chmod +x "$WORK_DIR/scripts/allow_ptrace"
 
 # Mark the wrapper executable
 chmod +x "$WORK_DIR/scripts/launch_r.sh"
