@@ -28,7 +28,7 @@ PATCHDIR = \"$PATCHDIR\"
 Have fun \U0001F601
 "
 
-# open INDEX.md if svn and build directories exist
+# open INDEX.md if svn and build directories do not exist
 if [ ! -d "svn" ] && [ ! -d "build" ]; then
     sleep 2
     code INDEX.md
