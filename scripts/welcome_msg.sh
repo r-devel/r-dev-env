@@ -16,7 +16,7 @@ Welcome to the R Dev Container v$CONTAINER_VERSION
 
 Here you can modify, compile and use R as described in
 the r development guide:
-    https://contributor.r-project.org/rdevguide/GetStart.html#building-r
+    https://contributor.r-project.org/r-dev-env/tutorials/building_r/
 
 
 To help you, we have already set the following environment variables:
@@ -28,9 +28,8 @@ PATCHDIR = \"$PATCHDIR\"
 Have fun \U0001F601
 "
 
-# open INDEX.md if INIT file exists
+# open INDEX.md if svn and build directories do not exist
 if [ ! -d "svn" ] && [ ! -d "build" ]; then
     sleep 2
     code INDEX.md
-    rm INIT
 fi

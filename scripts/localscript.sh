@@ -27,11 +27,28 @@ cat $WORK_DIR/scripts/welcome_msg.sh >> ~/.bashrc
 # Remove git directory if it exists
 #rm -rf .git
 
+# copy launch.json for debugging config if present
+if [ -f "$WORK_DIR/.devcontainer/launch.json" ]; then
+    cp "$WORK_DIR/.devcontainer/launch.json" "$VSCODE_DIR/launch.json"
+fi
+
 # copying vscode extension settings from devcontainer json to vscode settings json using jq
 if [ -f "$DEVCONTAINER_JSON" ]; then
         jq '.customizations.vscode.settings' "$DEVCONTAINER_JSON" > "$VSCODE_DIR/settings.json"
 fi
 
+# Update r.rterm.linux setting to use the launch_r.sh script with full dynamic path
+if [ -f "$VSCODE_DIR/settings.json" ]; then
+    tmpfile="${VSCODE_DIR/settings.json}.tmp.$$"
+    jq --arg rterm "$WORK_DIR/scripts/launch_r.sh" '."r.rterm.linux"=$rterm' "$VSCODE_DIR/settings.json" > "$tmpfile" && mv "$tmpfile" "$VSCODE_DIR/settings.json"
+fi
+
+# Compile the ptrace helper executable
+gcc -O2 -o "$WORK_DIR/scripts/allow_ptrace" "$WORK_DIR/scripts/allow_ptrace.c"
+chmod +x "$WORK_DIR/scripts/allow_ptrace"
+
+# Mark the wrapper executable
+chmod +x "$WORK_DIR/scripts/launch_r.sh"
 
 }
 

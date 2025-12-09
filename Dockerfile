@@ -8,6 +8,7 @@ RUN sed -i.bak "/^#.*deb-src.*universe$/s/^# //g" /etc/apt/sources.list \
       software-properties-common \
       subversion \
       libmagick++-dev \
+      libpoppler-cpp-dev \
     && add-apt-repository --enable-source --yes "ppa:marutter/rrutter4.0" \
     && wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc \
     && apt-get update \
@@ -22,11 +23,14 @@ RUN Rscript -e "runiverse <- sprintf('r-universe.dev/bin/linux/%s-%s/%s/', \
                                  R.version\$arch, \
                                  substr(getRversion(), 1, 3)); \
                 print('Installing packages...'); \
-                install.packages(c('languageserver', 'httpgd'), \
-                 repos = c(runiverse = paste0('https://cran.', runiverse), \
-                           nx10 = paste0('https://nx10.', runiverse))); \
+                install.packages(c('languageserver', 'gdiff', 'remotes'), \
+                 repos = c(runiverse = paste0('https://cran.', runiverse))); \
+                print('Installing httpgd from GitHub...'); \
+                remotes::install_github('nx10/httpgd'); \
                 print('Packages installed.')"
 
 # Define env var used in GitHub Actions that build and deploy container
 ARG CONTAINER_VERSION
 ENV CONTAINER_VERSION=${CONTAINER_VERSION}
+
+USER vscode
