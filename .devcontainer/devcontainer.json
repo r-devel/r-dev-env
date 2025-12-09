@@ -1,6 +1,7 @@
 {
     "name": "R-Dev-Env",
     "image": "ghcr.io/r-devel/r-dev-env:devel",
+    "runArgs": ["--cap-add=SYS_PTRACE"],
     "remoteUser": "vscode",
     "hostRequirements": {
         "cpus": 4
@@ -10,7 +11,6 @@
             "settings": {
                 "git.ignoredRepositories": ["."],
                   "files.exclude": {
-                       "**/.vscode": true,
                        "**/.devcontainer": true,
                        "**/.git": true,
                        "**/.github": true,
@@ -44,9 +44,10 @@
                 "johnstoncode.svn-scm",
                 "ms-vscode.cpptools",
                 "MS-vsliveshare.vsliveshare",
-                "natqe.reload"
+                "natqe.reload",
+                "vadimcn.vscode-lldb"
             ]
         }
     },
-    "postCreateCommand": "sh /workspaces/r-dev-env/scripts/localscript.sh"
+    "postCreateCommand": "bash ./scripts/localscript.sh"
 }

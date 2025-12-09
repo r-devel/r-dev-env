@@ -61,8 +61,7 @@ cd $BUILDDIR
 directory.  This step takes ~1 minute on the codespace.
 
 ```bash
-$TOP_SRCDIR/configure --with-valgrind-instrumentation=1
-
+$TOP_SRCDIR/configure --with-valgrind-instrumentation=1 CFLAGS="-g -O0"
 ```
 
 <!-- markdownlint-disable MD046 -->
@@ -71,6 +70,9 @@ $TOP_SRCDIR/configure --with-valgrind-instrumentation=1
     of valgrind. See the [Using
     valgrind](https://cran.r-project.org/doc/manuals/R-exts.html#Using-valgrind)
     section of the R-admin manual for more information.
+    The `CFLAGS="-g -O0"` setting compiles C code with debugging symbols
+    (`-g`) and disables optimization (`-O0`) so the compiled code closely
+    matches the original source, which aids debugging.
 <!-- markdownlint-enable MD046 -->
 
 - The configure cmd prepares for building R, creating files and folders inside

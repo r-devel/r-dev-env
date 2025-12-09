@@ -9,6 +9,10 @@
 # .libPaths() already includes site library for default R version.
 .libPaths(c(.libPaths(), .Library.site))
 
+# Source initialization script for VSCode R extension
+source("~/.vscode-R/init.R")
+.First.sys()
+
 # The remotes package is installed to install httpgd from GitHub
 # The gdiff package is installed to support visual difference testing
 
