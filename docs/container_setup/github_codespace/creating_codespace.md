@@ -2,7 +2,7 @@
 1. From the main branch of the [r-dev-env
 repo](https://github.com/r-devel/r-dev-env/tree/main), click on the 'Open in
 GitHub Codespaces' button and then click the green 'Create Codespace' button.
-![create codespace](../../assets/rdev1.png)
+![create codespace](../../assets/gh_codespace_create.webp)
 
     !!! Note
         You will see the message "Codespace usage for this repository is
@@ -19,7 +19,7 @@ GitHub Codespaces' button and then click the green 'Create Codespace' button.
    take a minute or so.
 
 3. You will be taken to a VS Code editor within your browser.
-![codespace](../../assets/rdev3.png)
+![codespace](../../assets/gh_codespace.webp)
 
 4. Rename your codespace and manage auto-delete for easier identification and to
    prevent accidental removal:
@@ -43,7 +43,7 @@ GitHub Codespaces' button and then click the green 'Create Codespace' button.
      off auto-delete (remove the check mark). This will prevent the
      codespace from being deleted automatically.
 
-    ![rename codespace](../../assets/rdev3_5.png)
+    ![rename codespace](../../assets/gh_codespace_rename.webp)
 
     !!! Tip
 

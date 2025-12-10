@@ -3,12 +3,12 @@
 - To stop codespaces we just need to navigate to the Codespaces option in the
   bottom left of the Codespace panel.
 
-    ![stop codespace](../../assets/rdev14.png)
+    ![stop codespace](../../assets/codespace_button.webp)
 
 - After clicking on codespaces option we will get a drop down above something
   like this👇
 
-    ![stop codespace](../../assets/rdev15.png)
+    ![stop codespace](../../assets/codespace_commands.webp)
 
 - Click on "Stop Current Codespace". It will stop the codespaces you are
   currently using or running.
@@ -16,7 +16,7 @@
 - You will be redirected to a Restart Codespaces page. The page shows a link to
   restart the codespace you just stopped.
 
-    ![stop codespace](../../assets/rdev16.png)
+    ![stop codespace](../../assets/codespace_stopped.webp)
 
 #### Idle timeout
 
@@ -34,11 +34,11 @@ restart it as shown below.
 
 - Go to [github.com/codespaces](https://github.com/codespaces)
 - Here we can see a list of the codespaces we have created ![stop
-  codespace](../../assets/rdev17.png)
+  codespace](../../assets/codespace_homepage.webp)
 - To restart it, we can just click on the codespaces we wanted to use and it
   will start the codespaces again for us.
 - You can also see an active label added to the codespaces we just started
- ![stop codespace](../../assets/rdev18.png)
+ ![stop codespace](../../assets/codespace_listing.webp)
 
 #### Managing and Sustaining Codespaces
 
@@ -58,7 +58,7 @@ restart it as shown below.
 - Under "Default retention period," enter the number of days (between 0 and 30)
 for which you want your codespaces to be retained after they have been stopped.
 Example: Setting it to 30 days.  ![retain
-codespace](../../assets/manage_codespace.png)
+codespace](../../assets/manage_codespace.webp)
 
 **Warning:**
 
