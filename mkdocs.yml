@@ -21,7 +21,7 @@ nav:
         - 'Building R': 'tutorials/building_r.md'
         - 'R Contribution Workflow' : 'tutorials/contribution_workflow.md'
         - 'Updating Source Code' : 'tutorials/update_source.md'
-        - 'Debugging with LLDB' : 'tutorials/debugging_with_lldb.md'
+        - 'Debugging C with LLDB' : 'tutorials/debugging_c_with_lldb.md'
         - 'Creating a Patch File' : 'tutorials/patch_update.md'
         - 'Multiple R Versions' : 'tutorials/multi_r_compilation.md'
         - 'SVN Help' : 'tutorials/svn_help.md'
