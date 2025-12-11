@@ -18,6 +18,10 @@ for (i in seq_along(files)) {
         next
     })
 
+    if (image_info(img)["width"] > 1000){
+        img <- image_resize(img, geometry_size_pixels(width = 1000))
+    }
+
     # Convert to webp
     img <- image_convert(img, "webp")
 
