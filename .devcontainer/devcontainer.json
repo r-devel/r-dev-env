@@ -10,22 +10,36 @@
         "vscode": {
             "settings": {
                 "git.ignoredRepositories": ["."],
-                  "files.exclude": {
-                       "**/.devcontainer": true,
-                       "**/.git": true,
-                       "**/.github": true,
-                       "**/.gitignore": true,
-                       "**/.gitpod.Dockerfile": true,
-                       "**/.gitpod.yml": true,
-                       "**/.markdownlint-cli2.yaml": true,
-                       "**/.pre-commit-config.yaml": true,
-                       "**/Dockerfile": true,
-                       "**/mkdocs.yml": true,
-                       "**/scripts": true
-  },
-                "editor.tabSize": 8,
-                "editor.indentSize": 4,
-                "editor.detectIndentation": false,
+                "files.exclude": {
+                    "**/.devcontainer": true,
+                    "**/.git": true,
+                    "**/.github": true,
+                    "**/.gitignore": true,
+                    "**/.gitpod.Dockerfile": true,
+                    "**/.gitpod.yml": true,
+                    "**/.markdownlint-cli2.yaml": true,
+                    "**/.pre-commit-config.yaml": true,
+                    "**/Dockerfile": true,
+                    "**/mkdocs.yml": true,
+                    "**/scripts": true
+                },
+                "[c]": {
+                    "editor.indentSize": 4,
+                    "editor.tabSize": 8,
+                    "editor.insertSpaces": true,
+                    "editor.detectIndentation": false
+                },
+                "[r]": {
+                    "editor.indentSize": 4,
+                    "editor.tabSize": 8,
+                    "editor.insertSpaces": true,
+                    "editor.detectIndentation": false
+                },
+                "editor.formatOnSave": false,
+                "editor.renderWhitespace": "all",
+                "editor.minimap.autohide": "mouseover",
+                "diffEditor.ignoreTrimWhitespace": false,
+                "files.trimTrailingWhitespace": true,
                 "r.lsp.diagnostics": false,
                 "r.plot.useHttpgd": true,
                 "r.rpath.linux": "/usr/bin/R",
