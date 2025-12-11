@@ -1,7 +1,10 @@
 {
     "name": "R-Dev-Env",
     "image": "ghcr.io/r-devel/r-dev-env:devel",
-    "runArgs": ["--cap-add=SYS_PTRACE"],
+    "runArgs": [
+        "--cap-add=SYS_PTRACE",
+        "--dns=8.8.8.8"
+    ],
     "remoteUser": "vscode",
     "hostRequirements": {
         "cpus": 4
