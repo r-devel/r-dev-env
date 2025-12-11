@@ -24,11 +24,11 @@ need to deselect some of the statuses shown to see the status for R).
 Open the "Run and Debug" sidebar and click the green arrow next to the
 drop-down box at the top.
 
-![alt text](../assets/lldb_start_debugging.png)
+![alt text](../assets/lldb_start_debugging.webp)
 
 This will open a dialog for you to enter the PID:
 
-![alt text](../assets/lldb_select_process.png)
+![alt text](../assets/lldb_select_process.webp)
 
 When you enter the PID the corresponding process is shown underneath -
 click on it to select that process for LLDB to attach to.
@@ -39,7 +39,7 @@ For example, to debug the `rlogis` C function, open
 `$TOP_SRCDIR/src/nmath/rlogis.c` and set a breakpoint by clicking to the left
 of the line number corresponding to the first line in the body of the function:
 
-![alt text](../assets/lldb_add_breakpoint.png)
+![alt text](../assets/lldb_add_breakpoint.webp)
 
 #### 4. Trigger the Debugger
 
@@ -53,7 +53,7 @@ rlogis(1)
 This will trigger the LLDB debugger and pause at the line where the
 breakpoint was added:
 
-![alt text](../assets/lldb_debugging_rlogis.png)
+![alt text](../assets/lldb_debugging_rlogis.webp)
 
 #### 5. Using the Debugger Toolbar
 
@@ -84,16 +84,16 @@ The Variables sub-panel of the Run and Debug side panel shows the current value
 of variables in the current environment. This is particularly helpful for
 local variables defined in the function, e.g. before `u` is defined:
 
-![alt text](../assets/lldb_before_u.png)
+![alt text](../assets/lldb_before_u.webp)
 
 and after
 
-![alt text](../assets/lldb_after_u.png)
+![alt text](../assets/lldb_after_u.webp)
 
 In the Watch sub-panel we can define expressions to watch as we step through
 the code. For example, we might watch `u / (1 - u)` and `scale == 0`:
 
-![alt text](../assets/lldb_watch.png)
+![alt text](../assets/lldb_watch.webp)
 
 Note these expressions can only use simple operations, for example, we can't
 watch `log (u / (1 - u))` as this uses the `log` function.
@@ -106,7 +106,7 @@ access elements of an array (e.g. `array[5]`).
 Using the Debug Console, we can interact with LLDB via the command line,
 enabling more advanced debugging.
 
-![alt text](../assets/lldb_debug_console.png)
+![alt text](../assets/lldb_debug_console.webp)
 
 ##### Stepping through the code
 
