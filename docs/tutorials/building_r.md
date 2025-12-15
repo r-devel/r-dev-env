@@ -8,7 +8,7 @@
 - The environment variables are set in the codespace image and are available
   when the codespace starts.
 
-    ![alt text](../assets/rdev6.png)
+    ![alt text](../assets/building_env_var.webp)
 
 **2) svn checkout**
 
@@ -24,7 +24,7 @@
 - Output : We get file structure something like this after checking out R source
   code from R svn repository.
 
-    ![alt text](../assets/rdev8.png)
+    ![alt text](../assets/building_source_dir.webp)
 
 **3) Download recommended packages for R**
 
@@ -36,7 +36,7 @@ source code for these packages:
 $TOP_SRCDIR/tools/rsync-recommended
 ```
 
-![alt text](../assets/rdev9.png)
+![alt text](../assets/building_recommended.webp)
 
 **4) Change to the build directory**
 
@@ -61,8 +61,7 @@ cd $BUILDDIR
 directory.  This step takes ~1 minute on the codespace.
 
 ```bash
-$TOP_SRCDIR/configure --with-valgrind-instrumentation=1
-
+$TOP_SRCDIR/configure --with-valgrind-instrumentation=1 CFLAGS="-g -O0"
 ```
 
 <!-- markdownlint-disable MD046 -->
@@ -71,6 +70,9 @@ $TOP_SRCDIR/configure --with-valgrind-instrumentation=1
     of valgrind. See the [Using
     valgrind](https://cran.r-project.org/doc/manuals/R-exts.html#Using-valgrind)
     section of the R-admin manual for more information.
+    The `CFLAGS="-g -O0"` setting compiles C code with debugging symbols
+    (`-g`) and disables optimization (`-O0`) so the compiled code closely
+    matches the original source, which aids debugging.
 <!-- markdownlint-enable MD046 -->
 
 - The configure cmd prepares for building R, creating files and folders inside
@@ -78,7 +80,7 @@ $TOP_SRCDIR/configure --with-valgrind-instrumentation=1
 - Output : We get file structure something like this after using configure
   command.
 
-    ![alt text](../assets/rdev7.png)
+    ![alt text](../assets/building_build_dir.webp)
 
 **6) Build R**
 

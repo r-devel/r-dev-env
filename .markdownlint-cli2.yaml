@@ -13,6 +13,9 @@ config:
   ol-prefix: false
 # MD041 - first-line-heading disable due to splitting of sections across multiple files
   first-line-h1: false
+# MD007 - list indentation
+  list_indentation:
+    indent: 4    # use 4 spaces for nested lists
 
 globs:
 

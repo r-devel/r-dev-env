@@ -7,16 +7,16 @@ in the terminal to create and open an R file
 code R/test.R
 ```
 
-![alt text](../assets/rdev4.png)
+![alt text](../assets/running_r_file.webp)
 
 2) You should see `R:(not attached)` in the Status Bar at the bottom of the
 VSCode window:
 
-![alt text](../assets/rdev11.png)
+![alt text](../assets/running_r_attach.webp)
 
 Click on the `R:(not attached)` link to launch an R terminal.
 
-![alt text](../assets/rdev12.png)
+![alt text](../assets/running_r_terminal.webp)
 
 <!-- markdownlint-disable MD046 -->
 !!! Note
@@ -31,4 +31,8 @@ Click on the `R:(not attached)` link to launch an R terminal.
 3) You can then send code from the `.R` file to the R terminal by pressing
 `cmd/ctrl + enter`.
 
-![alt text](../assets/rdev5.png)
+```R
+hist(rnorm(1000))
+```
+
+![alt text](../assets/running_r_plot.webp)
