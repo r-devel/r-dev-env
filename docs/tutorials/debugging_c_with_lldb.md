@@ -60,10 +60,10 @@ breakpoint was added:
 After pausing at a breakpoint, use the LLDB
 toolbar buttons and commands to control execution:
 
-- **Continue/Pause** (![Continue/Pause](../assets/continue-pause.webp){.icon} 
-or F5): Resume running until the next breakpoint or the end of the call from 
-R. This changes to a pause button 
-(![Pause](../assets/continue-pause.webp){.icon}) when the code is running, 
+- **Continue/Pause** (![Continue/Pause](../assets/continue-pause.webp){.icon}
+or F5): Resume running until the next breakpoint or the end of the call from
+R. This changes to a pause button
+(![Pause](../assets/continue-pause.webp){.icon}) when the code is running,
 allowing you to pause execution.
 - **Step Over** (![Step Over](../assets/step-over.webp){.icon} or F10): Run the
  current line of code and stop at the next line.
@@ -72,7 +72,7 @@ allowing you to pause execution.
  the code in that function.
 - **Step Out** (![Step Out](../assets/step-out.webp){.icon} or Shift+F11): Run
  the remainder of the current function and stop at the point where the function
- was called. This will step out through several internal C functions in the 
+ was called. This will step out through several internal C functions in the
  call stack - use
 **Continue** instead to finish and return to R.
 - **Restart** (![Restart](../assets/restart.webp){.icon} or Cmd/Ctrl+Shift+F5):
