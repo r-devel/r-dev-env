@@ -60,20 +60,20 @@ breakpoint was added:
 After pausing at a breakpoint, use the LLDB
 toolbar buttons and commands to control execution:
 
-- **Continue/Pause** (▷ in blue, or F5): Resume running until the next
+- **Continue/Pause** (![Continue/Pause](../assets/continue-pause.webp){.icon} or F5): Resume running until the next
 breakpoint or the end of the call from R. This changes to a pause button
-(⏸ in blue) when the code is running, allowing you to pause execution.
-- **Step Over** (↷ in blue, or F10): Run the current line of code and stop
+(![Pause](../assets/continue-pause.webp){.icon}) when the code is running, allowing you to pause execution.
+- **Step Over** (![Step Over](../assets/step-over.webp){.icon} or F10): Run the current line of code and stop
 at the next line.
-- **Step Into** (↓ in blue, or F11): Run the current line of code and step
+- **Step Into** (![Step Into](../assets/step-into.webp){.icon} or F11): Run the current line of code and step
 into the next function called to start debugging the code in that function.
-- **Step Out** (↑ in blue, or Shift+F11): Run the remainder of the current
+- **Step Out** (![Step Out](../assets/step-out.webp){.icon} or Shift+F11): Run the remainder of the current
 function and stop at the point where the function was called. This will step
 out through several internal C functions in the call stack - use
 **Continue** instead to finish and return to R.
-- **Restart** (⟲ in green, or Cmd/Ctrl+Shift+F5): Start again from the
+- **Restart** (![Restart](../assets/restart.webp){.icon} or Cmd/Ctrl+Shift+F5): Start again from the
 beginning.
-- **Disconnect** (🔌 in red, or Shift+F5): Detach the debugger but keep R
+- **Disconnect** (![Disconnect](../assets/disconnect.webp){.icon} or Shift+F5): Detach the debugger but keep R
 running.
 - **Stop** (access from more controls): Teminate the debugging session and
 the R process (closes the R terminal).
