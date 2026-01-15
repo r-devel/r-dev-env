@@ -1,0 +1,28 @@
+name: Call reusable workflows
+
+on:
+  pull_request:
+    branches:
+      - main
+      - devel
+    types:
+      - closed
+    paths:
+      - '.github/workflows/reuse-build-and-publish-amd.yml'
+      - '.devcontainer/devcontainer.json'
+      - 'Dockerfile'
+      - 'reinstall-cmake.sh'
+      - 'VERSION'
+
+jobs:
+  call-workflow-amd64:
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/reuse-build-and-publish.yml
+    with:
+      image_name: ${{ github.repository }}
+      ref_name: ${{ github.ref_name }}
+      actor: ${{ github.actor }}
+      registry: ghcr.io
+    secrets: inherit
