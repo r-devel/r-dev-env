@@ -3,14 +3,14 @@
 - To start working in R we will click on `R:(not attach)` which is in the bottom
   right of the VSCode window. This will open an R terminal for us.
 
-    ![alt text](../assets/rdev11.png)
+    ![alt text](../assets/running_r_attach.webp)
 
-    ![alt text](../assets/rdev12.png)
+    ![alt text](../assets/running_r_terminal.webp)
 
 - We can now run R commands. We will use the `utils::askYesNo()` function as an
   example
 
-    ![alt text](../assets/rdev19.png)
+    ![alt text](../assets/workflow_askYesNo.webp)
 
     ```Rconsole
     > askYesNo("Is this a good example?")
@@ -28,7 +28,7 @@
 code $TOP_SRCDIR/src/library/utils/R/askYesNo.R
 ```
 
-**> Before edit:** ![alt text](../assets/rdev20.png)
+**> Before edit:** ![alt text](../assets/workflow_askYesNo_code.webp)
 
 ```R title="askYesNo.R" linenums="20"
     prompts = getOption("askYesNo", gettext(c("Yes", "No", "Cancel"))),
@@ -36,7 +36,7 @@ code $TOP_SRCDIR/src/library/utils/R/askYesNo.R
 
 **> With edit (for example - change to whatever you like!):**
 
-![alt text](../assets/rdev21.png)
+![alt text](../assets/workflow_askYesNo_edit.webp)
 
 ```R title="askYesNo.R" linenums="20"
     prompts = getOption("askYesNo", gettext(c("Oh yeah!", "Don't think so", "Cancel"))),
@@ -61,7 +61,7 @@ cd $BUILDDIR
 make
 ```
 
-![alt text](../assets/rdev22.png)
+![alt text](../assets/workflow_rebuild.webp)
 
 - Optionally run `make check` to run R's test suite with your local changes. You
   may skip this step while you are iterating on a bug fix or other development,
@@ -74,7 +74,7 @@ make
 #### 4. Cross check and Re-running Code
 
 - Check the edit has worked as expected by re-running the example code: ![alt
-text](../assets/rdev23.png)
+text](../assets/workflow_askYesNo_test.webp)
 
     ```Rconsole
     > askYesNo("Is this a good example?")

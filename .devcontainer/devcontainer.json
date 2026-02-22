@@ -1,6 +1,11 @@
 {
     "name": "R-Dev-Env",
     "image": "ghcr.io/r-devel/r-dev-env:devel",
+    "runArgs": [
+        "--cap-add=SYS_PTRACE",
+        "--dns=8.8.8.8"
+    ],
+    "remoteUser": "vscode",
     "hostRequirements": {
         "cpus": 4
     },
@@ -8,23 +13,36 @@
         "vscode": {
             "settings": {
                 "git.ignoredRepositories": ["."],
-                  "files.exclude": {
-                       "**/.vscode": true,
-                       "**/.devcontainer": true,
-                       "**/.git": true,
-                       "**/.github": true,
-                       "**/.gitignore": true,
-                       "**/.gitpod.Dockerfile": true,
-                       "**/.gitpod.yml": true,
-                       "**/.markdownlint-cli2.yaml": true,
-                       "**/.pre-commit-config.yaml": true,
-                       "**/Dockerfile": true,
-                       "**/mkdocs.yml": true,
-                       "**/scripts": true
-  },
-                "editor.tabSize": 8,
-                "editor.indentSize": 4,
-                "editor.detectIndentation": false,
+                "files.exclude": {
+                    "**/.devcontainer": true,
+                    "**/.git": true,
+                    "**/.github": true,
+                    "**/.gitignore": true,
+                    "**/.gitpod.Dockerfile": true,
+                    "**/.gitpod.yml": true,
+                    "**/.markdownlint-cli2.yaml": true,
+                    "**/.pre-commit-config.yaml": true,
+                    "**/Dockerfile": true,
+                    "**/mkdocs.yml": true,
+                    "**/scripts": true
+                },
+                "[c]": {
+                    "editor.indentSize": 4,
+                    "editor.tabSize": 8,
+                    "editor.insertSpaces": true,
+                    "editor.detectIndentation": false
+                },
+                "[r]": {
+                    "editor.indentSize": 4,
+                    "editor.tabSize": 8,
+                    "editor.insertSpaces": true,
+                    "editor.detectIndentation": false
+                },
+                "editor.formatOnSave": false,
+                "editor.renderWhitespace": "all",
+                "editor.minimap.autohide": "mouseover",
+                "diffEditor.ignoreTrimWhitespace": false,
+                "files.trimTrailingWhitespace": true,
                 "r.lsp.diagnostics": false,
                 "r.plot.useHttpgd": true,
                 "r.rpath.linux": "/usr/bin/R",
@@ -43,9 +61,10 @@
                 "johnstoncode.svn-scm",
                 "ms-vscode.cpptools",
                 "MS-vsliveshare.vsliveshare",
-                "natqe.reload"
+                "natqe.reload",
+                "vadimcn.vscode-lldb"
             ]
         }
     },
-    "postCreateCommand": "find . -wholename '*.git*'  -type d -prune -o -type f -exec chown vscode:vscode {} \\; && sh /workspaces/r-dev-env/scripts/localscript.sh"
+    "postCreateCommand": "bash ./scripts/localscript.sh"
 }
