@@ -4,8 +4,6 @@ There are Docker images for the different chip architectures - either AMD or ARM
 
 When opened in VSCode, the code will start to build the Docker container using the devcontainer.json file. This currently starts a version developed for AMD chips and will be slow on a Mac that uses Apple Silicon or any other ARM based machine. 
 
-![startlocalsetup](../../assets/rdev13.png)
-
 The devcontainer to be used can be updated if you need an ARM container. 
 
 ### Pull Container
