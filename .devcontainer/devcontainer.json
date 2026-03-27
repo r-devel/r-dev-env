@@ -26,6 +26,7 @@
                     "**/mkdocs.yml": true,
                     "**/scripts": true
                 },
+                "search.useIgnoreFiles": false,
                 "[c]": {
                     "editor.indentSize": 4,
                     "editor.tabSize": 8,
