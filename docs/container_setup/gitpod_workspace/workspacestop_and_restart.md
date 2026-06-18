@@ -5,13 +5,15 @@ look for the orange Gitpod command palette button in the bottom left corner of
 the workspace.
 
     ![stop gitpod workspace](../../assets/gitpod2.png)
+
 2. **Open the Command Palette and Stop the Workspace:** After clicking on the
 Gitpod command palette button, a pop-up will appear from the top of the
 screen. Select the Gitpod: Stop Workspace option to stop the current workspace.
 
     ![stop gitpod workspace](../../assets/gitpod3.png)
 
-    !!! Note Stopping a workspace will save its state, so you can resume later
+    !!! note
+        Stopping a workspace will save its state, so you can resume later
         without losing your progress.
 
 ### Restarting a Gitpod Workspace
