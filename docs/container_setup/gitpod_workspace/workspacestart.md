@@ -20,7 +20,8 @@ pre-filled:
     will take approximately 15-20 minutes to create the workspace for the first
     time. The environment will be cached for faster startup in the future.
 
-    !!! Note Changing the resource option from Standard to Large will reduce the
+    !!! note
+        Changing the resource option from Standard to Large will reduce the
         free monthly Gitpod usage, which is 50 hours per month of Standard
         workspace usage. See the
         [billing](https://www.gitpod.io/docs/configure/billing) docs for more

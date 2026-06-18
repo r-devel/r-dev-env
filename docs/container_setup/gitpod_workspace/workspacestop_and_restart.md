@@ -11,7 +11,8 @@ screen. Select the Gitpod: Stop Workspace option to stop the current workspace.
 
     ![stop gitpod workspace](../../assets/gitpod3.png)
 
-    !!! Note Stopping a workspace will save its state, so you can resume later
+    !!! note
+        Stopping a workspace will save its state, so you can resume later
         without losing your progress.
 
 ### Restarting a Gitpod Workspace
