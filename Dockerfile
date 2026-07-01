@@ -1,3 +1,4 @@
+# Uses latest ubuntu on https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/cpp/tags
 FROM mcr.microsoft.com/devcontainers/cpp:dev-ubuntu
 
 # Update and install necessary dependencies
