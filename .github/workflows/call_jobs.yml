@@ -5,17 +5,11 @@ on:
     branches:
       - main
       - devel
-  pull_request:
-    branches:
-      - main
-      - devel
-    types:
-      - closed
     paths:
       - '.github/workflows/reuse-build-and-publish-amd.yml'
-      - '.devcontainer/devcontainer.json'
+      - '.github/workflows/reuse-build-and-publish-arm.yml'
+      - '.github/workflows/reuse-build-manifest.yml'
       - 'Dockerfile'
-      - 'reinstall-cmake.sh'
       - 'VERSION'
 
 jobs:
