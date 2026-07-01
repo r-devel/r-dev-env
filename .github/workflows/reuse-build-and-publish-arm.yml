@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Build and publish amd 64 Docker image
+name: Build and publish arm64 Docker image
 
 on:
   workflow_call:
@@ -35,6 +35,8 @@ permissions:
 jobs:
   reuse-build-and-push:
 
+    # no "ubuntu-latest-arm" so need to specify version
+    # version here does not need to match that used in r-dev-env/Dockerfile
     runs-on: ubuntu-26.04-arm
 
     steps:
