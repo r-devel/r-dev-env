@@ -3,8 +3,8 @@ name: Call reusable workflows
 on:
   push:
     branches:
-     - main
-     - devel
+      - main
+      - devel
   pull_request:
     branches:
       - main
@@ -55,3 +55,16 @@ jobs:
   #    registry: ghcr.io
   #    platform: buildx
   #  secrets: inherit
+  call-workflow-manifest:
+    needs:
+      - call-workflow-amd64
+      - call-workflow-arm64
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/reuse-build-manifest.yml
+    with:
+      image_name: ${{ github.repository }}
+      ref_name: ${{ github.ref_name }}
+      registry: ghcr.io
+    secrets: inherit
