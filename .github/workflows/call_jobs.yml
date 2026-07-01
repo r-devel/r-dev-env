@@ -56,7 +56,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-    uses: ./.github/workflows/reuse-build-manifest.yml
+    uses: ./.github/workflows/reuse-build-and-publish-manifest.yml
     with:
       image_name: ${{ github.repository }}
       ref_name: ${{ github.ref_name }}
