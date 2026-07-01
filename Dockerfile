@@ -23,10 +23,8 @@ RUN Rscript -e "runiverse <- sprintf('r-universe.dev/bin/linux/%s-%s/%s/', \
                                  R.version\$arch, \
                                  substr(getRversion(), 1, 3)); \
                 print('Installing packages...'); \
-                install.packages(c('languageserver', 'gdiff', 'remotes'), \
+                install.packages(c('languageserver', 'gdiff', 'httpgd', 'remotes'), \
                  repos = c(runiverse = paste0('https://cran.', runiverse))); \
-                print('Installing httpgd from GitHub...'); \
-                remotes::install_github('nx10/httpgd'); \
                 print('Packages installed.')"
 
 # Define env var used in GitHub Actions that build and deploy container
