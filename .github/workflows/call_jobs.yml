@@ -9,6 +9,7 @@ on:
       - '.github/workflows/reuse-build-and-publish-amd.yml'
       - '.github/workflows/reuse-build-and-publish-arm.yml'
       - '.github/workflows/reuse-build-manifest.yml'
+      - '.github/workflows/call_jobs.yml'
       - 'Dockerfile'
       - 'VERSION'
 
