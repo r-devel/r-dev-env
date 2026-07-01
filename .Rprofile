@@ -31,7 +31,7 @@ rm(linux_binary_repo)
 # http graphics device requires unigd to be built for current R version
 build_ver <- installed.packages()["unigd", "Built"]
 r_ver <- paste(R.version$major, substr(R.version$minor, 1, 1), sep = ".")
-if (substr(build_ver, 1, 3) != r_ver){
+if (substr(build_ver, 3, 5) != r_ver){
     message("installing unigd package (graphics backend) for R ", r_ver)
     suppressMessages(install.packages("unigd", quiet = TRUE))
 }
