@@ -6,6 +6,9 @@
         "--dns=8.8.8.8"
     ],
     "remoteUser": "vscode",
+    "features": {
+        "ghcr.io/devcontainers/features/sshd:1": {}
+    },
     "hostRequirements": {
         "cpus": 4
     },
