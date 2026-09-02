@@ -17,4 +17,6 @@ VSCode window.
 3) Click on the `R:(not attached)` link to launch an R terminal. You can then
 send code from the `.R` file to the R terminal by pressing `cmd/ctrl + enter`.
 
-![Screenshot of the R terminal](../assets/rdev12.png) ![Output after running a R script in the R development environment](../assets/rdev5.png)
+![Screenshot of the R terminal](../assets/rdev12.png)
+
+![Output after running a R script in the R development environment](../assets/rdev5.png)
