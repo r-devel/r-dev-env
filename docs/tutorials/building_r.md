@@ -8,7 +8,7 @@
 - The environment variables are set in the codespace image and are available
   when the codespace starts.
 
-    ![alt text](../assets/rdev6.png)
+    ![Screenshot of container of the R development environment](../assets/rdev6.png)
 
 **2) svn checkout**
 
@@ -24,7 +24,7 @@
 - Output : We get file structure something like this after checking out R source
   code from R svn repository.
 
-    ![alt text](../assets/rdev8.png)
+    ![File structure after running svn checkout on R SVN repository.](../assets/rdev8.png)
 
 **3) Download recommended packages for R**
 
@@ -36,7 +36,7 @@ source code for these packages:
 $TOP_SRCDIR/tools/rsync-recommended
 ```
 
-![alt text](../assets/rdev9.png)
+![List of recommended packages after running tools/rsync-recommended](../assets/rdev9.png)
 
 **4) Change to the build directory**
 
@@ -78,7 +78,7 @@ $TOP_SRCDIR/configure --with-valgrind-instrumentation=1
 - Output : We get file structure something like this after using configure
   command.
 
-    ![alt text](../assets/rdev7.png)
+    ![File structure after using configure command](../assets/rdev7.png)
 
 **6) Build R**
 
