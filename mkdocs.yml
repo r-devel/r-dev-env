@@ -65,8 +65,8 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/r-devel/r-dev-env/
-    - icon: fontawesome/brands/slack
-      link: https://r-contributors.slack.com/
+    - icon: fontawesome/brands/zulip
+      link: https://r-project.zulipchat.com/
 
 markdown_extensions:
   - pymdownx.highlight:
