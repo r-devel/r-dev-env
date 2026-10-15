@@ -25,6 +25,7 @@ nav:
         - 'Creating a Patch File' : 'tutorials/patch_update.md'
         - 'Multiple R Versions' : 'tutorials/multi_r_compilation.md'
         - 'SVN Help' : 'tutorials/svn_help.md'
+        - 'Alternate Workflow using git-r': 'tutorials/git_r_workflow.md'
     - 'Contributor Guide' :
         - 'contributor_guide/contributing_to_docs.md'
         - 'contributor_guide/contributing_to_codebase.md'
