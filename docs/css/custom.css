@@ -35,3 +35,9 @@
 .language-bash.highlight code span.c1 {
   color: var(--md-code-hl-comment-color);
 }
+
+.icon {
+  vertical-align: middle;
+  height : 20px;
+  width : 20px;
+}
