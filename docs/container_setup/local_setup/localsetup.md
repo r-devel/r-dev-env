@@ -1,4 +1,5 @@
-!!! note Local setup is not recommended on macOS or Windows as the Docker
+!!! note
+    Local setup is not recommended on macOS or Windows as the Docker
     container will work via a Virtual Machine and building R will take far
     longer (e.g. a full build may take 1 hour vs 10 minutes!).
 
